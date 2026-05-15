@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
@@ -103,8 +104,11 @@ const SOCIALS = [
 ]
 
 export default function Footer() {
+  const pathname = usePathname()
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
   const [errorMessage, setErrorMessage] = useState("")
+
+  if (pathname?.startsWith("/dashboard")) return null
 
   const {
     register,

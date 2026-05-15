@@ -21,6 +21,7 @@ const config = {
       fontFamily: {
         display: ["var(--font-syne)", "sans-serif"],
         sans: ["var(--font-dm-sans)", "sans-serif"],
+        bricolage: ["var(--font-bricolage)", "sans-serif"],
       },
       colors: {
         bg: "var(--color-bg)",
@@ -35,6 +36,16 @@ const config = {
         muted: "var(--color-muted)",
         white: "var(--color-white)",
         heading: "var(--color-heading)",
+        dashboard: {
+          bg: "#000000",
+          surface: "#0b0d1e", // Reusing existing surface or custom
+          text: {
+            primary: "#ffffff",
+            secondary: "#23272e",
+            tertiary: "#666666",
+            inverse: "#888888",
+          },
+        },
 
         // Shadcn UI base colors (mapped to our vars in CSS)
         background: "var(--background)",
@@ -70,6 +81,16 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      spacing: {
+        "space-1": "4px",
+        "space-2": "8px",
+        "space-3": "16px",
+        "space-4": "17.25px",
+        "space-5": "20px",
+        "space-6": "24px",
+        "space-7": "32px",
+        "space-8": "40px",
       },
       keyframes: {
         "accordion-down": {

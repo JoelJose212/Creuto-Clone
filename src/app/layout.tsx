@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Syne, DM_Sans } from "next/font/google"
+import { Syne, DM_Sans, Bricolage_Grotesque } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/layout/Navbar"
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp"
@@ -18,6 +18,12 @@ const dmSans = DM_Sans({
   weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
   variable: "--font-dm-sans",
+})
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-bricolage",
 })
 
 export const viewport = {
@@ -55,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${syne.variable} ${dmSans.variable} dark`}>
+    <html lang="en" className={`${syne.variable} ${dmSans.variable} ${bricolage.variable} dark`}>
       <body className="bg-bg text-text antialiased selection:bg-blue/30">
         <Providers>
           <CustomCursor />
