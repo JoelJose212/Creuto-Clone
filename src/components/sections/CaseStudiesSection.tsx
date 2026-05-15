@@ -54,7 +54,7 @@ export default function CaseStudiesSection() {
           <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
             OUR PROJECTS
           </span>
-          <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-white md:text-[48px]">
+          <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
             Our success stories.
           </h2>
           <p className="font-sans text-[16px] font-[300] text-muted">
@@ -84,7 +84,7 @@ export default function CaseStudiesSection() {
                 </div>
               </div>
               <div className="flex flex-1 flex-col p-[20px]">
-                <h3 className="mb-[12px] font-display text-[16px] font-[700] text-white">
+                <h3 className="mb-[12px] font-display text-[16px] font-[700] text-heading">
                   {project.title}
                 </h3>
                 <p className="mb-[24px] flex-1 font-sans text-[13px] font-[300] leading-[1.6] text-muted">
@@ -108,7 +108,7 @@ export default function CaseStudiesSection() {
             href="#"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-block rounded-[10px] border border-border bg-transparent px-[32px] py-[14px] font-sans text-[15px] font-[600] text-white transition-colors hover:border-blue"
+            className="inline-block rounded-[10px] border border-border bg-transparent px-[32px] py-[14px] font-sans text-[15px] font-[600] text-heading transition-colors hover:border-blue"
           >
             Check All Our Case Studies
           </MotionLink>

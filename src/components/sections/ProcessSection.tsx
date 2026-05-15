@@ -33,7 +33,7 @@ export default function ProcessSection() {
           <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
             HOW WE WORK
           </span>
-          <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-white md:text-[48px]">
+          <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
             Our Product Development Process.
           </h2>
           <p className="mx-auto max-w-[600px] font-sans text-[16px] font-[300] text-muted">
@@ -52,7 +52,7 @@ export default function ProcessSection() {
                   {step.num}
                 </span>
               </div>
-              <h3 className="mb-[16px] font-display text-[18px] font-[700] text-white">
+              <h3 className="mb-[16px] font-display text-[18px] font-[700] text-heading">
                 {step.title}
               </h3>
               <p className="font-sans text-[13px] font-[300] leading-[1.7] text-muted">

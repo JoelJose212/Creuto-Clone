@@ -29,7 +29,7 @@ export default function TestimonialsSection() {
             <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
               TESTIMONIALS
             </span>
-            <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-white md:text-[48px]">
+            <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
               What Our Clients Have to Say About Us.
             </h2>
             <p className="font-sans text-[16px] font-[300] text-muted">
@@ -39,13 +39,13 @@ export default function TestimonialsSection() {
           <div className="flex gap-[12px]">
             <button
               onClick={scrollLeft}
-              className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-border bg-transparent text-white transition-colors duration-200 hover:border-blue"
+              className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-border bg-transparent text-heading transition-colors duration-200 hover:border-blue"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={scrollRight}
-              className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-border bg-transparent text-white transition-colors duration-200 hover:border-blue"
+              className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-border bg-transparent text-heading transition-colors duration-200 hover:border-blue"
             >
               <ChevronRight size={20} />
             </button>
@@ -82,7 +82,7 @@ export default function TestimonialsSection() {
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-sans text-[14px] font-[600] text-white">
+                  <span className="font-sans text-[14px] font-[600] text-heading">
                     {t.name}
                   </span>
                   <span className="font-sans text-[12px] text-muted">

@@ -140,18 +140,18 @@ export default function Footer() {
   }
 
   return (
-    <footer className="border-t border-border bg-surface px-[5%] pb-[32px] pt-[64px]">
+    <footer className="border-t border-[#1a1e3a] bg-[#0a0c1a] px-[5%] pb-[32px] pt-[64px]">
       <div className="mx-auto max-w-7xl">
         {/* Top Grid */}
-        <div className="grid grid-cols-1 gap-[48px] border-b border-border pb-[48px] md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr]">
+        <div className="grid grid-cols-1 gap-[48px] border-b border-[#1a1e3a] pb-[48px] md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr]">
           
           {/* Column 1: Brand & Newsletter */}
           <div className="flex flex-col">
             <Link href="/" className="mb-[20px] font-display text-[24px] font-[800] tracking-[-0.5px]">
-              <span className="text-white">Creu</span>
+              <span className="text-[#ffffff]">Creu</span>
               <span className="text-blue">to</span>
             </Link>
-            <p className="mb-[32px] max-w-[280px] font-sans text-[14px] font-[300] leading-[1.75] text-muted">
+            <p className="mb-[32px] max-w-[280px] font-sans text-[14px] font-[300] leading-[1.75] text-[#7b80a8]">
               We don&apos;t just aim to fit in — we strive to stand out. Experience the perfect blend of innovation, excellence, and trust that makes us truly unforgettable. Discover the difference with Creuto.
             </p>
             
@@ -160,12 +160,12 @@ export default function Footer() {
                 <input
                   {...register("email")}
                   placeholder="Enter your email"
-                  className="w-full flex-1 rounded-[8px] border border-border bg-bg px-[16px] py-[10px] font-sans text-[13px] text-white outline-none transition-colors focus:border-blue"
+                  className="w-full flex-1 rounded-[8px] border border-[#1a1e3a] bg-[#0b0d1e] px-[16px] py-[10px] font-sans text-[13px] text-[#ffffff] outline-none transition-colors focus:border-blue"
                 />
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex items-center justify-center rounded-[8px] bg-[#1531FF] px-[18px] py-[10px] font-sans text-[13px] font-[600] text-white transition-colors hover:bg-[#3d57ff] disabled:opacity-70"
+                  className="flex items-center justify-center rounded-[8px] bg-[#1531FF] px-[18px] py-[10px] font-sans text-[13px] font-[600] text-[#ffffff] transition-colors hover:bg-[#3d57ff] disabled:opacity-70"
                 >
                   {isSubmitting ? <Loader2 size={16} className="animate-spin" /> : "Subscribe"}
                 </button>
@@ -184,7 +184,7 @@ export default function Footer() {
 
           {/* Column 2: Services */}
           <div>
-            <h4 className="mb-[20px] font-display text-[13px] font-[700] uppercase tracking-[0.06em] text-white">
+            <h4 className="mb-[20px] font-display text-[13px] font-[700] uppercase tracking-[0.06em] text-[#ffffff]">
               Services
             </h4>
             <div className="flex flex-col gap-[10px]">
@@ -192,7 +192,7 @@ export default function Footer() {
                 <Link
                   key={link}
                   href="#"
-                  className="font-sans text-[13px] font-[300] text-muted transition-colors duration-200 hover:text-white"
+                  className="font-sans text-[13px] font-[300] text-[#7b80a8] transition-colors duration-200 hover:text-[#ffffff]"
                 >
                   {link}
                 </Link>
@@ -202,7 +202,7 @@ export default function Footer() {
 
           {/* Column 3: Company */}
           <div>
-            <h4 className="mb-[20px] font-display text-[13px] font-[700] uppercase tracking-[0.06em] text-white">
+            <h4 className="mb-[20px] font-display text-[13px] font-[700] uppercase tracking-[0.06em] text-[#ffffff]">
               Company
             </h4>
             <div className="flex flex-col gap-[10px]">
@@ -210,7 +210,7 @@ export default function Footer() {
                 <Link
                   key={link}
                   href="#"
-                  className="font-sans text-[13px] font-[300] text-muted transition-colors duration-200 hover:text-white"
+                  className="font-sans text-[13px] font-[300] text-[#7b80a8] transition-colors duration-200 hover:text-[#ffffff]"
                 >
                   {link}
                 </Link>
@@ -220,16 +220,16 @@ export default function Footer() {
 
           {/* Column 4: Locations */}
           <div>
-            <h4 className="mb-[20px] font-display text-[13px] font-[700] uppercase tracking-[0.06em] text-white">
+            <h4 className="mb-[20px] font-display text-[13px] font-[700] uppercase tracking-[0.06em] text-[#ffffff]">
               Locations
             </h4>
             <div className="flex flex-col gap-[20px]">
               {LOCATIONS.map((loc, i) => (
                 <div key={i}>
-                  <div className="mb-[4px] font-sans text-[14px] font-[500] text-white">
+                  <div className="mb-[4px] font-sans text-[14px] font-[500] text-[#ffffff]">
                     {loc.country}
                   </div>
-                  <div className="font-sans text-[12px] font-[300] leading-[1.6] text-muted">
+                  <div className="font-sans text-[12px] font-[300] leading-[1.6] text-[#7b80a8]">
                     {loc.address}
                   </div>
                 </div>
@@ -240,14 +240,14 @@ export default function Footer() {
 
         {/* Bottom Row */}
         <div className="flex flex-col items-start gap-[16px] pt-[28px] md:flex-row md:items-center md:justify-between">
-          <div className="font-sans text-[13px] font-[300] text-muted">
+          <div className="font-sans text-[13px] font-[300] text-[#7b80a8]">
             © 2026 Creuto All Rights Reserved
           </div>
           <div className="flex gap-[24px]">
-            <Link href="#" className="font-sans text-[12px] text-muted transition-colors hover:text-white">
+            <Link href="#" className="font-sans text-[12px] text-[#7b80a8] transition-colors hover:text-[#ffffff]">
               Terms & Conditions
             </Link>
-            <Link href="#" className="font-sans text-[12px] text-muted transition-colors hover:text-white">
+            <Link href="#" className="font-sans text-[12px] text-[#7b80a8] transition-colors hover:text-[#ffffff]">
               Privacy Policy
             </Link>
           </div>
@@ -260,7 +260,7 @@ export default function Footer() {
                   href={social.href}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex h-[36px] w-[36px] items-center justify-center rounded-[8px] border border-border bg-transparent text-muted transition-colors duration-200 hover:border-blue hover:text-blue"
+                  className="flex h-[36px] w-[36px] items-center justify-center rounded-[8px] border border-[#1a1e3a] bg-transparent text-[#7b80a8] transition-colors duration-200 hover:border-blue hover:text-blue"
                 >
                   <Icon width={16} height={16} />
                 </MotionLink>

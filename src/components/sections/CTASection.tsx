@@ -31,7 +31,7 @@ export default function CTASection() {
           LET&apos;S CONNECT
         </span>
         
-        <h2 className="mb-[24px] font-display text-[clamp(36px,5vw,64px)] font-[800] leading-[1.1] text-white">
+        <h2 className="mb-[24px] font-display text-[clamp(36px,5vw,64px)] font-[800] leading-[1.1] text-heading">
           Connect with Creuto!
         </h2>
         
@@ -44,7 +44,7 @@ export default function CTASection() {
             href="#"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="rounded-[10px] bg-[#1531FF] px-[28px] py-[14px] font-sans text-[15px] font-[600] text-white transition-colors duration-200 hover:bg-[#3d57ff]"
+            className="rounded-[10px] bg-[#1531FF] px-[28px] py-[14px] font-sans text-[15px] font-[600] text-[#ffffff] transition-colors duration-200 hover:bg-[#3d57ff]"
           >
             Schedule a Call
           </MotionLink>
@@ -52,7 +52,7 @@ export default function CTASection() {
             href="#"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="rounded-[10px] border border-border bg-transparent px-[28px] py-[14px] font-sans text-[15px] font-[600] text-white transition-colors duration-200 hover:border-[#1531FF]"
+            className="rounded-[10px] border border-border bg-transparent px-[28px] py-[14px] font-sans text-[15px] font-[600] text-heading transition-colors duration-200 hover:border-[#1531FF]"
           >
             Contact Us
           </MotionLink>

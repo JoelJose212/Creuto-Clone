@@ -31,10 +31,10 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        initial={{ backgroundColor: "rgba(5,6,15,0)", borderBottomColor: "rgba(26,30,58,0)", backdropFilter: "blur(0px)" }}
+        initial={{ backgroundColor: "rgba(255,255,255,0)", borderBottomColor: "rgba(216,219,230,0)", backdropFilter: "blur(0px)" }}
         animate={{
-          backgroundColor: scrolled ? "rgba(5,6,15,0.9)" : "rgba(5,6,15,0)",
-          borderBottomColor: scrolled ? "rgba(26,30,58,1)" : "rgba(26,30,58,0)",
+          backgroundColor: scrolled ? "rgba(255,255,255,0.92)" : "rgba(255,255,255,0)",
+          borderBottomColor: scrolled ? "rgba(216,219,230,1)" : "rgba(216,219,230,0)",
           backdropFilter: scrolled ? "blur(20px)" : "blur(0px)",
         }}
         transition={{ duration: 0.3 }}
@@ -44,7 +44,7 @@ export default function Navbar() {
           {/* Logo */}
           <motion.div layout>
             <Link href="/" className="font-display text-[22px] font-[800] tracking-[-0.5px]">
-              <span className="text-white">Creu</span>
+              <span className="text-heading">Creu</span>
               <span className="text-blue">to</span>
             </Link>
           </motion.div>
@@ -55,7 +55,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="font-sans text-[14px] font-medium text-muted transition-colors duration-200 hover:text-white"
+                className="font-sans text-[14px] font-medium text-muted transition-colors duration-200 hover:text-heading"
               >
                 {link.name}
               </Link>
@@ -68,7 +68,7 @@ export default function Navbar() {
               href="#"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="rounded-lg border border-border bg-transparent px-[16px] py-[8px] font-sans text-[14px] font-medium text-white transition-colors duration-200 hover:border-blue"
+              className="rounded-lg border border-border bg-transparent px-[16px] py-[8px] font-sans text-[14px] font-medium text-heading transition-colors duration-200 hover:border-blue"
             >
               Contact Us
             </MotionLink>
@@ -76,7 +76,7 @@ export default function Navbar() {
               href="#"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="rounded-lg bg-blue px-[22px] py-[10px] font-sans text-[14px] font-medium text-white transition-colors duration-200 hover:bg-blue-hover"
+              className="rounded-lg bg-blue px-[22px] py-[10px] font-sans text-[14px] font-medium text-[#ffffff] transition-colors duration-200 hover:bg-blue-hover"
             >
               Book A Call
             </MotionLink>
@@ -84,7 +84,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="flex items-center justify-center p-2 text-white md:hidden"
+            className="flex items-center justify-center p-2 text-heading md:hidden"
             onClick={() => setMobileMenuOpen(true)}
           >
             <Menu size={22} />
@@ -100,15 +100,15 @@ export default function Navbar() {
             animate={{ height: "100vh", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 z-[60] overflow-hidden bg-surface"
+            className="fixed inset-0 z-[60] overflow-hidden bg-[#ffffff]"
           >
             <div className="flex h-[72px] items-center justify-between px-4">
               <Link href="/" className="font-display text-[22px] font-[800] tracking-[-0.5px]">
-                <span className="text-white">Creu</span>
+                <span className="text-heading">Creu</span>
                 <span className="text-blue">to</span>
               </Link>
               <button
-                className="flex items-center justify-center p-2 text-white"
+                className="flex items-center justify-center p-2 text-heading"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <X size={22} />
@@ -121,7 +121,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="font-sans text-[18px] font-medium text-white"
+                  className="font-sans text-[18px] font-medium text-heading"
                 >
                   {link.name}
                 </Link>
@@ -130,14 +130,14 @@ export default function Navbar() {
                 <Link
                   href="#"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-lg border border-border bg-transparent px-[24px] py-[12px] font-sans text-[16px] font-medium text-white transition-colors hover:border-blue"
+                  className="rounded-lg border border-border bg-transparent px-[24px] py-[12px] font-sans text-[16px] font-medium text-heading transition-colors hover:border-blue"
                 >
                   Contact Us
                 </Link>
                 <Link
                   href="#"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-lg bg-blue px-[24px] py-[12px] font-sans text-[16px] font-medium text-white transition-all hover:bg-blue-hover"
+                  className="rounded-lg bg-blue px-[24px] py-[12px] font-sans text-[16px] font-medium text-[#ffffff] transition-all hover:bg-blue-hover"
                 >
                   Book A Call
                 </Link>

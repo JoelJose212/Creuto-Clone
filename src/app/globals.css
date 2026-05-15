@@ -4,15 +4,16 @@
 
 @layer base {
   :root {
-    --color-bg: #05060f;
-    --color-surface: #0b0d1e;
-    --color-surface-2: #10132a;
-    --color-border: #1a1e3a;
+    --color-bg: #ffffff;
+    --color-surface: #f5f6fa;
+    --color-surface-2: #ebedf5;
+    --color-border: #d8dbe6;
     --color-blue: #1531FF;
     --color-blue-hover: #3d57ff;
-    --color-text: #e8eaff;
-    --color-muted: #7b80a8;
+    --color-text: #1a1c2e;
+    --color-muted: #5f6381;
     --color-white: #ffffff;
+    --color-heading: #0a0c1a;
     
     /* Shadcn defaults mapped to our custom variables */
     --background: var(--color-bg);
@@ -43,7 +44,7 @@
 
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight text-white;
+    @apply font-display tracking-tight text-[var(--color-heading)];
   }
 }
 

@@ -16,7 +16,7 @@ export default function CreutoAISection() {
           <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
             INTRODUCING CREUTO AI
           </span>
-          <h2 className="mb-[24px] font-display text-[40px] font-[800] leading-[1.1] text-white md:text-[48px]">
+          <h2 className="mb-[24px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
             When Tech meets AI
           </h2>
           <p className="mb-[40px] max-w-[500px] font-sans text-[16px] font-[300] leading-[1.8] text-muted">
@@ -26,7 +26,7 @@ export default function CreutoAISection() {
             href="#"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-block rounded-[8px] bg-blue px-[24px] py-[12px] font-sans text-[15px] font-[500] text-white transition-colors duration-200 hover:bg-blue-hover"
+            className="inline-block rounded-[8px] bg-blue px-[24px] py-[12px] font-sans text-[15px] font-[500] text-[#ffffff] transition-colors duration-200 hover:bg-blue-hover"
           >
             Know more about Creuto AI &rarr;
           </MotionLink>
@@ -37,7 +37,7 @@ export default function CreutoAISection() {
           <div
             className="relative flex aspect-square w-full max-w-[400px] items-center justify-center rounded-[16px] border border-[rgba(21,49,255,0.3)]"
             style={{
-              background: "linear-gradient(135deg, #0b0d1e, rgba(21,49,255,0.1))",
+              background: "linear-gradient(135deg, #ebedf5, rgba(21,49,255,0.08))",
             }}
           >
             {/* Radial Glow */}

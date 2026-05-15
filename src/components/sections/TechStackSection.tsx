@@ -16,7 +16,7 @@ export default function TechStackSection() {
         <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
           OUR TECH STACK
         </span>
-        <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-white md:text-[48px]">
+        <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
           Technologies we use to elevate experiences.
         </h2>
         <p className="mb-[48px] font-sans text-[16px] font-[300] text-muted">
@@ -32,8 +32,8 @@ export default function TechStackSection() {
                 key={cat}
                 onClick={() => setActiveTab(cat)}
                 className={cn(
-                  "rounded-full border border-border bg-transparent px-[18px] py-[8px] font-sans text-[13px] font-[500] text-muted transition-colors duration-200 hover:border-[#1531FF] hover:bg-[#1531FF] hover:text-white",
-                  isActive && "border-[#1531FF] bg-[#1531FF] text-white"
+                  "rounded-full border border-border bg-transparent px-[18px] py-[8px] font-sans text-[13px] font-[500] text-muted transition-colors duration-200 hover:border-[#1531FF] hover:bg-[#1531FF] hover:text-[#ffffff]",
+                  isActive && "border-[#1531FF] bg-[#1531FF] text-[#ffffff]"
                 )}
               >
                 {cat}
@@ -56,7 +56,7 @@ export default function TechStackSection() {
               {TECH_DATA[activeTab].map((tech, i) => (
                 <div
                   key={i}
-                  className="rounded-[8px] border border-border bg-surface px-[16px] py-[8px] font-sans text-[13px] font-[500] text-text transition-colors duration-200 hover:border-blue hover:text-white"
+                  className="rounded-[8px] border border-border bg-surface px-[16px] py-[8px] font-sans text-[13px] font-[500] text-text transition-colors duration-200 hover:border-blue hover:text-heading"
                 >
                   {tech}
                 </div>

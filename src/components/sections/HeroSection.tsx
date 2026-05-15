@@ -50,7 +50,7 @@ export default function HeroSection() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="font-display text-[clamp(42px,6vw,80px)] font-[800] leading-[1.05] tracking-[-2px] text-white"
+          className="font-display text-[clamp(42px,6vw,80px)] font-[800] leading-[1.05] tracking-[-2px] text-heading"
         >
           {words.map((word, index) => {
             const isHighlight = ["Designed", "To", "Accelerate"].includes(word)
@@ -87,7 +87,7 @@ export default function HeroSection() {
             href="#"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="rounded-[10px] bg-blue px-[28px] py-[14px] font-sans text-[15px] font-medium text-white transition-colors duration-200 hover:bg-blue-hover"
+            className="rounded-[10px] bg-blue px-[28px] py-[14px] font-sans text-[15px] font-medium text-[#ffffff] transition-colors duration-200 hover:bg-blue-hover"
           >
             Free Discovery Call
           </MotionLink>
@@ -95,7 +95,7 @@ export default function HeroSection() {
             href="#"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="rounded-[10px] border border-border bg-transparent px-[28px] py-[14px] font-sans text-[15px] font-medium text-white transition-colors duration-200 hover:border-blue"
+            className="rounded-[10px] border border-border bg-transparent px-[28px] py-[14px] font-sans text-[15px] font-medium text-heading transition-colors duration-200 hover:border-blue"
           >
             Explore Our Work &rarr;
           </MotionLink>

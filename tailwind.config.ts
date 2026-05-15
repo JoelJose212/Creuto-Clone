@@ -34,6 +34,7 @@ const config = {
         text: "var(--color-text)",
         muted: "var(--color-muted)",
         white: "var(--color-white)",
+        heading: "var(--color-heading)",
 
         // Shadcn UI base colors (mapped to our vars in CSS)
         background: "var(--background)",

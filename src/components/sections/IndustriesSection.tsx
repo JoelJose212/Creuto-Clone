@@ -28,7 +28,7 @@ export default function IndustriesSection() {
         <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
           OUR EXPERTISE
         </span>
-        <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-white md:text-[48px]">
+        <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
           Industries We Specialise In.
         </h2>
         <p className="mx-auto max-w-[700px] font-sans text-[16px] font-[300] text-muted">
@@ -47,7 +47,7 @@ export default function IndustriesSection() {
             {INDUSTRIES.map((industry, i) => (
               <div
                 key={`set1-${i}`}
-                className="inline-flex cursor-pointer items-center gap-[10px] whitespace-nowrap rounded-[100px] border border-border bg-bg px-[24px] py-[14px] font-sans text-[14px] font-[500] text-text transition-colors duration-200 hover:border-blue hover:text-white"
+                className="inline-flex cursor-pointer items-center gap-[10px] whitespace-nowrap rounded-[100px] border border-border bg-bg px-[24px] py-[14px] font-sans text-[14px] font-[500] text-text transition-colors duration-200 hover:border-blue hover:text-heading"
               >
                 <div className="h-[8px] w-[8px] rounded-full bg-blue" />
                 {industry}
@@ -59,7 +59,7 @@ export default function IndustriesSection() {
             {INDUSTRIES.map((industry, i) => (
               <div
                 key={`set2-${i}`}
-                className="inline-flex cursor-pointer items-center gap-[10px] whitespace-nowrap rounded-[100px] border border-border bg-bg px-[24px] py-[14px] font-sans text-[14px] font-[500] text-text transition-colors duration-200 hover:border-blue hover:text-white"
+                className="inline-flex cursor-pointer items-center gap-[10px] whitespace-nowrap rounded-[100px] border border-border bg-bg px-[24px] py-[14px] font-sans text-[14px] font-[500] text-text transition-colors duration-200 hover:border-blue hover:text-heading"
               >
                 <div className="h-[8px] w-[8px] rounded-full bg-blue" />
                 {industry}

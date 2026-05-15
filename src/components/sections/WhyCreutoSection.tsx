@@ -67,7 +67,7 @@ export default function WhyCreutoSection() {
           <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
             THE CREUTO DIFFERENCE
           </span>
-          <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-white md:text-[48px]">
+          <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
             Why Businesses Choose CREUTO?
           </h2>
           <p className="font-sans text-[16px] font-[300] text-muted">
@@ -91,7 +91,7 @@ export default function WhyCreutoSection() {
               <div className="mb-[20px] font-display text-[12px] font-[700] tracking-[0.08em] text-blue">
                 {card.num}
               </div>
-              <h3 className="mb-[12px] font-display text-[17px] font-[700] text-white">
+              <h3 className="mb-[12px] font-display text-[17px] font-[700] text-heading">
                 {card.title}
               </h3>
               <p className="font-sans text-[14px] font-[300] leading-[1.6] text-muted">
@@ -119,7 +119,7 @@ export default function WhyCreutoSection() {
               <span className="font-display text-[14px] font-[700] text-blue">NR</span>
             </div>
             <div>
-              <div className="font-sans text-[14px] font-[600] text-white">
+              <div className="font-sans text-[14px] font-[600] text-heading">
                 Nihar Ranjan Rout
               </div>
               <div className="font-sans text-[12px] text-muted">
