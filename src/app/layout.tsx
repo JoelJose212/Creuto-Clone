@@ -3,6 +3,8 @@ import { Syne, DM_Sans } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/layout/Navbar"
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp"
+import CustomCursor from "@/components/layout/CustomCursor"
+import PageTransition from "@/components/layout/PageTransition"
 import Providers from "@/components/providers/Providers"
 
 const syne = Syne({ 
@@ -56,8 +58,11 @@ export default function RootLayout({
     <html lang="en" className={`${syne.variable} ${dmSans.variable} dark`}>
       <body className="bg-bg text-text antialiased selection:bg-blue/30">
         <Providers>
+          <CustomCursor />
           <Navbar />
-          {children}
+          <PageTransition>
+            {children}
+          </PageTransition>
           <FloatingWhatsApp />
         </Providers>
       </body>

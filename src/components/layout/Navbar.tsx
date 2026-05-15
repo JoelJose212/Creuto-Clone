@@ -5,6 +5,8 @@ import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 
+const MotionLink = motion(Link)
+
 const NAV_LINKS = [
   { name: "Creuto AI", href: "#" },
   { name: "About Us", href: "#" },
@@ -40,10 +42,12 @@ export default function Navbar() {
       >
         <div className="container mx-auto flex w-full items-center justify-between px-4 md:px-8">
           {/* Logo */}
-          <Link href="/" className="font-display text-[22px] font-[800] tracking-[-0.5px]">
-            <span className="text-white">Creu</span>
-            <span className="text-blue">to</span>
-          </Link>
+          <motion.div layout>
+            <Link href="/" className="font-display text-[22px] font-[800] tracking-[-0.5px]">
+              <span className="text-white">Creu</span>
+              <span className="text-blue">to</span>
+            </Link>
+          </motion.div>
 
           {/* Desktop Links */}
           <div className="hidden items-center gap-6 md:flex">
@@ -60,18 +64,22 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden items-center gap-4 md:flex">
-            <Link
+            <MotionLink
               href="#"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               className="rounded-lg border border-border bg-transparent px-[16px] py-[8px] font-sans text-[14px] font-medium text-white transition-colors duration-200 hover:border-blue"
             >
               Contact Us
-            </Link>
-            <Link
+            </MotionLink>
+            <MotionLink
               href="#"
-              className="rounded-lg bg-blue px-[22px] py-[10px] font-sans text-[14px] font-medium text-white transition-all duration-200 hover:-translate-y-[1px] hover:bg-blue-hover"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="rounded-lg bg-blue px-[22px] py-[10px] font-sans text-[14px] font-medium text-white transition-colors duration-200 hover:bg-blue-hover"
             >
               Book A Call
-            </Link>
+            </MotionLink>
           </div>
 
           {/* Mobile Menu Toggle */}

@@ -1,7 +1,9 @@
 "use client"
 
+import { useState } from "react"
 import { Award } from "lucide-react"
 import SectionWrapper from "@/components/shared/SectionWrapper"
+import { cn } from "@/lib/cn"
 
 const BADGES = [
   "App Developers",
@@ -15,7 +17,9 @@ const BADGES = [
   "Web Excellence",
 ]
 
-export default function Awards() {
+export default function AwardsSection() {
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
     <SectionWrapper className="bg-bg">
       <div className="mx-auto max-w-5xl">
@@ -51,8 +55,12 @@ export default function Awards() {
         </div>
 
         {/* Scrolling Badges */}
-        <div className="group flex w-full overflow-hidden">
-          <div className="flex w-max animate-marqueeLeft group-hover:[animation-play-state:paused]" style={{ animationDuration: "25s" }}>
+        <div 
+          className="flex w-full overflow-hidden"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className={cn("flex w-max animate-marqueeLeft", isHovered && "[animation-play-state:paused]")} style={{ animationDuration: "25s" }}>
             {/* First Set */}
             <div className="flex shrink-0 gap-[16px] pr-[16px]">
               {BADGES.map((badge, i) => (

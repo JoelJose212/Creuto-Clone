@@ -4,6 +4,8 @@ import { motion, Variants } from "framer-motion"
 import Link from "next/link"
 import SectionWrapper from "@/components/shared/SectionWrapper"
 
+const MotionLink = motion(Link)
+
 const PROJECTS = [
   {
     badge: "AI POWERED",
@@ -44,7 +46,7 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 }
 
-export default function CaseStudies() {
+export default function CaseStudiesSection() {
   return (
     <SectionWrapper>
       <div className="mx-auto max-w-7xl">
@@ -88,24 +90,28 @@ export default function CaseStudies() {
                 <p className="mb-[24px] flex-1 font-sans text-[13px] font-[300] leading-[1.6] text-muted">
                   {project.desc}
                 </p>
-                <Link
+                <MotionLink
                   href="#"
-                  className="font-sans text-[13px] font-[600] text-[#1531FF]"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-block font-sans text-[13px] font-[600] text-[#1531FF]"
                 >
                   View Case Study &rarr;
-                </Link>
+                </MotionLink>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
         <div className="flex justify-center">
-          <Link
+          <MotionLink
             href="#"
-            className="rounded-[10px] border border-border bg-transparent px-[32px] py-[14px] font-sans text-[15px] font-[600] text-white transition-colors hover:border-blue"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-block rounded-[10px] border border-border bg-transparent px-[32px] py-[14px] font-sans text-[15px] font-[600] text-white transition-colors hover:border-blue"
           >
             Check All Our Case Studies
-          </Link>
+          </MotionLink>
         </div>
       </div>
     </SectionWrapper>

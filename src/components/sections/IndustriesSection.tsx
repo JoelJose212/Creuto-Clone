@@ -1,6 +1,8 @@
 "use client"
 
+import { useState } from "react"
 import SectionWrapper from "@/components/shared/SectionWrapper"
+import { cn } from "@/lib/cn"
 
 const INDUSTRIES = [
   "Healthcare",
@@ -17,7 +19,9 @@ const INDUSTRIES = [
   "SaaS",
 ]
 
-export default function Industries() {
+export default function IndustriesSection() {
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
     <SectionWrapper className="border-y border-border bg-surface overflow-hidden">
       <div className="mb-[48px] text-center">
@@ -32,8 +36,12 @@ export default function Industries() {
         </p>
       </div>
 
-      <div className="group flex w-full overflow-hidden">
-        <div className="flex w-max animate-marqueeLeftFast group-hover:[animation-play-state:paused]">
+      <div 
+        className="flex w-full overflow-hidden"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className={cn("flex w-max animate-marqueeLeftFast", isHovered && "[animation-play-state:paused]")}>
           {/* First Set */}
           <div className="flex shrink-0 gap-[16px] pr-[16px]">
             {INDUSTRIES.map((industry, i) => (

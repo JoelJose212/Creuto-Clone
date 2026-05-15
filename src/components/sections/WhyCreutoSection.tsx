@@ -59,7 +59,7 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 }
 
-export default function WhyChooseUs() {
+export default function WhyCreutoSection() {
   return (
     <SectionWrapper>
       <div className="mx-auto max-w-7xl">

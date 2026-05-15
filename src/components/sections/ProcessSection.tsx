@@ -25,7 +25,7 @@ const STEPS = [
   },
 ]
 
-export default function Process() {
+export default function ProcessSection() {
   return (
     <SectionWrapper>
       <div className="mx-auto max-w-7xl">

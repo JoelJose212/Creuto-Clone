@@ -1,6 +1,8 @@
 "use client"
 
+import { useState } from "react"
 import SectionWrapper from "@/components/shared/SectionWrapper"
+import { cn } from "@/lib/cn"
 
 const PARTNERS = [
   "Škoda Auto",
@@ -16,7 +18,9 @@ const PARTNERS = [
   "Chromaceutic",
 ]
 
-export default function PartnerLogos() {
+export default function MarqueeSection() {
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
     <SectionWrapper className="border-y border-border bg-surface px-0 py-[40px]">
       <div className="flex flex-col items-center">
@@ -24,8 +28,12 @@ export default function PartnerLogos() {
           TRUSTED BY INNOVATIVE COMPANIES WORLDWIDE
         </h2>
 
-        <div className="group flex w-full overflow-hidden">
-          <div className="flex w-max animate-marqueeLeft group-hover:[animation-play-state:paused]">
+        <div 
+          className="flex w-full overflow-hidden"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className={cn("flex w-max animate-marqueeLeft", isHovered && "[animation-play-state:paused]")}>
             {/* First Set */}
             <div className="flex shrink-0">
               {PARTNERS.map((partner, i) => (

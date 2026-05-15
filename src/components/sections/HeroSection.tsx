@@ -3,6 +3,8 @@
 import { motion, Variants } from "framer-motion"
 import Link from "next/link"
 
+const MotionLink = motion(Link)
+
 const words = "AI-Driven Product Development, Designed To Accelerate Your Business.".split(" ")
 
 const containerVariants: Variants = {
@@ -18,7 +20,7 @@ const wordVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
 
-export default function Hero() {
+export default function HeroSection() {
   return (
     <section className="relative flex min-h-screen flex-col justify-center px-[5%]">
       {/* Radial Gradient Overlay */}
@@ -81,18 +83,22 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
           className="flex items-center gap-[14px]"
         >
-          <Link
+          <MotionLink
             href="#"
-            className="rounded-[10px] bg-blue px-[28px] py-[14px] font-sans text-[15px] font-medium text-white transition-all duration-200 hover:-translate-y-[2px] hover:bg-blue-hover"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="rounded-[10px] bg-blue px-[28px] py-[14px] font-sans text-[15px] font-medium text-white transition-colors duration-200 hover:bg-blue-hover"
           >
             Free Discovery Call
-          </Link>
-          <Link
+          </MotionLink>
+          <MotionLink
             href="#"
-            className="rounded-[10px] border border-border bg-transparent px-[28px] py-[14px] font-sans text-[15px] font-medium text-white transition-all duration-200 hover:-translate-y-[2px] hover:border-blue"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="rounded-[10px] border border-border bg-transparent px-[28px] py-[14px] font-sans text-[15px] font-medium text-white transition-colors duration-200 hover:border-blue"
           >
             Explore Our Work &rarr;
-          </Link>
+          </MotionLink>
         </motion.div>
       </div>
 

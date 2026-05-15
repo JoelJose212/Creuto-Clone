@@ -29,7 +29,7 @@ function StatCell({ stat, startWhen }: { stat: typeof STATS_DATA[0]; startWhen: 
   )
 }
 
-export default function Stats() {
+export default function StatsSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 

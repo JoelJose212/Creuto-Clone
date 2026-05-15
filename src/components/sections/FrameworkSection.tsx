@@ -27,7 +27,7 @@ const CS = [
   },
 ]
 
-export default function Framework() {
+export default function FrameworkSection() {
   const carouselRef = useRef<HTMLDivElement>(null)
   const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 })
 

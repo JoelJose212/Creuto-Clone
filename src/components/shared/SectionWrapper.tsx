@@ -12,7 +12,7 @@ interface SectionWrapperProps {
 
 export default function SectionWrapper({ children, className, id }: SectionWrapperProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: "-80px" })
 
   return (
     <section id={id} className={cn("py-[100px] px-[5%]", className)}>
@@ -20,7 +20,7 @@ export default function SectionWrapper({ children, className, id }: SectionWrapp
         ref={ref}
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         {children}
       </motion.div>
