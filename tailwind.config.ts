@@ -19,8 +19,8 @@ const config = {
     },
     extend: {
       fontFamily: {
-        display: ["var(--font-syne)", "sans-serif"],
-        sans: ["var(--font-dm-sans)", "sans-serif"],
+        display: ["var(--font-bricolage)", "sans-serif"],
+        sans: ["var(--font-bricolage)", "sans-serif"],
         bricolage: ["var(--font-bricolage)", "sans-serif"],
       },
       colors: {
@@ -37,13 +37,13 @@ const config = {
         white: "var(--color-white)",
         heading: "var(--color-heading)",
         dashboard: {
-          bg: "#000000",
-          surface: "#0b0d1e", // Reusing existing surface or custom
+          bg: "var(--color-bg)",
+          surface: "var(--color-surface)",
           text: {
-            primary: "#ffffff",
-            secondary: "#23272e",
-            tertiary: "#666666",
-            inverse: "#888888",
+            primary: "var(--color-text)",
+            secondary: "var(--color-muted)",
+            tertiary: "var(--color-text-secondary)",
+            inverse: "var(--color-text-inverse)",
           },
         },
 

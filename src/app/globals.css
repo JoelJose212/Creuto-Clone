@@ -5,15 +5,17 @@
 @layer base {
   :root {
     --color-bg: #ffffff;
-    --color-surface: #f5f6fa;
-    --color-surface-2: #ebedf5;
-    --color-border: #d8dbe6;
-    --color-blue: #1531FF;
-    --color-blue-hover: #3d57ff;
-    --color-text: #1a1c2e;
-    --color-muted: #5f6381;
+    --color-surface: #ffffff;
+    --color-surface-2: #f0f4ff;
+    --color-border: #f7f8ff;
+    --color-blue: #1746ea;
+    --color-blue-hover: #1d4ed8;
+    --color-text: #23272e;
+    --color-text-secondary: #475569;
+    --color-text-inverse: #888888;
+    --color-muted: #475569;
     --color-white: #ffffff;
-    --color-heading: #0a0c1a;
+    --color-heading: #23272e;
     
     /* Shadcn defaults mapped to our custom variables */
     --background: var(--color-bg);

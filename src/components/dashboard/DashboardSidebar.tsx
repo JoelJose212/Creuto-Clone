@@ -32,7 +32,7 @@ export default function DashboardSidebar() {
       <div className="flex h-full flex-col">
         {/* Brand */}
         <Link href="/" className="mb-space-8 flex items-center px-space-2 text-[20px] font-bold tracking-tight">
-          <span className="text-white">Creu</span>
+          <span className="text-heading">Creu</span>
           <span className="text-blue">to</span>
           <span className="ml-2 rounded bg-blue/10 px-1.5 py-0.5 text-[10px] font-medium text-blue">DASH</span>
         </Link>
@@ -50,11 +50,11 @@ export default function DashboardSidebar() {
                 className={cn(
                   "group flex items-center gap-space-3 rounded-md px-space-3 py-space-3 text-sm font-medium transition-all duration-motion-fast focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-dashboard-bg",
                   isActive 
-                    ? "bg-blue/10 text-white" 
-                    : "text-dashboard-text-tertiary hover:bg-white/5 hover:text-white"
+                    ? "bg-blue/10 text-blue" 
+                    : "text-dashboard-text-secondary hover:bg-black/5 hover:text-heading"
                 )}
               >
-                <Icon size={18} className={cn("transition-colors", isActive ? "text-blue" : "group-hover:text-white")} />
+                <Icon size={18} className={cn("transition-colors", isActive ? "text-blue" : "group-hover:text-heading")} />
                 {item.name}
               </Link>
             )
@@ -63,8 +63,8 @@ export default function DashboardSidebar() {
 
         {/* Notifications & User Mini */}
         <div className="mt-auto border-t border-dashboard-text-tertiary/10 pt-space-6">
-          <button className="group flex w-full items-center gap-space-3 rounded-md px-space-3 py-space-3 text-sm font-medium text-dashboard-text-tertiary hover:bg-white/5 hover:text-white focus-visible:ring-2 focus-visible:ring-blue">
-            <Bell size={18} className="group-hover:text-white" />
+          <button className="group flex w-full items-center gap-space-3 rounded-md px-space-3 py-space-3 text-sm font-medium text-dashboard-text-secondary hover:bg-black/5 hover:text-heading focus-visible:ring-2 focus-visible:ring-blue">
+            <Bell size={18} className="group-hover:text-heading" />
             Notifications
             <span className="ml-auto flex h-5 w-5 items-center justify-center rounded-full bg-blue text-[10px] text-white">3</span>
           </button>

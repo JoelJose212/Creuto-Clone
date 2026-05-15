@@ -13,7 +13,7 @@ const DATA = [
 
 export default function DataGrid() {
   return (
-    <div className="overflow-x-auto rounded-lg border border-dashboard-text-tertiary/20 bg-white/[0.02]">
+    <div className="overflow-x-auto rounded-lg border border-dashboard-text-tertiary/10 bg-black/[0.01]">
       <table className="w-full text-left border-collapse">
         <thead className="sticky top-0 bg-dashboard-bg/95 backdrop-blur-sm border-b border-dashboard-text-tertiary/20">
           <tr className="text-[11px] font-bold uppercase tracking-wider text-dashboard-text-tertiary">
@@ -29,7 +29,7 @@ export default function DataGrid() {
           {DATA.map((row) => (
             <tr 
               key={row.id} 
-              className="group text-[13px] text-white transition-colors hover:bg-white/[0.03] active:bg-white/[0.05]"
+              className="group text-[13px] text-heading transition-colors hover:bg-black/[0.02] active:bg-black/[0.03]"
             >
               <td className="px-space-4 py-space-4 font-mono text-[12px] text-dashboard-text-tertiary">{row.id}</td>
               <td className="px-space-4 py-space-4">
@@ -59,10 +59,10 @@ export default function DataGrid() {
               <td className="px-space-4 py-space-4 text-dashboard-text-tertiary">{row.latency}</td>
               <td className="px-space-4 py-space-4 text-right">
                 <div className="flex items-center justify-end gap-2">
-                  <button className="flex h-7 w-7 items-center justify-center rounded border border-dashboard-text-tertiary/20 text-dashboard-text-tertiary transition-all hover:border-blue hover:text-white focus-visible:ring-2 focus-visible:ring-blue">
+                  <button className="flex h-7 w-7 items-center justify-center rounded border border-dashboard-text-tertiary/20 text-dashboard-text-tertiary transition-all hover:border-blue hover:text-heading focus-visible:ring-2 focus-visible:ring-blue">
                     <ExternalLink size={14} />
                   </button>
-                  <button className="flex h-7 w-7 items-center justify-center rounded border border-dashboard-text-tertiary/20 text-dashboard-text-tertiary transition-all hover:border-blue hover:text-white focus-visible:ring-2 focus-visible:ring-blue">
+                  <button className="flex h-7 w-7 items-center justify-center rounded border border-dashboard-text-tertiary/20 text-dashboard-text-tertiary transition-all hover:border-blue hover:text-heading focus-visible:ring-2 focus-visible:ring-blue">
                     <MoreHorizontal size={14} />
                   </button>
                 </div>

@@ -17,7 +17,7 @@ export default function DashboardPage() {
       <div className="flex flex-col gap-space-8">
         {/* Header Section */}
         <div>
-          <h1 className="text-3xl font-bold text-white tracking-tight mb-space-2">Infrastructure Overview</h1>
+          <h1 className="text-3xl font-bold text-heading tracking-tight mb-space-2">Infrastructure Overview</h1>
           <p className="text-dashboard-text-tertiary text-sm max-w-2xl">
             Monitor your global infrastructure, project health, and API performance in real-time. 
             All systems are currently operational across all regions.
@@ -29,17 +29,17 @@ export default function DashboardPage() {
           {STATS.map((stat) => {
             const Icon = stat.icon
             return (
-              <div key={stat.name} className="p-space-5 rounded-lg border border-dashboard-text-tertiary/20 bg-white/[0.02] flex flex-col gap-space-3 transition-all hover:border-blue/50 group">
+              <div key={stat.name} className="p-space-5 rounded-lg border border-dashboard-text-tertiary/10 bg-black/[0.01] flex flex-col gap-space-3 transition-all hover:border-blue/50 group">
                 <div className="flex items-center justify-between">
-                  <div className={cn("p-2 rounded-md bg-white/5", stat.color)}>
+                  <div className={cn("p-2 rounded-md bg-black/5", stat.color)}>
                     <Icon size={18} />
                   </div>
-                  <span className="text-[10px] font-bold text-dashboard-text-tertiary bg-white/5 px-1.5 py-0.5 rounded uppercase tracking-wider group-hover:text-blue">
+                  <span className="text-[10px] font-bold text-dashboard-text-tertiary bg-black/5 px-1.5 py-0.5 rounded uppercase tracking-wider group-hover:text-blue">
                     {stat.change}
                   </span>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-white">{stat.value}</div>
+                  <div className="text-2xl font-bold text-heading">{stat.value}</div>
                   <div className="text-xs text-dashboard-text-tertiary mt-1">{stat.name}</div>
                 </div>
               </div>
@@ -50,9 +50,9 @@ export default function DashboardPage() {
         {/* Main Data Section */}
         <div className="flex flex-col gap-space-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-bold text-white tracking-tight">Active Services</h2>
+            <h2 className="text-xl font-bold text-heading tracking-tight">Active Services</h2>
             <div className="flex gap-2">
-              <button className="px-3 py-1.5 text-xs font-semibold text-dashboard-text-tertiary bg-white/5 border border-dashboard-text-tertiary/20 rounded hover:bg-white/10 transition-colors">
+              <button className="px-3 py-1.5 text-xs font-semibold text-dashboard-text-tertiary bg-black/5 border border-dashboard-text-tertiary/20 rounded hover:bg-black/10 transition-colors">
                 Filter
               </button>
               <button className="px-3 py-1.5 text-xs font-semibold text-white bg-blue rounded hover:bg-blue-hover transition-colors">
