@@ -17,6 +17,15 @@
     --color-white: #ffffff;
     --color-heading: #23272e;
     
+    /* About Page Specific Tokens */
+    --color-bg-secondary-about: #f8f8f8;
+    --color-text-secondary-about: #666666;
+    --color-block: #e5e7eb;
+    --color-button-light: #e8edff;
+    --color-navy: #01083d;
+    --shadow-deep-about: rgba(0,0,0,0.08) 0px 20px 50px 0px;
+    --shadow-mid-about: rgba(0,0,0,0.1) 0px 4px 12px 0px;
+    
     /* Shadcn defaults mapped to our custom variables */
     --background: var(--color-bg);
     --foreground: var(--color-text);
