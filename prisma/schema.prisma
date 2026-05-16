@@ -25,11 +25,12 @@ model NewsletterSubscriber {
 
 model CaseStudy {
   id          String   @id @default(cuid())
-  title       String
   slug        String   @unique
-  badge       String
+  category    String
+  title       String
   description String
   gradient    String
-  order       Int      @default(0)
+  accentColor String
+  sortOrder   Int      @default(0)
   createdAt   DateTime @default(now())
 }
