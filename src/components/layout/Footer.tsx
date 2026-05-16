@@ -9,7 +9,7 @@ import { z } from "zod"
 import { motion } from "framer-motion"
 import { Loader2 } from "lucide-react"
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 const newsletterSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email" }),

@@ -3,7 +3,7 @@
 import { motion, Variants } from "framer-motion"
 import Link from "next/link"
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 const words = "AI-Driven Product Development, Designed To Accelerate Your Business.".split(" ")
 

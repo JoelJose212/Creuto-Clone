@@ -4,7 +4,7 @@ import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import Link from "next/link"
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 export default function CTASection() {
   const ref = useRef(null)

@@ -5,7 +5,7 @@ import { BrainCircuit } from "lucide-react"
 import Link from "next/link"
 import SectionWrapper from "@/components/shared/SectionWrapper"
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 export default function CreutoAISection() {
   return (

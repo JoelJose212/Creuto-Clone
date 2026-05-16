@@ -4,7 +4,7 @@ import { motion, Variants } from "framer-motion"
 import Link from "next/link"
 import SectionWrapper from "@/components/shared/SectionWrapper"
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 const PROJECTS = [
   {

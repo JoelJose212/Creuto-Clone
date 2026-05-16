@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 const NAV_LINKS = [
   { name: "Creuto AI", href: "#" },
