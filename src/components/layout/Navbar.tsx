@@ -5,16 +5,17 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import AnnouncementBanner from "./AnnouncementBanner"
 
 const MotionLink = motion.create(Link)
 
 const NAV_LINKS = [
-  { name: "Creuto AI", href: "#" },
-  { name: "About Us", href: "#" },
-  { name: "Services", href: "#" },
-  { name: "Case Studies", href: "#" },
-  { name: "Blogs", href: "#" },
-  { name: "Careers", href: "#" },
+  { name: "Creuto.ai", href: "/creuto-ai" },
+  { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services", hasDropdown: true },
+  { name: "Case Studies", href: "/case-studies" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "Careers", href: "/careers" },
 ]
 
 export default function Navbar() {
@@ -26,7 +27,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 60)
+      setScrolled(window.scrollY > 40)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -34,32 +35,34 @@ export default function Navbar() {
 
   return (
     <>
+      <AnnouncementBanner />
       <motion.nav
-        initial={{ backgroundColor: "rgba(255,255,255,0)", borderBottomColor: "rgba(216,219,230,0)", backdropFilter: "blur(0px)" }}
+        initial={{ backgroundColor: "rgba(255,255,255,0)", borderBottomColor: "rgba(229,231,235,0)", backdropFilter: "blur(0px)" }}
         animate={{
-          backgroundColor: scrolled ? "rgba(255,255,255,0.92)" : "rgba(255,255,255,0)",
-          borderBottomColor: scrolled ? "rgba(216,219,230,1)" : "rgba(216,219,230,0)",
-          backdropFilter: scrolled ? "blur(20px)" : "blur(0px)",
+          backgroundColor: scrolled ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0)",
+          borderBottomColor: scrolled ? "rgba(229,231,235,1)" : "rgba(229,231,235,0)",
+          backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
+          top: scrolled ? "0px" : "42px", // Shift down when banner is visible
         }}
-        transition={{ duration: 0.3 }}
-        className="fixed top-0 left-0 right-0 z-50 flex h-[72px] items-center border-b border-transparent"
+        transition={{ duration: 0.2, ease: "easeOut" }}
+        className="fixed left-0 right-0 z-50 flex h-[80px] items-center border-b border-transparent"
       >
         <div className="container mx-auto flex w-full items-center justify-between px-4 md:px-8">
           {/* Logo */}
           <motion.div layout>
-            <Link href="/" className="font-display text-[22px] font-[800] tracking-[-0.5px]">
-              <span className="text-heading">Creu</span>
-              <span className="text-blue">to</span>
+            <Link href="/" className="font-jakarta text-[26px] font-[800] tracking-[-0.03em] text-heading flex items-center">
+              <span>Creuto</span>
+              <span className="w-1.5 h-1.5 bg-blue rounded-full ml-0.5 mt-2" />
             </Link>
           </motion.div>
 
           {/* Desktop Links */}
-          <div className="hidden items-center gap-6 md:flex">
+          <div className="hidden items-center gap-8 lg:flex">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="font-sans text-[14px] font-medium text-muted transition-colors duration-200 hover:text-heading"
+                className="font-jakarta text-[14.5px] font-[600] text-[#4B5563] transition-colors duration-200 hover:text-blue"
               >
                 {link.name}
               </Link>
@@ -67,12 +70,12 @@ export default function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden items-center gap-4 md:flex">
+          <div className="hidden items-center gap-3 lg:flex">
             <MotionLink
-              href="#"
+              href="/contact"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="rounded-lg border border-border bg-transparent px-[16px] py-[8px] font-sans text-[14px] font-medium text-heading transition-colors duration-200 hover:border-blue"
+              className="rounded-full border border-border bg-white px-7 py-2.5 font-jakarta text-[14.5px] font-bold text-heading transition-all hover:border-blue hover:text-blue"
             >
               Contact Us
             </MotionLink>
@@ -80,7 +83,7 @@ export default function Navbar() {
               href="#"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="rounded-lg bg-blue px-[22px] py-[10px] font-sans text-[14px] font-medium text-[#ffffff] transition-colors duration-200 hover:bg-blue-hover"
+              className="rounded-full bg-blue px-7 py-2.5 font-jakarta text-[14.5px] font-bold text-white shadow-lg shadow-blue/20 transition-all hover:bg-blue-hover"
             >
               Book A Call
             </MotionLink>
@@ -88,10 +91,10 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="flex items-center justify-center p-2 text-heading md:hidden"
+            className="flex items-center justify-center p-2 text-heading lg:hidden"
             onClick={() => setMobileMenuOpen(true)}
           >
-            <Menu size={22} />
+            <Menu size={26} />
           </button>
         </div>
       </motion.nav>

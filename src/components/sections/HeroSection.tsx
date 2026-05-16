@@ -2,45 +2,42 @@
 
 import { motion, Variants } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 
 const MotionLink = motion.create(Link)
 
-const words = "AI-Driven Product Development, Designed To Accelerate Your Business.".split(" ")
+const headline = "AI-Driven Product Development, Designed To Accelerate Your Business."
+const words = headline.split(" ")
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.06, delayChildren: 0.2 },
+    transition: { staggerChildren: 0.05, delayChildren: 0.3 },
   },
 }
 
 const wordVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.215, 0.61, 0.355, 1] } },
 }
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-screen flex-col justify-center px-[5%]">
-      {/* Radial Gradient Overlay */}
-      <div
-        className="pointer-events-none absolute inset-0 z-0"
-        style={{
-          background: "radial-gradient(ellipse 60% 50% at 70% 40%, rgba(21,49,255,0.18) 0%, transparent 70%)",
-        }}
-      />
+    <section className="relative flex min-h-screen flex-col items-center justify-start overflow-hidden pt-[140px] pb-[40px] px-[5%] text-center">
+      {/* Background Subtle Gradient */}
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_-20%,#f0f4ff_0%,transparent_50%)] opacity-40" />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl pt-20">
+      <div className="relative z-10 flex w-full max-w-[1000px] flex-col items-center">
         {/* Pill Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-8 inline-flex items-center gap-[8px] rounded-[100px] border border-[rgba(21,49,255,0.35)] px-[14px] py-[6px]"
+          className="mb-8 inline-flex items-center gap-[10px] rounded-full border border-border bg-white/40 px-[16px] py-[8px] backdrop-blur-[4px]"
         >
-          <div className="h-[6px] w-[6px] animate-pulse-dot rounded-full bg-[#1531FF]" />
-          <span className="text-[11px] font-[600] uppercase tracking-[0.12em] text-[#1531FF]">
+          <div className="h-[6px] w-[6px] animate-pulse-dot rounded-full bg-blue shadow-[0_0_8px_rgba(37,99,235,0.6)]" />
+          <span className="text-[10.5px] font-[700] uppercase tracking-[0.15em] text-blue">
             EITHER WE BUILD IT EXCEPTIONAL, OR WE DON&apos;T!
           </span>
         </motion.div>
@@ -50,28 +47,25 @@ export default function HeroSection() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="font-display text-[clamp(42px,6vw,80px)] font-[800] leading-[1.05] tracking-[-2px] text-heading"
+          className="mb-8 font-jakarta text-[clamp(44px,7.5vw,84px)] font-[800] leading-[1.05] tracking-[-0.035em] text-heading"
         >
-          {words.map((word, index) => {
-            const isHighlight = ["Designed", "To", "Accelerate"].includes(word)
-            return (
-              <motion.span
-                key={index}
-                variants={wordVariants}
-                className={`inline-block mr-[0.25em] ${isHighlight ? "text-[#1531FF]" : ""}`}
-              >
-                {word}
-              </motion.span>
-            )
-          })}
+          {words.map((word, index) => (
+            <motion.span
+              key={index}
+              variants={wordVariants}
+              className="inline-block mr-[0.22em] last:mr-0"
+            >
+              {word}
+            </motion.span>
+          ))}
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-          className="mt-8 mb-[40px] max-w-[580px] font-sans text-[17px] font-[300] leading-[1.75] text-muted"
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+          className="mb-12 max-w-[780px] font-jakarta text-[17px] font-[500] leading-[1.7] text-muted md:text-[19px]"
         >
           We design and build high-performance, future-ready digital systems backed by enterprise-grade engineering and uncompromising execution.
         </motion.p>
@@ -80,14 +74,14 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-          className="flex items-center gap-[14px]"
+          transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
+          className="flex flex-wrap items-center justify-center gap-4"
         >
           <MotionLink
             href="#"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="rounded-[10px] bg-blue px-[28px] py-[14px] font-sans text-[15px] font-medium text-[#ffffff] transition-colors duration-200 hover:bg-blue-hover"
+            className="rounded-full bg-blue px-10 py-4.5 text-[15.5px] font-bold text-white shadow-[0_8px_20px_rgba(37,99,235,0.25)] transition-all hover:bg-blue-hover hover:shadow-[0_12px_24px_rgba(37,99,235,0.35)]"
           >
             Free Discovery Call
           </MotionLink>
@@ -95,20 +89,32 @@ export default function HeroSection() {
             href="#"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="rounded-[10px] border border-border bg-transparent px-[28px] py-[14px] font-sans text-[15px] font-medium text-heading transition-colors duration-200 hover:border-blue"
+            className="group rounded-full border border-border bg-white px-10 py-4.5 text-[15.5px] font-bold text-heading transition-all hover:border-blue hover:text-blue"
           >
-            Explore Our Work &rarr;
+            Explore Our Work <span className="inline-block ml-1 transition-transform group-hover:translate-x-1">→</span>
           </MotionLink>
         </motion.div>
       </div>
 
-      {/* Bottom Thin Line */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-[1px]"
-        style={{
-          background: "linear-gradient(90deg, transparent, var(--color-border), transparent)",
-        }}
-      />
+      {/* Hero Graphic - Glass Planes */}
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 1.1 }}
+        className="relative mt-16 w-full max-w-[1280px]"
+      >
+        <div className="relative aspect-[21/9] w-full">
+           <Image 
+             src="/img/hero-graphic.png" 
+             alt="Creuto Graphic" 
+             fill 
+             className="object-contain object-bottom scale-110"
+             priority
+           />
+        </div>
+        {/* Smooth fade to white at bottom to blend with next section */}
+        <div className="absolute inset-x-0 bottom-[-2px] h-[120px] bg-gradient-to-t from-white via-white/80 to-transparent z-10" />
+      </motion.div>
     </section>
   )
 }

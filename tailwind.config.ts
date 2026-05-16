@@ -19,9 +19,10 @@ const config = {
     },
     extend: {
       fontFamily: {
-        display: ["var(--font-bricolage)", "sans-serif"],
-        sans: ["var(--font-bricolage)", "sans-serif"],
+        display: ["var(--font-jakarta)", "sans-serif"],
+        sans: ["var(--font-jakarta)", "sans-serif"],
         bricolage: ["var(--font-bricolage)", "sans-serif"],
+        jakarta: ["var(--font-jakarta)", "sans-serif"],
       },
       colors: {
         bg: "var(--color-bg)",
