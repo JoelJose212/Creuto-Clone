@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function AboutHeroSection() {
   const h1Text = "Why CREUTO Was Started";
   const words = h1Text.split(" ");
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,7 +16,7 @@ export default function AboutHeroSection() {
     },
   };
 
-  const child = {
+  const child: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -54,7 +54,7 @@ export default function AboutHeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.6 }}
         >
-          Most development teams are "order takers."
+          Most development teams are &ldquo;order takers.&rdquo;
         </motion.h2>
 
         <motion.div 

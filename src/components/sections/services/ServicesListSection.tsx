@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { servicesData, ServiceItem } from "@/constants/servicesData";
 
@@ -12,7 +12,7 @@ function ServiceRow({ service, index }: { service: ServiceItem; index: number })
   
   const isEven = index % 2 === 0;
   
-  const contentVariants = {
+  const contentVariants: Variants = {
     hidden: { opacity: 0, x: isEven ? 40 : -40 },
     visible: { 
       opacity: 1, 
@@ -21,7 +21,7 @@ function ServiceRow({ service, index }: { service: ServiceItem; index: number })
     }
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0.6, scale: 1.03 },
     visible: { 
       opacity: 1, 

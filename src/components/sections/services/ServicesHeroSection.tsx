@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { Check } from "lucide-react";
 
@@ -28,7 +28,7 @@ interface ServicesHeroSectionProps {
 }
 
 export default function ServicesHeroSection({ onExploreClick }: ServicesHeroSectionProps) {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, x: -40 },
     visible: { 
       opacity: 1, 
@@ -37,7 +37,7 @@ export default function ServicesHeroSection({ onExploreClick }: ServicesHeroSect
     }
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, x: 40 },
     visible: { 
       opacity: 1, 

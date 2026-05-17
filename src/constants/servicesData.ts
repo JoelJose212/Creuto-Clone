@@ -1,6 +1,8 @@
 import { SERVICE_COLORS } from "./serviceColors";
 import { ServiceItem } from "@/types/services";
 
+export type { ServiceItem };
+
 export const servicesData: ServiceItem[] = [
   {
     id: "custom-software",

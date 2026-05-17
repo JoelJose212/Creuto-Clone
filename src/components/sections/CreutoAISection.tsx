@@ -5,8 +5,6 @@ import { BrainCircuit } from "lucide-react"
 import Link from "next/link"
 import SectionWrapper from "@/components/shared/SectionWrapper"
 
-const MotionLink = motion.create(Link)
-
 export default function CreutoAISection() {
   return (
     <SectionWrapper className="border-y border-border bg-surface px-[5%] py-[80px]">
@@ -22,14 +20,18 @@ export default function CreutoAISection() {
           <p className="mb-[40px] max-w-[500px] font-sans text-[16px] font-[300] leading-[1.8] text-muted">
             Creuto.AI builds custom AI products, automation workflows, and intelligent systems for businesses ready to move beyond manual. From early-stage startups to scaling enterprises — we turn AI potential into measurable business results.
           </p>
-          <MotionLink
-            href="#"
+          <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-block rounded-[8px] bg-blue px-[24px] py-[12px] font-sans text-[15px] font-[500] text-[#ffffff] transition-colors duration-200 hover:bg-blue-hover"
+            className="inline-block"
           >
-            Know more about Creuto AI &rarr;
-          </MotionLink>
+            <Link
+              href="#"
+              className="inline-block rounded-[8px] bg-blue px-[24px] py-[12px] font-sans text-[15px] font-[500] text-[#ffffff] transition-colors duration-200 hover:bg-blue-hover"
+            >
+              Know more about Creuto AI &rarr;
+            </Link>
+          </motion.div>
         </div>
 
         {/* Right Side Visual */}

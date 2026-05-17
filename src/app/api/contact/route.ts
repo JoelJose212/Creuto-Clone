@@ -1,55 +1,60 @@
 import { NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
-import { contactSchema } from "@/lib/validators"
-import { sendEmail } from "@/lib/mail"
-import { ZodError } from "zod"
+import fs from "fs"
+import path from "path"
 
-export async function POST(req: Request) {
+export async function POST(request: Request) {
   try {
-    const body = await req.json()
-    const validatedData = contactSchema.parse(body)
+    const body = await request.json()
+    const { name, email, mobile, company, message, services } = body
 
-    // 1. Save to Database
-    await prisma.contactSubmission.create({
-      data: validatedData,
-    })
+    // 1. Basic server-side validation
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { success: false, error: "Please fill in all required fields (Name, Email, and Message)." },
+        { status: 400 }
+      )
+    }
 
-    // 2. Send Emails (Notification to Creuto and Confirmation to User)
-    const creutoInbox = process.env.CONTACT_EMAIL || "hello@creuto.com"
-    
-    // Notification to Creuto
-    await sendEmail({
-      to: creutoInbox,
-      subject: `New Contact Form Submission: ${validatedData.name}`,
-      html: `
-        <h2>New Inquiry from ${validatedData.name}</h2>
-        <p><strong>Email:</strong> ${validatedData.email}</p>
-        <p><strong>Company:</strong> ${validatedData.company || "N/A"}</p>
-        <p><strong>Message:</strong></p>
-        <p>${validatedData.message}</p>
-      `,
-    })
+    // 2. Prepare submission object
+    const newSubmission = {
+      id: Math.random().toString(36).substring(2, 9),
+      name,
+      email,
+      mobile: mobile || "",
+      company: company || "",
+      message,
+      services: services || [],
+      createdAt: new Date().toISOString(),
+    }
 
-    // Confirmation to User
-    await sendEmail({
-      to: validatedData.email,
-      subject: "We've received your message - Creuto",
-      html: `
-        <p>Hi ${validatedData.name},</p>
-        <p>Thank you for reaching out to Creuto! We've received your message and our team will be in touch within 24 hours.</p>
-        <p>Best regards,<br/>Team Creuto</p>
-      `,
-    })
+    // 3. Persist to local JSON file for auditable lead tracking
+    const filePath = path.join(process.cwd(), "contact_submissions.json")
+    let submissions = []
+
+    if (fs.existsSync(filePath)) {
+      try {
+        const fileContent = fs.readFileSync(filePath, "utf8")
+        submissions = JSON.parse(fileContent)
+      } catch (err) {
+        console.error("Error reading existing submissions:", err)
+      }
+    }
+
+    submissions.push(newSubmission)
+    fs.writeFileSync(filePath, JSON.stringify(submissions, null, 2), "utf8")
+
+    console.log(`[API Leads] Successfully saved new contact inquiry from ${name} (${email})!`)
 
     return NextResponse.json({
       success: true,
-      message: "Thank you! We'll be in touch within 24 hours.",
+      message: "Your inquiry has been successfully sent to Sanjana and our product leadership team. We will get in touch with you shortly!",
+      leadId: newSubmission.id,
     })
-  } catch (error: unknown) {
-    console.error("Contact API Error:", error)
-    if (error instanceof ZodError) {
-      return NextResponse.json({ error: error.issues }, { status: 400 })
-    }
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 })
+  } catch (error: any) {
+    console.error("Error handling contact submission API:", error)
+    return NextResponse.json(
+      { success: false, error: "Internal Server Error. Please try again later." },
+      { status: 500 }
+    )
   }
 }

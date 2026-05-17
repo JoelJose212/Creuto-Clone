@@ -72,7 +72,7 @@ export default function AboutStorySection() {
         <div className="w-full md:w-1/2 flex items-center p-[24px] md:py-[64px] md:pl-[64px] md:pr-[5%]">
           <AnimatedText initialX={40}>
             <h3 className="font-bricolage text-[24px] md:text-[28px] font-semibold text-[#23272e] tracking-[-0.5px] leading-[1.5]">
-              You give them a requirement, they build it, and they send you a bill even if that feature is a mistake for your business. They focus on clearing tickets, while you're left worrying if the product will actually survive the market.
+              You give them a requirement, they build it, and they send you a bill even if that feature is a mistake for your business. They focus on clearing tickets, while you&apos;re left worrying if the product will actually survive the market.
             </h3>
           </AnimatedText>
         </div>
@@ -91,7 +91,7 @@ export default function AboutStorySection() {
         <div className="w-full md:w-1/2 flex items-center p-[24px] md:py-[64px] md:pr-[64px] md:pl-[5%]">
           <AnimatedText initialX={-40}>
             <h2 className="font-bricolage text-[32px] md:text-[40px] font-bold text-[#23272e] tracking-[-0.64px] leading-[1.2]">
-              We started CREUTO in <span className="text-[#1746ea]">2023</span> because you don't need more 'order takers.'
+              We started CREUTO in <span className="text-[#1746ea]">2023</span> because you don&apos;t need more &apos;order takers.&apos;
             </h2>
           </AnimatedText>
         </div>
@@ -110,7 +110,7 @@ export default function AboutStorySection() {
         <div className="w-full md:w-1/2 flex items-center p-[24px] md:py-[64px] md:pl-[64px] md:pr-[5%]">
           <AnimatedText initialX={40}>
             <h3 className="font-bricolage text-[24px] md:text-[28px] font-semibold text-[#23272e] tracking-[-0.5px] leading-[1.5]">
-              You need a partner who understands that every dollar you spend is a bet on your future. We don't just write code; we consult. If we see a path that is faster, cheaper, or better for your users, we tell you.
+              You need a partner who understands that every dollar you spend is a bet on your future. We don&apos;t just write code; we consult. If we see a path that is faster, cheaper, or better for your users, we tell you.
             </h3>
           </AnimatedText>
         </div>

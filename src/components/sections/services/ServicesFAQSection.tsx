@@ -24,7 +24,7 @@ export default function ServicesFAQSection() {
         </h2>
         
         <p className="font-bricolage text-[15.2px] font-medium text-[#666666] leading-[1.65] max-w-[640px] mb-[56px]">
-          Here are some common things people ask us before building their custom software. If you're still wondering about something, we're just a message away!
+          Here are some common things people ask us before building their custom software. If you&apos;re still wondering about something, we&apos;re just a message away!
         </p>
 
         <div className="max-w-[840px] w-full flex flex-col">

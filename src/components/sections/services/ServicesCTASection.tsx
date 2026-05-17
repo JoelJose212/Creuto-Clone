@@ -1,13 +1,13 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 
 export default function ServicesCTASection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -17,7 +17,7 @@ export default function ServicesCTASection() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
@@ -39,7 +39,7 @@ export default function ServicesCTASection() {
           className="rounded-[50px] border-[0.8px] border-[rgba(255,255,255,0.25)] bg-[rgba(255,255,255,0.1)] p-[6px_18px] font-bricolage text-[10.4px] font-semibold uppercase tracking-[0.15em] text-white mb-[24px] inline-block text-center"
           variants={itemVariants}
         >
-          LET'S CONNECT
+          LET&apos;S CONNECT
         </motion.div>
         
         <motion.h2 
@@ -53,7 +53,7 @@ export default function ServicesCTASection() {
           className="text-[16px] md:text-[17px] font-normal text-[rgba(255,255,255,0.8)] leading-[1.75] text-center max-w-[520px] mb-[40px]"
           variants={itemVariants}
         >
-          Ready to take the first step towards unlocking opportunities, realizing goals, and embracing innovation? We're here and eager to connect.
+          Ready to take the first step towards unlocking opportunities, realizing goals, and embracing innovation? We&apos;re here and eager to connect.
         </motion.p>
         
         <motion.div 

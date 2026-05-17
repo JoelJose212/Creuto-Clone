@@ -2,12 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { CaseStudyItem } from "@/types/caseStudies";
 
 function CaseStudyCardComponent({ item }: { item: CaseStudyItem }) {
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30, scale: 0.97 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
     exit: { opacity: 0, scale: 0.95, transition: { duration: 0.2 } },

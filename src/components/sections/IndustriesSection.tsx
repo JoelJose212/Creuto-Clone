@@ -1,73 +1,103 @@
 "use client"
 
-import { useState } from "react"
-import SectionWrapper from "@/components/shared/SectionWrapper"
-import { cn } from "@/lib/cn"
+import { motion } from "framer-motion"
+import Image from "next/image"
 
 const INDUSTRIES = [
-  "Healthcare",
-  "Fitness",
-  "E-commerce & Retail",
-  "Social Media & Wellness",
-  "Education",
-  "ERP",
-  "Travel & Hospitality",
-  "Streaming",
-  "Fintech",
-  "Real Estate",
-  "Logistics",
-  "SaaS",
+  {
+    title: "Travel & Hospitality",
+    image: "/img/industries/travel.png"
+  },
+  {
+    title: "Streaming",
+    image: "/img/industries/streaming.png"
+  },
+  {
+    title: "Healthcare",
+    image: "/img/industries/healthcare.png"
+  },
+  {
+    title: "Fitness",
+    image: "/img/industries/fitness.png"
+  },
+  {
+    title: "E-commerce & Retail",
+    image: "/img/industries/ecommerce.png"
+  }
 ]
 
 export default function IndustriesSection() {
-  const [isHovered, setIsHovered] = useState(false)
-
   return (
-    <SectionWrapper className="border-y border-border bg-surface overflow-hidden">
-      <div className="mb-[48px] text-center">
-        <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
-          OUR EXPERTISE
-        </span>
-        <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
-          Industries We Specialise In.
-        </h2>
-        <p className="mx-auto max-w-[700px] font-sans text-[16px] font-[300] text-muted">
-          Explore our comprehensive suite of solutions. From software development to digital transformation, we adapt to each sector&apos;s specific needs.
-        </p>
-      </div>
+    <section className="bg-white py-[120px] px-[5%] overflow-hidden relative">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-[64px]">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-[16px] inline-block text-[13px] font-bold uppercase tracking-[0.2em] text-[#2563eb]"
+          >
+            OUR EXPERTISE
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mb-[20px] font-jakarta text-[clamp(32px,5vw,52px)] font-[800] leading-[1.1] text-[#111827] tracking-tight"
+          >
+            Industries We Specialise In.
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="max-w-[640px] font-jakarta text-[17px] font-[500] text-[#4B5563]"
+          >
+            Explore our comprehensive suite of solutions. From software development to digital transformation, we adapt to each sector&apos;s specific needs.
+          </motion.p>
+        </div>
 
-      <div 
-        className="flex w-full overflow-hidden"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <div className={cn("flex w-max animate-marqueeLeftFast", isHovered && "[animation-play-state:paused]")}>
-          {/* First Set */}
-          <div className="flex shrink-0 gap-[16px] pr-[16px]">
-            {INDUSTRIES.map((industry, i) => (
-              <div
-                key={`set1-${i}`}
-                className="inline-flex cursor-pointer items-center gap-[10px] whitespace-nowrap rounded-[100px] border border-border bg-bg px-[24px] py-[14px] font-sans text-[14px] font-[500] text-text transition-colors duration-200 hover:border-blue hover:text-heading"
-              >
-                <div className="h-[8px] w-[8px] rounded-full bg-blue" />
-                {industry}
+        {/* Gorgeous Horizontal Photograph Slider */}
+        <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory px-2 -mx-2">
+          {INDUSTRIES.map((ind, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              whileHover={{ y: -6 }}
+              className="group relative h-[420px] w-[300px] md:h-[480px] md:w-[360px] shrink-0 overflow-hidden rounded-[32px] snap-start shadow-xl shadow-black/5 cursor-pointer"
+            >
+              {/* Background Image with Hover Scale */}
+              <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-110">
+                <Image
+                  src={ind.image}
+                  alt={ind.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 300px, 360px"
+                />
               </div>
-            ))}
-          </div>
-          {/* Second Set */}
-          <div className="flex shrink-0 gap-[16px] pr-[16px]">
-            {INDUSTRIES.map((industry, i) => (
-              <div
-                key={`set2-${i}`}
-                className="inline-flex cursor-pointer items-center gap-[10px] whitespace-nowrap rounded-[100px] border border-border bg-bg px-[24px] py-[14px] font-sans text-[14px] font-[500] text-text transition-colors duration-200 hover:border-blue hover:text-heading"
-              >
-                <div className="h-[8px] w-[8px] rounded-full bg-blue" />
-                {industry}
+
+              {/* Dark Gradient Overlay */}
+              <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-95" />
+
+              {/* Text elements at bottom left */}
+              <div className="absolute bottom-10 left-10 right-10 z-20">
+                <div className="mb-3 font-jakarta text-[12px] font-[800] uppercase tracking-[0.2em] text-[#2563eb]">
+                  Sector {i + 1}
+                </div>
+                <h3 className="font-jakarta text-[26px] md:text-[30px] font-[800] leading-tight text-white tracking-tight">
+                  {ind.title}
+                </h3>
               </div>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
-    </SectionWrapper>
+    </section>
   )
 }

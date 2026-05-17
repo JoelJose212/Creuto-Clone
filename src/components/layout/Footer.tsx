@@ -9,7 +9,7 @@ import { z } from "zod"
 import { motion } from "framer-motion"
 import { Loader2 } from "lucide-react"
 
-const MotionLink = motion.create(Link)
+
 
 const newsletterSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email" }),
@@ -108,8 +108,6 @@ export default function Footer() {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
   const [errorMessage, setErrorMessage] = useState("")
 
-  if (pathname?.startsWith("/dashboard")) return null
-
   const {
     register,
     handleSubmit,
@@ -142,6 +140,8 @@ export default function Footer() {
       setErrorMessage("Something went wrong. Please try again.")
     }
   }
+
+  if (pathname?.startsWith("/dashboard")) return null
 
   return (
     <footer className="border-t border-[#1a1e3a] bg-[#0a0c1a] px-[5%] pb-[32px] pt-[64px]">
@@ -259,15 +259,18 @@ export default function Footer() {
             {SOCIALS.map((social, i) => {
               const Icon = social.icon
               return (
-                <MotionLink
+                <motion.div
                   key={i}
-                  href={social.href}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex h-[36px] w-[36px] items-center justify-center rounded-[8px] border border-[#1a1e3a] bg-transparent text-[#7b80a8] transition-colors duration-200 hover:border-blue hover:text-blue"
                 >
-                  <Icon width={16} height={16} />
-                </MotionLink>
+                  <Link
+                    href={social.href}
+                    className="flex h-[36px] w-[36px] items-center justify-center rounded-[8px] border border-[#1a1e3a] bg-transparent text-[#7b80a8] transition-colors duration-200 hover:border-blue hover:text-blue"
+                  >
+                    <Icon width={16} height={16} />
+                  </Link>
+                </motion.div>
               )
             })}
           </div>

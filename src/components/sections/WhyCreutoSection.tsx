@@ -1,7 +1,6 @@
 "use client"
 
-import { motion, Variants } from "framer-motion"
-import SectionWrapper from "@/components/shared/SectionWrapper"
+import { motion } from "framer-motion"
 
 const CARDS = [
   {
@@ -46,89 +45,94 @@ const CARDS = [
   },
 ]
 
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 },
-  },
-}
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-}
-
 export default function WhyCreutoSection() {
   return (
-    <SectionWrapper>
+    <section className="bg-[#2563eb] py-[100px] px-[5%]">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-[48px]">
-          <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
+        <div className="mb-[64px] text-center md:text-left">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-[16px] inline-block text-[13px] font-bold uppercase tracking-[0.15em] text-white/90"
+          >
             THE CREUTO DIFFERENCE
-          </span>
-          <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mb-[20px] font-jakarta text-[clamp(32px,5vw,52px)] font-[800] leading-[1.1] text-white"
+          >
             Why Businesses Choose CREUTO?
-          </h2>
-          <p className="font-sans text-[16px] font-[300] text-muted">
-            In a cluttered market, your product demands certainty.
-          </p>
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="max-w-[600px] font-jakarta text-[18px] font-[500] text-white/80"
+          >
+            In a cluttered market, your product demands certainty. We provide the engineering discipline to ensure success.
+          </motion.p>
         </div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="mb-[48px] grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] overflow-hidden rounded-[16px] border border-border"
-        >
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {CARDS.map((card, i) => (
             <motion.div
               key={i}
-              variants={itemVariants}
-              className="border-b border-r border-border bg-surface px-[32px] py-[36px] transition-colors duration-250 hover:bg-surface-2"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: (i % 4) * 0.1 }}
+              whileHover={{ scale: 1.02, backgroundColor: "#1e40af" }}
+              className="group flex flex-col rounded-[24px] bg-[#1d4ed8] p-10 transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/10"
             >
-              <div className="mb-[20px] font-display text-[12px] font-[700] tracking-[0.08em] text-blue">
+              <div className="mb-6 font-jakarta text-[30px] font-[800] leading-none text-white">
                 {card.num}
               </div>
-              <h3 className="mb-[12px] font-display text-[17px] font-[700] text-heading">
+              <h3 className="mb-4 font-jakarta text-[22px] font-[700] leading-tight text-white">
                 {card.title}
               </h3>
-              <p className="font-sans text-[14px] font-[300] leading-[1.6] text-muted">
+              <p className="font-jakarta text-[16px] font-[500] leading-relaxed text-white/80">
                 {card.desc}
               </p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
+        {/* CEO Quote Card */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col gap-[32px] rounded-[16px] border border-border bg-surface p-[40px]"
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          className="mt-16 flex flex-col gap-[40px] rounded-[32px] bg-white p-[48px] md:p-[64px] shadow-xl"
         >
-          <div className="flex gap-[24px]">
-            <div className="w-[4px] self-stretch rounded-[4px] bg-blue" />
-            <blockquote className="font-sans text-[18px] font-[300] italic leading-[1.75] text-text">
-              &quot;At CREUTO, we bypass theoretical delivery models, opting instead for a strict engineering discipline. We combine advanced AI expertise with a commitment to measurable ROI, ensuring every product we ship is ready for real users, real revenue, and real market traction.&quot;
-            </blockquote>
+          <div className="flex flex-col md:flex-row gap-[32px] items-start">
+            <div className="w-[6px] self-stretch rounded-full bg-[#2563eb] hidden md:block" />
+            <div className="flex-1">
+              <blockquote className="font-jakarta text-[20px] md:text-[24px] font-[600] italic leading-[1.6] text-[#111827]">
+                &quot;At CREUTO, we bypass theoretical delivery models, opting instead for a strict engineering discipline. We combine advanced AI expertise with a commitment to measurable ROI, ensuring every product we ship is ready for real users, real revenue, and real market traction.&quot;
+              </blockquote>
+            </div>
           </div>
-          <div className="flex items-center gap-[16px] ml-[28px]">
-            <div className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-full border-[2px] border-[#1531FF] bg-[rgba(21,49,255,0.15)]">
-              <span className="font-display text-[14px] font-[700] text-blue">NR</span>
+          <div className="flex items-center gap-[20px]">
+            <div className="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-full bg-[#2563eb]/10 border-2 border-[#2563eb]/20">
+              <span className="font-jakarta text-[16px] font-[800] text-[#2563eb]">NR</span>
             </div>
             <div>
-              <div className="font-sans text-[14px] font-[600] text-heading">
+              <div className="font-jakarta text-[18px] font-[700] text-[#111827]">
                 Nihar Ranjan Rout
               </div>
-              <div className="font-sans text-[12px] text-muted">
+              <div className="font-jakarta text-[14px] font-[600] uppercase tracking-wider text-[#6B7280]">
                 CEO & CO-FOUNDER, Creuto
               </div>
             </div>
           </div>
         </motion.div>
       </div>
-    </SectionWrapper>
+    </section>
   )
 }

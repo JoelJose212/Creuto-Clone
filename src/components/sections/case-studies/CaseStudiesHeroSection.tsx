@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { motion, useInView, useSpring, useTransform } from "framer-motion";
+import { motion, useInView, useSpring, useTransform, Variants } from "framer-motion";
 
 function CountUp({ end, suffix }: { end: number; suffix: string }) {
   const ref = useRef(null);
@@ -34,7 +34,7 @@ export default function CaseStudiesHeroSection() {
   const headline = "We build the brands others follow.";
   const words = headline.split(" ");
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -44,12 +44,12 @@ export default function CaseStudiesHeroSection() {
     },
   };
 
-  const wordVariants = {
+  const wordVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } },
   };
 
-  const statsContainerVariants = {
+  const statsContainerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -60,7 +60,7 @@ export default function CaseStudiesHeroSection() {
     },
   };
 
-  const statVariants = {
+  const statVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };

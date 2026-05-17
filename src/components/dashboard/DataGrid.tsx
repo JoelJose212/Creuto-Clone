@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/cn"
-import { MoreHorizontal, ExternalLink, ShieldCheck, Zap, Server } from "lucide-react"
+import { MoreHorizontal, ExternalLink, Server } from "lucide-react"
 
 const DATA = [
   { id: "PRJ-001", name: "Creuto-AI-Core", type: "Production", status: "Active", latency: "24ms", health: "100%" },

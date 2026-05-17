@@ -2,64 +2,85 @@
 
 import { motion, Variants } from "framer-motion"
 import Link from "next/link"
-import SectionWrapper from "@/components/shared/SectionWrapper"
+import Image from "next/image"
 
-const MotionLink = motion.create(Link)
+
 
 const PROJECTS = [
   {
-    badge: "AI POWERED",
-    gradient: "linear-gradient(135deg, #0b0d1e, rgba(21,49,255,0.15))",
+    category: "SKODA",
     title: "AI-Powered Sales Training App for Škoda Auto",
-    desc: "Creuto built an AI-powered training platform for Škoda Auto, centralizing learning across its dealership network with personalized content based on role and behavior.",
+    desc: "Centralizing learning across its dealership network with personalized AI content.",
+    image: "/img/projects/skoda.png",
+    link: "/case-studies/skoda"
   },
   {
-    badge: "IOT SMART CITY",
-    gradient: "linear-gradient(135deg, #0b0d1e, rgba(0,255,136,0.1))",
+    category: "AI POWERED",
     title: "IoT Smart City Platform for Binimise",
-    desc: "A cloud-native, IoT-powered smart city platform with web command dashboard, citizen mobile app, field staff app, and full IoT integration.",
+    desc: "A cloud-native, IoT-powered platform with full device integration and monitoring.",
+    image: "/img/projects/binimise.png",
+    link: "/case-studies/binimise"
   },
   {
-    badge: "CUSTOM ERP",
-    gradient: "linear-gradient(135deg, #0b0d1e, rgba(255,136,21,0.1))",
-    title: "Custom Cloud ERP for Large-Scale Industrial Operations",
-    desc: "A fully custom browser-based ERP system built to unify every department, eliminate silos, and scale with the business.",
+    category: "ERP SYSTEM",
+    title: "Custom Cloud ERP for Large-Scale Operations",
+    desc: "A fully custom browser-based ERP system built to unify every department.",
+    image: "/img/projects/erp.png",
+    link: "/case-studies/erp"
   },
   {
-    badge: "PAYROLL SYSTEM",
-    gradient: "linear-gradient(135deg, #0b0d1e, rgba(136,21,255,0.1))",
+    category: "Nomina HR",
     title: "Enterprise HR & Payroll Platform – Nomina",
-    desc: "A complete end-to-end HR and payroll platform covering employee onboarding to exit, attendance, leave, payroll, compliance, and reporting.",
-  },
+    desc: "A complete end-to-end HR and payroll platform for enterprise compliance.",
+    image: "/img/projects/nomina.png",
+    link: "/case-studies/nomina"
+  }
 ]
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.1 },
+    transition: { staggerChildren: 0.15 },
   },
 }
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 }
 
 export default function CaseStudiesSection() {
   return (
-    <SectionWrapper>
+    <section className="bg-white py-[120px] px-[5%]">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-[48px] text-center md:text-left">
-          <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
+        <div className="mb-[80px] text-center">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-[16px] inline-block text-[13px] font-bold uppercase tracking-[0.15em] text-[#2563eb]"
+          >
             OUR PROJECTS
-          </span>
-          <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
-            Our success stories.
-          </h2>
-          <p className="font-sans text-[16px] font-[300] text-muted">
-            Every business challenge is unique, and so is the solution.
-          </p>
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mb-[20px] font-jakarta text-[clamp(32px,5vw,52px)] font-[800] leading-[1.1] text-[#111827]"
+          >
+            Our Success Stories.
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="mx-auto max-w-[600px] font-jakarta text-[18px] font-[500] text-[#4B5563]"
+          >
+            Every business challenge is unique, and so is the solution. We build products that deliver measurable impact.
+          </motion.p>
         </div>
 
         <motion.div
@@ -67,53 +88,66 @@ export default function CaseStudiesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="mb-[48px] grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-[24px]"
+          className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16"
         >
           {PROJECTS.map((project, i) => (
             <motion.div
               key={i}
               variants={itemVariants}
-              className="group flex flex-col overflow-hidden rounded-[14px] border border-border bg-surface transition-all duration-250 hover:-translate-y-[4px] hover:border-blue"
+              className="group cursor-pointer"
             >
-              <div
-                className="relative flex h-[180px] w-full items-center justify-center overflow-hidden"
-                style={{ background: project.gradient }}
-              >
-                <div className="absolute left-[12px] top-[12px] rounded-full border border-[rgba(21,49,255,0.4)] bg-[rgba(21,49,255,0.2)] px-[10px] py-[4px] text-[10px] uppercase text-blue">
-                  {project.badge}
+              <Link href={project.link}>
+                <div className="relative aspect-[16/10] overflow-hidden rounded-[32px] bg-[#F3F4F6] mb-8 shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:shadow-blue/5">
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    fill 
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute top-6 left-6">
+                    <span className="rounded-full bg-white/90 backdrop-blur-md px-5 py-2.5 text-[12px] font-bold uppercase tracking-wider text-[#2563eb] shadow-sm">
+                      {project.category}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-1 flex-col p-[20px]">
-                <h3 className="mb-[12px] font-display text-[16px] font-[700] text-heading">
-                  {project.title}
-                </h3>
-                <p className="mb-[24px] flex-1 font-sans text-[13px] font-[300] leading-[1.6] text-muted">
-                  {project.desc}
-                </p>
-                <MotionLink
-                  href="#"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="inline-block font-sans text-[13px] font-[600] text-[#1531FF]"
-                >
-                  View Case Study &rarr;
-                </MotionLink>
-              </div>
+                <div className="px-2">
+                  <h3 className="mb-4 font-jakarta text-[26px] font-[800] leading-tight text-[#111827] group-hover:text-[#2563eb] transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="font-jakarta text-[17px] font-[500] leading-relaxed text-[#4B5563]">
+                    {project.desc}
+                  </p>
+                  <div className="mt-6 inline-flex items-center gap-2 font-jakarta text-[15px] font-[700] text-[#2563eb]">
+                    View Case Study
+                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
 
-        <div className="flex justify-center">
-          <MotionLink
-            href="#"
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-20 flex justify-center"
+        >
+          <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-block rounded-[10px] border border-border bg-transparent px-[32px] py-[14px] font-sans text-[15px] font-[600] text-heading transition-colors hover:border-blue"
           >
-            Check All Our Case Studies
-          </MotionLink>
-        </div>
+            <Link
+              href="/case-studies"
+              className="rounded-full bg-[#111827] px-10 py-4.5 text-[16px] font-bold text-white shadow-lg transition-all hover:bg-[#2563eb] hover:shadow-blue/20 block"
+            >
+              Check All Our Case Studies
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
-    </SectionWrapper>
+    </section>
   )
 }

@@ -7,10 +7,10 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import AnnouncementBanner from "./AnnouncementBanner"
 
-const MotionLink = motion.create(Link)
+
 
 const NAV_LINKS = [
-  { name: "Creuto.ai", href: "/creuto-ai" },
+  { name: "Creuto.ai", href: "/ai" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services", hasDropdown: true },
   { name: "Case Studies", href: "/case-studies" },
@@ -23,8 +23,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  if (pathname?.startsWith("/dashboard")) return null
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40)
@@ -32,6 +30,8 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  if (pathname === "/" || pathname === "/ai" || pathname === "/about" || pathname === "/services" || pathname === "/case-studies" || pathname === "/blogs" || pathname?.startsWith("/blogs/") || pathname === "/contact" || pathname === "/careers" || pathname?.startsWith("/careers/") || pathname?.startsWith("/dashboard")) return null
 
   return (
     <>
@@ -71,22 +71,28 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden items-center gap-3 lg:flex">
-            <MotionLink
-              href="/contact"
+            <motion.div
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="rounded-full border border-border bg-white px-7 py-2.5 font-jakarta text-[14.5px] font-bold text-heading transition-all hover:border-blue hover:text-blue"
             >
-              Contact Us
-            </MotionLink>
-            <MotionLink
-              href="#"
+              <Link
+                href="/contact"
+                className="rounded-full border border-border bg-white px-7 py-2.5 font-jakarta text-[14.5px] font-bold text-heading transition-all hover:border-blue hover:text-blue block"
+              >
+                Contact Us
+              </Link>
+            </motion.div>
+            <motion.div
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="rounded-full bg-blue px-7 py-2.5 font-jakarta text-[14.5px] font-bold text-white shadow-lg shadow-blue/20 transition-all hover:bg-blue-hover"
             >
-              Book A Call
-            </MotionLink>
+              <Link
+                href="#"
+                className="rounded-full bg-blue px-7 py-2.5 font-jakarta text-[14.5px] font-bold text-white shadow-lg shadow-blue/20 transition-all hover:bg-blue-hover block"
+              >
+                Book A Call
+              </Link>
+            </motion.div>
           </div>
 
           {/* Mobile Menu Toggle */}

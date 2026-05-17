@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { X } from "lucide-react";
 import { neverDone } from "@/constants/neverDone";
 
@@ -10,7 +10,7 @@ export default function AboutNeverDoneSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -20,7 +20,7 @@ export default function AboutNeverDoneSection() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, x: -30 },
     visible: {
       opacity: 1,
@@ -40,7 +40,7 @@ export default function AboutNeverDoneSection() {
           </div>
           
           <h2 className="font-bricolage text-[32px] md:text-[44px] font-bold text-[#ffffff] tracking-[-0.88px] leading-[1.1] mb-[16px]">
-            What We've Never Done
+            What We&apos;ve Never Done
           </h2>
           
           <p className="font-bricolage text-[18px] md:text-[20px] font-medium text-[rgba(255,255,255,0.6)] mb-[48px]">

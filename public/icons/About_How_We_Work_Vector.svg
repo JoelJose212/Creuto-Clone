@@ -1,4 +1,3 @@
-<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="300" rx="24" fill="#f8f8f8"/>
-  <path d="M100 150H300M200 50V250" stroke="#1746ea" stroke-width="1" stroke-opacity="0.2"/>
+<svg width="281" height="184" viewBox="0 0 281 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 47.5342V0H280.926V47.5338C280.926 59.5981 275.97 71.1421 267.221 79.4609L170.806 171.082C153.802 187.241 127.123 187.241 110.12 171.082L13.7051 79.4609C4.95547 71.1421 0 59.598 0 47.5342Z" fill="#1746EA"/>
 </svg>

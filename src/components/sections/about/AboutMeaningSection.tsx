@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
 
 export default function AboutMeaningSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -18,7 +18,7 @@ export default function AboutMeaningSection() {
     },
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -108,7 +108,7 @@ export default function AboutMeaningSection() {
             CREUTO
           </div>
           <div className="text-[14.4px] font-medium text-[#23272e] leading-[1.65]">
-            CREUTO Means Building Beyond The Obvious. Looking Further Into A Product's Future Than Most Are Willing To See.
+            CREUTO Means Building Beyond The Obvious. Looking Further Into A Product&apos;s Future Than Most Are Willing To See.
           </div>
         </motion.div>
       </motion.div>

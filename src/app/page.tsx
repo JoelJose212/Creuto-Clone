@@ -1,74 +1,187 @@
 import { Metadata } from "next"
-import dynamic from "next/dynamic"
-import { Suspense } from "react"
-import HeroSection from "@/components/sections/HeroSection"
-import MarqueeSection from "@/components/sections/MarqueeSection"
-import WhyCreutoSection from "@/components/sections/WhyCreutoSection"
-import CaseStudiesSection from "@/components/sections/CaseStudiesSection"
-import FrameworkSection from "@/components/sections/FrameworkSection"
-import ServicesSection from "@/components/sections/ServicesSection"
-import StatsSection from "@/components/sections/StatsSection"
-import TechStackSection from "@/components/sections/TechStackSection"
-import AwardsSection from "@/components/sections/AwardsSection"
-import CreutoAISection from "@/components/sections/CreutoAISection"
-import ProcessSection from "@/components/sections/ProcessSection"
-import IndustriesSection from "@/components/sections/IndustriesSection"
-import FAQSection from "@/components/sections/FAQSection"
-import CTASection from "@/components/sections/CTASection"
-import Footer from "@/components/layout/Footer"
-
-// Lazy load Testimonials for performance
-const TestimonialsSection = dynamic(() => import("@/components/sections/TestimonialsSection"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex h-[400px] w-full items-center justify-center bg-surface">
-      <div className="h-8 w-8 animate-spin rounded-full border-4 border-blue border-t-transparent"></div>
-    </div>
-  ),
-})
+import fs from "fs"
+import path from "path"
 
 export const metadata: Metadata = {
-  title: "Creuto | Premier AI & Software Engineering Partner",
-  description: "Creuto specializes in building high-performance custom software, mobile apps, and AI-driven solutions for ambitious startups and enterprises globally.",
-  keywords: ["Software Development", "AI Engineering", "Mobile Apps", "MVP Builder", "Product Engineering"],
-  openGraph: {
-    title: "Creuto | Premier AI & Software Engineering Partner",
-    description: "Creuto specializes in building high-performance custom software, mobile apps, and AI-driven solutions.",
-    url: "https://creuto.com",
-    siteName: "Creuto",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: "en_US",
-    type: "website",
+  title: "AI-First Product Development - Build Intelligent Software | Creuto",
+  description: "Creuto builds high-performance AI-powered software products for startups and enterprises. Custom software development, mobile apps, and AI solutions designed to accelerate business growth.",
+  keywords: ["Custom Software Development", "AI Solutions", "Mobile App Development", "Creuto", "Product Engineering"],
+  alternates: {
+    canonical: "https://creuto.com",
   },
 }
 
-export default function Home() {
+interface CacheData {
+  processedHtml: string
+  styles: string[]
+  unlayeredInlineStyles: string[]
+}
+
+let cache: CacheData | null = null
+
+// Helper to remove CSS layers dynamically
+function unlayerCSS(css: string): string {
+  let result = ""
+  let i = 0
+  while (i < css.length) {
+    if (css.substring(i, i + 12) === "@layer mui {") {
+      i += 12
+      let braceCount = 1
+      let j = i
+      while (j < css.length && braceCount > 0) {
+        if (css[j] === "{") braceCount++
+        else if (css[j] === "}") braceCount--
+        j++
+      }
+      const layerContent = css.substring(i, j - 1)
+      result += unlayerCSS(layerContent)
+      i = j
+    } else if (css.substring(i, i + 11) === "@layer mui{") {
+      i += 11
+      let braceCount = 1
+      let j = i
+      while (j < css.length && braceCount > 0) {
+        if (css[j] === "{") braceCount++
+        else if (css[j] === "}") braceCount--
+        j++
+      }
+      const layerContent = css.substring(i, j - 1)
+      result += unlayerCSS(layerContent)
+      i = j
+    } else {
+      result += css[i]
+      i++
+    }
+  }
+  return result
+}
+
+export default function HomePage() {
+  if (cache !== null) {
+    return renderPage(cache)
+  }
+
+  const bodyPath = path.join(process.cwd(), "index_extracted_body.html")
+  const stylesPath = path.join(process.cwd(), "index_extracted_styles.json")
+
+  let bodyHtml = ""
+  let stylesConfig = { styles: [] as string[], inlineStyles: [] as string[] }
+
+  try {
+    bodyHtml = fs.readFileSync(bodyPath, "utf8")
+  } catch (error) {
+    console.error("Error reading index_extracted_body.html:", error)
+  }
+
+  try {
+    const stylesContent = fs.readFileSync(stylesPath, "utf8")
+    stylesConfig = JSON.parse(stylesContent)
+  } catch (error) {
+    console.error("Error reading index_extracted_styles.json:", error)
+  }
+
+  // 1. Convert relative asset paths to absolute (starting with '/')
+  let processedHtml = bodyHtml
+    .replace(/(["'\s])(img|icons|favicon)\//g, "$1/$2/")
+    .replace(/(["'\s])_next\//g, "$1/cloned_next/")
+    .replace(/(["'\s])(favicon652a\.ico)/g, "$1/$2")
+
+  // 2. Map static navigation .html links to clean Next.js routes
+  processedHtml = processedHtml
+    .replace(/href="ai\.html"/g, 'href="/ai"')
+    .replace(/href="about\.html"/g, 'href="/about"')
+    .replace(/href="services\.html"/g, 'href="/services"')
+    .replace(/href="case-studies\.html"/g, 'href="/case-studies"')
+    .replace(/href="contact\.html"/g, 'href="/contact"')
+    .replace(/href="careers\.html"/g, 'href="/careers"')
+    .replace(/href="portfolio\.html"/g, 'href="/portfolio"')
+    .replace(/href="blog\.html"/g, 'href="/blogs"')
+    .replace(/href="index\.html"/g, 'href="/"')
+
+  // Map sub-services inside body/footer
+  processedHtml = processedHtml
+    .replace(/href="services\/custom-software-development\.html"/g, 'href="/services"')
+    .replace(/href="services\/mobile-apps-development\.html"/g, 'href="/services"')
+    .replace(/href="services\/web-app-development\.html"/g, 'href="/services"')
+    .replace(/href="services\/ai-engineering-services\.html"/g, 'href="/services"')
+    .replace(/href="services\/devops-cloud-engineering\.html"/g, 'href="/services"')
+    .replace(/href="services\/mvp-development\.html"/g, 'href="/services"')
+
+  // 3. Map dynamic sub-routes (e.g. careers detail and blogs detail)
+  processedHtml = processedHtml
+    .replace(/href="careers\/([a-zA-Z0-9_-]+)\.html"/g, 'href="/careers/$1"')
+    .replace(/href="blog\/([a-zA-Z0-9_-]+)\.html"/g, 'href="/blogs/$1"')
+
+  // 4. Overwrite pre-rendered entrance animation opacities (opacity:0 -> opacity:1)
+  processedHtml = processedHtml
+    .replace(/opacity\s*:\s*0/gi, 'opacity:1')
+    .replace(/transform\s*:\s*translateX\(-40px\)/gi, 'transform:none')
+    .replace(/transform\s*:\s*translateX\(40px\)/gi, 'transform:none')
+    .replace(/transform\s*:\s*translateY\(20px\)/gi, 'transform:none')
+    .replace(/transform\s*:\s*translateY\(30px\)/gi, 'transform:none')
+    .replace(/transform\s*:\s*translateY\(40px\)/gi, 'transform:none')
+    .replace(/transform\s*:\s*scale\(0\.95\)/gi, 'transform:none')
+    .replace(/transform\s*:\s*scale\(0\.98\)/gi, 'transform:none')
+
+  // 5. Compute unlayered inline styles
+  const unlayeredInlineStyles = stylesConfig.inlineStyles.map((styleBlock) => {
+    const cssContent = styleBlock
+      .replace(/<style[^>]*>/, "")
+      .replace(/<\/style>/, "")
+    return unlayerCSS(cssContent)
+  })
+
+  // Populate cache
+  cache = {
+    processedHtml,
+    styles: stylesConfig.styles,
+    unlayeredInlineStyles,
+  }
+
+  return renderPage(cache)
+}
+
+function renderPage(data: CacheData) {
   return (
-    <main>
-      <HeroSection />
-      <MarqueeSection />
-      <WhyCreutoSection />
-      <CaseStudiesSection />
-      <FrameworkSection />
-      <ServicesSection />
-      <StatsSection />
-      <TechStackSection />
-      <AwardsSection />
-      <Suspense fallback={<div>Loading Testimonials...</div>}>
-        <TestimonialsSection />
-      </Suspense>
-      <CreutoAISection />
-      <ProcessSection />
-      <IndustriesSection />
-      <FAQSection />
-      <CTASection />
-      <Footer />
-    </main>
+    <>
+      {/* Load original CSS stylesheets */}
+      {data.styles.map((href, index) => {
+        const processedHref = href.replace(/_next\//g, "cloned_next/")
+        const absoluteHref = processedHref.startsWith("/") ? processedHref : `/${processedHref}`
+        return <link key={index} rel="stylesheet" href={absoluteHref} />
+      })}
+
+      {/* Inject Emotion/MUI global and local inline styling layers */}
+      {data.unlayeredInlineStyles.map((unlayeredCss, index) => (
+        <style
+          key={`inline-${index}`}
+          dangerouslySetInnerHTML={{ __html: unlayeredCss }}
+        />
+      ))}
+
+      {/* Enforce correct Bricolage Grotesque font family */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        #creuto-homepage,
+        #creuto-homepage h1,
+        #creuto-homepage h2,
+        #creuto-homepage h3,
+        #creuto-homepage h4,
+        #creuto-homepage h5,
+        #creuto-homepage h6,
+        #creuto-homepage p,
+        #creuto-homepage span,
+        #creuto-homepage li,
+        #creuto-homepage a,
+        #creuto-homepage button,
+        #creuto-homepage label,
+        #creuto-homepage div,
+        #creuto-homepage .MuiTypography-root {
+          font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
+        }
+      `}} />
+
+      {/* Render the dynamic parsed body layout */}
+      <div id="creuto-homepage" dangerouslySetInnerHTML={{ __html: data.processedHtml }} />
+    </>
   )
 }

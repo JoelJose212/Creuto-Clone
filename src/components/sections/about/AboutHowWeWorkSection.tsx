@@ -2,14 +2,14 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { howWeWork } from "@/constants/howWeWork";
 
 function AboutHowWeWorkSectionComponent() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -19,7 +19,7 @@ function AboutHowWeWorkSectionComponent() {
     },
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, x: 30 },
     visible: {
       opacity: 1,
@@ -28,7 +28,7 @@ function AboutHowWeWorkSectionComponent() {
     },
   };
 
-  const arrowVariants = {
+  const arrowVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,

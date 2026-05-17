@@ -1,0 +1,13 @@
+[
+  {
+    "id": "773ld78",
+    "name": "Test Candidate",
+    "email": "candidate@test.com",
+    "mobile": "9876543210",
+    "portfolio": "",
+    "resume": "https://drive.google.com/file/d/123456/view",
+    "message": "This is a test application from Antigravity visual verification agent!",
+    "role": "Customer Success Manager",
+    "createdAt": "2026-05-17T22:10:41.328Z"
+  }
+]
