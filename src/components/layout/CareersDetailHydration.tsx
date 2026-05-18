@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 interface CareersDetailHydrationProps {
@@ -104,7 +104,7 @@ export default function CareersDetailHydration({ html, roleTitle }: CareersDetai
       } else {
         setFormErrors({ form: data.error || "Failed to submit application. Please try again." })
       }
-    } catch (err) {
+    } catch {
       setFormErrors({ form: "Network error. Please check your connection and try again." })
     } finally {
       setIsSubmitting(false)

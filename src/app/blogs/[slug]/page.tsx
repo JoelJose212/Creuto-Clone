@@ -188,7 +188,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const bodyRegex = /<body[^>]*?>([\s\S]*?)<\/body>/i
   const bodyMatch = bodyRegex.exec(htmlContent)
-  let bodyHtml = bodyMatch ? bodyMatch[1] : ""
+  const bodyHtml = bodyMatch ? bodyMatch[1] : ""
 
   // 5. Apply dynamic asset mappings
   let processedHtml = bodyHtml

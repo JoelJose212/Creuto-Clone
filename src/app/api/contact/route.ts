@@ -50,7 +50,7 @@ export async function POST(request: Request) {
       message: "Your inquiry has been successfully sent to Sanjana and our product leadership team. We will get in touch with you shortly!",
       leadId: newSubmission.id,
     })
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error handling contact submission API:", error)
     return NextResponse.json(
       { success: false, error: "Internal Server Error. Please try again later." },

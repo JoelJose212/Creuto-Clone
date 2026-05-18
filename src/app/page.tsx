@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import fs from "fs"
 import path from "path"
+import ServicesSection from "@/components/sections/ServicesSection"
 
 export const metadata: Metadata = {
   title: "AI-First Product Development - Build Intelligent Software | Creuto",
@@ -142,6 +143,22 @@ export default function HomePage() {
 }
 
 function renderPage(data: CacheData) {
+  const servicesStartMarker = '<div class="MuiBox-root mui-uzl9bz">'
+  const servicesEndMarker = '<section class="MuiBox-root mui-157rcvf">'
+
+  const startIdx = data.processedHtml.indexOf(servicesStartMarker)
+  const endIdx = data.processedHtml.indexOf(servicesEndMarker)
+
+  let beforeHtml = data.processedHtml
+  let afterHtml = ""
+  let hasSplit = false
+  
+  if (startIdx !== -1 && endIdx !== -1) {
+    beforeHtml = data.processedHtml.substring(0, startIdx)
+    afterHtml = data.processedHtml.substring(endIdx)
+    hasSplit = true
+  }
+
   return (
     <>
       {/* Load original CSS stylesheets */}
@@ -181,7 +198,17 @@ function renderPage(data: CacheData) {
       `}} />
 
       {/* Render the dynamic parsed body layout */}
-      <div id="creuto-homepage" dangerouslySetInnerHTML={{ __html: data.processedHtml }} />
+      <div id="creuto-homepage">
+        {hasSplit ? (
+          <>
+            <div dangerouslySetInnerHTML={{ __html: beforeHtml }} />
+            <ServicesSection />
+            <div dangerouslySetInnerHTML={{ __html: afterHtml }} />
+          </>
+        ) : (
+          <div dangerouslySetInnerHTML={{ __html: data.processedHtml }} />
+        )}
+      </div>
     </>
   )
 }

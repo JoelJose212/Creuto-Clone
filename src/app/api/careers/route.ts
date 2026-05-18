@@ -51,7 +51,7 @@ export async function POST(request: Request) {
       message: `Thank you, ${name}! Your application for the ${role} position has been successfully logged. Our talent acquisition team will review your credentials and get back to you shortly.`,
       applicationId: newApplication.id,
     })
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error handling careers application API:", error)
     return NextResponse.json(
       { success: false, error: "Internal Server Error. Please try again later." },
