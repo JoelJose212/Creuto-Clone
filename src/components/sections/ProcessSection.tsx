@@ -1,67 +1,155 @@
-"use client"
-
-import SectionWrapper from "@/components/shared/SectionWrapper"
-
-const STEPS = [
-  {
-    num: "1",
-    title: "Discovery",
-    desc: "We establish clear direction by aligning on your vision and business goals through introductory calls and detailed market analysis.",
-  },
-  {
-    num: "2",
-    title: "Design & Development",
-    desc: "Senior engineers architect and build your solution using structured sprints, modern frameworks, and enterprise-grade standards.",
-  },
-  {
-    num: "3",
-    title: "Testing & Deployment",
-    desc: "Rigorous QA including automated testing, manual testing, and code reviews with CI/CD pipelines for smooth deployments.",
-  },
-  {
-    num: "4",
-    title: "Support, Maintenance & Growth",
-    desc: "Post-launch, we stay as your technical partner — monitoring, maintaining, and scaling your product alongside your business.",
-  },
-]
+import React from 'react';
 
 export default function ProcessSection() {
   return (
-    <SectionWrapper>
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-[48px] text-center">
-          <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
-            HOW WE WORK
-          </span>
-          <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
-            Our Product Development Process.
-          </h2>
-          <p className="mx-auto max-w-[600px] font-sans text-[16px] font-[300] text-muted">
-            At Creuto, we believe that a structured and effective development process is crucial to delivering successful products.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 overflow-hidden rounded-[16px] border border-border sm:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map((step, i) => (
-            <div
-              key={i}
-              className="group border-b border-border bg-surface px-[28px] py-[40px] transition-colors duration-250 hover:bg-surface-2 md:border-b-0 md:border-r last:border-r-0 last:border-b-0"
-            >
-              <div className="mb-[24px] flex h-[36px] w-[36px] items-center justify-center rounded-full border border-[rgba(21,49,255,0.4)] bg-transparent">
-                <span className="font-display text-[13px] font-[700] text-blue">
-                  {step.num}
-                </span>
+    <>
+      <section className="MuiBox-root mui-k55zy5">
+        <div className="MuiBox-root mui-0">
+          <div className="MuiBox-root mui-1rjwnmq" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
+            <div className="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault mui-1vp9gl0" style={{"opacity":"1","transform":"translateY(0.625rem)"} as React.CSSProperties}>
+              <span className="MuiChip-label MuiChip-labelMedium mui-1fqh3rg">
+OUR EXPERTISE
+              </span>
+            </div>            <h2 className="MuiTypography-root MuiTypography-h2 mui-1stngiq" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
+Industries We Specialise In.
+            </h2>            <p className="MuiTypography-root MuiTypography-body1 mui-1jt98zh" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
+Explore our comprehensive suite of solutions catering to your needs. From software development to digital transformation, we're here to drive your success.
+            </p>
+          </div>          <div className="MuiBox-root mui-19gghux">
+            <div className="MuiBox-root mui-1ix91ph">
+              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/health.webp" alt="Healthcare" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Healthcare
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/fitness.webp" alt="Fitness" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Fitness
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/ecommerce.webp" alt="E-commerce & Retail" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+E-commerce & Retail
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/social-media.webp" alt="Social Media & Wellness" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Social Media & Wellness
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/education.webp" alt="Education" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Education
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/erp.webp" alt="ERP" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+ERP
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/travel.webp" alt="Travel & Hospitality" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Travel & Hospitality
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/streaming.webp" alt="Streaming" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Streaming
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/health.webp" alt="Healthcare" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Healthcare
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/fitness.webp" alt="Fitness" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Fitness
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/ecommerce.webp" alt="E-commerce & Retail" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+E-commerce & Retail
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/social-media.webp" alt="Social Media & Wellness" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Social Media & Wellness
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/education.webp" alt="Education" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Education
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/erp.webp" alt="ERP" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+ERP
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/travel.webp" alt="Travel & Hospitality" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Travel & Hospitality
+                  </span>
+                </div>
+              </div>              <div className="MuiBox-root mui-1opqt3w">
+                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1sdcgw1" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
+                  <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-b3fp8t" src="/img/industries/streaming.webp" alt="Streaming" />
+                </div>                <div className="MuiBox-root mui-jy24ve">
+                  <span className="MuiTypography-root MuiTypography-subtitle1 mui-1krozh8">
+Streaming
+                  </span>
+                </div>
               </div>
-              <h3 className="mb-[16px] font-display text-[18px] font-[700] text-heading">
-                {step.title}
-              </h3>
-              <p className="font-sans text-[13px] font-[300] leading-[1.7] text-muted">
-                {step.desc}
-              </p>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </SectionWrapper>
-  )
+      </section>
+    </>
+  );
 }

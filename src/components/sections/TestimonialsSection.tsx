@@ -1,99 +1,117 @@
-"use client"
-
-import { useRef } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import SectionWrapper from "@/components/shared/SectionWrapper"
-
-import { TESTIMONIALS } from "@/constants/testimonials"
+import React from 'react';
 
 export default function TestimonialsSection() {
-  const scrollRef = useRef<HTMLDivElement>(null)
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -360, behavior: "smooth" })
-    }
-  }
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 360, behavior: "smooth" })
-    }
-  }
-
   return (
-    <SectionWrapper className="border-y border-border bg-surface overflow-hidden">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-[48px] flex flex-col items-start justify-between gap-[24px] md:flex-row md:items-end">
-          <div>
-            <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
-              TESTIMONIALS
-            </span>
-            <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
-              What Our Clients Have to Say About Us.
-            </h2>
-            <p className="font-sans text-[16px] font-[300] text-muted">
-              A leading product engineering company, creating adaptive software solutions to improve operations.
-            </p>
-          </div>
-          <div className="flex gap-[12px]">
-            <button
-              onClick={scrollLeft}
-              className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-border bg-transparent text-heading transition-colors duration-200 hover:border-blue"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={scrollRight}
-              className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-border bg-transparent text-heading transition-colors duration-200 hover:border-blue"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
-        </div>
-
-        {/* Carousel */}
-        <div
-          ref={scrollRef}
-          className="no-scrollbar flex gap-[20px] overflow-x-auto pb-[12px]"
-          style={{ scrollbarWidth: "none" }}
-        >
-          {TESTIMONIALS.map((t, i) => (
-            <div
-              key={i}
-              className="flex w-[340px] shrink-0 flex-col rounded-[14px] border border-border bg-bg p-[28px] transition-all duration-250 hover:-translate-y-[4px] hover:border-blue"
-            >
-              <div className="mb-[16px]">
-                <span
-                  className="mr-[8px] font-display text-[36px] text-[#1531FF]"
-                  style={{ lineHeight: 0, verticalAlign: "-14px" }}
-                >
-                  &quot;
-                </span>
-                <span className="font-sans text-[14px] font-[300] italic leading-[1.75] text-text">
-                  {t.text}
-                </span>
+    <>
+      <div className="MuiBox-root mui-12rflrp">
+        <div className="MuiContainer-root MuiContainer-maxWidthLg mui-1f29tn4">
+          <div className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 mui-1m9pnp8">
+            <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 mui-tnatjl">
+              <div className="MuiBox-root mui-0" style={{"opacity":"1","transform":"translateX(-1.875rem)"} as React.CSSProperties}>
+                <div className="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault mui-1r08qvb">
+                  <span className="MuiChip-label MuiChip-labelMedium mui-1fqh3rg">
+HOW WE WORK
+                  </span>
+                </div>                <h2 className="MuiTypography-root MuiTypography-h2 mui-1dt13f9">
+Our Product Development Process
+                </h2>
               </div>
-              <div className="mb-[20px] mt-auto h-[1px] w-full bg-border" />
-              <div className="flex items-center gap-[16px]">
-                <div className="flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-full border border-[rgba(21,49,255,0.3)] bg-[rgba(21,49,255,0.15)]">
-                  <span className="font-display text-[13px] font-[700] text-blue">
-                    {t.initials}
-                  </span>
+            </div>            <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 mui-tnatjl">
+              <p className="MuiTypography-root MuiTypography-subtitle1 mui-f5usl4" style={{"opacity":"1","transform":"translateX(1.875rem)"} as React.CSSProperties}>
+At Creuto, we believe that a structured and effective development process is crucial to delivering successful products for our clients. Our approach is characterized by flexibility and responsiveness, ensuring that we deliver maximum value at every stage, and turn your vision into a reality.
+              </p>
+            </div>
+          </div>          <div className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-md-6 mui-1qsd2mk">
+            <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 mui-hgz3do">
+              <div className="MuiBox-root mui-1dy7g8b">
+                <div className="MuiStack-root mui-y4s0a3">
+                  <div className="MuiBox-root mui-18uyps2">
+                    <div className="MuiStack-root mui-1x4jos1">
+                      <div className="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault mui-1tzzgqm">
+1
+                      </div>                      <h3 className="MuiTypography-root MuiTypography-h5 mui-4n51sy">
+Discovery
+                      </h3>
+                    </div>                    <p className="MuiTypography-root MuiTypography-subtitle1 mui-1mjmbx5" style={{"opacity":"1","height":"0px"} as React.CSSProperties}>
+We establish clear direction by aligning on your vision and business goals.
+                    </p>
+                  </div>                  <div className="MuiBox-root mui-18uyps2">
+                    <div className="MuiStack-root mui-1x4jos1">
+                      <div className="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault mui-4po8ma">
+2
+                      </div>                      <h3 className="MuiTypography-root MuiTypography-h5 mui-4n51sy">
+Design & Development
+                      </h3>
+                    </div>
+                  </div>                  <div className="MuiBox-root mui-18uyps2">
+                    <div className="MuiStack-root mui-1x4jos1">
+                      <div className="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault mui-4po8ma">
+3
+                      </div>                      <h3 className="MuiTypography-root MuiTypography-h5 mui-4n51sy">
+Testing & Deployment
+                      </h3>
+                    </div>
+                  </div>                  <div className="MuiBox-root mui-18uyps2">
+                    <div className="MuiStack-root mui-1x4jos1">
+                      <div className="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault mui-4po8ma">
+4
+                      </div>                      <h3 className="MuiTypography-root MuiTypography-h5 mui-4n51sy">
+Support, Maintenance & Growth
+                      </h3>
+                    </div>
+                  </div>
+                </div>                <div className="MuiBox-root mui-fk9xpm">
+                  <div className="MuiBox-root mui-16s3cwu">
+
+                  </div>
                 </div>
-                <div className="flex flex-col">
-                  <span className="font-sans text-[14px] font-[600] text-heading">
-                    {t.name}
-                  </span>
-                  <span className="font-sans text-[12px] text-muted">
-                    {t.role}
-                  </span>
+              </div>
+            </div>            <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 mui-x4d953">
+              <div className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 mui-1a96clx">
+                <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-sm-6 mui-1lm563g">
+                  <div className="MuiBox-root mui-3uzkvh">
+                    <img alt="Discovery" decoding="async" data-nimg="fill" style={{"position":"absolute","height":"100%","width":"100%","left":"0","top":"0","right":"0","bottom":"0","objectFit":"cover","color":"transparent","borderRadius":"1rem"} as React.CSSProperties} sizes="100vw" srcSet="/_next/image?url=%2Fimg%2Fhome%2Fdiscovery.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fhome%2Fdiscovery.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fhome%2Fdiscovery.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fhome%2Fdiscovery.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fhome%2Fdiscovery.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fhome%2Fdiscovery.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fhome%2Fdiscovery.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fhome%2Fdiscovery.webp&w=3840&q=75 3840w" src="/cloned_next/discoverydc53.jpeg?url=%2Fimg%2Fhome%2Fdiscovery.webp&w=3840&q=75" />
+                  </div>
+                </div>                <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-sm-6 mui-1lm563g">
+                  <div className="MuiBox-root mui-17ba16h">
+                    <div className="MuiStack-root mui-1ujske3">
+                      <div className="MuiBox-root mui-16ztjd2">
+                        <img alt="Alignment" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" style={{"color":"transparent"} as React.CSSProperties} srcSet="/_next/image?url=%2Ficons%2Falarm.webp&w=32&q=75 1x, /_next/image?url=%2Ficons%2Falarm.webp&w=48&q=75 2x" src="/cloned_next/alarm2615.jpeg?url=%2Ficons%2Falarm.webp&w=48&q=75" />
+                      </div>                      <div className="MuiBox-root mui-1fjtzvx">
+                        <h3 className="MuiTypography-root MuiTypography-h6 mui-nublk6">
+Alignment
+                        </h3>                        <p className="MuiTypography-root MuiTypography-body1 mui-1fodzmu">
+We start with an introductory call to understand your project, budget considerations, and the current industry landscape.
+                        </p>
+                      </div>
+                    </div>                    <div className="MuiStack-root mui-1ujske3">
+                      <div className="MuiBox-root mui-16ztjd2">
+                        <img alt="Analysis" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" style={{"color":"transparent"} as React.CSSProperties} srcSet="/_next/image?url=%2Ficons%2Fbar.webp&w=32&q=75 1x, /_next/image?url=%2Ficons%2Fbar.webp&w=48&q=75 2x" src="/cloned_next/bar86ef.jpeg?url=%2Ficons%2Fbar.webp&w=48&q=75" />
+                      </div>                      <div className="MuiBox-root mui-1fjtzvx">
+                        <h3 className="MuiTypography-root MuiTypography-h6 mui-nublk6">
+Analysis
+                        </h3>                        <p className="MuiTypography-root MuiTypography-body1 mui-1fodzmu">
+Through detailed conversations, we explore your needs and conduct a thorough analysis of the market segment, including competitor analysis and identifying key deliverables.
+                        </p>
+                      </div>
+                    </div>                    <div className="MuiStack-root mui-1ujske3">
+                      <div className="MuiBox-root mui-16ztjd2">
+                        <img alt="Definition" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" style={{"color":"transparent"} as React.CSSProperties} srcSet="/_next/image?url=%2Ficons%2Fvector.webp&w=32&q=75 1x, /_next/image?url=%2Ficons%2Fvector.webp&w=48&q=75 2x" src="/cloned_next/vectorf3fa.jpeg?url=%2Ficons%2Fvector.webp&w=48&q=75" />
+                      </div>                      <div className="MuiBox-root mui-1fjtzvx">
+                        <h3 className="MuiTypography-root MuiTypography-h6 mui-nublk6">
+Definition
+                        </h3>                        <p className="MuiTypography-root MuiTypography-body1 mui-1fodzmu">
+We then create a tailored proposal that outlines the project scope, budget breakdown, user stories, and defined milestones.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
-    </SectionWrapper>
-  )
+    </>
+  );
 }

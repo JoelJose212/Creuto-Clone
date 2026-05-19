@@ -1,8 +1,20 @@
 import { Metadata } from "next"
 import fs from "fs"
 import path from "path"
+import HeroSection from "@/components/sections/HeroSection"
+import ConnectStatsSection from "@/components/sections/ConnectStatsSection"
+import BrandsSection from "@/components/sections/BrandsSection"
+import WhyChooseSection from "@/components/sections/WhyChooseSection"
+import ProjectsSection from "@/components/sections/ProjectsSection"
 import ServicesSection from "@/components/sections/ServicesSection"
+import AwardsQuoteSection from "@/components/sections/AwardsQuoteSection"
+import TechStackAISection from "@/components/sections/TechStackAISection"
+import TestimonialsSection from "@/components/sections/TestimonialsSection"
+import ProcessSection from "@/components/sections/ProcessSection"
+import IndustriesSection from "@/components/sections/IndustriesSection"
 import FAQSection from "@/components/sections/FAQSection"
+import ConnectSection from "@/components/sections/ConnectSection"
+import FooterSection from "@/components/sections/FooterSection"
 
 export const metadata: Metadata = {
   title: "AI-First Product Development - Build Intelligent Software | Creuto",
@@ -12,14 +24,6 @@ export const metadata: Metadata = {
     canonical: "https://creuto.com",
   },
 }
-
-interface CacheData {
-  processedHtml: string
-  styles: string[]
-  unlayeredInlineStyles: string[]
-}
-
-let cache: CacheData | null = null
 
 // Helper to remove CSS layers dynamically
 function unlayerCSS(css: string): string {
@@ -59,21 +63,8 @@ function unlayerCSS(css: string): string {
 }
 
 export default function HomePage() {
-  if (cache !== null) {
-    return renderPage(cache)
-  }
-
-  const bodyPath = path.join(process.cwd(), "index_extracted_body.html")
   const stylesPath = path.join(process.cwd(), "index_extracted_styles.json")
-
-  let bodyHtml = ""
   let stylesConfig = { styles: [] as string[], inlineStyles: [] as string[] }
-
-  try {
-    bodyHtml = fs.readFileSync(bodyPath, "utf8")
-  } catch (error) {
-    console.error("Error reading index_extracted_body.html:", error)
-  }
 
   try {
     const stylesContent = fs.readFileSync(stylesPath, "utf8")
@@ -82,50 +73,6 @@ export default function HomePage() {
     console.error("Error reading index_extracted_styles.json:", error)
   }
 
-  // 1. Convert relative asset paths to absolute (starting with '/')
-  let processedHtml = bodyHtml
-    .replace(/(["'\s])(img|icons|favicon)\//g, "$1/$2/")
-    .replace(/(["'\s])_next\//g, "$1/cloned_next/")
-    .replace(/(["'\s])(favicon652a\.ico)/g, "$1/$2")
-
-  // 2. Map static navigation .html links to clean Next.js routes
-  processedHtml = processedHtml
-    .replace(/href="ai\.html"/g, 'href="/ai"')
-    .replace(/href="about\.html"/g, 'href="/about"')
-    .replace(/href="services\.html"/g, 'href="/services"')
-    .replace(/href="case-studies\.html"/g, 'href="/case-studies"')
-    .replace(/href="contact\.html"/g, 'href="/contact"')
-    .replace(/href="careers\.html"/g, 'href="/careers"')
-    .replace(/href="portfolio\.html"/g, 'href="/portfolio"')
-    .replace(/href="blog\.html"/g, 'href="/blogs"')
-    .replace(/href="index\.html"/g, 'href="/"')
-
-  // Map sub-services inside body/footer
-  processedHtml = processedHtml
-    .replace(/href="services\/custom-software-development\.html"/g, 'href="/services"')
-    .replace(/href="services\/mobile-apps-development\.html"/g, 'href="/services"')
-    .replace(/href="services\/web-app-development\.html"/g, 'href="/services"')
-    .replace(/href="services\/ai-engineering-services\.html"/g, 'href="/services"')
-    .replace(/href="services\/devops-cloud-engineering\.html"/g, 'href="/services"')
-    .replace(/href="services\/mvp-development\.html"/g, 'href="/services"')
-
-  // 3. Map dynamic sub-routes (e.g. careers detail and blogs detail)
-  processedHtml = processedHtml
-    .replace(/href="careers\/([a-zA-Z0-9_-]+)\.html"/g, 'href="/careers/$1"')
-    .replace(/href="blog\/([a-zA-Z0-9_-]+)\.html"/g, 'href="/blogs/$1"')
-
-  // 4. Overwrite pre-rendered entrance animation opacities (opacity:0 -> opacity:1)
-  processedHtml = processedHtml
-    .replace(/opacity\s*:\s*0/gi, 'opacity:1')
-    .replace(/transform\s*:\s*translateX\(-40px\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*translateX\(40px\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*translateY\(20px\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*translateY\(30px\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*translateY\(40px\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*scale\(0\.95\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*scale\(0\.98\)/gi, 'transform:none')
-
-  // 5. Compute unlayered inline styles
   const unlayeredInlineStyles = stylesConfig.inlineStyles.map((styleBlock) => {
     const cssContent = styleBlock
       .replace(/<style[^>]*>/, "")
@@ -133,48 +80,17 @@ export default function HomePage() {
     return unlayerCSS(cssContent)
   })
 
-  // Populate cache
-  cache = {
-    processedHtml,
-    styles: stylesConfig.styles,
-    unlayeredInlineStyles,
-  }
-
-  return renderPage(cache)
-}
-
-function renderPage(data: CacheData) {
-  const servicesStartMarker = '<div class="MuiBox-root mui-uzl9bz">'
-  const servicesEndMarker = '<section class="MuiBox-root mui-157rcvf">'
-  const connectStartMarker = '<section class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters mui-1bo1og6">'
-
-  const startIdx = data.processedHtml.indexOf(servicesStartMarker)
-  const endIdx = data.processedHtml.indexOf(servicesEndMarker)
-  const connectIdx = data.processedHtml.indexOf(connectStartMarker)
-
-  let beforeHtml = data.processedHtml
-  let servicesHtml = ""
-  let afterHtml = ""
-  let hasSplit = false
-  
-  if (startIdx !== -1 && endIdx !== -1 && connectIdx !== -1) {
-    beforeHtml = data.processedHtml.substring(0, startIdx)
-    servicesHtml = data.processedHtml.substring(endIdx, connectIdx)
-    afterHtml = data.processedHtml.substring(connectIdx)
-    hasSplit = true
-  }
-
   return (
     <>
       {/* Load original CSS stylesheets */}
-      {data.styles.map((href, index) => {
+      {stylesConfig.styles.map((href, index) => {
         const processedHref = href.replace(/_next\//g, "cloned_next/")
         const absoluteHref = processedHref.startsWith("/") ? processedHref : `/${processedHref}`
         return <link key={index} rel="stylesheet" href={absoluteHref} />
       })}
 
       {/* Inject Emotion/MUI global and local inline styling layers */}
-      {data.unlayeredInlineStyles.map((unlayeredCss, index) => (
+      {unlayeredInlineStyles.map((unlayeredCss, index) => (
         <style
           key={`inline-${index}`}
           dangerouslySetInnerHTML={{ __html: unlayeredCss }}
@@ -202,20 +118,22 @@ function renderPage(data: CacheData) {
         }
       `}} />
 
-      {/* Render the dynamic parsed body layout */}
-      <div id="creuto-homepage">
-        {hasSplit ? (
-          <>
-            <div dangerouslySetInnerHTML={{ __html: beforeHtml }} />
-            <ServicesSection />
-            <div dangerouslySetInnerHTML={{ __html: servicesHtml }} />
-            <FAQSection />
-            <div dangerouslySetInnerHTML={{ __html: afterHtml }} />
-          </>
-        ) : (
-          <div dangerouslySetInnerHTML={{ __html: data.processedHtml }} />
-        )}
-      </div>
+      <main id="creuto-homepage">
+        <HeroSection />
+        <ConnectStatsSection />
+        <BrandsSection />
+        <WhyChooseSection />
+        <ProjectsSection />
+        <ServicesSection />
+        <AwardsQuoteSection />
+        <TechStackAISection />
+        <TestimonialsSection />
+        <ProcessSection />
+        <IndustriesSection />
+        <FAQSection />
+        <ConnectSection />
+        <FooterSection />
+      </main>
     </>
   )
 }

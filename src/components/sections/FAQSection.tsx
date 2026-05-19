@@ -190,14 +190,14 @@ export default function FAQSection() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          border: 1px solid rgba(255, 255, 255, 0.15);
+          border: 1px solid rgba(0, 0, 0, 0.12);
           border-radius: 9999px;
           padding: 6px 16px;
           font-size: 0.75rem;
           font-weight: 700;
           letter-spacing: 0.1em;
-          color: #ffffff;
-          background: rgba(255, 255, 255, 0.03);
+          color: #0f172a;
+          background: rgba(0, 0, 0, 0.03);
           margin-bottom: 20px;
           text-transform: uppercase;
         }
@@ -207,7 +207,7 @@ export default function FAQSection() {
           font-size: 2.75rem;
           font-weight: 800;
           line-height: 1.2;
-          color: #ffffff;
+          color: #0f172a;
           margin: 0 0 16px 0;
           letter-spacing: -0.02em;
         }
@@ -215,7 +215,7 @@ export default function FAQSection() {
         .faq-subtitle {
           font-size: 1.1rem;
           line-height: 1.6;
-          color: #969696;
+          color: #64748b;
           margin: 0;
           font-weight: 400;
           max-width: 600px;
@@ -240,8 +240,8 @@ export default function FAQSection() {
         }
 
         .faq-card {
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid rgba(255, 255, 255, 0.06);
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.06);
           border-radius: 16px;
           padding: 24px;
           cursor: pointer;
@@ -249,18 +249,20 @@ export default function FAQSection() {
           box-sizing: border-box;
           overflow: hidden;
           position: relative;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
         }
 
         .faq-card:hover {
-          background: rgba(255, 255, 255, 0.04);
-          border-color: rgba(255, 255, 255, 0.15);
+          background: #ffffff;
+          border-color: rgba(0, 0, 0, 0.15);
           transform: translateY(-4px) scale(1.01);
-          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2), 0 0 1px 1px rgba(255, 255, 255, 0.1) inset;
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06), 0 0 1px 1px rgba(0, 0, 0, 0.01) inset;
         }
 
         .faq-card.active {
-          background: rgba(255, 255, 255, 0.03);
-          border-color: rgba(255, 255, 255, 0.12);
+          background: #ffffff;
+          border-color: rgba(0, 0, 0, 0.1);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
         }
 
         .faq-card-header {
@@ -275,7 +277,7 @@ export default function FAQSection() {
           font-size: 1.05rem;
           font-weight: 700;
           line-height: 1.5;
-          color: #ffffff;
+          color: #0f172a;
           margin: 0;
           display: flex;
           align-items: flex-start;
@@ -283,7 +285,7 @@ export default function FAQSection() {
         }
 
         .faq-card-num {
-          color: #ffffff;
+          color: #0f172a;
           font-weight: 800;
           opacity: 0.9;
         }
@@ -296,13 +298,13 @@ export default function FAQSection() {
           align-items: center;
           justify-content: center;
           border-radius: 50%;
-          background: rgba(255, 255, 255, 0.05);
-          color: #ffffff;
+          background: rgba(0, 0, 0, 0.03);
+          color: #0f172a;
           transition: background 300ms ease;
         }
 
         .faq-card:hover .faq-card-icon {
-          background: rgba(255, 255, 255, 0.12);
+          background: rgba(0, 0, 0, 0.08);
         }
 
         .faq-card-content-wrapper {
@@ -313,9 +315,9 @@ export default function FAQSection() {
           padding-top: 16px;
           font-size: 0.92rem;
           line-height: 1.6;
-          color: #a3a3a3;
+          color: #475569;
           font-weight: 400;
-          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          border-top: 1px solid rgba(0, 0, 0, 0.05);
           margin-top: 16px;
         }
 
