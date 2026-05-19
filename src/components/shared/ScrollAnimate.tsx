@@ -19,8 +19,15 @@ export default function ScrollAnimate() {
           "section, .MuiContainer-root, .MuiBox-root, [class*='CTASection'], [class*='HeroSection'], [class*='StatsSection'], [class*='ServicesSection'], [class*='WhyCreutoSection'], [class*='CaseStudiesSection'], [class*='TestimonialsSection'], [class*='FAQSection']"
         )
       ).filter((el) => {
-        // Exclude elements inside the navbar/header
-        if (el.closest("nav") || el.closest(".MuiAppBar-root") || el.closest("[class*='Navbar']")) {
+        // Exclude elements inside the navbar/header or footer
+        if (
+          el.closest("nav") || 
+          el.closest(".MuiAppBar-root") || 
+          el.closest("[class*='Navbar']") ||
+          el.closest("footer") ||
+          el.closest("[class*='Footer']") ||
+          el.closest(".mui-a524gp")
+        ) {
           return false;
         }
         
@@ -54,8 +61,8 @@ export default function ScrollAnimate() {
             "h1, h2, h3, h4, h5, h6, .MuiTypography-h1, .MuiTypography-h2, .MuiTypography-h3, .MuiTypography-h4, .MuiTypography-h5, .MuiTypography-h6, .MuiTypography-subtitle1, p:not(.MuiTypography-body1), .MuiTypography-body1:not(li p)"
           )
         ).filter((el) => {
-          // Exclude header navbar and elements already inside card-like grids
-          if (el.closest("nav") || el.closest(".MuiAppBar-root")) return false;
+          // Exclude header navbar, footer and elements already inside card-like grids
+          if (el.closest("nav") || el.closest(".MuiAppBar-root") || el.closest("footer") || el.closest("[class*='Footer']") || el.closest(".mui-a524gp")) return false;
           // If the element is deep inside a card/paper, we animate the card, not the individual text
           const cardParent = el.closest(".MuiPaper-root, .MuiCard-root, [class*='card'], .reveal-card");
           return !cardParent;
@@ -67,7 +74,7 @@ export default function ScrollAnimate() {
             ".MuiPaper-root, .MuiCard-root, [class*='MuiGrid-grid-'], .MuiAccordion-root, .MuiChip-root, [class*='card'], [class*='Card'], .testimonial-card, .process-item, [class*='grid'] > div"
           )
         ).filter((el) => {
-          if (el.closest("nav") || el.closest(".MuiAppBar-root")) return false;
+          if (el.closest("nav") || el.closest(".MuiAppBar-root") || el.closest("footer") || el.closest("[class*='Footer']") || el.closest(".mui-a524gp")) return false;
           // Avoid tagging nested papers (only tag the outermost card wrapper)
           const parentCard = el.parentElement?.closest(
             ".MuiPaper-root, .MuiCard-root, [class*='MuiGrid-grid-'], [class*='card']"
