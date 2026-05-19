@@ -74,3 +74,56 @@
   }
 }
 
+/* Align stats cards in the connect section to be equal width (50% each) on desktop */
+@media (min-width: 600px) {
+  .mui-4qnynj,
+  .mui-b62ixu {
+    flex-basis: auto !important;
+    flex-grow: 0 !important;
+    width: calc(100% * 6 / var(--Grid-parent-columns, 12) - (var(--Grid-parent-columns, 12) - 6) * (var(--Grid-parent-columnSpacing, 24px) / var(--Grid-parent-columns, 12))) !important;
+  }
+}
+
+/* Premium Unified Hover States for Cards */
+.reveal-card.active {
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease-in-out !important;
+}
+
+/* Float & Glow on Hover for General Grid Cards */
+.reveal-card.active:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 32px rgba(23, 70, 234, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Custom transitions and hover scaling for Connect Stats Cards */
+.mui-qxdipa {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transform-origin: center center;
+}
+
+.mui-qxdipa:hover {
+  transform: translateY(-6px) scale(1.025) !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15), 0 0 24px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Stat numbers micro-scale animation when their parent card is hovered */
+.mui-qxdipa:hover h3.MuiTypography-h1 {
+  transform: scale(1.04) translateY(-2px);
+  color: #ffffff !important;
+}
+
+.mui-qxdipa h3.MuiTypography-h1 {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease !important;
+  transform-origin: left center;
+}
+
+
+

@@ -6,6 +6,7 @@ import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp"
 import CustomCursor from "@/components/layout/CustomCursor"
 import PageTransition from "@/components/layout/PageTransition"
 import Providers from "@/components/providers/Providers"
+import ScrollAnimate from "@/components/shared/ScrollAnimate"
 
 const syne = Syne({ 
   subsets: ["latin"],
@@ -72,6 +73,7 @@ export default function RootLayout({
       <body className="bg-bg text-text antialiased selection:bg-blue/30">
         <Providers>
           <CustomCursor />
+          <ScrollAnimate />
           <Navbar />
           <PageTransition>
             {children}
