@@ -248,6 +248,11 @@ export default function ScrollAnimate() {
         transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
         transform-origin: center center;
       }
+
+      .MuiAccordionDetails-root, .mui-ltyu2k {
+        height: auto !important;
+        overflow: visible !important;
+      }
     `}} />
   );
 }
