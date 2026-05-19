@@ -10,11 +10,11 @@ export function AiGlobeInjector() {
   useEffect(() => {
     // Wait for the DOM to paint the statically injected HTML
     const timer = setTimeout(() => {
-      // Find the specific wrapper div where the globe belongs
-      const targetNode = document.querySelector(".gp-wrapper.mui-10l306a")
+      // Find the specific wrapper div next to 'Trusted By Startups And Businesses Worldwide'
+      const targetNode = document.querySelector(".mui-1toaoq1")
       
       if (targetNode) {
-        // Clear out the legacy static CSS 3D elements
+        // Clear out the empty dark box
         targetNode.innerHTML = ""
         // Set the mount node to trigger the portal render
         setMountNode(targetNode)
