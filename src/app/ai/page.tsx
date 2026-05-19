@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import fs from "fs"
 import path from "path"
+import { AiGlobeInjector } from "@/components/sections/AiGlobeInjector"
 
 export const metadata: Metadata = {
   title: "AI-First Product Development - Build Intelligent Software | Creuto",
@@ -175,6 +176,9 @@ export default function AiPage() {
 
         {/* Render the beautifully processed page body inside a white text wrapper */}
         <div id="creuto-ai-cloned-page" className="text-white" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+        
+        {/* Inject the interactive Globe component safely into the static HTML */}
+        <AiGlobeInjector />
       </>
     )
   }
@@ -340,6 +344,9 @@ export default function AiPage() {
 
       {/* Render the beautifully processed page body inside a white text wrapper */}
       <div id="creuto-ai-cloned-page" className="text-white" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+      
+      {/* Inject the interactive Globe component safely into the static HTML */}
+      <AiGlobeInjector />
     </>
   )
 }
