@@ -1,114 +1,342 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Plus } from "lucide-react"
-import SectionWrapper from "@/components/shared/SectionWrapper"
-import { cn } from "@/lib/cn"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Plus } from "lucide-react";
 
-const FAQS = [
+interface FAQItem {
+  id: string;
+  num: string;
+  question: string;
+  answer: string;
+}
+
+const faqData: FAQItem[] = [
   {
-    q: "What services does CREUTO provide?",
-    a: "We offer end-to-end custom software development, mobile app development, AI feature integration, MVP development, and scalable digital product engineering for startups, SMEs, and enterprises.",
+    id: "faq-1",
+    num: "01.",
+    question: "What services does CREUTO provide?",
+    answer: "We offer end-to-end custom software development, mobile app development, AI feature integration, MVP development, and scalable digital product engineering for startups, SMEs, and enterprises."
   },
   {
-    q: "Can CREUTO integrate AI into my existing product or application?",
-    a: "Yes, we specialize in integrating AI capabilities into existing systems. Whether adding chatbots, predictive analytics, or computer vision, we can enhance your product with the latest AI technologies.",
+    id: "faq-2",
+    num: "02.",
+    question: "Can CREUTO integrate AI into my existing product or application?",
+    answer: "Yes, we specialize in integrating AI capabilities into existing systems. Whether it's adding chatbots, predictive analytics, or computer vision features, we can enhance your product with the latest AI technologies."
   },
   {
-    q: "How long does it take to build a custom software or mobile application?",
-    a: "The timeline depends on complexity. A simple MVP might take 4-8 weeks, while a full-scale enterprise solution could take 3-6 months or more. We provide a detailed timeline after the initial discovery phase.",
+    id: "faq-3",
+    num: "03.",
+    question: "How long does it take to build a custom software or mobile application?",
+    answer: "The timeline depends on the project's complexity. A simple MVP might take 4-8 weeks, while a full-scale enterprise solution could take 3-6 months or more. We provide a detailed timeline after the initial discovery phase."
   },
   {
-    q: "What industries does Creuto work with?",
-    a: "We work with Healthcare, Fintech, E-commerce, Education, Real Estate, Logistics, and more. Our team adapts to the specific compliance and operational needs of each sector.",
+    id: "faq-4",
+    num: "04.",
+    question: "What industries does Creuto work with?",
+    answer: "We work with a diverse range of industries including Healthcare, Fintech, E-commerce, Education, Real Estate, Logistics, and more. Our team adapts to the specific compliance and operational needs of each sector."
   },
   {
-    q: "How do you ensure the quality and stability of the software you deliver?",
-    a: "We follow a rigorous QA process including automated testing, manual testing, and code reviews. We implement CI/CD pipelines to ensure smooth deployments and maintain high code quality throughout.",
+    id: "faq-5",
+    num: "05.",
+    question: "How do you ensure the quality and stability of the software you deliver?",
+    answer: "We follow a rigorous QA process including automated testing, manual testing, and code reviews. We also implement CI/CD pipelines to ensure smooth deployments and maintain high code quality standards throughout development."
   },
   {
-    q: "Do you build MVPs for startups?",
-    a: "Yes, we love working with startups! We specialize in building MVPs that help you validate your idea quickly and cost-effectively, allowing you to launch and gather user feedback sooner.",
+    id: "faq-6",
+    num: "06.",
+    question: "Do you build MVPs for startups?",
+    answer: "Yes, we love working with startups! We specialize in building MVPs (Minimum Viable Products) that help you validate your idea quickly and cost-effectively, allowing you to launch and gather user feedback sooner."
   },
   {
-    q: "What technologies and AI models do you work with?",
-    a: "We work with React, Next.js, Node.js, Python, Flutter, and React Native. For AI, we utilize OpenAI, Llama, TensorFlow, PyTorch, and cloud AI services from AWS and Azure.",
+    id: "faq-7",
+    num: "07.",
+    question: "What technologies and AI models do you work with?",
+    answer: "We work with modern stacks like React, Next.js, Node.js, Python, Flutter, and React Native. For AI, we utilize OpenAI models, Llama, TensorFlow, PyTorch, and various cloud AI services from AWS and Azure."
   },
   {
-    q: "Why should we choose Creuto for our software or AI project?",
-    a: "We combine technical expertise with business acumen. Our team doesn't just write code — we understand your business goals. We offer transparent communication, agile delivery, and future-proof solutions.",
-  },
-]
+    id: "faq-8",
+    num: "08.",
+    question: "Why should we choose Creuto for our software or AI project?",
+    answer: "We combine technical expertise with business acumen. Our team doesn't just write code; we understand your business goals. We offer transparent communication, agile delivery, and a commitment to building scalable, future-proof solutions."
+  }
+];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
 
-  const toggleOpen = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index))
-  }
+  const toggleFAQ = (index: number) => {
+    setExpandedIdx(expandedIdx === index ? null : index);
+  };
+
+  const col1 = faqData.slice(0, 4);
+  const col2 = faqData.slice(4, 8);
 
   return (
-    <SectionWrapper>
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-[48px] text-center">
-          <span className="mb-[16px] inline-block text-[11px] font-bold uppercase tracking-[0.1em] text-blue">
-            FAQS
-          </span>
-          <h2 className="mb-[16px] font-display text-[40px] font-[800] leading-[1.1] text-heading md:text-[48px]">
-            Frequently Asked Questions.
-          </h2>
-          <p className="font-sans text-[16px] font-[300] text-muted">
-            Got a query? We&apos;ve solved some of your doubts below.
-          </p>
-        </div>
+    <section className="faq-section-container">
+      <div className="faq-header-wrapper">
+        <div className="faq-pill">FAQS</div>
+        <h2 className="faq-title">Frequently Asked Questions</h2>
+        <p className="faq-subtitle">Got a query? We've solved some of your doubts below.</p>
+      </div>
 
-        <div className="mx-auto max-w-[800px]">
-          {FAQS.map((faq, i) => {
-            const isOpen = openIndex === i
+      <div className="faq-grid">
+        {/* Left Column (01-04) */}
+        <div className="faq-column">
+          {col1.map((item, idx) => {
+            const globalIdx = idx;
+            const isExpanded = expandedIdx === globalIdx;
             return (
-              <div key={i} className="border-b border-border last:border-0">
-                <button
-                  onClick={() => toggleOpen(i)}
-                  className="flex w-full items-center justify-between gap-[20px] bg-transparent py-[24px] text-left transition-colors hover:text-blue"
-                >
-                  <span className="font-display text-[17px] font-[600] text-heading transition-colors hover:text-blue">
-                    {faq.q}
-                  </span>
-                  <div
-                    className={cn(
-                      "flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-full border border-border transition-colors duration-200",
-                      isOpen && "border-blue"
-                    )}
+              <div
+                key={item.id}
+                className={`faq-card ${isExpanded ? "active" : ""}`}
+                onClick={() => toggleFAQ(globalIdx)}
+              >
+                <div className="faq-card-header">
+                  <h3 className="faq-card-question">
+                    <span className="faq-card-num">{item.num}</span> {item.question}
+                  </h3>
+                  <motion.div
+                    className="faq-card-icon"
+                    animate={{ rotate: isExpanded ? 45 : 0 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
-                    <motion.div
-                      animate={{ rotate: isOpen ? 45 : 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <Plus size={16} className={isOpen ? "text-blue" : "text-muted"} />
-                    </motion.div>
-                  </div>
-                </button>
+                    <Plus className="faq-plus-icon" size={20} />
+                  </motion.div>
+                </div>
                 <AnimatePresence initial={false}>
-                  {isOpen && (
+                  {isExpanded && (
                     <motion.div
+                      key="content"
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="overflow-hidden"
+                      transition={{ type: "spring", stiffness: 260, damping: 26 }}
+                      className="faq-card-content-wrapper"
                     >
-                      <div className="pb-[24px] font-sans text-[14px] font-[300] leading-[1.8] text-muted">
-                        {faq.a}
+                      <div className="faq-card-answer">
+                        {item.answer}
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
-            )
+            );
+          })}
+        </div>
+
+        {/* Right Column (05-08) */}
+        <div className="faq-column">
+          {col2.map((item, idx) => {
+            const globalIdx = idx + 4;
+            const isExpanded = expandedIdx === globalIdx;
+            return (
+              <div
+                key={item.id}
+                className={`faq-card ${isExpanded ? "active" : ""}`}
+                onClick={() => toggleFAQ(globalIdx)}
+              >
+                <div className="faq-card-header">
+                  <h3 className="faq-card-question">
+                    <span className="faq-card-num">{item.num}</span> {item.question}
+                  </h3>
+                  <motion.div
+                    className="faq-card-icon"
+                    animate={{ rotate: isExpanded ? 45 : 0 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <Plus className="faq-plus-icon" size={20} />
+                  </motion.div>
+                </div>
+                <AnimatePresence initial={false}>
+                  {isExpanded && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ type: "spring", stiffness: 260, damping: 26 }}
+                      className="faq-card-content-wrapper"
+                    >
+                      <div className="faq-card-answer">
+                        {item.answer}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
           })}
         </div>
       </div>
-    </SectionWrapper>
-  )
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        .faq-section-container {
+          max-width: 1200px;
+          margin: 120px auto;
+          padding: 0 24px;
+          box-sizing: border-box;
+        }
+
+        .faq-header-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          margin-bottom: 56px;
+        }
+
+        .faq-pill {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 9999px;
+          padding: 6px 16px;
+          font-size: 0.75rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          color: #ffffff;
+          background: rgba(255, 255, 255, 0.03);
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+
+        .faq-title {
+          font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
+          font-size: 2.75rem;
+          font-weight: 800;
+          line-height: 1.2;
+          color: #ffffff;
+          margin: 0 0 16px 0;
+          letter-spacing: -0.02em;
+        }
+
+        .faq-subtitle {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          color: #969696;
+          margin: 0;
+          font-weight: 400;
+          max-width: 600px;
+        }
+
+        .faq-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        @media (min-width: 900px) {
+          .faq-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        .faq-column {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .faq-card {
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          border-radius: 16px;
+          padding: 24px;
+          cursor: pointer;
+          transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+          box-sizing: border-box;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .faq-card:hover {
+          background: rgba(255, 255, 255, 0.04);
+          border-color: rgba(255, 255, 255, 0.15);
+          transform: translateY(-4px) scale(1.01);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2), 0 0 1px 1px rgba(255, 255, 255, 0.1) inset;
+        }
+
+        .faq-card.active {
+          background: rgba(255, 255, 255, 0.03);
+          border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .faq-card-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+        }
+
+        .faq-card-question {
+          font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
+          font-size: 1.05rem;
+          font-weight: 700;
+          line-height: 1.5;
+          color: #ffffff;
+          margin: 0;
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+        }
+
+        .faq-card-num {
+          color: #ffffff;
+          font-weight: 800;
+          opacity: 0.9;
+        }
+
+        .faq-card-icon {
+          flex-shrink: 0;
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.05);
+          color: #ffffff;
+          transition: background 300ms ease;
+        }
+
+        .faq-card:hover .faq-card-icon {
+          background: rgba(255, 255, 255, 0.12);
+        }
+
+        .faq-card-content-wrapper {
+          overflow: hidden;
+        }
+
+        .faq-card-answer {
+          padding-top: 16px;
+          font-size: 0.92rem;
+          line-height: 1.6;
+          color: #a3a3a3;
+          font-weight: 400;
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          margin-top: 16px;
+        }
+
+        @media (max-width: 600px) {
+          .faq-section-container {
+            margin: 80px auto;
+          }
+
+          .faq-title {
+            font-size: 2rem;
+          }
+
+          .faq-card {
+            padding: 20px;
+          }
+
+          .faq-card-question {
+            font-size: 0.95rem;
+          }
+        }
+      `}} />
+    </section>
+  );
 }

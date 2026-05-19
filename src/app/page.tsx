@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import fs from "fs"
 import path from "path"
 import ServicesSection from "@/components/sections/ServicesSection"
+import FAQSection from "@/components/sections/FAQSection"
 
 export const metadata: Metadata = {
   title: "AI-First Product Development - Build Intelligent Software | Creuto",
@@ -145,17 +146,21 @@ export default function HomePage() {
 function renderPage(data: CacheData) {
   const servicesStartMarker = '<div class="MuiBox-root mui-uzl9bz">'
   const servicesEndMarker = '<section class="MuiBox-root mui-157rcvf">'
+  const connectStartMarker = '<section class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters mui-1bo1og6">'
 
   const startIdx = data.processedHtml.indexOf(servicesStartMarker)
   const endIdx = data.processedHtml.indexOf(servicesEndMarker)
+  const connectIdx = data.processedHtml.indexOf(connectStartMarker)
 
   let beforeHtml = data.processedHtml
+  let servicesHtml = ""
   let afterHtml = ""
   let hasSplit = false
   
-  if (startIdx !== -1 && endIdx !== -1) {
+  if (startIdx !== -1 && endIdx !== -1 && connectIdx !== -1) {
     beforeHtml = data.processedHtml.substring(0, startIdx)
-    afterHtml = data.processedHtml.substring(endIdx)
+    servicesHtml = data.processedHtml.substring(endIdx, connectIdx)
+    afterHtml = data.processedHtml.substring(connectIdx)
     hasSplit = true
   }
 
@@ -203,6 +208,8 @@ function renderPage(data: CacheData) {
           <>
             <div dangerouslySetInnerHTML={{ __html: beforeHtml }} />
             <ServicesSection />
+            <div dangerouslySetInnerHTML={{ __html: servicesHtml }} />
+            <FAQSection />
             <div dangerouslySetInnerHTML={{ __html: afterHtml }} />
           </>
         ) : (
