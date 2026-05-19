@@ -124,6 +124,78 @@ export default function ScrollAnimate() {
         observer.observe(section);
         observers.push(observer);
       });
+
+      // 5. Setup Interactive Accordion Toggling for all FAQs
+      setupFAQs();
+
+      function setupFAQs() {
+        const faqContainer = document.querySelector(".MuiContainer-root.mui-17mtwhi");
+        if (!faqContainer) return;
+
+        const accordions = faqContainer.querySelectorAll(".MuiAccordion-root");
+        accordions.forEach((accordion) => {
+          const headerButton = accordion.querySelector(".MuiAccordionSummary-root");
+          const collapseDiv = accordion.querySelector(".MuiCollapse-root") as HTMLElement;
+          const iconWrapper = accordion.querySelector(".MuiAccordionSummary-expandIconWrapper") as HTMLElement;
+
+          if (!headerButton || !collapseDiv) return;
+
+          // Clone the button to cleanly purge any stale static event listeners
+          const newButton = headerButton.cloneNode(true) as HTMLElement;
+          headerButton.parentNode?.replaceChild(newButton, headerButton);
+
+          newButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            const isExpanded = newButton.getAttribute("aria-expanded") === "true";
+
+            // Collapse all other siblings
+            if (!isExpanded) {
+              accordions.forEach((sibling) => {
+                sibling.classList.remove("Mui-expanded");
+                const sibButton = sibling.querySelector(".MuiAccordionSummary-root");
+                const sibCollapse = sibling.querySelector(".MuiCollapse-root") as HTMLElement;
+                const sibIcon = sibling.querySelector(".MuiAccordionSummary-expandIconWrapper") as HTMLElement;
+                if (sibButton && sibCollapse && sibButton !== newButton) {
+                  sibButton.setAttribute("aria-expanded", "false");
+                  sibButton.classList.remove("Mui-expanded");
+                  sibCollapse.style.height = "0px";
+                  sibCollapse.style.visibility = "hidden";
+                  sibCollapse.classList.remove("MuiCollapse-entered");
+                  sibCollapse.classList.add("MuiCollapse-hidden");
+                  sibCollapse.classList.add("mui-abqyn");
+                  if (sibIcon) sibIcon.style.transform = "rotate(0deg)";
+                }
+              });
+            }
+
+            // Toggle current Accordion item
+            if (isExpanded) {
+              accordion.classList.remove("Mui-expanded");
+              newButton.setAttribute("aria-expanded", "false");
+              newButton.classList.remove("Mui-expanded");
+              collapseDiv.style.height = "0px";
+              collapseDiv.style.visibility = "hidden";
+              collapseDiv.classList.remove("MuiCollapse-entered");
+              collapseDiv.classList.add("MuiCollapse-hidden");
+              collapseDiv.classList.add("mui-abqyn");
+              if (iconWrapper) iconWrapper.style.transform = "rotate(0deg)";
+            } else {
+              accordion.classList.add("Mui-expanded");
+              newButton.setAttribute("aria-expanded", "true");
+              newButton.classList.add("Mui-expanded");
+              collapseDiv.classList.remove("MuiCollapse-hidden");
+              collapseDiv.classList.add("MuiCollapse-entered");
+              collapseDiv.classList.remove("mui-abqyn");
+              collapseDiv.style.visibility = "visible";
+
+              const wrapperInner = collapseDiv.querySelector(".MuiCollapse-wrapperInner") as HTMLElement;
+              const height = wrapperInner ? `${wrapperInner.offsetHeight}px` : "auto";
+              collapseDiv.style.height = height;
+              if (iconWrapper) iconWrapper.style.transform = "rotate(45deg)";
+            }
+          });
+        });
+      }
     }
 
     // Run observer initialization after DOM paints
@@ -163,6 +235,18 @@ export default function ScrollAnimate() {
       .reveal-card.active {
         opacity: 1 !important;
         transform: translateY(0) scale(1) !important;
+      }
+
+      /* --- PREMIUM FAQ COLLAPSE ANIMATIONS --- */
+      
+      .MuiCollapse-root {
+        transition: height 350ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+        overflow: hidden !important;
+      }
+      
+      .MuiAccordionSummary-expandIconWrapper {
+        transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+        transform-origin: center center;
       }
     `}} />
   );
