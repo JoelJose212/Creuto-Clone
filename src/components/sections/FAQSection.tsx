@@ -241,28 +241,26 @@ export default function FAQSection() {
 
         .faq-card {
           background: #ffffff;
-          border: 1px solid rgba(0, 0, 0, 0.06);
-          border-radius: 16px;
+          border: 1px solid #eeeeee;
+          border-radius: 12px;
           padding: 24px;
           cursor: pointer;
-          transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+          transition: border-color 200ms ease;
           box-sizing: border-box;
           overflow: hidden;
           position: relative;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+          box-shadow: none;
         }
 
         .faq-card:hover {
           background: #ffffff;
-          border-color: rgba(0, 0, 0, 0.15);
-          transform: translateY(-4px) scale(1.01);
-          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06), 0 0 1px 1px rgba(0, 0, 0, 0.01) inset;
+          border-color: #cccccc;
         }
 
         .faq-card.active {
           background: #ffffff;
-          border-color: rgba(0, 0, 0, 0.1);
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+          border-color: #eeeeee;
+          box-shadow: none;
         }
 
         .faq-card-header {
