@@ -97,35 +97,50 @@ export default function ServicesSection() {
       <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-indigo-400/5 blur-[120px] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl relative z-10">
-        <div className="mb-[60px] flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <div className="max-w-2xl">
+        <div className="mb-[80px] flex flex-col items-center text-center">
+          <div className="max-w-3xl mx-auto flex flex-col items-center">
             <motion.span 
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-[16px] inline-block text-[13px] font-bold uppercase tracking-[0.2em] text-[#1746EA]"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mb-[16px] inline-block text-[13px] font-[700] uppercase tracking-[0.25em] text-[#1746EA] px-4 py-1.5 bg-[#1746EA]/5 rounded-full"
             >
               OUR SERVICES
             </motion.span>
+            
             <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="mb-[20px] text-[clamp(32px,5vw,48px)] font-[800] leading-[1.15] text-[#01083D] tracking-tight"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+              className="mb-[24px] text-[clamp(34px,5vw,52px)] font-[800] leading-[1.15] text-[#01083D] tracking-tight max-w-2xl"
             >
-              Our services tailored to your specific need
+              Our services tailored to your specific need<span className="text-[#1746EA]">.</span>
             </motion.h2>
-            <p className="text-[16px] md:text-[18px] text-[#475569] font-[500] leading-relaxed max-w-xl">
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              className="text-[16px] md:text-[19px] text-[#475569] font-[500] leading-relaxed max-w-2xl mb-[40px]"
+            >
               Your vision, our expertise—shaping digital solutions that drive impact. Whether it&apos;s software, cloud, or automation, we craft solutions designed to scale.
-            </p>
+            </motion.p>
           </div>
 
-          {/* Navigation Controls and Link */}
-          <div className="flex items-center gap-6 self-start md:self-end">
+          {/* Navigation Controls and Link Centered */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.45 }}
+            className="flex flex-wrap items-center justify-center gap-8"
+          >
             <Link 
               href="/services" 
-              className="group inline-flex items-center gap-2 text-[16px] font-[700] text-[#1746EA] transition-all duration-300 hover:text-[#01083D]"
+              className="group inline-flex items-center gap-2.5 text-[16px] font-[700] text-[#1746EA] transition-all duration-300 hover:text-[#01083D] border-b-2 border-[#1746EA]/10 hover:border-[#01083D] pb-0.5"
             >
               Explore All Services
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5">→</span>
@@ -147,7 +162,7 @@ export default function ServicesSection() {
                 <ArrowRight size={18} />
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Dynamic Interactive Horizontal Carousel */}
