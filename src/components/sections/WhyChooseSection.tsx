@@ -49,7 +49,7 @@ Every business challenge is unique, and so is the solution. See how our expert-b
           </p>
         </div>        <div className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 MuiGrid-spacing-md-3 mui-13dyghr">
           <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 mui-tnatjl" style={{"opacity":"1","transform":"translateY(1.875rem)"} as React.CSSProperties}>
-            <a style={{"textDecoration":"none","color":"inherit","display":"block","height":"100%"} as React.CSSProperties} href="case-studies/skoda-auto-sales-training-platform.html">
+            <a style={{"textDecoration":"none","color":"inherit","display":"block","height":"100%"} as React.CSSProperties} href="/case-studies/skoda-auto-sales-training-platform">
               <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-6hcrsu" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
                 <div className="MuiBox-root mui-1xmwj44">
                   <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-1q8hdg6" src="/img/projects/skoda.webp" alt="skoda-auto-sales-training-platform" />
@@ -65,7 +65,7 @@ Creuto built an AI-powered training platform for Škoda Auto, centralizing learn
               </div>
             </a>
           </div>          <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 mui-tnatjl" style={{"opacity":"1","transform":"translateY(1.875rem)"} as React.CSSProperties}>
-            <a style={{"textDecoration":"none","color":"inherit","display":"block","height":"100%"} as React.CSSProperties} href="case-studies/binimise-smart-city-platform.html">
+            <a style={{"textDecoration":"none","color":"inherit","display":"block","height":"100%"} as React.CSSProperties} href="/case-studies/binimise-smart-city-platform">
               <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-6hcrsu" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
                 <div className="MuiBox-root mui-1xmwj44">
                   <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-1q8hdg6" src="/img/projects/binimise.webp" alt="binimise-smart-city-platform" />                  <div className="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault mui-s2js8v">
@@ -87,7 +87,7 @@ A cloud-native, IoT-powered smart city platform — web command dashboard, citiz
               </div>
             </a>
           </div>          <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 mui-tnatjl" style={{"opacity":"1","transform":"translateY(1.875rem)"} as React.CSSProperties}>
-            <a style={{"textDecoration":"none","color":"inherit","display":"block","height":"100%"} as React.CSSProperties} href="case-studies/custom-erp-large-scale-industries.html">
+            <a style={{"textDecoration":"none","color":"inherit","display":"block","height":"100%"} as React.CSSProperties} href="/case-studies/custom-erp-large-scale-industries">
               <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-6hcrsu" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
                 <div className="MuiBox-root mui-1xmwj44">
                   <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-1q8hdg6" src="/img/projects/canopus.webp" alt="custom-erp-large-scale-industries" />
@@ -103,7 +103,7 @@ A fully custom, browser-based ERP system built to unify every department, elimin
               </div>
             </a>
           </div>          <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 mui-tnatjl" style={{"opacity":"1","transform":"translateY(1.875rem)"} as React.CSSProperties}>
-            <a style={{"textDecoration":"none","color":"inherit","display":"block","height":"100%"} as React.CSSProperties} href="case-studies/enterprise-payroll-management-system.html">
+            <a style={{"textDecoration":"none","color":"inherit","display":"block","height":"100%"} as React.CSSProperties} href="/case-studies/enterprise-payroll-management-system">
               <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-6hcrsu" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
                 <div className="MuiBox-root mui-1xmwj44">
                   <img className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img mui-1q8hdg6" src="/img/projects/payroll.webp" alt="enterprise-payroll-management-system" />

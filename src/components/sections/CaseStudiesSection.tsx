@@ -12,28 +12,28 @@ const PROJECTS = [
     title: "AI-Powered Sales Training App for Škoda Auto",
     desc: "Centralizing learning across its dealership network with personalized AI content.",
     image: "/img/projects/skoda.png",
-    link: "/case-studies/skoda"
+    link: "/case-studies/skoda-auto-sales-training-platform"
   },
   {
     category: "AI POWERED",
     title: "IoT Smart City Platform for Binimise",
     desc: "A cloud-native, IoT-powered platform with full device integration and monitoring.",
     image: "/img/projects/binimise.png",
-    link: "/case-studies/binimise"
+    link: "/case-studies/binimise-smart-city-platform"
   },
   {
     category: "ERP SYSTEM",
     title: "Custom Cloud ERP for Large-Scale Operations",
     desc: "A fully custom browser-based ERP system built to unify every department.",
     image: "/img/projects/erp.png",
-    link: "/case-studies/erp"
+    link: "/case-studies/custom-erp-large-scale-industries"
   },
   {
     category: "Nomina HR",
     title: "Enterprise HR & Payroll Platform – Nomina",
     desc: "A complete end-to-end HR and payroll platform for enterprise compliance.",
     image: "/img/projects/nomina.png",
-    link: "/case-studies/nomina"
+    link: "/case-studies/enterprise-payroll-management-system"
   }
 ]
 

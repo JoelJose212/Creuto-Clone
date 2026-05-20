@@ -147,7 +147,7 @@ export default function CaseStudiesPage() {
     .replace(/(["'\s])_next\//g, "$1/cloned_next/")
     .replace(/(["'\s])(favicon652a\.ico)/g, "$1/$2")
 
-  // 2. Map cloned static navigation .html links to clean Next.js routes
+  // 2. Map static navigation .html links to clean Next.js routes
   processedHtml = processedHtml
     .replace(/href="ai\.html"/g, 'href="/ai"')
     .replace(/href="about\.html"/g, 'href="/about"')
@@ -158,6 +158,7 @@ export default function CaseStudiesPage() {
     .replace(/href="portfolio\.html"/g, 'href="/portfolio"')
     .replace(/href="blog\.html"/g, 'href="/blogs"')
     .replace(/href="index\.html"/g, 'href="/"')
+    .replace(/href="case-studies\/([^"]+)\.html"/g, 'href="/case-studies/$1"')
 
   // 3. Strip all dynamic srcset / srcSet attributes
   processedHtml = processedHtml
