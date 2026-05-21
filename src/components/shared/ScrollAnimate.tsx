@@ -150,8 +150,8 @@ export default function ScrollAnimate() {
       /* --- PREMIUM SCROLL ANIMATION EFFECTS --- */
       
       .reveal-text {
-        opacity: 0 !important;
-        transform: translateY(24px) !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
         transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
         will-change: transform, opacity;
       }
@@ -162,8 +162,8 @@ export default function ScrollAnimate() {
       }
       
       .reveal-card {
-        opacity: 0 !important;
-        transform: translateY(40px) scale(0.96) !important;
+        opacity: 1 !important;
+        transform: translateY(0) scale(1) !important;
         transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1) !important;
         will-change: transform, opacity;
       }
