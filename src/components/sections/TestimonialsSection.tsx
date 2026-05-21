@@ -124,6 +124,7 @@ export default function TestimonialsSection() {
   const [transitionEnabled, setTransitionEnabled] = useState(true);
   const [dragOffset, setDragOffset] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [visibleSlides, setVisibleSlides] = useState(3);
   
   const containerRef = useRef<HTMLDivElement>(null);
@@ -161,7 +162,7 @@ export default function TestimonialsSection() {
     stopAutoplay();
     autoplayTimerRef.current = setInterval(() => {
       setCurrentIndex(prev => prev + 1);
-    }, 5000);
+    }, 4000);
   };
 
   const stopAutoplay = () => {
@@ -172,9 +173,13 @@ export default function TestimonialsSection() {
   };
 
   useEffect(() => {
+    if (isDragging || isHovered) {
+      stopAutoplay();
+      return;
+    }
     startAutoplay();
     return () => stopAutoplay();
-  }, [currentIndex, isDragging]);
+  }, [currentIndex, isDragging, isHovered]);
 
   // Snapping back to the middle set quietly to allow infinite looping
   useEffect(() => {
@@ -335,6 +340,8 @@ export default function TestimonialsSection() {
                 onPointerMove={handlePointerMove}
                 onPointerUp={handlePointerUp}
                 onPointerLeave={handlePointerUp}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
               >
                 <div 
                   className="slick-track" 
@@ -342,7 +349,7 @@ export default function TestimonialsSection() {
                     display: 'flex',
                     width: `${extendedTestimonials.length * (100 / visibleSlides)}%`,
                     transform: `translateX(calc(-${(currentIndex) * (100 / extendedTestimonials.length)}% + ${dragOffset}px))`,
-                    transition: transitionEnabled ? (isDragging ? 'none' : 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)') : 'none',
+                    transition: transitionEnabled ? (isDragging ? 'none' : 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)') : 'none',
                   }}
                 >
                   {extendedTestimonials.map((testimonial, idx) => {
