@@ -51,6 +51,8 @@ function htmlToJsx(html) {
   jsx = jsx.replace(/ tabindex="([^"]*)"/gi, (match, p1) => ' tabIndex={' + p1 + '}');
   jsx = jsx.replace(/crossorigin=/gi, 'crossOrigin=');
   jsx = jsx.replace(/hidden=""/gi, 'hidden');
+  jsx = jsx.replace(/ whilehover="[^"]*"/gi, '');
+  jsx = jsx.replace(/ whiletap="[^"]*"/gi, '');
   
   jsx = jsx.replace(/ style="([^"]*)"/g, (match, p1) => {
     let styleObj = {};
@@ -66,7 +68,7 @@ function htmlToJsx(html) {
         }
       }
     });
-    return ` style={${JSON.stringify(styleObj)}}`;
+    return ` style={${JSON.stringify(styleObj)} as any}`;
   });
 
   // SVG attributes
@@ -141,9 +143,7 @@ function processPage(htmlFile, jsonFile, outJsxFile, outCssFile) {
       
       let css = unlayerCSS(cssString);
       // Clean up url() paths
-      css = css.replace(/url\(\.\.\/\.\.\//g, 'url(/');
-      css = css.replace(/url\(\.\.\//g, 'url(/');
-      css = css.replace(/url\(['"]?img\//g, "url('/img/");
+      css = css.replace(/url\(['"]?(?:[./]*)*img\/([^'"]+)['"]?\)/g, 'url(\'/img/$1\')');
       css = css.replace(/_next\//g, 'cloned_next/');
       fs.writeFileSync(outCssFile, css);
       console.log(`Wrote CSS to ${outCssFile}`);
