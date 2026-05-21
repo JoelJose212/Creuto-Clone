@@ -444,25 +444,7 @@ npm run start    # Serves production build
 
 ---
 
-## ☁️ Deployment
 
-### Vercel (Recommended)
-
-1. Push your branch to GitHub
-2. Import the repository in [Vercel Dashboard](https://vercel.com/dashboard)
-3. Configure environment variables matching `.env.local`
-4. Deploy — Vercel auto-detects Next.js 14 and optimizes the build
-
-### Database Providers
-
-| Provider | Best For | Pricing |
-|:---|:---|:---|
-| **Neon** | Serverless PostgreSQL on Vercel | Free tier available |
-| **Supabase** | Full PostgreSQL with dashboard | Free tier available |
-| **Railway** | Managed PostgreSQL with CLI | Usage-based |
-| **PlanetScale** | MySQL-compatible serverless | Free tier available |
-
----
 
 ## 📊 Build Output
 
@@ -485,17 +467,6 @@ Route (app)                              Size      First Load JS
 ○  Static    ●  SSG    ƒ  Dynamic
 ```
 
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
 
 ## 📄 License
 
