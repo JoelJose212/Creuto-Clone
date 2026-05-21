@@ -13,6 +13,11 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      {/* Dynamic Link stylesheets for 3D Globe Carousel */}
+      <link rel="stylesheet" href="/cloned_next/static/chunks/11e_lg_sg.5lk.css" />
+      <link rel="stylesheet" href="/cloned_next/static/chunks/15cdx8da0wltn.css" />
+      <link rel="stylesheet" href="/cloned_next/static/chunks/0ghnlru.2-aun.css" />
+      <link rel="stylesheet" href="/cloned_next/static/chunks/054gr0kjs26lp.css" />
 
       <style dangerouslySetInnerHTML={{ __html: `
         #creuto-home-cloned-page,
