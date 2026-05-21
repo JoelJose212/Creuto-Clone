@@ -96,7 +96,13 @@ function htmlToJsx(html) {
   jsx = jsx.replace(/_next\//g, '/cloned_next/');
   jsx = jsx.replace(/src="(?!\/)([^"]+)"/g, 'src="/$1"');
   jsx = jsx.replace(/srcset="[^"]*"/g, '');
-  jsx = jsx.replace(/srcSet="[^"]*"/g, '');
+  jsx = jsx.replace(/ srcSet="[^"]*"/g, '');
+
+  jsx = jsx.replace(/ rows="([^"]*)"/g, (match, p1) => ' rows={' + p1 + '}');
+  jsx = jsx.replace(/ strokeWidth="([^"]*)"/g, (match, p1) => ' strokeWidth={' + p1 + '}');
+  jsx = jsx.replace(/ readOnly(?:="[^"]*")?/g, ' readOnly');
+  jsx = jsx.replace(/ disabled(?:="[^"]*")?/g, ' disabled');
+  jsx = jsx.replace(/ required(?:="[^"]*")?/g, ' required');
   
   // Opacity/Translate fixes
   jsx = jsx.replace(/opacity:\s*0/g, 'opacity: 1');
