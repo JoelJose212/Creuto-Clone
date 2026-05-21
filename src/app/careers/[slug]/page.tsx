@@ -1,26 +1,12 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import fs from "fs"
-import path from "path"
 import CareersDetailHydration from "@/components/layout/CareersDetailHydration"
+import { careersComponents } from "./data"
 
 interface Props {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
 }
 
-// Memory Cache for Job Detail pages
-interface DetailCache {
-  processedHtml: string
-  styles: string[]
-  unlayeredInlineStyles: string[]
-  roleTitle: string
-}
-
-const detailCacheMap = new Map<string, DetailCache>()
-
-// Helper to format slug to pretty role title
 function formatSlugToTitle(slug: string): string {
   const overrides: Record<string, string> = {
     "ai-ml-engineer": "AI/ML Engineer",
@@ -53,9 +39,9 @@ function formatSlugToTitle(slug: string): string {
     .join(" ")
 }
 
-// 1. Dynamic SEO Metadata Generation
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
   const roleTitle = formatSlugToTitle(slug)
 
   return {
@@ -67,184 +53,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-// 2. Pre-compile all 30+ static slugs during build time!
 export async function generateStaticParams() {
-  const careersDir = path.join("D:", "clone", "Clone", "creuto.com", "careers")
-  if (!fs.existsSync(careersDir)) {
-    return []
-  }
-
-  const files = fs.readdirSync(careersDir)
-  const slugs = files
-    .filter((file) => {
-      const name = file.toLowerCase()
-      return name.endsWith(".html") && !name.startsWith("apply")
-    })
-    .map((file) => {
-      return { slug: file.replace(/\.html$/, "") }
-    })
-
-  console.log(`[Static Params] Pre-compiling ${slugs.length} careers slugs.`)
-  return slugs
+  return Object.keys(careersComponents).map((slug) => ({
+    slug,
+  }))
 }
 
-// Helper to remove CSS layers dynamically
-function unlayerCSS(css: string): string {
-  let result = ""
-  let i = 0
-  while (i < css.length) {
-    if (css.substring(i, i + 12) === "@layer mui {") {
-      i += 12
-      let braceCount = 1
-      let j = i
-      while (j < css.length && braceCount > 0) {
-        if (css[j] === "{") braceCount++
-        else if (css[j] === "}") braceCount--
-        j++
-      }
-      const layerContent = css.substring(i, j - 1)
-      result += unlayerCSS(layerContent)
-      i = j
-    } else if (css.substring(i, i + 11) === "@layer mui{") {
-      i += 11
-      let braceCount = 1
-      let j = i
-      while (j < css.length && braceCount > 0) {
-        if (css[j] === "{") braceCount++
-        else if (css[j] === "}") braceCount--
-        j++
-      }
-      const layerContent = css.substring(i, j - 1)
-      result += unlayerCSS(layerContent)
-      i = j
-    } else {
-      result += css[i]
-      i++
-    }
-  }
-  return result
-}
+export default async function JobDetailPage({ params }: Props) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
 
-export default function JobDetailPage({ params }: Props) {
-  const { slug } = params
+  const getComponent = (careersComponents as any)[slug];
 
-  if (detailCacheMap.has(slug)) {
-    return renderDetailPage(detailCacheMap.get(slug)!)
-  }
-
-  const filePath = path.join("D:", "clone", "Clone", "creuto.com", "careers", `${slug}.html`)
-
-  if (!fs.existsSync(filePath)) {
+  if (!getComponent) {
     notFound()
   }
 
   const roleTitle = formatSlugToTitle(slug)
-  let htmlContent = ""
+  const Component = (await getComponent()).default;
 
-  try {
-    htmlContent = fs.readFileSync(filePath, "utf8")
-  } catch (error) {
-    console.error(`Error reading job detail file for ${slug}:`, error)
-    notFound()
-  }
-
-  // Extract body content
-  const bodyRegex = /<body[^>]*?>([\s\S]*?)<\/body>/i
-  const bodyMatch = bodyRegex.exec(htmlContent)
-  const bodyHtml = bodyMatch ? bodyMatch[1] : ""
-
-  // Extract external style sheets
-  const linkRegex = /<link[^>]*?rel="stylesheet"[^>]*?>/g
-  let m
-  const styles: string[] = []
-  while ((m = linkRegex.exec(htmlContent)) !== null) {
-    const hrefMatch = /href="([^"]+)"/.exec(m[0])
-    if (hrefMatch) {
-      styles.push(hrefMatch[1])
-    }
-  }
-
-  // Extract block style tags
-  const styleRegex = /<style[^>]*?>([\s\S]*?)<\/style>/g
-  const inlineStyles: string[] = []
-  while ((m = styleRegex.exec(htmlContent)) !== null) {
-    inlineStyles.push(m[1])
-  }
-
-  // 1. Map relative paths and assets (../img/ -> /img/)
-  let processedHtml = bodyHtml
-    .replace(/(["'\s])\.\.\/(img|icons|favicon)\//g, "$1/$2/")
-    .replace(/(["'\s])\.\.\/_next\//g, "$1/cloned_next/")
-    .replace(/(["'\s])(favicon652a\.ico)/g, "$1/$2")
-
-  // 2. Map static navigation .html links to clean Next.js routes
-  processedHtml = processedHtml
-    .replace(/href="\.\.\/ai\.html"/g, 'href="/ai"')
-    .replace(/href="\.\.\/about\.html"/g, 'href="/about"')
-    .replace(/href="\.\.\/services\.html"/g, 'href="/services"')
-    .replace(/href="\.\.\/case-studies\.html"/g, 'href="/case-studies"')
-    .replace(/href="\.\.\/contact\.html"/g, 'href="/contact"')
-    .replace(/href="\.\.\/careers\.html"/g, 'href="/careers"')
-    .replace(/href="\.\.\/blog\.html"/g, 'href="/blogs"')
-    .replace(/href="\.\.\/index\.html"/g, 'href="/"')
-
-  // Map sub-services inside the footer
-  processedHtml = processedHtml
-    .replace(/href="\.\.\/services\/custom-software-development\.html"/g, 'href="/services"')
-    .replace(/href="\.\.\/services\/mobile-apps-development\.html"/g, 'href="/services"')
-    .replace(/href="\.\.\/services\/web-app-development\.html"/g, 'href="/services"')
-    .replace(/href="\.\.\/services\/ai-engineering-services\.html"/g, 'href="/services"')
-    .replace(/href="\.\.\/services\/devops-cloud-engineering\.html"/g, 'href="/services"')
-    .replace(/href="\.\.\/services\/mvp-development\.html"/g, 'href="/services"')
-
-  // 3. Overwrite entrance pre-rendered animation opacities (opacity:0 -> opacity:1)
-  processedHtml = processedHtml
-    .replace(/opacity\s*:\s*0/gi, 'opacity:1')
-    .replace(/transform\s*:\s*translateX\(-40px\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*translateX\(40px\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*translateY\(20px\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*translateY\(30px\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*translateY\(40px\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*scale\(0\.95\)/gi, 'transform:none')
-    .replace(/transform\s*:\s*scale\(0\.98\)/gi, 'transform:none')
-
-  // 4. Compute unlayered inline styles
-  const unlayeredInlineStyles = inlineStyles.map((styleContent) => {
-    return unlayerCSS(styleContent)
-  })
-
-  // Cache compiled payload
-  const cacheData = {
-    processedHtml,
-    styles,
-    unlayeredInlineStyles,
-    roleTitle,
-  }
-
-  detailCacheMap.set(slug, cacheData)
-
-  return renderDetailPage(cacheData)
-}
-
-function renderDetailPage(data: DetailCache) {
   return (
     <>
-      {/* Load original CSS stylesheets */}
-      {data.styles.map((href, index) => {
-        const processedHref = href.replace(/\.\.\/_next\//g, "cloned_next/")
-        const absoluteHref = processedHref.startsWith("/") ? processedHref : `/${processedHref}`
-        return <link key={index} rel="stylesheet" href={absoluteHref} />
-      })}
-
-      {/* Inject Emotion/MUI global and local inline styling layers */}
-      {data.unlayeredInlineStyles.map((unlayeredCss, index) => (
-        <style
-          key={`inline-${index}`}
-          dangerouslySetInnerHTML={{ __html: unlayeredCss }}
-        />
-      ))}
-
-      {/* Enforce Bricolage Grotesque font family */}
       <style dangerouslySetInnerHTML={{ __html: `
         #creuto-job-detail-page,
         #creuto-job-detail-page h1,
@@ -265,12 +94,10 @@ function renderDetailPage(data: DetailCache) {
         }
       `}} />
 
-      {/* Render the hydrated interactive page body */}
       <div id="creuto-job-detail-page">
-        <CareersDetailHydration
-          html={data.processedHtml}
-          roleTitle={data.roleTitle}
-        />
+        <CareersDetailHydration roleTitle={roleTitle}>
+          <Component />
+        </CareersDetailHydration>
       </div>
     </>
   )

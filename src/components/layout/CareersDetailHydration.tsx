@@ -4,11 +4,11 @@ import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 interface CareersDetailHydrationProps {
-  html: string
+  children: React.ReactNode
   roleTitle: string
 }
 
-export default function CareersDetailHydration({ html, roleTitle }: CareersDetailHydrationProps) {
+export default function CareersDetailHydration({ children, roleTitle }: CareersDetailHydrationProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
@@ -121,8 +121,8 @@ export default function CareersDetailHydration({ html, roleTitle }: CareersDetai
 
   return (
     <>
-      {/* Dangerously render the unlayered static MUI job description */}
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      {/* Render the React Native converted job description */}
+      {children}
 
       {/* Candidates Talent Application Overlay Modal */}
       <AnimatePresence>
