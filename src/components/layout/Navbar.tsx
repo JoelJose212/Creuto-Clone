@@ -14,7 +14,7 @@ const NAV_LINKS = [
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services", hasDropdown: true },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "Blogs", href: "/blogs" },
+  { name: "Blogs", href: "/blog" },
   { name: "Careers", href: "/careers" },
 ]
 
@@ -31,7 +31,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  if (pathname === "/" || pathname === "/ai" || pathname === "/about" || pathname === "/services" || pathname === "/case-studies" || pathname === "/blogs" || pathname?.startsWith("/blogs/") || pathname === "/contact" || pathname === "/careers" || pathname?.startsWith("/careers/") || pathname?.startsWith("/dashboard")) return null
+  if (pathname === "/" || pathname === "/ai" || pathname === "/about" || pathname === "/services" || pathname === "/case-studies" || pathname === "/blog" || pathname?.startsWith("/blog/") || pathname === "/contact" || pathname === "/careers" || pathname?.startsWith("/careers/") || pathname?.startsWith("/dashboard")) return null
 
   return (
     <>

@@ -176,7 +176,7 @@ export default function ProjectsSection() {
       >
         {/* Carousel Circular Card */}
         <div
-          className="flex flex-col items-center pointer-events-auto transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] w-full"
+          className="flex flex-col items-center pointer-events-auto transition-transform duration-700 ease-out-quart w-full"
           style={{
             transform: isActive ? "translateY(0)" : "translateY(min(5.5rem, 7.5vw))",
           }}
@@ -184,7 +184,7 @@ export default function ProjectsSection() {
           {/* Glassmorphic Icon Circle */}
           <button
             onClick={() => handleItemClick(idx)}
-            className={`w-[4.5rem] h-[4.5rem] md:w-[6rem] md:h-[6rem] flex items-center justify-center rounded-3xl transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer backdrop-blur-md shadow-lg outline-none select-none border border-white/10 ${
+            className={`w-[4.5rem] h-[4.5rem] md:w-[6rem] md:h-[6rem] flex items-center justify-center rounded-3xl transition-all duration-700 ease-out-quart cursor-pointer backdrop-blur-md shadow-lg outline-none select-none border border-white/10 ${
               isActive
                 ? "bg-white/20 scale-110 shadow-white/10"
                 : "bg-white/10 opacity-60 hover:opacity-90 hover:bg-white/15"
@@ -201,7 +201,7 @@ export default function ProjectsSection() {
           
           {/* Item Text Title */}
           <h3
-            className={`mt-4 md:mt-5 text-center font-display font-semibold transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] select-none tracking-tight ${
+            className={`mt-4 md:mt-5 text-center font-display font-semibold transition-all duration-700 ease-out-quart select-none tracking-tight ${
               isActive
                 ? "text-[1.25rem] md:text-[1.6rem] text-white opacity-100 scale-105"
                 : "text-[1rem] md:text-[1.2rem] text-white/60 opacity-60"
@@ -213,7 +213,7 @@ export default function ProjectsSection() {
 
         {/* Active Item Description details */}
         <div
-          className="absolute flex flex-col items-center pointer-events-none text-center px-4 w-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+          className="absolute flex flex-col items-center pointer-events-none text-center px-4 w-full transition-all duration-700 ease-out-quart"
           style={{
             top: "min(12.5rem, 16vw)",
             opacity: isActive ? 1 : 0,
@@ -244,7 +244,7 @@ export default function ProjectsSection() {
                 className="flex-1 flex justify-center items-end h-full"
               >
                 <div
-                  className={`w-[2px] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] rounded-full ${
+                  className={`w-[2px] transition-all duration-700 ease-out-quart rounded-full ${
                     isCenterTick && isActive
                       ? "h-full bg-white w-[3px] shadow-[0_0_10px_rgba(255,255,255,0.6)]"
                       : isCenterTick
@@ -318,7 +318,7 @@ export default function ProjectsSection() {
           {/* Track slider */}
           <div
             ref={containerRef}
-            className="absolute top-0 left-1/2 h-full will-change-transform transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+            className="absolute top-0 left-1/2 h-full will-change-transform transition-transform duration-700 ease-out-quart"
             style={{
               transform: transformStyle,
               width: 0

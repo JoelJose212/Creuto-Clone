@@ -49,7 +49,7 @@ export default function AboutWhyChooseSection() {
           {whyChoose.map((item, index) => (
             <motion.div 
               key={index}
-              className="rounded-[24px] bg-[#f8f8f8] border-[0.8px] border-[#f7f8ff] p-[32px] shadow-[0_4px_12px_0_rgba(0,0,0,0.04)] hover:bg-[#ffffff] hover:shadow-[var(--shadow-deep-about)] hover:-translate-y-[4px] transition-all duration-[280ms] ease-in-out"
+              className="rounded-[24px] bg-[#f8f8f8] border-[0.8px] border-[#f7f8ff] p-[32px] shadow-[0_4px_12px_0_rgba(0,0,0,0.04)] hover:bg-[#ffffff] hover:shadow-[var(--shadow-deep-about)] hover:-translate-y-[4px] transition-all duration-280 ease-in-out"
               variants={itemVariants}
             >
               <div className="flex flex-row items-center gap-[14px]">

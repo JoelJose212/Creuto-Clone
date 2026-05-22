@@ -42,7 +42,7 @@ Services
 Case Studies
                 </a>
               </li>              <li className="MuiBox-root mui-0">
-                <a style={{"textDecoration":"none","color":"#1E293B","fontWeight":"500","fontSize":"0.95rem"} as React.CSSProperties} href="/blogs">
+                <a style={{"textDecoration":"none","color":"#1E293B","fontWeight":"500","fontSize":"0.95rem"} as React.CSSProperties} href="/blog">
 Blogs
                 </a>
               </li>              <li className="MuiBox-root mui-0">

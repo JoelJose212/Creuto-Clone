@@ -19,7 +19,7 @@ function CaseStudyCardComponent({ item }: { item: CaseStudyItem }) {
     <motion.div variants={itemVariants} initial="hidden" animate="visible" exit="exit" layout className="h-full">
       <Link 
         href={item.href}
-        className="block relative rounded-[24px] overflow-hidden bg-[#ffffff] border-[0.8px] border-[#f8faff] shadow-[0_0_12px_0_rgba(77,77,77,0.08)] cursor-pointer transition-all duration-[250ms] ease-in-out hover:shadow-[0_4px_12px_0_rgba(0,0,0,0.1)] hover:-translate-y-[6px] hover:border-[rgba(23,70,234,0.15)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#1746ea] focus-visible:outline-offset-2 focus-visible:shadow-[0_4px_12px_0_rgba(0,0,0,0.1)] focus-visible:-translate-y-[6px] focus-visible:border-[rgba(23,70,234,0.15)] group flex flex-col h-full"
+        className="block relative rounded-[24px] overflow-hidden bg-[#ffffff] border-[0.8px] border-[#f8faff] shadow-[0_0_12px_0_rgba(77,77,77,0.08)] cursor-pointer transition-all duration-250 ease-in-out hover:shadow-[0_4px_12px_0_rgba(0,0,0,0.1)] hover:-translate-y-[6px] hover:border-[rgba(23,70,234,0.15)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#1746ea] focus-visible:outline-offset-2 focus-visible:shadow-[0_4px_12px_0_rgba(0,0,0,0.1)] focus-visible:-translate-y-[6px] focus-visible:border-[rgba(23,70,234,0.15)] group flex flex-col h-full"
       >
         {/* Image Area */}
         <div 
@@ -42,8 +42,8 @@ function CaseStudyCardComponent({ item }: { item: CaseStudyItem }) {
           </div>
 
           {/* ArrowUpRight Icon container */}
-          <div className="absolute top-[16px] right-[16px] w-[28px] h-[28px] rounded-full bg-[rgba(255,255,255,0.9)] flex items-center justify-center transition-all duration-[250ms] group-hover:bg-[#1746ea] group-hover:scale-110">
-            <ArrowUpRight size={14} className="text-[#1746ea] group-hover:text-white transition-colors duration-[250ms]" />
+          <div className="absolute top-[16px] right-[16px] w-[28px] h-[28px] rounded-full bg-[rgba(255,255,255,0.9)] flex items-center justify-center transition-all duration-250 group-hover:bg-[#1746ea] group-hover:scale-110">
+            <ArrowUpRight size={14} className="text-[#1746ea] group-hover:text-white transition-colors duration-250" />
           </div>
         </div>
 
@@ -59,7 +59,7 @@ function CaseStudyCardComponent({ item }: { item: CaseStudyItem }) {
           {/* Bottom Row */}
           <div className="flex items-center text-[#1746ea] font-bricolage text-[13px] font-semibold mt-auto group">
             <span>View Case Study</span>
-            <div className="ml-[6px] transition-transform duration-[250ms] group-hover:translate-x-[4px]">
+            <div className="ml-[6px] transition-transform duration-250 group-hover:translate-x-[4px]">
               <ArrowRight size={14} />
             </div>
           </div>

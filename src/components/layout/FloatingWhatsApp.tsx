@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation"
 export default function FloatingWhatsApp() {
   const pathname = usePathname()
   
-  if (pathname === "/" || pathname === "/ai" || pathname === "/about" || pathname === "/services" || pathname === "/case-studies" || pathname === "/blogs" || pathname?.startsWith("/blogs/") || pathname === "/contact" || pathname === "/careers" || pathname?.startsWith("/careers/")) return null
+  if (pathname === "/" || pathname === "/ai" || pathname === "/about" || pathname === "/services" || pathname === "/case-studies" || pathname === "/blog" || pathname?.startsWith("/blog/") || pathname === "/contact" || pathname === "/careers" || pathname?.startsWith("/careers/")) return null
 
   return (
     <motion.a

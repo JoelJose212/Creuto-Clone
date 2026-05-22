@@ -163,14 +163,14 @@ export default function FrameworkSection() {
       >
         {/* Top Section with Icon and Title - Animated via pure GPU Tailwind classes */}
         <div
-          className={`flex flex-col items-center w-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          className={`flex flex-col items-center w-full transition-transform duration-700 ease-out-quart ${
             a ? "translate-y-0" : "translate-y-[5.5rem] md:translate-y-[7.5rem]"
           }`}
         >
           {/* Icon Container */}
           <div
             onClick={() => y(e)}
-            className={`rounded-[1.25rem] flex justify-center items-center backdrop-blur-[10px] cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            className={`rounded-[1.25rem] flex justify-center items-center backdrop-blur-[10px] cursor-pointer transition-all duration-700 ease-out-quart ${
               a
                 ? "w-[5rem] md:w-[6.5rem] h-[5rem] md:h-[6.5rem] bg-white/20 hover:bg-white/25 mb-4 md:mb-6"
                 : "w-[3.75rem] md:w-[5rem] h-[3.75rem] md:h-[5rem] bg-white/10 hover:bg-white/15 mb-4 md:mb-6"
@@ -178,7 +178,7 @@ export default function FrameworkSection() {
           >
             {/* Image Wrapper */}
             <div
-              className={`relative transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+              className={`relative transition-all duration-500 ease-out-quart ${
                 a
                   ? "w-[2rem] sm:w-[2.5rem] md:w-[3rem] h-[2rem] sm:h-[2.5rem] md:h-[3rem]"
                   : "w-[1.5rem] sm:w-[2rem] md:w-[2.5rem] h-[1.5rem] sm:h-[2rem] md:h-[2.5rem]"
@@ -196,7 +196,7 @@ export default function FrameworkSection() {
 
           {/* Title Label */}
           <h3
-            className={`font-jakarta font-[600] text-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            className={`font-jakarta font-[600] text-center transition-all duration-700 ease-out-quart ${
               a
                 ? "text-[1.25rem] md:text-[1.75rem] opacity-100"
                 : "text-[1rem] md:text-[1.25rem] opacity-70"
@@ -208,7 +208,7 @@ export default function FrameworkSection() {
 
         {/* Middle Section with Description & Arrow Dropdown - Animated via pure GPU Tailwind classes */}
         <div
-          className={`absolute top-[8.5rem] md:top-[11.25rem] flex flex-col items-center w-full px-4 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          className={`absolute top-[8.5rem] md:top-[11.25rem] flex flex-col items-center w-full px-4 transition-all duration-700 ease-out-quart ${
             a 
               ? "opacity-100 translate-y-0 pointer-events-auto" 
               : "opacity-0 -translate-y-[0.9375rem] pointer-events-none"
@@ -238,7 +238,7 @@ export default function FrameworkSection() {
                 className="flex-1 flex justify-center items-end h-full"
               >
                 <div
-                  className={`rounded-[0.125rem] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                  className={`rounded-[0.125rem] transition-all duration-700 ease-out-quart ${
                     isCenterTick
                       ? "w-[0.1875rem] h-[4.5rem] md:h-[6.25rem] bg-white"
                       : "w-[0.125rem] h-[4.5rem] md:h-[6.25rem] bg-white/20"

@@ -83,6 +83,13 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      transitionDuration: {
+        "250": "250ms",
+        "280": "280ms",
+      },
+      transitionTimingFunction: {
+        "out-quart": "cubic-bezier(0.22, 1, 0.36, 1)",
+      },
       spacing: {
         "space-1": "4px",
         "space-2": "8px",
