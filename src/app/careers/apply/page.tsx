@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, Suspense } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
 import Link from "next/link"
 import { useForm } from "react-hook-form"
@@ -54,7 +54,7 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>
 
-export default function ApplyPage() {
+function ApplyForm() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const positionParam = searchParams.get("position") || ""
@@ -823,5 +823,20 @@ export default function ApplyPage() {
   
       </div>
     </>
+  )
+}
+
+export default function ApplyPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex min-h-screen items-center justify-center bg-white text-slate-800">
+        <div className="text-center space-y-4">
+          <Loader2 className="mx-auto h-8 w-8 animate-spin text-[#1d4ed8]" />
+          <p className="text-sm font-semibold text-slate-500 font-jakarta">Loading application forms...</p>
+        </div>
+      </div>
+    }>
+      <ApplyForm />
+    </Suspense>
   )
 }

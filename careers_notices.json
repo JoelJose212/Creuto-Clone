@@ -1,0 +1,26 @@
+[
+  {
+    "id": "notice-1",
+    "title": "🚀 AI Research Lab Expansion",
+    "content": "We're launching a new adaptive AI research lab. We are actively scouting for MLOps and NLP engineers to join the force!",
+    "color": "blue"
+  },
+  {
+    "id": "notice-2",
+    "title": "💻 Creuto Hackathon 2026",
+    "content": "Our annual internal hackathon starts next Friday. Prepare your teams and build the next big thing in automated agents!",
+    "color": "pink"
+  },
+  {
+    "id": "notice-3",
+    "title": "🏕️ Annual Team Retreat!",
+    "content": "Pack your bags! We are heading to the hills for our annual team bonding and strategy retreat this July.",
+    "color": "yellow"
+  },
+  {
+    "id": "notice-4",
+    "title": "🎨 Design Co-Lab Openings",
+    "content": "We are expanding our branding and UI/UX team. Check out the senior graphic designer openings below!",
+    "color": "green"
+  }
+]
