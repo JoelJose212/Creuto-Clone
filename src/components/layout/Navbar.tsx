@@ -57,7 +57,7 @@ export default function Navbar() {
     pathname?.startsWith("/blog/") ||
     pathname === "/contact" ||
     pathname === "/careers" ||
-    pathname?.startsWith("/careers/") ||
+    (pathname?.startsWith("/careers/") && pathname !== "/careers/apply") ||
     pathname?.startsWith("/dashboard")
   ) {
     return null

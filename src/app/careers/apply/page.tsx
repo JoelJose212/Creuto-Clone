@@ -276,10 +276,10 @@ export default function ApplyPage() {
   }
 
   return (
-    <div className="w-full min-h-screen bg-white text-slate-800 font-bricolage relative overflow-x-hidden flex flex-col md:flex-row antialiased selection:bg-[#1d4ed8]/20 select-none">
+    <div className="w-full pt-12 md:pt-14 min-h-[calc(100vh-72px)] bg-white text-slate-800 font-bricolage relative overflow-x-hidden flex flex-col md:flex-row antialiased selection:bg-[#1d4ed8]/20 select-none">
       
       {/* LEFT COLUMN - Creuto Banner / Branding */}
-      <div className="w-full md:w-[40%] bg-[#f8fafc] border-b md:border-b-0 md:border-r border-[#e5e7eb] p-8 md:p-12 lg:p-16 flex flex-col justify-between sticky top-0 md:h-screen overflow-y-auto">
+      <div className="w-full md:w-[40%] bg-[#f8fafc] border-b md:border-b-0 md:border-r border-[#e5e7eb] p-8 md:p-12 lg:p-16 flex flex-col justify-between md:sticky md:top-[80px] md:h-[calc(100vh-80px)] overflow-y-auto">
         <div className="flex flex-col gap-8 md:gap-12">
           {/* Logo & Back Button */}
           <div className="flex flex-col gap-6">
