@@ -34,3 +34,18 @@ model CaseStudy {
   sortOrder   Int      @default(0)
   createdAt   DateTime @default(now())
 }
+
+model JobApplication {
+  id              String   @id @default(cuid())
+  position        String   // The dynamic position name
+  fullName        String
+  email           String
+  mobile          String
+  experience      String   // Relevant Experience
+  linkedinProfile String?  // Optional LinkedIn profile
+  whyCreuto       String   @db.Text
+  resumePath      String   // Path/url to uploaded Resume (PDF/DOC)
+  coverLetterPath String?  // Optional Path/url to uploaded Cover Letter
+  createdAt       DateTime @default(now())
+}
+
