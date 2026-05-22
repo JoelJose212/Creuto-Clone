@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { blogsComponents } from "./data"
 import Footer from "@/components/layout/Footer"
+import TOCConnector from "./TOCConnector"
 
 const BLOG_METADATA_MAP: Record<string, { title: string; description: string }> = {
   "how-smes-can-leverage-ai": {
@@ -118,7 +119,84 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         #creuto-blogpost-cloned-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
+
+        /* Premium Table of Contents Styles */
+        .mui-rjqn30 {
+          position: sticky !important;
+          top: 160px !important;
+          background: #F8FAFF !important;
+          border-radius: 12px !important;
+          padding: 24px !important;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+          border: 1px solid #E2E8F0 !important;
+          transition: all 0.3s ease !important;
+        }
+        .mui-plk8wk {
+          font-weight: 700 !important;
+          color: #0F172A !important;
+          font-size: 1.1rem !important;
+          margin-bottom: 16px !important;
+          text-transform: uppercase !important;
+          letter-spacing: 0.05em !important;
+          border-bottom: 2px solid #E2E8F0 !important;
+          padding-bottom: 8px !important;
+        }
+        .mui-rjqn30 ul {
+          list-style: none !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        .mui-rjqn30 ul li {
+          position: relative !important;
+          padding-left: 16px !important;
+          margin-bottom: 14px !important;
+          color: #475569 !important;
+          font-size: 0.95rem !important;
+          font-weight: 500 !important;
+          line-height: 1.4 !important;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+          cursor: pointer !important;
+        }
+        .mui-rjqn30 ul li::before {
+          content: '' !important;
+          position: absolute !important;
+          left: 0 !important;
+          top: 50% !important;
+          transform: translateY(-50%) scaleY(0) !important;
+          width: 3px !important;
+          height: 14px !important;
+          background-color: #1746EA !important;
+          border-radius: 2px !important;
+          transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        .mui-rjqn30 ul li:hover {
+          color: #1746EA !important;
+          padding-left: 22px !important;
+        }
+        .mui-rjqn30 ul li:hover::before {
+          transform: translateY(-50%) scaleY(1) !important;
+        }
+
+        /* Premium Dynamic Article Styles for Parsed Markdown */
+        .mui-1uz8ey3 h2 {
+          color: #0F172A !important;
+          font-weight: 700 !important;
+          font-size: 1.8rem !important;
+          margin-top: 32px !important;
+          margin-bottom: 16px !important;
+          line-height: 1.3 !important;
+        }
+        .mui-1uz8ey3 h3 {
+          color: #1E293B !important;
+          font-weight: 600 !important;
+          font-size: 1.4rem !important;
+          margin-top: 24px !important;
+          margin-bottom: 12px !important;
+          line-height: 1.3 !important;
+        }
       `}} />
+
+      <TOCConnector slug={slug} />
 
       <div id="creuto-blogpost-cloned-page">
         <Component />
