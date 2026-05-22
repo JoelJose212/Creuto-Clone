@@ -34,8 +34,22 @@ export default function PinBoard() {
   const [newColor, setNewColor] = useState<"pink" | "blue" | "yellow" | "green">("pink")
   const [composerError, setComposerError] = useState("")
 
-  // Load notices from localStorage or fallback to default JSON
-  useEffect(() => {
+  // Fetch notices from the server or fallback locally
+  const fetchNotices = async () => {
+    try {
+      const res = await fetch("/api/careers/notices")
+      if (res.ok) {
+        const data = await res.json()
+        if (data.success && data.notices) {
+          setNotices(data.notices)
+          return
+        }
+      }
+    } catch (err) {
+      console.error("Error fetching careers notices from API:", err)
+    }
+
+    // Fallback loading mechanism
     const saved = localStorage.getItem("creuto_notices")
     if (saved) {
       try {
@@ -46,44 +60,112 @@ export default function PinBoard() {
     } else {
       setNotices(defaultNotices as Notice[])
     }
-  }, [])
-
-  // Save notices helper
-  const saveNotices = (updatedNotices: Notice[]) => {
-    setNotices(updatedNotices)
-    localStorage.setItem("creuto_notices", JSON.stringify(updatedNotices))
   }
 
-  // Handle adding new notice
-  const handlePinNotice = (e: React.FormEvent) => {
+  // Load notices and automatically activate admin controls if the authorized session cookie is active
+  useEffect(() => {
+    fetchNotices()
+
+    // Read cookie list
+    const cookies = typeof document !== "undefined" ? document.cookie.split("; ") : []
+    const sessionCookie = cookies.find(row => row.startsWith("creuto_admin_session="))
+    if (sessionCookie && sessionCookie.split("=")[1] === "authorized") {
+      setIsAdminMode(true)
+    }
+  }, [])
+
+  // Handle adding new notice dynamically synchronized with the server
+  const handlePinNotice = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!newTitle.trim() || !newContent.trim()) {
       setComposerError("Both title and content are required!")
       return
     }
+    
+    if (newTitle.length > 30) {
+      setComposerError("Title is too long! Keep it under 30 characters.")
+      return
+    }
+    
     setComposerError("")
 
-    const notice: Notice = {
-      id: `notice-${Date.now()}`,
-      title: newTitle.trim(),
-      content: newContent.trim(),
-      color: newColor
+    try {
+      const res = await fetch("/api/admin/bulletins", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: newTitle.trim(),
+          content: newContent.trim(),
+          color: newColor
+        })
+      })
+
+      if (res.ok) {
+        const data = await res.json()
+        if (data.success) {
+          setNotices(prev => [data.bulletin, ...prev])
+          // Reset Form
+          setNewTitle("")
+          setNewContent("")
+          setNewColor("pink")
+          setIsComposerOpen(false)
+          return
+        } else {
+          setComposerError(data.error || "Failed to publish notice to the server.")
+        }
+      } else if (res.status === 401) {
+        setComposerError("Unauthorized! Please log in to the admin panel at /admin/login to publish.")
+      } else {
+        setComposerError("Server failed to pin the notice.")
+      }
+    } catch (err) {
+      console.error("Error pinning notice via server API:", err)
+      setComposerError("Network error. Saving locally instead.")
+      
+      // Local fallback
+      const notice: Notice = {
+        id: `notice-${Date.now()}`,
+        title: newTitle.trim(),
+        content: newContent.trim(),
+        color: newColor
+      }
+      const updated = [notice, ...notices]
+      setNotices(updated)
+      localStorage.setItem("creuto_notices", JSON.stringify(updated))
+      
+      // Reset Form
+      setNewTitle("")
+      setNewContent("")
+      setNewColor("pink")
+      setIsComposerOpen(false)
     }
-
-    const updated = [notice, ...notices]
-    saveNotices(updated)
-
-    // Reset Form
-    setNewTitle("")
-    setNewContent("")
-    setNewColor("pink")
-    setIsComposerOpen(false)
   }
 
-  // Handle deleting a notice
-  const handleDeleteNotice = (id: string) => {
+  // Handle deleting/unpinning a notice synchronized with the server
+  const handleDeleteNotice = async (id: string) => {
+    try {
+      const res = await fetch(`/api/admin/bulletins?id=${id}`, {
+        method: "DELETE"
+      })
+
+      if (res.ok) {
+        const data = await res.json()
+        if (data.success) {
+          setNotices(prev => prev.filter(n => n.id !== id))
+          return
+        }
+      } else if (res.status === 401) {
+        alert("Unauthorized! Please log in to the admin dashboard (/admin) to delete bulletins.")
+        return
+      }
+    } catch (err) {
+      console.error("Error unpinning bulletin notice:", err)
+    }
+
+    // Local fallback deletion
     const updated = notices.filter(n => n.id !== id)
-    saveNotices(updated)
+    setNotices(updated)
+    localStorage.setItem("creuto_notices", JSON.stringify(updated))
   }
 
   // Sticky color classes
