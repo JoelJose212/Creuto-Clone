@@ -24,15 +24,10 @@ function cleanHtmlWithJsdom(bodyHtml) {
   const dom = new JSDOM(bodyHtml);
   const doc = dom.window.document;
 
-  // 1. Remove duplicate header, banner, footer, whatsapp, and overlay drawers/navbars
+  // 1. Remove duplicate footer and whatsapp widget
   const selectorsToRemove = [
-    '.mui-1h4dmgi', // Ribbon banner
-    '.mui-143ljvh', // Header/Navbar
     '.mui-a524gp',  // Cloned Footer
-    '.mui-160f6iq', // WhatsApp widget
-    '.MuiDrawer-root', // Drawer container
-    '.mui-1ngb9tf', // Mobile drawers/overlays
-    '.mui-1fr0qmq'  // Mobile drawer menus
+    '.mui-160f6iq'  // WhatsApp widget
   ];
   
   selectorsToRemove.forEach(sel => {
@@ -56,6 +51,7 @@ function cleanHtmlWithJsdom(bodyHtml) {
 
   return doc.body.innerHTML;
 }
+
 
 
 function preprocess(html) {
@@ -264,7 +260,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <>
       <style dangerouslySetInnerHTML={{ __html: \`
         #creuto-blogpost-cloned-page {
-          padding-top: 130px;
           background-color: #ffffff;
         }
         #creuto-blogpost-cloned-page,

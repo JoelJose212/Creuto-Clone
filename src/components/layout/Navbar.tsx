@@ -31,7 +31,38 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  if (pathname === "/" || pathname === "/ai" || pathname === "/about" || pathname === "/services" || pathname === "/case-studies" || pathname === "/blog" || pathname?.startsWith("/blog/") || pathname === "/contact" || pathname === "/careers" || pathname?.startsWith("/careers/") || pathname?.startsWith("/dashboard")) return null
+  const BLOG_SLUGS = [
+    "how-smes-can-leverage-ai",
+    "how-creuto-help-businesses-scale-smartly",
+    "why-every-business-owner-should-invest-in-custom-software",
+    "the-beginning-of-something-real",
+    "your-customers-are-on-mobile",
+    "custom-crm",
+    "software-partner",
+    "custom-software-development",
+    "customsoftware-roi",
+    "startup"
+  ]
+
+  const slug = pathname ? pathname.slice(1) : ""
+
+  if (
+    BLOG_SLUGS.includes(slug) ||
+    pathname === "/" ||
+    pathname === "/ai" ||
+    pathname === "/about" ||
+    pathname === "/services" ||
+    pathname === "/case-studies" ||
+    pathname === "/blog" ||
+    pathname?.startsWith("/blog/") ||
+    pathname === "/contact" ||
+    pathname === "/careers" ||
+    pathname?.startsWith("/careers/") ||
+    pathname?.startsWith("/dashboard")
+  ) {
+    return null
+  }
+
 
   return (
     <>

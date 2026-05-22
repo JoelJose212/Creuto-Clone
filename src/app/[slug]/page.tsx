@@ -99,7 +99,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <>
       <style dangerouslySetInnerHTML={{ __html: `
         #creuto-blogpost-cloned-page {
-          padding-top: 130px;
           background-color: #ffffff;
         }
         #creuto-blogpost-cloned-page,
