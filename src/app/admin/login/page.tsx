@@ -74,9 +74,9 @@ export default function AdminLogin() {
         </div>
 
         {/* Glassmorphic Form Card */}
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-8 shadow-2xl backdrop-blur-xl sm:p-10">
+        <div className="relative overflow-hidden rounded-3xl border border-[#ffffff]/10 bg-[#ffffff]/[0.03] p-8 shadow-2xl backdrop-blur-xl sm:p-10">
           {/* Subtle reflection border light */}
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#ffffff]/20 to-transparent" />
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
@@ -105,7 +105,7 @@ export default function AdminLogin() {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   placeholder="Enter admin username"
-                  className="w-full rounded-2xl border border-white/10 bg-white/[0.05] py-3.5 pl-12 pr-4 text-sm text-white placeholder-slate-500 transition-all focus:border-blue-500/50 focus:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                  className="w-full rounded-2xl border border-[#ffffff]/10 bg-[#ffffff]/[0.05] py-3.5 pl-12 pr-4 text-sm text-white placeholder-slate-500 transition-all focus:border-blue-500/50 focus:bg-[#ffffff]/[0.08] focus:outline-none focus:ring-2 focus:ring-blue-500/20"
                 />
               </div>
             </div>
@@ -127,7 +127,7 @@ export default function AdminLogin() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••••••"
-                  className="w-full rounded-2xl border border-white/10 bg-white/[0.05] py-3.5 pl-12 pr-12 text-sm text-white placeholder-slate-500 transition-all focus:border-blue-500/50 focus:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                  className="w-full rounded-2xl border border-[#ffffff]/10 bg-[#ffffff]/[0.05] py-3.5 pl-12 pr-12 text-sm text-white placeholder-slate-500 transition-all focus:border-blue-500/50 focus:bg-[#ffffff]/[0.08] focus:outline-none focus:ring-2 focus:ring-blue-500/20"
                 />
                 <button
                   type="button"
