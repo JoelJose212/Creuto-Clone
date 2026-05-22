@@ -58,7 +58,8 @@ export default function Navbar() {
     pathname === "/contact" ||
     pathname === "/careers" ||
     pathname?.startsWith("/careers/") ||
-    pathname?.startsWith("/dashboard")
+    pathname?.startsWith("/dashboard") ||
+    pathname?.startsWith("/admin")
   ) {
     return null
   }
@@ -118,7 +119,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.98 }}
             >
               <Link
-                href="#"
+                href="/book-a-call"
                 className="rounded-full bg-blue px-7 py-2.5 font-jakarta text-[14.5px] font-bold text-white shadow-lg shadow-blue/20 transition-all hover:bg-blue-hover block"
               >
                 Book A Call
@@ -172,14 +173,14 @@ export default function Navbar() {
               ))}
               <div className="mt-8 flex flex-col items-center gap-4">
                 <Link
-                  href="#"
+                  href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
                   className="rounded-lg border border-border bg-transparent px-[24px] py-[12px] font-sans text-[16px] font-medium text-heading transition-colors hover:border-blue"
                 >
                   Contact Us
                 </Link>
                 <Link
-                  href="#"
+                  href="/book-a-call"
                   onClick={() => setMobileMenuOpen(false)}
                   className="rounded-lg bg-blue px-[24px] py-[12px] font-sans text-[16px] font-medium text-[#ffffff] transition-all hover:bg-blue-hover"
                 >
