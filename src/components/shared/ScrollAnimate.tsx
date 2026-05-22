@@ -88,6 +88,7 @@ export default function ScrollAnimate() {
         });
 
         cards.forEach((card) => {
+          if (pathname === "/careers") return;
           card.classList.add("reveal-card");
         });
 
