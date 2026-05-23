@@ -146,16 +146,16 @@
   background-color: #f4f7ff !important;
   color: #1e293b !important;
 
-  /* Shift layout down to sit perfectly below the restored Announcement Banner + Navbar */
-  margin-top: 128px !important;
-  height: calc(100vh - 128px) !important;
+  /* Restore full screen layout by removing offsets */
+  margin-top: 0px !important;
+  height: 100vh !important;
   position: relative !important;
 }
 
-/* Ensure mobile/desktop sidebars align exactly below the navbar */
+/* Ensure sidebars align perfectly from the very top */
 .admin-theme aside {
-  top: 128px !important;
-  height: calc(100vh - 128px) !important;
+  top: 0px !important;
+  height: 100vh !important;
   background-color: #ffffff !important;
   border-right: 1px solid #cbd5e1 !important;
 }

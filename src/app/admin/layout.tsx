@@ -129,10 +129,19 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   // Loading Screen for auth validation
   if (isAuthorized === null) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#0a0f24] text-white">
-        <div className="text-center space-y-4">
-          <Loader2 className="mx-auto h-10 w-10 animate-spin text-blue-500" />
-          <p className="font-jakarta text-sm text-slate-400">Verifying administrative access...</p>
+      <div className="flex min-h-screen items-center justify-center bg-[#f4f7ff] text-slate-800 font-jakarta relative overflow-hidden">
+        {/* BACKGROUND DECORATION */}
+        <div className="absolute top-0 right-0 -z-10 h-[600px] w-[600px] rounded-full bg-blue-600/10 opacity-30 blur-[130px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 -z-10 h-[600px] w-[600px] rounded-full bg-sky-500/10 opacity-40 blur-[130px] pointer-events-none" />
+        
+        <div className="text-center space-y-4 relative z-10">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600/10 text-blue-600 border border-blue-500/20 mx-auto shadow-md">
+            <Loader2 className="h-7 w-7 animate-spin text-blue-600" />
+          </div>
+          <div className="space-y-1">
+            <p className="font-bricolage text-lg font-extrabold text-slate-900">Creuto Control Deck</p>
+            <p className="text-xs text-slate-500 font-semibold tracking-wide">Verifying secure administrative session...</p>
+          </div>
         </div>
       </div>
     )
