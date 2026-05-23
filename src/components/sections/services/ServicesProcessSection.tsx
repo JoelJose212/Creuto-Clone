@@ -39,10 +39,10 @@ export default function ServicesProcessSection() {
               OUR PROCESS
             </div>
             <h2 className="font-bricolage text-[32px] md:text-[44px] font-bold text-[#23272e] tracking-[-0.88px] leading-[1.1] max-w-[680px] mb-[16px]">
-              Why is Creuto your Top Choice?
+              Why is Aanandi your Top Choice?
             </h2>
             <p className="font-bricolage text-[15.2px] font-medium text-[#666666] leading-[1.7] max-w-[600px]">
-              At Creuto, we specialize in developing customized software solutions to fit your unique needs, backed by industry expertise and a commitment to excellence.
+              At Aanandi, we specialize in developing customized software solutions to fit your unique needs, backed by industry expertise and a commitment to excellence.
             </p>
           </div>
           

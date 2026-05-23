@@ -4,11 +4,33 @@ import path from "path"
 import ContactHydration from "@/components/layout/ContactHydration"
 
 export const metadata: Metadata = {
-  title: "Contact Creuto - Book a Free Strategy Call",
-  description: "Got an idea for an AI product, mobile app, or custom software? Talk to the Creuto team. Book a free strategy call  no commitment, just a clear roadmap to launch.",
-  keywords: ["Contact Creuto", "Book Call Creuto", "Custom Software Consultation", "AI Development Odisha", "Creuto Offices"],
+  title: "Contact Aanandi TechnoSoft - Book a Free Strategy Call",
+  description: "Got an idea for an AI product, mobile app, or custom software? Talk to the Aanandi TechnoSoft team. Book a free strategy call  no commitment, just a clear roadmap to launch.",
+  keywords: ["Aanandi TechnoSoft", "Book Call Aanandi TechnoSoft", "Custom Software Consultation", "AI Development Odisha", "Aanandi TechnoSoft Offices"],
   alternates: {
-    canonical: "https://creuto.com/contact",
+    canonical: "https://aanandi.in/contact",
+  },
+  openGraph: {
+    title: "Contact Aanandi TechnoSoft - Book a Free Strategy Call",
+    description: "Got an idea for an AI product, mobile app, or custom software? Talk to the Aanandi TechnoSoft team. Book a free strategy call.",
+    url: "https://aanandi.in/contact",
+    siteName: "Aanandi TechnoSoft",
+    images: [
+      {
+        url: "/img/meta/meta-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Aanandi TechnoSoft",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Aanandi TechnoSoft - Book a Free Strategy Call",
+    description: "Got an idea for an AI product, mobile app, or custom software? Talk to the Aanandi TechnoSoft team.",
+    images: ["/img/meta/meta-image.png"],
   },
 }
 

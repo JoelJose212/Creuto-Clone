@@ -4,24 +4,32 @@ import path from "path"
 
 export function generateMetadata(): Metadata {
   return {
-    title: "About Creuto - Our Story, Team & Mission in AI Software Development",
-    description: "Meet the team behind Creuto - building AI-powered software, mobile apps, and custom platforms for businesses worldwide. Our story, values, and vision.",
+    title: "About Aanandi TechnoSoft - Our Story, Team & Mission in AI Software Development",
+    description: "Meet the team behind Aanandi TechnoSoft - building AI-powered software, mobile apps, and custom platforms for businesses worldwide. Our story, values, and vision.",
+    keywords: ["Aanandi TechnoSoft", "AI Software Team", "Custom Software Agency", "Aanandi TechnoSoft Mission", "AI Development Company"],
     alternates: {
-      canonical: "https://creuto.com/about",
+      canonical: "https://aanandi.in/about",
     },
     openGraph: {
-      title: "About Creuto - Our Story, Team & Mission in AI Software Development",
-      description: "Meet the team behind Creuto - building AI-powered software, mobile apps, and custom platforms for businesses worldwide. Our story, values, and vision.",
-      url: "https://creuto.com/about",
+      title: "About Aanandi TechnoSoft - Our Story, Team & Mission in AI Software Development",
+      description: "Meet the team behind Aanandi TechnoSoft - building AI-powered software, mobile apps, and custom platforms for businesses worldwide. Our story, values, and vision.",
+      url: "https://aanandi.in/about",
       images: [
         {
           url: "/img/meta/meta-image.png",
           width: 1200,
           height: 630,
+          alt: "Aanandi TechnoSoft",
         },
       ],
       locale: "en_US",
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "About Aanandi TechnoSoft - Our Story, Team & Mission in AI Software Development",
+      description: "Meet the team behind Aanandi TechnoSoft - building AI-powered software, mobile apps, and custom platforms for businesses worldwide.",
+      images: ["/img/meta/meta-image.png"],
     },
   }
 }
@@ -95,27 +103,27 @@ export default function AboutPage() {
 
         {/* Enforce correct Bricolage Grotesque font family */}
         <style dangerouslySetInnerHTML={{ __html: `
-          #creuto-about-cloned-page,
-          #creuto-about-cloned-page h1,
-          #creuto-about-cloned-page h2,
-          #creuto-about-cloned-page h3,
-          #creuto-about-cloned-page h4,
-          #creuto-about-cloned-page h5,
-          #creuto-about-cloned-page h6,
-          #creuto-about-cloned-page p,
-          #creuto-about-cloned-page span,
-          #creuto-about-cloned-page li,
-          #creuto-about-cloned-page a,
-          #creuto-about-cloned-page button,
-          #creuto-about-cloned-page label,
-          #creuto-about-cloned-page div,
-          #creuto-about-cloned-page .MuiTypography-root {
+          #aanandi-about-cloned-page,
+          #aanandi-about-cloned-page h1,
+          #aanandi-about-cloned-page h2,
+          #aanandi-about-cloned-page h3,
+          #aanandi-about-cloned-page h4,
+          #aanandi-about-cloned-page h5,
+          #aanandi-about-cloned-page h6,
+          #aanandi-about-cloned-page p,
+          #aanandi-about-cloned-page span,
+          #aanandi-about-cloned-page li,
+          #aanandi-about-cloned-page a,
+          #aanandi-about-cloned-page button,
+          #aanandi-about-cloned-page label,
+          #aanandi-about-cloned-page div,
+          #aanandi-about-cloned-page .MuiTypography-root {
             font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
           }
         `}} />
 
         {/* Render the beautifully processed page body */}
-        <div id="creuto-about-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+        <div id="aanandi-about-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
       </>
     )
   }
@@ -202,27 +210,27 @@ export default function AboutPage() {
 
       {/* Enforce correct Bricolage Grotesque font family */}
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-about-cloned-page,
-        #creuto-about-cloned-page h1,
-        #creuto-about-cloned-page h2,
-        #creuto-about-cloned-page h3,
-        #creuto-about-cloned-page h4,
-        #creuto-about-cloned-page h5,
-        #creuto-about-cloned-page h6,
-        #creuto-about-cloned-page p,
-        #creuto-about-cloned-page span,
-        #creuto-about-cloned-page li,
-        #creuto-about-cloned-page a,
-        #creuto-about-cloned-page button,
-        #creuto-about-cloned-page label,
-        #creuto-about-cloned-page div,
-        #creuto-about-cloned-page .MuiTypography-root {
+        #aanandi-about-cloned-page,
+        #aanandi-about-cloned-page h1,
+        #aanandi-about-cloned-page h2,
+        #aanandi-about-cloned-page h3,
+        #aanandi-about-cloned-page h4,
+        #aanandi-about-cloned-page h5,
+        #aanandi-about-cloned-page h6,
+        #aanandi-about-cloned-page p,
+        #aanandi-about-cloned-page span,
+        #aanandi-about-cloned-page li,
+        #aanandi-about-cloned-page a,
+        #aanandi-about-cloned-page button,
+        #aanandi-about-cloned-page label,
+        #aanandi-about-cloned-page div,
+        #aanandi-about-cloned-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />
 
       {/* Render the beautifully processed page body inside a scoped container */}
-      <div id="creuto-about-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+      <div id="aanandi-about-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
     </>
   )
 }

@@ -3,11 +3,33 @@ import fs from "fs"
 import path from "path"
 
 export const metadata: Metadata = {
-  title: "Careers at Creuto - Join an AI-First Software Development Team",
-  description: "Join Creuto and build AI-powered software used by real businesses. We're hiring engineers, designers, and product thinkers who ship fast and own what they build. Apply now.",
-  keywords: ["Creuto Careers", "Software Engineer Jobs Odisha", "AI developer openings", "Product Manager roles", "Remote tech careers"],
+  title: "Careers at Aanandi TechnoSoft - Join an AI-First Software Development Team",
+  description: "Join Aanandi TechnoSoft and build AI-powered software used by real businesses. We're hiring engineers, designers, and product thinkers who ship fast and own what they build. Apply now.",
+  keywords: ["Aanandi TechnoSoft Careers", "Software Engineer Jobs Odisha", "AI developer openings", "Product Manager roles", "Remote tech careers"],
   alternates: {
-    canonical: "https://creuto.com/careers",
+    canonical: "https://aanandi.in/careers",
+  },
+  openGraph: {
+    title: "Careers at Aanandi TechnoSoft - Join an AI-First Software Development Team",
+    description: "Join Aanandi TechnoSoft and build AI-powered software used by real businesses. We're hiring engineers, designers, and product thinkers who ship fast and own what they build.",
+    url: "https://aanandi.in/careers",
+    siteName: "Aanandi TechnoSoft",
+    images: [
+      {
+        url: "/img/meta/meta-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Careers at Aanandi TechnoSoft",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers at Aanandi TechnoSoft - Join an AI-First Software Development Team",
+    description: "Join Aanandi TechnoSoft and build AI-powered software used by real businesses. We're hiring engineers, designers, and product thinkers.",
+    images: ["/img/meta/meta-image.png"],
   },
 }
 
@@ -161,27 +183,27 @@ function renderPage(data: CacheData) {
 
       {/* Enforce correct Bricolage Grotesque font family */}
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-careers-list-page,
-        #creuto-careers-list-page h1,
-        #creuto-careers-list-page h2,
-        #creuto-careers-list-page h3,
-        #creuto-careers-list-page h4,
-        #creuto-careers-list-page h5,
-        #creuto-careers-list-page h6,
-        #creuto-careers-list-page p,
-        #creuto-careers-list-page span,
-        #creuto-careers-list-page li,
-        #creuto-careers-list-page a,
-        #creuto-careers-list-page button,
-        #creuto-careers-list-page label,
-        #creuto-careers-list-page div,
-        #creuto-careers-list-page .MuiTypography-root {
+        #aanandi-careers-list-page,
+        #aanandi-careers-list-page h1,
+        #aanandi-careers-list-page h2,
+        #aanandi-careers-list-page h3,
+        #aanandi-careers-list-page h4,
+        #aanandi-careers-list-page h5,
+        #aanandi-careers-list-page h6,
+        #aanandi-careers-list-page p,
+        #aanandi-careers-list-page span,
+        #aanandi-careers-list-page li,
+        #aanandi-careers-list-page a,
+        #aanandi-careers-list-page button,
+        #aanandi-careers-list-page label,
+        #aanandi-careers-list-page div,
+        #aanandi-careers-list-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />
 
       {/* Render the processed body */}
-      <div id="creuto-careers-list-page" dangerouslySetInnerHTML={{ __html: data.processedHtml }} />
+      <div id="aanandi-careers-list-page" dangerouslySetInnerHTML={{ __html: data.processedHtml }} />
     </>
   )
 }

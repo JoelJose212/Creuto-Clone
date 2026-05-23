@@ -1,9 +1,10 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /dashboard
 
 # Host
-Host: http://localhost:3000
+Host: https://aanandi.in
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://aanandi.in/sitemap.xml

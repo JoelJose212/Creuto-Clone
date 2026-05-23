@@ -8,11 +8,11 @@ import { cn } from "@/lib/cn"
 
 const FAQS = [
   {
-    q: "What services does CREUTO provide?",
+    q: "What services does AANANDI TECHNOSOFT provide?",
     a: "We offer end-to-end custom software development, mobile app development, AI feature integration, MVP development, and scalable digital product engineering for startups, SMEs, and enterprises.",
   },
   {
-    q: "Can CREUTO integrate AI into my existing product or application?",
+    q: "Can AANANDI TECHNOSOFT integrate AI into my existing product or application?",
     a: "Yes, we specialize in integrating AI capabilities into existing systems. Whether adding chatbots, predictive analytics, or computer vision, we can enhance your product with the latest AI technologies.",
   },
   {
@@ -20,7 +20,7 @@ const FAQS = [
     a: "The timeline depends on complexity. A simple MVP might take 4-8 weeks, while a full-scale enterprise solution could take 3-6 months or more. We provide a detailed timeline after the initial discovery phase.",
   },
   {
-    q: "What industries does Creuto work with?",
+    q: "What industries does Aanandi work with?",
     a: "We work with Healthcare, Fintech, E-commerce, Education, Real Estate, Logistics, and more. Our team adapts to the specific compliance and operational needs of each sector.",
   },
   {
@@ -36,7 +36,7 @@ const FAQS = [
     a: "We work with React, Next.js, Node.js, Python, Flutter, and React Native. For AI, we utilize OpenAI, Llama, TensorFlow, PyTorch, and cloud AI services from AWS and Azure.",
   },
   {
-    q: "Why should we choose Creuto for our software or AI project?",
+    q: "Why should we choose Aanandi for our software or AI project?",
     a: "We combine technical expertise with business acumen. Our team doesn't just write code — we understand your business goals. We offer transparent communication, agile delivery, and future-proof solutions.",
   },
 ]

@@ -59,17 +59,39 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const roleTitle = formatSlugToTitle(slug)
 
   return {
-    title: `${roleTitle} Jobs at Creuto - Join Our Product Team`,
-    description: `Apply for the ${roleTitle} position at Creuto. Join our high-performance engineering, product, and design team. Review candidate requirements and submit your application online today.`,
+    title: `${roleTitle} Jobs at Aanandi TechnoSoft - Join Our Product Team`,
+    description: `Apply for the ${roleTitle} position at Aanandi TechnoSoft. Join our high-performance engineering, product, and design team. Review candidate requirements and submit your application online today.`,
     alternates: {
-      canonical: `https://creuto.com/careers/${slug}`,
+      canonical: `https://aanandi.in/careers/${slug}`,
+    },
+    openGraph: {
+      title: `${roleTitle} Jobs at Aanandi TechnoSoft - Join Our Product Team`,
+      description: `Apply for the ${roleTitle} position at Aanandi TechnoSoft. Join our high-performance engineering, product, and design team.`,
+      url: `https://aanandi.in/careers/${slug}`,
+      siteName: "Aanandi TechnoSoft",
+      images: [
+        {
+          url: "/img/meta/meta-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${roleTitle} position at Aanandi TechnoSoft`,
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${roleTitle} Jobs at Aanandi TechnoSoft - Join Our Product Team`,
+      description: `Apply for the ${roleTitle} position at Aanandi TechnoSoft. Join our high-performance engineering, product, and design team.`,
+      images: ["/img/meta/meta-image.png"],
     },
   }
 }
 
 // 2. Pre-compile all 30+ static slugs during build time!
 export async function generateStaticParams() {
-  const careersDir = path.join("D:", "clone", "Clone", "creuto.com", "careers")
+  const careersDir = path.join(process.cwd(), "public", "cloned_html", "careers")
   if (!fs.existsSync(careersDir)) {
     return []
   }
@@ -132,7 +154,7 @@ export default function JobDetailPage({ params }: Props) {
     return renderDetailPage(detailCacheMap.get(slug)!)
   }
 
-  const filePath = path.join("D:", "clone", "Clone", "creuto.com", "careers", `${slug}.html`)
+  const filePath = path.join(process.cwd(), "public", "cloned_html", "careers", `${slug}.html`)
 
   if (!fs.existsSync(filePath)) {
     notFound()
@@ -246,27 +268,27 @@ function renderDetailPage(data: DetailCache) {
 
       {/* Enforce Bricolage Grotesque font family */}
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-job-detail-page,
-        #creuto-job-detail-page h1,
-        #creuto-job-detail-page h2,
-        #creuto-job-detail-page h3,
-        #creuto-job-detail-page h4,
-        #creuto-job-detail-page h5,
-        #creuto-job-detail-page h6,
-        #creuto-job-detail-page p,
-        #creuto-job-detail-page span,
-        #creuto-job-detail-page li,
-        #creuto-job-detail-page a,
-        #creuto-job-detail-page button,
-        #creuto-job-detail-page label,
-        #creuto-job-detail-page div,
-        #creuto-job-detail-page .MuiTypography-root {
+        #aanandi-job-detail-page,
+        #aanandi-job-detail-page h1,
+        #aanandi-job-detail-page h2,
+        #aanandi-job-detail-page h3,
+        #aanandi-job-detail-page h4,
+        #aanandi-job-detail-page h5,
+        #aanandi-job-detail-page h6,
+        #aanandi-job-detail-page p,
+        #aanandi-job-detail-page span,
+        #aanandi-job-detail-page li,
+        #aanandi-job-detail-page a,
+        #aanandi-job-detail-page button,
+        #aanandi-job-detail-page label,
+        #aanandi-job-detail-page div,
+        #aanandi-job-detail-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />
 
       {/* Render the hydrated interactive page body */}
-      <div id="creuto-job-detail-page">
+      <div id="aanandi-job-detail-page">
         <CareersDetailHydration
           html={data.processedHtml}
           roleTitle={data.roleTitle}

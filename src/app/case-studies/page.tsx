@@ -3,23 +3,23 @@ import fs from "fs"
 import path from "path"
 
 export const metadata: Metadata = {
-  title: "AI Custom Product Case Studies & Success Stories | Creuto",
-  description: "Explore Creuto's custom AI engineering and product development case studies. Learn how we build, scale, and optimize intelligent applications for scaling businesses.",
-  keywords: ["AI Case Studies", "Custom Software Success Stories", "Creuto Client Stories", "Software Development Success", "Product Engineering Case Studies"],
+  title: "AI Custom Product Case Studies & Success Stories | Aanandi TechnoSoft",
+  description: "Explore Aanandi TechnoSoft's custom AI engineering and product development case studies. Learn how we build, scale, and optimize intelligent applications for scaling businesses.",
+  keywords: ["AI Case Studies", "Custom Software Success Stories", "Aanandi TechnoSoft Client Stories", "Software Development Success", "Product Engineering Case Studies"],
   alternates: {
-    canonical: "https://creuto.com/case-studies",
+    canonical: "https://aanandi.in/case-studies",
   },
   openGraph: {
-    title: "AI Custom Product Case Studies & Success Stories | Creuto",
-    description: "Explore Creuto's custom AI engineering and product development case studies. Learn how we build, scale, and optimize intelligent applications for scaling businesses.",
-    url: "https://creuto.com/case-studies",
-    siteName: "Creuto",
+    title: "AI Custom Product Case Studies & Success Stories | Aanandi TechnoSoft",
+    description: "Explore Aanandi TechnoSoft's custom AI engineering and product development case studies. Learn how we build, scale, and optimize intelligent applications for scaling businesses.",
+    url: "https://aanandi.in/case-studies",
+    siteName: "Aanandi TechnoSoft",
     images: [
       {
         url: "/img/meta/meta-image.png",
         width: 1200,
         height: 630,
-        alt: "Creuto Case Studies Success Stories",
+        alt: "Aanandi TechnoSoft Case Studies Success Stories",
       },
     ],
     locale: "en_US",
@@ -96,27 +96,27 @@ export default function CaseStudiesPage() {
 
         {/* Enforce correct Bricolage Grotesque font family */}
         <style dangerouslySetInnerHTML={{ __html: `
-          #creuto-casestudies-cloned-page,
-          #creuto-casestudies-cloned-page h1,
-          #creuto-casestudies-cloned-page h2,
-          #creuto-casestudies-cloned-page h3,
-          #creuto-casestudies-cloned-page h4,
-          #creuto-casestudies-cloned-page h5,
-          #creuto-casestudies-cloned-page h6,
-          #creuto-casestudies-cloned-page p,
-          #creuto-casestudies-cloned-page span,
-          #creuto-casestudies-cloned-page li,
-          #creuto-casestudies-cloned-page a,
-          #creuto-casestudies-cloned-page button,
-          #creuto-casestudies-cloned-page label,
-          #creuto-casestudies-cloned-page div,
-          #creuto-casestudies-cloned-page .MuiTypography-root {
+          #aanandi-casestudies-cloned-page,
+          #aanandi-casestudies-cloned-page h1,
+          #aanandi-casestudies-cloned-page h2,
+          #aanandi-casestudies-cloned-page h3,
+          #aanandi-casestudies-cloned-page h4,
+          #aanandi-casestudies-cloned-page h5,
+          #aanandi-casestudies-cloned-page h6,
+          #aanandi-casestudies-cloned-page p,
+          #aanandi-casestudies-cloned-page span,
+          #aanandi-casestudies-cloned-page li,
+          #aanandi-casestudies-cloned-page a,
+          #aanandi-casestudies-cloned-page button,
+          #aanandi-casestudies-cloned-page label,
+          #aanandi-casestudies-cloned-page div,
+          #aanandi-casestudies-cloned-page .MuiTypography-root {
             font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
           }
         `}} />
 
         {/* Render the beautifully processed page body */}
-        <div id="creuto-casestudies-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+        <div id="aanandi-casestudies-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
       </>
     )
   }
@@ -203,27 +203,27 @@ export default function CaseStudiesPage() {
 
       {/* Enforce correct Bricolage Grotesque font family */}
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-casestudies-cloned-page,
-        #creuto-casestudies-cloned-page h1,
-        #creuto-casestudies-cloned-page h2,
-        #creuto-casestudies-cloned-page h3,
-        #creuto-casestudies-cloned-page h4,
-        #creuto-casestudies-cloned-page h5,
-        #creuto-casestudies-cloned-page h6,
-        #creuto-casestudies-cloned-page p,
-        #creuto-casestudies-cloned-page span,
-        #creuto-casestudies-cloned-page li,
-        #creuto-casestudies-cloned-page a,
-        #creuto-casestudies-cloned-page button,
-        #creuto-casestudies-cloned-page label,
-        #creuto-casestudies-cloned-page div,
-        #creuto-casestudies-cloned-page .MuiTypography-root {
+        #aanandi-casestudies-cloned-page,
+        #aanandi-casestudies-cloned-page h1,
+        #aanandi-casestudies-cloned-page h2,
+        #aanandi-casestudies-cloned-page h3,
+        #aanandi-casestudies-cloned-page h4,
+        #aanandi-casestudies-cloned-page h5,
+        #aanandi-casestudies-cloned-page h6,
+        #aanandi-casestudies-cloned-page p,
+        #aanandi-casestudies-cloned-page span,
+        #aanandi-casestudies-cloned-page li,
+        #aanandi-casestudies-cloned-page a,
+        #aanandi-casestudies-cloned-page button,
+        #aanandi-casestudies-cloned-page label,
+        #aanandi-casestudies-cloned-page div,
+        #aanandi-casestudies-cloned-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />
 
       {/* Render the beautifully processed page body inside a scoped container */}
-      <div id="creuto-casestudies-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+      <div id="aanandi-casestudies-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
     </>
   )
 }

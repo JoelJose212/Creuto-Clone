@@ -10,7 +10,7 @@ import AnnouncementBanner from "./AnnouncementBanner"
 
 
 const NAV_LINKS = [
-  { name: "Creuto.ai", href: "/ai" },
+  { name: "Aanandi.ai", href: "/ai" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services", hasDropdown: true },
   { name: "Case Studies", href: "/case-studies" },
@@ -51,7 +51,7 @@ export default function Navbar() {
           {/* Logo */}
           <motion.div layout>
             <Link href="/" className="font-jakarta text-[26px] font-[800] tracking-[-0.03em] text-heading flex items-center">
-              <span>Creuto</span>
+              <span>Aanandi</span>
               <span className="w-1.5 h-1.5 bg-blue rounded-full ml-0.5 mt-2" />
             </Link>
           </motion.div>
@@ -116,9 +116,9 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] overflow-hidden bg-[#ffffff]"
           >
             <div className="flex h-[72px] items-center justify-between px-4">
-              <Link href="/" className="font-display text-[22px] font-[800] tracking-[-0.5px]">
-                <span className="text-heading">Creu</span>
-                <span className="text-blue">to</span>
+              <Link href="/" className="font-jakarta text-[22px] font-[800] tracking-[-0.03em] text-heading flex items-center">
+                <span>Aanandi</span>
+                <span className="w-1.5 h-1.5 bg-blue rounded-full ml-0.5 mt-2" />
               </Link>
               <button
                 className="flex items-center justify-center p-2 text-heading"

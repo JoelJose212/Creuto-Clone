@@ -36,7 +36,7 @@ export default function AboutWhyChooseSection() {
         </div>
         
         <h2 className="font-bricolage text-[32px] md:text-[44px] font-bold text-[#23272e] tracking-[-0.88px] mb-[48px]">
-          Why Teams Choose CREUTO
+          Why Teams Choose AANANDI
         </h2>
 
         <motion.div 

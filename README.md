@@ -1,6 +1,6 @@
-# 🚀 Creuto Clone — High-Fidelity AI-First Platform
+# 🚀 Aanandi TechnoSoft Clone — High-Fidelity AI-First Platform
 
-A state-of-the-art, pixel-perfect replication of the premium [Creuto homepage](https://creuto.com/), completely optimized and enhanced with highly dynamic React components, modern GPU-accelerated motion systems, and custom database integrations.
+A state-of-the-art, pixel-perfect replication of the premium [Aanandi TechnoSoft homepage](https://aanandi.in/), completely optimized and enhanced with highly dynamic React components, modern GPU-accelerated motion systems, and custom database integrations.
 
 This project merges the raw layouts of a pre-rendered static crawl with fully functional Next.js 14 App Router client hydration, offering an ultra-premium visual experience.
 
@@ -82,12 +82,12 @@ npm install
 ### 2. Environment Configuration
 Create a `.env.local` file in the root directory and define your PostgreSQL connection URI and Nodemailer credentials:
 ```env
-DATABASE_URL="postgresql://username:password@localhost:5432/creuto_db?schema=public"
+DATABASE_URL="postgresql://username:password@localhost:5432/aanandi_db?schema=public"
 SMTP_HOST="smtp.example.com"
 SMTP_PORT=587
 SMTP_USER="your-email@example.com"
 SMTP_PASS="your-email-password"
-CONTACT_RECEIVER="info@creuto.com"
+CONTACT_RECEIVER="info@aanandi.in"
 ```
 
 ### 3. Database Migration

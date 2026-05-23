@@ -3,27 +3,33 @@ import fs from "fs"
 import path from "path"
 
 export const metadata: Metadata = {
-  title: "AI-First Product Development - Build Intelligent Software | Creuto",
-  description: "Creuto builds AI-powered products — from intelligent apps and predictive platforms to ChatGPT integrations and ML pipelines. Custom AI development for businesses that move fast.",
+  title: "AI Engineering Services - Machine Learning, ChatGPT & MLOps | Aanandi TechnoSoft",
+  description: "Aanandi TechnoSoft LLP builds AI-powered products — from intelligent apps and predictive platforms to ChatGPT integrations and ML pipelines. Custom AI development for businesses that move fast.",
   keywords: ["AI Engineering", "Product Development", "ChatGPT Integration", "Machine Learning", "Custom Software"],
   alternates: {
-    canonical: "https://creuto.com/ai",
+    canonical: "https://aanandi.in/ai",
   },
   openGraph: {
-    title: "AI-First Product Development - Build Intelligent Software | Creuto",
-    description: "Creuto builds AI-powered products — from intelligent apps and predictive platforms to ChatGPT integrations and ML pipelines. Custom AI development for businesses that move fast.",
-    url: "https://creuto.com/ai",
-    siteName: "Creuto",
+    title: "AI Engineering Services - Machine Learning, ChatGPT & MLOps | Aanandi TechnoSoft",
+    description: "Aanandi TechnoSoft LLP builds AI-powered products — from intelligent apps and predictive platforms to ChatGPT integrations and ML pipelines. Custom AI development for businesses that move fast.",
+    url: "https://aanandi.in/ai",
+    siteName: "Aanandi TechnoSoft",
     images: [
       {
         url: "/img/meta/meta-image.png",
         width: 1200,
         height: 630,
-        alt: "Creuto AI Development",
+        alt: "Aanandi TechnoSoft AI Development",
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Engineering Services - Machine Learning, ChatGPT & MLOps | Aanandi TechnoSoft",
+    description: "Aanandi TechnoSoft LLP builds AI-powered products — from intelligent apps and predictive platforms to ChatGPT integrations and ML pipelines.",
+    images: ["/img/meta/meta-image.png"],
   },
 }
 
@@ -123,58 +129,58 @@ export default function AiPage() {
 
         {/* Force override Tailwind global heading colors and enforce correct Bricolage Grotesque font family */}
         <style dangerouslySetInnerHTML={{ __html: `
-          #creuto-ai-cloned-page,
-          #creuto-ai-cloned-page h1,
-          #creuto-ai-cloned-page h2,
-          #creuto-ai-cloned-page h3,
-          #creuto-ai-cloned-page h4,
-          #creuto-ai-cloned-page h5,
-          #creuto-ai-cloned-page h6,
-          #creuto-ai-cloned-page p,
-          #creuto-ai-cloned-page span,
-          #creuto-ai-cloned-page li,
-          #creuto-ai-cloned-page a,
-          #creuto-ai-cloned-page button,
-          #creuto-ai-cloned-page label,
-          #creuto-ai-cloned-page div,
-          #creuto-ai-cloned-page .MuiTypography-root {
+          #aanandi-ai-cloned-page,
+          #aanandi-ai-cloned-page h1,
+          #aanandi-ai-cloned-page h2,
+          #aanandi-ai-cloned-page h3,
+          #aanandi-ai-cloned-page h4,
+          #aanandi-ai-cloned-page h5,
+          #aanandi-ai-cloned-page h6,
+          #aanandi-ai-cloned-page p,
+          #aanandi-ai-cloned-page span,
+          #aanandi-ai-cloned-page li,
+          #aanandi-ai-cloned-page a,
+          #aanandi-ai-cloned-page button,
+          #aanandi-ai-cloned-page label,
+          #aanandi-ai-cloned-page div,
+          #aanandi-ai-cloned-page .MuiTypography-root {
             font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
           }
 
-          #creuto-ai-cloned-page h1,
-          #creuto-ai-cloned-page h2,
-          #creuto-ai-cloned-page h3,
-          #creuto-ai-cloned-page h4,
-          #creuto-ai-cloned-page h5,
-          #creuto-ai-cloned-page h6,
-          #creuto-ai-cloned-page p,
-          #creuto-ai-cloned-page span,
-          #creuto-ai-cloned-page li,
-          #creuto-ai-cloned-page label,
-          #creuto-ai-cloned-page .MuiTypography-root {
+          #aanandi-ai-cloned-page h1,
+          #aanandi-ai-cloned-page h2,
+          #aanandi-ai-cloned-page h3,
+          #aanandi-ai-cloned-page h4,
+          #aanandi-ai-cloned-page h5,
+          #aanandi-ai-cloned-page h6,
+          #aanandi-ai-cloned-page p,
+          #aanandi-ai-cloned-page span,
+          #aanandi-ai-cloned-page li,
+          #aanandi-ai-cloned-page label,
+          #aanandi-ai-cloned-page .MuiTypography-root {
             color: #ffffff !important;
           }
 
           /* Explicitly keep dark text on the cloned page's light/white sections (.mui-k7w9dk) */
-          #creuto-ai-cloned-page .mui-k7w9dk,
-          #creuto-ai-cloned-page .mui-k7w9dk h1,
-          #creuto-ai-cloned-page .mui-k7w9dk h2,
-          #creuto-ai-cloned-page .mui-k7w9dk h3,
-          #creuto-ai-cloned-page .mui-k7w9dk h4,
-          #creuto-ai-cloned-page .mui-k7w9dk h5,
-          #creuto-ai-cloned-page .mui-k7w9dk h6,
-          #creuto-ai-cloned-page .mui-k7w9dk p,
-          #creuto-ai-cloned-page .mui-k7w9dk span,
-          #creuto-ai-cloned-page .mui-k7w9dk li,
-          #creuto-ai-cloned-page .mui-k7w9dk label,
-          #creuto-ai-cloned-page .mui-k7w9dk .MuiTypography-root,
-          #creuto-ai-cloned-page .mui-k7w9dk strong {
+          #aanandi-ai-cloned-page .mui-k7w9dk,
+          #aanandi-ai-cloned-page .mui-k7w9dk h1,
+          #aanandi-ai-cloned-page .mui-k7w9dk h2,
+          #aanandi-ai-cloned-page .mui-k7w9dk h3,
+          #aanandi-ai-cloned-page .mui-k7w9dk h4,
+          #aanandi-ai-cloned-page .mui-k7w9dk h5,
+          #aanandi-ai-cloned-page .mui-k7w9dk h6,
+          #aanandi-ai-cloned-page .mui-k7w9dk p,
+          #aanandi-ai-cloned-page .mui-k7w9dk span,
+          #aanandi-ai-cloned-page .mui-k7w9dk li,
+          #aanandi-ai-cloned-page .mui-k7w9dk label,
+          #aanandi-ai-cloned-page .mui-k7w9dk .MuiTypography-root,
+          #aanandi-ai-cloned-page .mui-k7w9dk strong {
             color: #23272e !important;
           }
         `}} />
 
         {/* Render the beautifully processed page body inside a white text wrapper */}
-        <div id="creuto-ai-cloned-page" className="text-white" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+        <div id="aanandi-ai-cloned-page" className="text-white" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
       </>
     )
   }
@@ -288,58 +294,58 @@ export default function AiPage() {
 
       {/* Force override Tailwind global heading colors and enforce correct Bricolage Grotesque font family in cloned content */}
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-ai-cloned-page,
-        #creuto-ai-cloned-page h1,
-        #creuto-ai-cloned-page h2,
-        #creuto-ai-cloned-page h3,
-        #creuto-ai-cloned-page h4,
-        #creuto-ai-cloned-page h5,
-        #creuto-ai-cloned-page h6,
-        #creuto-ai-cloned-page p,
-        #creuto-ai-cloned-page span,
-        #creuto-ai-cloned-page li,
-        #creuto-ai-cloned-page a,
-        #creuto-ai-cloned-page button,
-        #creuto-ai-cloned-page label,
-        #creuto-ai-cloned-page div,
-        #creuto-ai-cloned-page .MuiTypography-root {
+        #aanandi-ai-cloned-page,
+        #aanandi-ai-cloned-page h1,
+        #aanandi-ai-cloned-page h2,
+        #aanandi-ai-cloned-page h3,
+        #aanandi-ai-cloned-page h4,
+        #aanandi-ai-cloned-page h5,
+        #aanandi-ai-cloned-page h6,
+        #aanandi-ai-cloned-page p,
+        #aanandi-ai-cloned-page span,
+        #aanandi-ai-cloned-page li,
+        #aanandi-ai-cloned-page a,
+        #aanandi-ai-cloned-page button,
+        #aanandi-ai-cloned-page label,
+        #aanandi-ai-cloned-page div,
+        #aanandi-ai-cloned-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
 
-        #creuto-ai-cloned-page h1,
-        #creuto-ai-cloned-page h2,
-        #creuto-ai-cloned-page h3,
-        #creuto-ai-cloned-page h4,
-        #creuto-ai-cloned-page h5,
-        #creuto-ai-cloned-page h6,
-        #creuto-ai-cloned-page p,
-        #creuto-ai-cloned-page span,
-        #creuto-ai-cloned-page li,
-        #creuto-ai-cloned-page label,
-        #creuto-ai-cloned-page .MuiTypography-root {
+        #aanandi-ai-cloned-page h1,
+        #aanandi-ai-cloned-page h2,
+        #aanandi-ai-cloned-page h3,
+        #aanandi-ai-cloned-page h4,
+        #aanandi-ai-cloned-page h5,
+        #aanandi-ai-cloned-page h6,
+        #aanandi-ai-cloned-page p,
+        #aanandi-ai-cloned-page span,
+        #aanandi-ai-cloned-page li,
+        #aanandi-ai-cloned-page label,
+        #aanandi-ai-cloned-page .MuiTypography-root {
           color: #ffffff !important;
         }
 
         /* Explicitly keep dark text on the cloned page's light/white sections (.mui-k7w9dk) */
-        #creuto-ai-cloned-page .mui-k7w9dk,
-        #creuto-ai-cloned-page .mui-k7w9dk h1,
-        #creuto-ai-cloned-page .mui-k7w9dk h2,
-        #creuto-ai-cloned-page .mui-k7w9dk h3,
-        #creuto-ai-cloned-page .mui-k7w9dk h4,
-        #creuto-ai-cloned-page .mui-k7w9dk h5,
-        #creuto-ai-cloned-page .mui-k7w9dk h6,
-        #creuto-ai-cloned-page .mui-k7w9dk p,
-        #creuto-ai-cloned-page .mui-k7w9dk span,
-        #creuto-ai-cloned-page .mui-k7w9dk li,
-        #creuto-ai-cloned-page .mui-k7w9dk label,
-        #creuto-ai-cloned-page .mui-k7w9dk .MuiTypography-root,
-        #creuto-ai-cloned-page .mui-k7w9dk strong {
+        #aanandi-ai-cloned-page .mui-k7w9dk,
+        #aanandi-ai-cloned-page .mui-k7w9dk h1,
+        #aanandi-ai-cloned-page .mui-k7w9dk h2,
+        #aanandi-ai-cloned-page .mui-k7w9dk h3,
+        #aanandi-ai-cloned-page .mui-k7w9dk h4,
+        #aanandi-ai-cloned-page .mui-k7w9dk h5,
+        #aanandi-ai-cloned-page .mui-k7w9dk h6,
+        #aanandi-ai-cloned-page .mui-k7w9dk p,
+        #aanandi-ai-cloned-page .mui-k7w9dk span,
+        #aanandi-ai-cloned-page .mui-k7w9dk li,
+        #aanandi-ai-cloned-page .mui-k7w9dk label,
+        #aanandi-ai-cloned-page .mui-k7w9dk .MuiTypography-root,
+        #aanandi-ai-cloned-page .mui-k7w9dk strong {
           color: #23272e !important;
         }
       `}} />
 
       {/* Render the beautifully processed page body inside a white text wrapper */}
-      <div id="creuto-ai-cloned-page" className="text-white" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+      <div id="aanandi-ai-cloned-page" className="text-white" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
     </>
   )
 }

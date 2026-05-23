@@ -39,26 +39,32 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  title: "Creuto - AI Products, Mobile Apps & Custom Software Development",
-  description: "Creuto is a premium agency specializing in AI products, mobile apps, and custom software development.",
+  title: "Aanandi TechnoSoft - AI Products, Mobile Apps & Custom Software Development",
+  description: "Aanandi TechnoSoft LLP is a premium agency specializing in AI products, mobile apps, and custom software development.",
   openGraph: {
-    title: "Creuto - AI Products, Mobile Apps & Custom Software Development",
-    description: "Creuto is a premium agency specializing in AI products, mobile apps, and custom software development.",
-    url: "https://creuto.com",
-    siteName: "Creuto",
+    title: "Aanandi TechnoSoft - AI Products, Mobile Apps & Custom Software Development",
+    description: "Aanandi TechnoSoft LLP is a premium agency specializing in AI products, mobile apps, and custom software development.",
+    url: "https://aanandi.in",
+    siteName: "Aanandi TechnoSoft",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/img/meta/meta-image.png",
         width: 1200,
         height: 630,
-        alt: "Creuto",
+        alt: "Aanandi TechnoSoft",
       },
     ],
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aanandi TechnoSoft - AI Products, Mobile Apps & Custom Software Development",
+    description: "Aanandi TechnoSoft LLP is a premium agency specializing in AI products, mobile apps, and custom software development.",
+    images: ["/img/meta/meta-image.png"],
+  },
   alternates: {
-    canonical: "https://creuto.com",
+    canonical: "https://aanandi.in",
   },
 }
 

@@ -291,7 +291,7 @@ export default function CareersDetailHydration({ html, roleTitle }: CareersDetai
                         rows={3}
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="Tell us why you want to join Creuto..."
+                        placeholder="Tell us why you want to join Aanandi..."
                         disabled={isSubmitting}
                         className="w-full bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 outline-none focus:border-blue-500/80 transition-all text-sm resize-none"
                       />

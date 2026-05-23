@@ -151,12 +151,11 @@ export default function Footer() {
           
           {/* Column 1: Brand & Newsletter */}
           <div className="flex flex-col">
-            <Link href="/" className="mb-[20px] font-display text-[24px] font-[800] tracking-[-0.5px]">
-              <span className="text-[#ffffff]">Creu</span>
-              <span className="text-blue">to</span>
+            <Link href="/" className="mb-[20px] block">
+              <img src="/aanandi_small_logo_white.png" alt="Aanandi" className="h-[32px] w-auto object-contain" />
             </Link>
             <p className="mb-[32px] max-w-[280px] font-sans text-[14px] font-[300] leading-[1.75] text-[#7b80a8]">
-              We don&apos;t just aim to fit in — we strive to stand out. Experience the perfect blend of innovation, excellence, and trust that makes us truly unforgettable. Discover the difference with Creuto.
+              We don&apos;t just aim to fit in — we strive to stand out. Experience the perfect blend of innovation, excellence, and trust that makes us truly unforgettable. Discover the difference with Aanandi.
             </p>
             
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
@@ -245,7 +244,7 @@ export default function Footer() {
         {/* Bottom Row */}
         <div className="flex flex-col items-start gap-[16px] pt-[28px] md:flex-row md:items-center md:justify-between">
           <div className="font-sans text-[13px] font-[300] text-[#7b80a8]">
-            © 2026 Creuto All Rights Reserved
+            © 2026 Aanandi TechnoSoft LLP. All Rights Reserved.
           </div>
           <div className="flex gap-[24px]">
             <Link href="#" className="font-sans text-[12px] text-[#7b80a8] transition-colors hover:text-[#ffffff]">

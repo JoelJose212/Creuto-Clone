@@ -3,23 +3,23 @@ import fs from "fs"
 import path from "path"
 
 export const metadata: Metadata = {
-  title: "AI Software & Custom Product Development Services | Creuto",
-  description: "Creuto provides premium product development services — from artificial intelligence and machine learning engineering to custom CRM, mobile, and web applications. Expert engineering tailored for growth.",
-  keywords: ["AI Development Services", "Custom CRM", "Mobile App Development", "Web Engineering", "Creuto Services", "Software Architecture"],
+  title: "AI Software & Custom Product Development Services | Aanandi TechnoSoft",
+  description: "Aanandi TechnoSoft LLP provides premium product development services — from artificial intelligence and machine learning engineering to custom CRM, mobile, and web applications. Expert engineering tailored for growth.",
+  keywords: ["AI Development Services", "Custom CRM", "Mobile App Development", "Web Engineering", "Aanandi TechnoSoft Services", "Software Architecture"],
   alternates: {
-    canonical: "https://creuto.com/services",
+    canonical: "https://aanandi.in/services",
   },
   openGraph: {
-    title: "AI Software & Custom Product Development Services | Creuto",
-    description: "Creuto provides premium product development services — from artificial intelligence and machine learning engineering to custom CRM, mobile, and web applications. Expert engineering tailored for growth.",
-    url: "https://creuto.com/services",
-    siteName: "Creuto",
+    title: "AI Software & Custom Product Development Services | Aanandi TechnoSoft",
+    description: "Aanandi TechnoSoft LLP provides premium product development services — from artificial intelligence and machine learning engineering to custom CRM, mobile, and web applications. Expert engineering tailored for growth.",
+    url: "https://aanandi.in/services",
+    siteName: "Aanandi TechnoSoft",
     images: [
       {
         url: "/img/meta/meta-image.png",
         width: 1200,
         height: 630,
-        alt: "Creuto Services Development",
+        alt: "Aanandi TechnoSoft Services Development",
       },
     ],
     locale: "en_US",
@@ -96,27 +96,27 @@ export default function ServicesPage() {
 
         {/* Enforce correct Bricolage Grotesque font family */}
         <style dangerouslySetInnerHTML={{ __html: `
-          #creuto-services-cloned-page,
-          #creuto-services-cloned-page h1,
-          #creuto-services-cloned-page h2,
-          #creuto-services-cloned-page h3,
-          #creuto-services-cloned-page h4,
-          #creuto-services-cloned-page h5,
-          #creuto-services-cloned-page h6,
-          #creuto-services-cloned-page p,
-          #creuto-services-cloned-page span,
-          #creuto-services-cloned-page li,
-          #creuto-services-cloned-page a,
-          #creuto-services-cloned-page button,
-          #creuto-services-cloned-page label,
-          #creuto-services-cloned-page div,
-          #creuto-services-cloned-page .MuiTypography-root {
+          #aanandi-services-cloned-page,
+          #aanandi-services-cloned-page h1,
+          #aanandi-services-cloned-page h2,
+          #aanandi-services-cloned-page h3,
+          #aanandi-services-cloned-page h4,
+          #aanandi-services-cloned-page h5,
+          #aanandi-services-cloned-page h6,
+          #aanandi-services-cloned-page p,
+          #aanandi-services-cloned-page span,
+          #aanandi-services-cloned-page li,
+          #aanandi-services-cloned-page a,
+          #aanandi-services-cloned-page button,
+          #aanandi-services-cloned-page label,
+          #aanandi-services-cloned-page div,
+          #aanandi-services-cloned-page .MuiTypography-root {
             font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
           }
         `}} />
 
         {/* Render the beautifully processed page body */}
-        <div id="creuto-services-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+        <div id="aanandi-services-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
       </>
     )
   }
@@ -203,27 +203,27 @@ export default function ServicesPage() {
 
       {/* Enforce correct Bricolage Grotesque font family */}
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-services-cloned-page,
-        #creuto-services-cloned-page h1,
-        #creuto-services-cloned-page h2,
-        #creuto-services-cloned-page h3,
-        #creuto-services-cloned-page h4,
-        #creuto-services-cloned-page h5,
-        #creuto-services-cloned-page h6,
-        #creuto-services-cloned-page p,
-        #creuto-services-cloned-page span,
-        #creuto-services-cloned-page li,
-        #creuto-services-cloned-page a,
-        #creuto-services-cloned-page button,
-        #creuto-services-cloned-page label,
-        #creuto-services-cloned-page div,
-        #creuto-services-cloned-page .MuiTypography-root {
+        #aanandi-services-cloned-page,
+        #aanandi-services-cloned-page h1,
+        #aanandi-services-cloned-page h2,
+        #aanandi-services-cloned-page h3,
+        #aanandi-services-cloned-page h4,
+        #aanandi-services-cloned-page h5,
+        #aanandi-services-cloned-page h6,
+        #aanandi-services-cloned-page p,
+        #aanandi-services-cloned-page span,
+        #aanandi-services-cloned-page li,
+        #aanandi-services-cloned-page a,
+        #aanandi-services-cloned-page button,
+        #aanandi-services-cloned-page label,
+        #aanandi-services-cloned-page div,
+        #aanandi-services-cloned-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />
 
       {/* Render the beautifully processed page body inside a scoped container */}
-      <div id="creuto-services-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+      <div id="aanandi-services-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
     </>
   )
 }

@@ -6,24 +6,24 @@ import path from "path"
 // Slugs mapping to provide high-fidelity dynamic SEO configurations
 const BLOG_METADATA_MAP: Record<string, { title: string; description: string }> = {
   "how-smes-can-leverage-ai": {
-    title: "How SMEs Can Leverage AI to Scale | Creuto Blog",
+    title: "How SMEs Can Leverage AI to Scale | Aanandi TechnoSoft Blog",
     description: "Learn how Small and Medium Enterprises can leverage artificial intelligence to optimize workflows, decrease operational costs, and build smarter capabilities.",
   },
   "your-customers-are-on-mobile": {
-    title: "Your Customers Are On Mobile: Why Mobile First Matters | Creuto Blog",
+    title: "Your Customers Are On Mobile: Why Mobile First Matters | Aanandi TechnoSoft Blog",
     description: "Why building a custom, responsive mobile app is critical for customer retention, direct engagement, and scaling your modern business footprint.",
   },
   "why-every-business-owner-should-invest-in-custom-software": {
-    title: "Why Business Owners Should Invest in Custom Software | Creuto Blog",
+    title: "Why Business Owners Should Invest in Custom Software | Aanandi TechnoSoft Blog",
     description: "Generic software limits your operational scale. Learn why custom-engineered product solutions provide higher ROI, better efficiency, and a robust competitive advantage.",
   },
-  "how-creuto-help-businesses-scale-smartly": {
-    title: "How Creuto Helps Businesses Scale Smartly | Creuto Blog",
+  "how-aanandi-help-businesses-scale-smartly": {
+    title: "How Aanandi TechnoSoft Helps Businesses Scale Smartly | Aanandi TechnoSoft Blog",
     description: "Explore our framework for scaling engineering infrastructure, team alignment, and rapid product development tailored for high-growth enterprises.",
   },
   "the-beginning-of-something-real": {
-    title: "The Beginning of Something Real | Creuto Blog",
-    description: "Deep dive into the vision, culture, and core engineering philosophy that inspired the launch of Creuto as an elite AI-first design and software agency.",
+    title: "The Beginning of Something Real | Aanandi TechnoSoft Blog",
+    description: "Deep dive into the vision, culture, and core engineering philosophy that inspired the launch of Aanandi TechnoSoft as an elite AI-first design and software agency.",
   },
 }
 
@@ -40,22 +40,38 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!meta) {
     return {
-      title: "Creuto Blog Post",
+      title: "Aanandi TechnoSoft Blog Post",
     }
   }
 
   return {
     title: meta.title,
     description: meta.description,
+    keywords: [meta.title.split(" | ")[0], "Aanandi TechnoSoft Blog", "AI Insights", "Software Development"],
     alternates: {
-      canonical: `https://creuto.com/blogs/${slug}`,
+      canonical: `https://aanandi.in/blogs/${slug}`,
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `https://creuto.com/blogs/${slug}`,
-      siteName: "Creuto",
+      url: `https://aanandi.in/blogs/${slug}`,
+      siteName: "Aanandi TechnoSoft",
+      images: [
+        {
+          url: "/img/meta/meta-image.png",
+          width: 1200,
+          height: 630,
+          alt: meta.title,
+        },
+      ],
+      locale: "en_US",
       type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: ["/img/meta/meta-image.png"],
     },
   }
 }
@@ -134,32 +150,32 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         ))}
 
         <style dangerouslySetInnerHTML={{ __html: `
-          #creuto-blogpost-cloned-page,
-          #creuto-blogpost-cloned-page h1,
-          #creuto-blogpost-cloned-page h2,
-          #creuto-blogpost-cloned-page h3,
-          #creuto-blogpost-cloned-page h4,
-          #creuto-blogpost-cloned-page h5,
-          #creuto-blogpost-cloned-page h6,
-          #creuto-blogpost-cloned-page p,
-          #creuto-blogpost-cloned-page span,
-          #creuto-blogpost-cloned-page li,
-          #creuto-blogpost-cloned-page a,
-          #creuto-blogpost-cloned-page button,
-          #creuto-blogpost-cloned-page label,
-          #creuto-blogpost-cloned-page div,
-          #creuto-blogpost-cloned-page .MuiTypography-root {
+          #aanandi-blogpost-cloned-page,
+          #aanandi-blogpost-cloned-page h1,
+          #aanandi-blogpost-cloned-page h2,
+          #aanandi-blogpost-cloned-page h3,
+          #aanandi-blogpost-cloned-page h4,
+          #aanandi-blogpost-cloned-page h5,
+          #aanandi-blogpost-cloned-page h6,
+          #aanandi-blogpost-cloned-page p,
+          #aanandi-blogpost-cloned-page span,
+          #aanandi-blogpost-cloned-page li,
+          #aanandi-blogpost-cloned-page a,
+          #aanandi-blogpost-cloned-page button,
+          #aanandi-blogpost-cloned-page label,
+          #aanandi-blogpost-cloned-page div,
+          #aanandi-blogpost-cloned-page .MuiTypography-root {
             font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
           }
         `}} />
 
-        <div id="creuto-blogpost-cloned-page" dangerouslySetInnerHTML={{ __html: cachedData.processedHtml }} />
+        <div id="aanandi-blogpost-cloned-page" dangerouslySetInnerHTML={{ __html: cachedData.processedHtml }} />
       </>
     )
   }
 
   // 3. Read cloned dynamic template file from disk
-  const filePath = path.join("D:", "clone", "Clone", "creuto.com", `${slug}.html`)
+  const filePath = path.join(process.cwd(), "public", "cloned_html", "blogs", `${slug}.html`)
   let htmlContent = ""
 
   try {
@@ -210,7 +226,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   // Map sub-post card click elements recursively
   processedHtml = processedHtml
-    .replace(/href="(how-smes-can-leverage-ai|your-customers-are-on-mobile|why-every-business-owner-should-invest-in-custom-software|how-creuto-help-businesses-scale-smartly|the-beginning-of-something-real)\.html"/g, 'href="/blogs/$1"')
+    .replace(/href="(how-smes-can-leverage-ai|your-customers-are-on-mobile|why-every-business-owner-should-invest-in-custom-software|how-aanandi-help-businesses-scale-smartly|the-beginning-of-something-real)\.html"/g, 'href="/blogs/$1"')
 
   // 7. Strip srcsets and fix pre-rendered animation delays
   processedHtml = processedHtml
@@ -254,27 +270,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {/* Enforce correct Bricolage Grotesque font family */}
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-blogpost-cloned-page,
-        #creuto-blogpost-cloned-page h1,
-        #creuto-blogpost-cloned-page h2,
-        #creuto-blogpost-cloned-page h3,
-        #creuto-blogpost-cloned-page h4,
-        #creuto-blogpost-cloned-page h5,
-        #creuto-blogpost-cloned-page h6,
-        #creuto-blogpost-cloned-page p,
-        #creuto-blogpost-cloned-page span,
-        #creuto-blogpost-cloned-page li,
-        #creuto-blogpost-cloned-page a,
-        #creuto-blogpost-cloned-page button,
-        #creuto-blogpost-cloned-page label,
-        #creuto-blogpost-cloned-page div,
-        #creuto-blogpost-cloned-page .MuiTypography-root {
+        #aanandi-blogpost-cloned-page,
+        #aanandi-blogpost-cloned-page h1,
+        #aanandi-blogpost-cloned-page h2,
+        #aanandi-blogpost-cloned-page h3,
+        #aanandi-blogpost-cloned-page h4,
+        #aanandi-blogpost-cloned-page h5,
+        #aanandi-blogpost-cloned-page h6,
+        #aanandi-blogpost-cloned-page p,
+        #aanandi-blogpost-cloned-page span,
+        #aanandi-blogpost-cloned-page li,
+        #aanandi-blogpost-cloned-page a,
+        #aanandi-blogpost-cloned-page button,
+        #aanandi-blogpost-cloned-page label,
+        #aanandi-blogpost-cloned-page div,
+        #aanandi-blogpost-cloned-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />
 
       {/* Render the beautifully processed page body inside a scoped container */}
-      <div id="creuto-blogpost-cloned-page" dangerouslySetInnerHTML={{ __html: computedData.processedHtml }} />
+      <div id="aanandi-blogpost-cloned-page" dangerouslySetInnerHTML={{ __html: computedData.processedHtml }} />
     </>
   )
 }

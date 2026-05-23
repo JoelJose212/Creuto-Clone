@@ -4,11 +4,11 @@ import path from "path"
 import ServicesSection from "@/components/sections/ServicesSection"
 
 export const metadata: Metadata = {
-  title: "AI-First Product Development - Build Intelligent Software | Creuto",
-  description: "Creuto builds high-performance AI-powered software products for startups and enterprises. Custom software development, mobile apps, and AI solutions designed to accelerate business growth.",
-  keywords: ["Custom Software Development", "AI Solutions", "Mobile App Development", "Creuto", "Product Engineering"],
+  title: "AI-First Product Development - Build Intelligent Software | Aanandi TechnoSoft",
+  description: "Aanandi TechnoSoft LLP builds high-performance AI-powered software products for startups and enterprises. Custom software development, mobile apps, and AI solutions designed to accelerate business growth.",
+  keywords: ["Custom Software Development", "AI Solutions", "Mobile App Development", "Aanandi TechnoSoft", "Product Engineering"],
   alternates: {
-    canonical: "https://creuto.com",
+    canonical: "https://aanandi.in",
   },
 }
 
@@ -178,27 +178,27 @@ function renderPage(data: CacheData) {
 
       {/* Enforce correct Bricolage Grotesque font family */}
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-homepage,
-        #creuto-homepage h1,
-        #creuto-homepage h2,
-        #creuto-homepage h3,
-        #creuto-homepage h4,
-        #creuto-homepage h5,
-        #creuto-homepage h6,
-        #creuto-homepage p,
-        #creuto-homepage span,
-        #creuto-homepage li,
-        #creuto-homepage a,
-        #creuto-homepage button,
-        #creuto-homepage label,
-        #creuto-homepage div,
-        #creuto-homepage .MuiTypography-root {
+        #aanandi-homepage,
+        #aanandi-homepage h1,
+        #aanandi-homepage h2,
+        #aanandi-homepage h3,
+        #aanandi-homepage h4,
+        #aanandi-homepage h5,
+        #aanandi-homepage h6,
+        #aanandi-homepage p,
+        #aanandi-homepage span,
+        #aanandi-homepage li,
+        #aanandi-homepage a,
+        #aanandi-homepage button,
+        #aanandi-homepage label,
+        #aanandi-homepage div,
+        #aanandi-homepage .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />
 
       {/* Render the dynamic parsed body layout */}
-      <div id="creuto-homepage">
+      <div id="aanandi-homepage">
         {hasSplit ? (
           <>
             <div dangerouslySetInnerHTML={{ __html: beforeHtml }} />

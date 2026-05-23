@@ -77,7 +77,7 @@ export default function FrameworkSection() {
             transition={{ delay: 0.1 }}
             className="mb-[20px] font-jakarta text-[clamp(32px,5vw,48px)] font-[800] leading-[1.1] tracking-tight text-white"
           >
-            C Is for CREUTO. C Is How We Build.
+            C Is for AANANDI. C Is How We Build.
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

@@ -150,7 +150,7 @@ export default function HeroSection() {
         >
            <Image 
              src="/img/hero-graphic.png" 
-             alt="Creuto Graphic" 
+             alt="Aanandi Graphic" 
              fill 
              className="object-contain object-bottom scale-110"
              priority

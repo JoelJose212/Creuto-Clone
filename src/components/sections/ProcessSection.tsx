@@ -37,7 +37,7 @@ export default function ProcessSection() {
             Our Product Development Process.
           </h2>
           <p className="mx-auto max-w-[600px] font-sans text-[16px] font-[300] text-muted">
-            At Creuto, we believe that a structured and effective development process is crucial to delivering successful products.
+            At Aanandi, we believe that a structured and effective development process is crucial to delivering successful products.
           </p>
         </div>
 

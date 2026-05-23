@@ -3,23 +3,23 @@ import fs from "fs"
 import path from "path"
 
 export const metadata: Metadata = {
-  title: "AI & Custom Software Insights | Creuto Blog",
-  description: "Read the latest engineering articles, product strategy guides, and AI development insights from Creuto's design and software engineering team.",
-  keywords: ["AI Engineering Blog", "Custom CRM Strategy", "Mobile Application Trends", "Creuto Blog", "Software Development Insights"],
+  title: "AI & Custom Software Insights | Aanandi TechnoSoft Blog",
+  description: "Read the latest engineering articles, product strategy guides, and AI development insights from Aanandi TechnoSoft's design and software engineering team.",
+  keywords: ["AI Engineering Blog", "Custom CRM Strategy", "Mobile Application Trends", "Aanandi TechnoSoft Blog", "Software Development Insights"],
   alternates: {
-    canonical: "https://creuto.com/blogs",
+    canonical: "https://aanandi.in/blogs",
   },
   openGraph: {
-    title: "AI & Custom Software Insights | Creuto Blog",
-    description: "Read the latest engineering articles, product strategy guides, and AI development insights from Creuto's design and software engineering team.",
-    url: "https://creuto.com/blogs",
-    siteName: "Creuto",
+    title: "AI & Custom Software Insights | Aanandi TechnoSoft Blog",
+    description: "Read the latest engineering articles, product strategy guides, and AI development insights from Aanandi TechnoSoft's design and software engineering team.",
+    url: "https://aanandi.in/blogs",
+    siteName: "Aanandi TechnoSoft",
     images: [
       {
         url: "/img/meta/meta-image.png",
         width: 1200,
         height: 630,
-        alt: "Creuto Engineering Blog",
+        alt: "Aanandi TechnoSoft Engineering Blog",
       },
     ],
     locale: "en_US",
@@ -96,27 +96,27 @@ export default function BlogsPage() {
 
         {/* Enforce correct Bricolage Grotesque font family */}
         <style dangerouslySetInnerHTML={{ __html: `
-          #creuto-blogs-cloned-page,
-          #creuto-blogs-cloned-page h1,
-          #creuto-blogs-cloned-page h2,
-          #creuto-blogs-cloned-page h3,
-          #creuto-blogs-cloned-page h4,
-          #creuto-blogs-cloned-page h5,
-          #creuto-blogs-cloned-page h6,
-          #creuto-blogs-cloned-page p,
-          #creuto-blogs-cloned-page span,
-          #creuto-blogs-cloned-page li,
-          #creuto-blogs-cloned-page a,
-          #creuto-blogs-cloned-page button,
-          #creuto-blogs-cloned-page label,
-          #creuto-blogs-cloned-page div,
-          #creuto-blogs-cloned-page .MuiTypography-root {
+          #aanandi-blogs-cloned-page,
+          #aanandi-blogs-cloned-page h1,
+          #aanandi-blogs-cloned-page h2,
+          #aanandi-blogs-cloned-page h3,
+          #aanandi-blogs-cloned-page h4,
+          #aanandi-blogs-cloned-page h5,
+          #aanandi-blogs-cloned-page h6,
+          #aanandi-blogs-cloned-page p,
+          #aanandi-blogs-cloned-page span,
+          #aanandi-blogs-cloned-page li,
+          #aanandi-blogs-cloned-page a,
+          #aanandi-blogs-cloned-page button,
+          #aanandi-blogs-cloned-page label,
+          #aanandi-blogs-cloned-page div,
+          #aanandi-blogs-cloned-page .MuiTypography-root {
             font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
           }
         `}} />
 
         {/* Render the beautifully processed page body */}
-        <div id="creuto-blogs-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+        <div id="aanandi-blogs-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
       </>
     )
   }
@@ -161,7 +161,7 @@ export default function BlogsPage() {
 
   // 3. Map list card links to clean dynamic Next.js blog slug routes
   processedHtml = processedHtml
-    .replace(/href="(how-smes-can-leverage-ai|your-customers-are-on-mobile|why-every-business-owner-should-invest-in-custom-software|how-creuto-help-businesses-scale-smartly|the-beginning-of-something-real)\.html"/g, 'href="/blogs/$1"')
+    .replace(/href="(how-smes-can-leverage-ai|your-customers-are-on-mobile|why-every-business-owner-should-invest-in-custom-software|how-aanandi-help-businesses-scale-smartly|the-beginning-of-something-real)\.html"/g, 'href="/blogs/$1"')
 
   // 4. Strip all dynamic srcset / srcSet attributes
   processedHtml = processedHtml
@@ -207,27 +207,27 @@ export default function BlogsPage() {
 
       {/* Enforce correct Bricolage Grotesque font family */}
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-blogs-cloned-page,
-        #creuto-blogs-cloned-page h1,
-        #creuto-blogs-cloned-page h2,
-        #creuto-blogs-cloned-page h3,
-        #creuto-blogs-cloned-page h4,
-        #creuto-blogs-cloned-page h5,
-        #creuto-blogs-cloned-page h6,
-        #creuto-blogs-cloned-page p,
-        #creuto-blogs-cloned-page span,
-        #creuto-blogs-cloned-page li,
-        #creuto-blogs-cloned-page a,
-        #creuto-blogs-cloned-page button,
-        #creuto-blogs-cloned-page label,
-        #creuto-blogs-cloned-page div,
-        #creuto-blogs-cloned-page .MuiTypography-root {
+        #aanandi-blogs-cloned-page,
+        #aanandi-blogs-cloned-page h1,
+        #aanandi-blogs-cloned-page h2,
+        #aanandi-blogs-cloned-page h3,
+        #aanandi-blogs-cloned-page h4,
+        #aanandi-blogs-cloned-page h5,
+        #aanandi-blogs-cloned-page h6,
+        #aanandi-blogs-cloned-page p,
+        #aanandi-blogs-cloned-page span,
+        #aanandi-blogs-cloned-page li,
+        #aanandi-blogs-cloned-page a,
+        #aanandi-blogs-cloned-page button,
+        #aanandi-blogs-cloned-page label,
+        #aanandi-blogs-cloned-page div,
+        #aanandi-blogs-cloned-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />
 
       {/* Render the beautifully processed page body inside a scoped container */}
-      <div id="creuto-blogs-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
+      <div id="aanandi-blogs-cloned-page" dangerouslySetInnerHTML={{ __html: cache.processedHtml }} />
     </>
   )
 }
