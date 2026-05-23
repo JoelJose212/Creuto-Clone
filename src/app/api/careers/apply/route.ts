@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
 import { promises as fs } from "fs"
 import path from "path"
+import { sendEmail } from "@/lib/mail"
+
 
 export const dynamic = "force-dynamic"
 
@@ -10,6 +12,230 @@ const ALLOWED_EXTENSIONS = [".pdf", ".doc", ".docx"]
 
 function getExtension(filename: string): string {
   return path.extname(filename).toLowerCase()
+}
+
+function generateApplicantHtml({
+  fullName,
+  email,
+  mobile,
+  position,
+  experience,
+  linkedinProfile,
+  whyCreuto,
+  resumeUrl,
+  coverLetterUrl,
+}: {
+  fullName: string
+  email: string
+  mobile: string
+  position: string
+  experience: string
+  linkedinProfile: string | null
+  whyCreuto: string
+  resumeUrl: string
+  coverLetterUrl: string | null
+}) {
+  return `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <style>
+        body {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+          background-color: #f4f7ff;
+          color: #334155;
+          margin: 0;
+          padding: 24px;
+        }
+        .container {
+          max-width: 600px;
+          margin: 0 auto;
+          background-color: #ffffff;
+          border-radius: 16px;
+          border: 1px solid #cbd5e1;
+          box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.05), 0 4px 6px -4px rgba(37, 99, 235, 0.05);
+          overflow: hidden;
+        }
+        .header {
+          background: linear-gradient(135deg, #2563eb, #1d4ed8);
+          padding: 32px 24px;
+          text-align: center;
+          color: #ffffff;
+        }
+        .header h1 {
+          margin: 0;
+          font-size: 24px;
+          font-weight: 800;
+          letter-spacing: -0.02em;
+        }
+        .header p {
+          margin: 8px 0 0 0;
+          font-size: 14px;
+          color: #bfdbfe;
+          font-weight: 600;
+        }
+        .content {
+          padding: 32px 24px;
+        }
+        .section-title {
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: #2563eb;
+          margin-bottom: 12px;
+          border-bottom: 1px solid #e2e8f0;
+          padding-bottom: 6px;
+        }
+        .grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+          margin-bottom: 24px;
+        }
+        @media (max-width: 480px) {
+          .grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        .card {
+          background-color: #f8fafc;
+          border: 1px solid #e2e8f0;
+          border-radius: 8px;
+          padding: 12px;
+        }
+        .card-label {
+          font-size: 10px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #64748b;
+        }
+        .card-value {
+          font-size: 13px;
+          font-weight: 600;
+          color: #1e293b;
+          margin-top: 4px;
+          word-break: break-all;
+        }
+        .card-value a {
+          color: #2563eb;
+          text-decoration: none;
+        }
+        .card-value a:hover {
+          text-decoration: underline;
+        }
+        .pitch {
+          background-color: #eff6ff;
+          border-left: 4px solid #2563eb;
+          border-radius: 0 8px 8px 0;
+          padding: 16px;
+          font-size: 13px;
+          line-height: 1.6;
+          color: #1e3a8a;
+          font-style: italic;
+          margin-bottom: 24px;
+        }
+        .actions {
+          text-align: center;
+          margin-top: 32px;
+          display: flex;
+          gap: 12px;
+          justify-content: center;
+        }
+        .btn {
+          display: inline-block;
+          padding: 12px 24px;
+          font-size: 13px;
+          font-weight: 700;
+          border-radius: 8px;
+          text-decoration: none;
+          transition: all 0.2s ease;
+        }
+        .btn-primary {
+          background-color: #2563eb;
+          color: #ffffff !important;
+          box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+        }
+        .btn-primary:hover {
+          background-color: #1d4ed8;
+        }
+        .btn-secondary {
+          background-color: #f1f5f9;
+          color: #475569 !important;
+          border: 1px solid #cbd5e1;
+        }
+        .btn-secondary:hover {
+          background-color: #e2e8f0;
+        }
+        .footer {
+          background-color: #f8fafc;
+          border-top: 1px solid #cbd5e1;
+          padding: 16px;
+          text-align: center;
+          font-size: 11px;
+          color: #64748b;
+          font-weight: 500;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h1>New Applicant Alert</h1>
+          <p>Creuto Recruitment Engine</p>
+        </div>
+        
+        <div class="content">
+          <div class="section-title">Candidate Coordinates</div>
+          
+          <div class="grid">
+            <div class="card">
+              <div class="card-label">Full Name</div>
+              <div class="card-value">${fullName}</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Target Position</div>
+              <div class="card-value" style="color: #2563eb; font-weight: 800;">${position}</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Email Address</div>
+              <div class="card-value"><a href="mailto:${email}">${email}</a></div>
+            </div>
+            <div class="card">
+              <div class="card-label">Mobile Contact</div>
+              <div class="card-value"><a href="tel:${mobile}">${mobile}</a></div>
+            </div>
+            <div class="card">
+              <div class="card-label">Experience Level</div>
+              <div class="card-value">${experience}</div>
+            </div>
+            <div class="card">
+              <div class="card-label">LinkedIn Profile</div>
+              <div class="card-value">
+                ${linkedinProfile ? `<a href="${linkedinProfile}" target="_blank" rel="noopener noreferrer">View LinkedIn</a>` : "Not Provided"}
+              </div>
+            </div>
+          </div>
+          
+          <div class="section-title">Candidate Pitch ("Why Creuto?")</div>
+          <div class="pitch">
+            "${whyCreuto.replace(/\n/g, "<br>")}"
+          </div>
+          
+          <div class="actions">
+            <a href="${resumeUrl}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">📂 View Resume PDF</a>
+            ${coverLetterUrl ? `<a href="${coverLetterUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">✉️ Cover Letter</a>` : ""}
+          </div>
+        </div>
+        
+        <div class="footer">
+          This is an automated recruitment system alert. Manage all active candidates at <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin/careers" style="color: #2563eb; text-decoration: none; font-weight: 600;">Creuto Control Deck</a>.
+        </div>
+      </div>
+    </body>
+    </html>
+  `
 }
 
 export async function POST(request: Request) {
@@ -159,6 +385,28 @@ export async function POST(request: Request) {
       console.log(`[API Apply] Backup logged in careers_applications.json successfully.`)
     } catch (jsonError) {
       console.error("[API Apply] Logging application backup to JSON file failed:", jsonError)
+    }
+
+    // 8. Send notification email to admin asynchronously (non-blocking)
+    const adminEmail = process.env.ADMIN_NOTIFICATION_EMAIL || "joel@creuto.com"
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+
+    if (adminEmail) {
+      sendEmail({
+        to: adminEmail,
+        subject: `[New Applicant] ${fullName} - ${position}`,
+        html: generateApplicantHtml({
+          fullName,
+          email,
+          mobile,
+          position,
+          experience,
+          linkedinProfile: linkedinProfile || null,
+          whyCreuto,
+          resumeUrl: `${siteUrl}${resumePath}`,
+          coverLetterUrl: coverLetterPath ? `${siteUrl}${coverLetterPath}` : null,
+        }),
+      }).catch((err) => console.error("Asynchronous recruitment mail dispatch failed:", err))
     }
 
     return NextResponse.json({
