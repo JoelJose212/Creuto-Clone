@@ -275,3 +275,27 @@
     border-color: #e2e8f0 !important;
   }
 }
+
+/* ==========================================================================
+   GLOBAL NAVBAR & ANNOUNCEMENT BANNER RECOVERY SYSTEM
+   ========================================================================== */
+
+/* 1. Hide the broken, static cloned legacy navbars globally on all public pages */
+.mui-143ljvh,
+[id*="cloned-page"] .mui-143ljvh,
+[id$="-page"] .mui-143ljvh {
+  display: none !important;
+}
+
+/* 2. Hide local page-level duplicate banners while preserving the root global banner */
+div[id*="creuto-"] .mui-1h4dmgi,
+div[id*="-page"] .mui-1h4dmgi {
+  display: none !important;
+}
+
+/* 3. Apply standard top spacing to public pages to accommodate the fixed premium header */
+div[id*="creuto-"]:not(.admin-exclude-navbar),
+div[id*="-page"]:not(.admin-exclude-navbar) {
+  padding-top: 128px !important; /* 48px Announcement Ribbon + 80px Navbar */
+}
+

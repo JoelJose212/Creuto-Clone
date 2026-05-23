@@ -46,21 +46,7 @@ export default function Navbar() {
 
   const slug = pathname ? pathname.slice(1) : ""
 
-  if (
-    BLOG_SLUGS.includes(slug) ||
-    pathname === "/" ||
-    pathname === "/ai" ||
-    pathname === "/about" ||
-    pathname === "/services" ||
-    pathname === "/case-studies" ||
-    pathname === "/blog" ||
-    pathname?.startsWith("/blog/") ||
-    pathname === "/contact" ||
-    pathname === "/careers" ||
-    pathname?.startsWith("/careers/") ||
-    pathname?.startsWith("/dashboard") ||
-    pathname?.startsWith("/admin")
-  ) {
+  if (pathname?.startsWith("/admin") || pathname?.startsWith("/dashboard")) {
     return null
   }
 
