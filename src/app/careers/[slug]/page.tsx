@@ -45,10 +45,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const roleTitle = formatSlugToTitle(slug)
 
   return {
-    title: `${roleTitle} Jobs at Creuto - Join Our Product Team`,
-    description: `Apply for the ${roleTitle} position at Creuto. Join our high-performance engineering, product, and design team. Review candidate requirements and submit your application online today.`,
+    title: `${roleTitle} Jobs at Aanandi - Join Our Product Team`,
+    description: `Apply for the ${roleTitle} position at Aanandi. Join our high-performance engineering, product, and design team. Review candidate requirements and submit your application online today.`,
     alternates: {
-      canonical: `https://creuto.com/careers/${slug}`,
+      canonical: `https://aananditechnosoft.com/careers/${slug}`,
     },
   }
 }
@@ -75,21 +75,21 @@ export default async function JobDetailPage({ params }: Props) {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-job-detail-page,
-        #creuto-job-detail-page h1,
-        #creuto-job-detail-page h2,
-        #creuto-job-detail-page h3,
-        #creuto-job-detail-page h4,
-        #creuto-job-detail-page h5,
-        #creuto-job-detail-page h6,
-        #creuto-job-detail-page p,
-        #creuto-job-detail-page span,
-        #creuto-job-detail-page li,
-        #creuto-job-detail-page a,
-        #creuto-job-detail-page button,
-        #creuto-job-detail-page label,
-        #creuto-job-detail-page div,
-        #creuto-job-detail-page .MuiTypography-root {
+        #aanandi-job-detail-page,
+        #aanandi-job-detail-page h1,
+        #aanandi-job-detail-page h2,
+        #aanandi-job-detail-page h3,
+        #aanandi-job-detail-page h4,
+        #aanandi-job-detail-page h5,
+        #aanandi-job-detail-page h6,
+        #aanandi-job-detail-page p,
+        #aanandi-job-detail-page span,
+        #aanandi-job-detail-page li,
+        #aanandi-job-detail-page a,
+        #aanandi-job-detail-page button,
+        #aanandi-job-detail-page label,
+        #aanandi-job-detail-page div,
+        #aanandi-job-detail-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />

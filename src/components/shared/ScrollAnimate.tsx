@@ -11,12 +11,12 @@ export default function ScrollAnimate() {
 
     function initializeAnimations() {
       // 1. Find all potential section containers on the page
-      const pageWrapper = document.getElementById("creuto-homepage") || document.body;
+      const pageWrapper = document.getElementById("aanandi-homepage") || document.body;
       
       // Select any top-level direct divs, sections or custom containers
       const possibleSections = Array.from(
         pageWrapper.querySelectorAll(
-          "section, .MuiContainer-root, .MuiBox-root, [class*='CTASection'], [class*='HeroSection'], [class*='StatsSection'], [class*='ServicesSection'], [class*='WhyCreutoSection'], [class*='CaseStudiesSection'], [class*='TestimonialsSection'], [class*='FAQSection']"
+          "section, .MuiContainer-root, .MuiBox-root, [class*='CTASection'], [class*='HeroSection'], [class*='StatsSection'], [class*='ServicesSection'], [class*='WhyAanandiSection'], [class*='CaseStudiesSection'], [class*='TestimonialsSection'], [class*='FAQSection']"
         )
       ).filter((el) => {
         // Exclude elements inside the navbar/header or footer

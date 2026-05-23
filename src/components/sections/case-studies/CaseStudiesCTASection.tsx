@@ -41,7 +41,7 @@ export default function CaseStudiesCTASection() {
           variants={itemVariants}
           className="font-bricolage text-[36px] md:text-[44px] font-bold text-white leading-[1.2] max-w-[500px] mx-auto mb-[16px]"
         >
-          Connect with Creuto!
+          Connect with Aanandi!
         </motion.h2>
 
         <motion.p 

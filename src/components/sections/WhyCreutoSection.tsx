@@ -41,11 +41,11 @@ const CARDS = [
   {
     num: "/08",
     title: "Zero-Compromise Quality",
-    desc: "If it doesn't meet the CREUTO standard, it doesn't ship. Simple as that.",
+    desc: "If it doesn't meet the AANANDI standard, it doesn't ship. Simple as that.",
   },
 ]
 
-export default function WhyCreutoSection() {
+export default function WhyAanandiSection() {
   return (
     <section className="bg-[#2563eb] py-[100px] px-[5%]">
       <div className="mx-auto max-w-7xl">
@@ -56,7 +56,7 @@ export default function WhyCreutoSection() {
             viewport={{ once: true }}
             className="mb-[16px] inline-block text-[13px] font-bold uppercase tracking-[0.15em] text-white/90"
           >
-            THE CREUTO DIFFERENCE
+            THE AANANDI DIFFERENCE
           </motion.span>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ export default function WhyCreutoSection() {
             transition={{ delay: 0.1 }}
             className="mb-[20px] font-jakarta text-[clamp(32px,5vw,52px)] font-[800] leading-[1.1] text-white"
           >
-            Why Businesses Choose CREUTO?
+            Why Businesses Choose AANANDI?
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -114,7 +114,7 @@ export default function WhyCreutoSection() {
             <div className="w-[6px] self-stretch rounded-full bg-[#2563eb] hidden md:block" />
             <div className="flex-1">
               <blockquote className="font-jakarta text-[20px] md:text-[24px] font-[600] italic leading-[1.6] text-[#111827]">
-                &quot;At CREUTO, we bypass theoretical delivery models, opting instead for a strict engineering discipline. We combine advanced AI expertise with a commitment to measurable ROI, ensuring every product we ship is ready for real users, real revenue, and real market traction.&quot;
+                &quot;At AANANDI, we bypass theoretical delivery models, opting instead for a strict engineering discipline. We combine advanced AI expertise with a commitment to measurable ROI, ensuring every product we ship is ready for real users, real revenue, and real market traction.&quot;
               </blockquote>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function WhyCreutoSection() {
                 Nihar Ranjan Rout
               </div>
               <div className="font-jakarta text-[14px] font-[600] uppercase tracking-wider text-[#6B7280]">
-                CEO & CO-FOUNDER, Creuto
+                CEO & CO-FOUNDER, Aanandi
               </div>
             </div>
           </div>

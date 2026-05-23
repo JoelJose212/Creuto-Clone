@@ -347,7 +347,7 @@ div[id*="-page"] .mui-1h4dmgi {
 }
 
 /* 3. Apply standard top spacing to public pages to accommodate the fixed premium header */
-div[id*="creuto-"]:not(.admin-exclude-navbar),
+div[id*="aanandi-"]:not(.admin-exclude-navbar),
 div[id*="-page"]:not(.admin-exclude-navbar) {
   padding-top: 128px !important; /* 48px Announcement Ribbon + 80px Navbar */
 }

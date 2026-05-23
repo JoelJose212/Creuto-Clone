@@ -116,7 +116,7 @@ export default function AdminCareers() {
     if (applications.length === 0) return
 
     // Define CSV headers
-    const headers = ["ID", "FullName", "Email", "Mobile", "Role/Position", "Experience", "LinkedIn", "Why Creuto / Message", "Resume Path", "Status", "Applied At"]
+    const headers = ["ID", "FullName", "Email", "Mobile", "Role/Position", "Experience", "LinkedIn", "Why Aanandi / Message", "Resume Path", "Status", "Applied At"]
     
     // Construct rows
     const rows = filteredApplications.map(app => [
@@ -127,7 +127,7 @@ export default function AdminCareers() {
       app.position || "",
       app.experience || "",
       app.linkedinProfile || "",
-      (app.whyCreuto || app.message || "").replace(/"/g, '""'), // Escape double quotes
+      (app.whyAanandi || app.message || "").replace(/"/g, '""'), // Escape double quotes
       app.resumePath || app.resume || "",
       app.status,
       app.createdAt
@@ -476,9 +476,9 @@ export default function AdminCareers() {
 
                 {/* 3. Cover Letter Message Details */}
                 <div className="rounded-xl border border-white/5 bg-white/[0.01] p-4 text-left space-y-1.5">
-                  <span className="text-[10px] uppercase font-bold text-slate-500 block">Why Creuto & Cover Letter</span>
+                  <span className="text-[10px] uppercase font-bold text-slate-500 block">Why Aanandi & Cover Letter</span>
                   <div className="max-h-36 overflow-y-auto text-xs text-slate-300 leading-relaxed font-jakarta bg-black/25 p-3 rounded-lg border border-white/5 select-text">
-                    {selectedApp.whyCreuto || selectedApp.message || "No message or cover letter submitted."}
+                    {selectedApp.whyAanandi || selectedApp.message || "No message or cover letter submitted."}
                   </div>
                 </div>
 

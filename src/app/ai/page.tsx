@@ -6,23 +6,23 @@ import { AiGlobeInjector } from "@/components/sections/AiGlobeInjector"
 import "./aiPageStyles.css"
 
 export const metadata: Metadata = {
-  title: "AI-First Product Development - Build Intelligent Software | Creuto",
-  description: "Creuto builds AI-powered products — from intelligent apps and predictive platforms to ChatGPT integrations and ML pipelines. Custom AI development for businesses that move fast.",
+  title: "AI-First Product Development - Build Intelligent Software | Aanandi",
+  description: "Aanandi builds AI-powered products — from intelligent apps and predictive platforms to ChatGPT integrations and ML pipelines. Custom AI development for businesses that move fast.",
   keywords: ["AI Engineering", "Product Development", "ChatGPT Integration", "Machine Learning", "Custom Software"],
   alternates: {
-    canonical: "https://creuto.com/ai",
+    canonical: "https://aananditechnosoft.com/ai",
   },
   openGraph: {
-    title: "AI-First Product Development - Build Intelligent Software | Creuto",
-    description: "Creuto builds AI-powered products — from intelligent apps and predictive platforms to ChatGPT integrations and ML pipelines. Custom AI development for businesses that move fast.",
-    url: "https://creuto.com/ai",
-    siteName: "Creuto",
+    title: "AI-First Product Development - Build Intelligent Software | Aanandi",
+    description: "Aanandi builds AI-powered products — from intelligent apps and predictive platforms to ChatGPT integrations and ML pipelines. Custom AI development for businesses that move fast.",
+    url: "https://aananditechnosoft.com/ai",
+    siteName: "Aanandi",
     images: [
       {
         url: "/img/meta/meta-image.png",
         width: 1200,
         height: 630,
-        alt: "Creuto AI Development",
+        alt: "Aanandi AI Development",
       },
     ],
     locale: "en_US",

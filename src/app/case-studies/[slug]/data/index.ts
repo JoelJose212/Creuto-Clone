@@ -3,7 +3,7 @@ import React from 'react';
 export const caseStudiesComponents: Record<string, () => Promise<{ default: React.ComponentType<any> }>> = {
   'aquapulse-agritech-platform': () => import('./AquapulseAgritechPlatform'),
   'binimise-smart-city-platform': () => import('./BinimiseSmartCityPlatform'),
-  'creuto-sales-crm': () => import('./CreutoSalesCrm'),
+  'aanandi-sales-crm': () => import('./AanandiSalesCrm'),
   'custom-erp-large-scale-industries': () => import('./CustomErpLargeScaleIndustries'),
   'dining-app': () => import('./DiningApp'),
   'enterprise-payroll-management-system': () => import('./EnterprisePayrollManagementSystem'),

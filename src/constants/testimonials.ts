@@ -1,6 +1,6 @@
 export const TESTIMONIALS = [
   {
-    text: "Their services were excellent. Creuto delivered a web and mobile app that exceeded expectations.",
+    text: "Their services were excellent. Aanandi delivered a web and mobile app that exceeded expectations.",
     name: "Emma Richardson",
     role: "CEO, Emion",
     initials: "ER",
@@ -30,7 +30,7 @@ export const TESTIMONIALS = [
     initials: "DF",
   },
   {
-    text: "Creuto's team was always open to listening and consistently came up with effective solutions for our custom LMS.",
+    text: "Aanandi's team was always open to listening and consistently came up with effective solutions for our custom LMS.",
     name: "Anonymous CEO",
     role: "Education Company",
     initials: "AC",

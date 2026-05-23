@@ -280,11 +280,11 @@ Explore Our Work              <span className="MuiButton-icon MuiButton-endIcon 
           <div className="MuiBox-root mui-1l4w6pd">
             <div className="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault mui-19knco0">
               <span className="MuiChip-label MuiChip-labelMedium mui-1fqh3rg">
-THE CREUTO DIFFERENCE
+THE AANANDI DIFFERENCE
               </span>
             </div>
           </div>          <h2 className="MuiTypography-root MuiTypography-h2 mui-nuw8rs">
-Why Businesses Choose CREUTO?
+Why Businesses Choose AANANDI?
           </h2>          <div className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 MuiGrid-spacing-md-3 mui-125dqx0">
             <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-lg-3 mui-1apcddy" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
               <div className="MuiBox-root mui-2bb4li">
@@ -363,7 +363,7 @@ We build with the seriousness of co-founders, not vendors. Your product becomes 
                 </p>                <h3 className="MuiTypography-root MuiTypography-h6 mui-b95qps">
 Zero-Compromise Quality
                 </h3>                <p className="MuiTypography-root MuiTypography-body1 mui-1lhuwzx">
-If it doesn't meet the CREUTO standard, it doesn't ship. Simple as that.
+If it doesn't meet the AANANDI standard, it doesn't ship. Simple as that.
                 </p>
               </div>
             </div>

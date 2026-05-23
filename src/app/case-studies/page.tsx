@@ -4,23 +4,23 @@ import { Metadata } from "next"
 import "./caseStudiesPageStyles.css"
 
 export const metadata: Metadata = {
-  title: "AI Custom Product Case Studies & Success Stories | Creuto",
-  description: "Explore Creuto's custom AI engineering and product development case studies. Learn how we build, scale, and optimize intelligent applications for scaling businesses.",
-  keywords: ["AI Case Studies", "Custom Software Success Stories", "Creuto Client Stories", "Software Development Success", "Product Engineering Case Studies"],
+  title: "AI Custom Product Case Studies & Success Stories | Aanandi",
+  description: "Explore Aanandi's custom AI engineering and product development case studies. Learn how we build, scale, and optimize intelligent applications for scaling businesses.",
+  keywords: ["AI Case Studies", "Custom Software Success Stories", "Aanandi Client Stories", "Software Development Success", "Product Engineering Case Studies"],
   alternates: {
-    canonical: "https://creuto.com/case-studies",
+    canonical: "https://aananditechnosoft.com/case-studies",
   },
   openGraph: {
-    title: "AI Custom Product Case Studies & Success Stories | Creuto",
-    description: "Explore Creuto's custom AI engineering and product development case studies. Learn how we build, scale, and optimize intelligent applications for scaling businesses.",
-    url: "https://creuto.com/case-studies",
-    siteName: "Creuto",
+    title: "AI Custom Product Case Studies & Success Stories | Aanandi",
+    description: "Explore Aanandi's custom AI engineering and product development case studies. Learn how we build, scale, and optimize intelligent applications for scaling businesses.",
+    url: "https://aananditechnosoft.com/case-studies",
+    siteName: "Aanandi",
     images: [
       {
         url: "/img/meta/meta-image.png",
         width: 1200,
         height: 630,
-        alt: "Creuto Case Studies Success Stories",
+        alt: "Aanandi Case Studies Success Stories",
       },
     ],
     locale: "en_US",

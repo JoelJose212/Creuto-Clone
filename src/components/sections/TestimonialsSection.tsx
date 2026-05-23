@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const TESTIMONIALS = [
   {
     quote: "“Their services were excellent.”",
-    description: "Creuto delivered a web and mobile app that exceeded the client's expectations. The team was highly responsive and punctual from a workflow standpoint, and internal stakeholders praised the service provider's collaborative nature and agility.",
+    description: "Aanandi delivered a web and mobile app that exceeded the client's expectations. The team was highly responsive and punctual from a workflow standpoint, and internal stakeholders praised the service provider's collaborative nature and agility.",
     name: "Emma Richardson",
     role: "CEO, Emion",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/352041"
@@ -19,98 +19,98 @@ const TESTIMONIALS = [
   },
   {
     quote: "“The deliverable was better than we anticipated.”",
-    description: "Thanks to Creuto's work, the client could track their expenses and employees' daily work efficiency. The team delivered a system that could solve and monitor complaints, improving guest satisfaction. They communicated well through in-person meetings. Overall, the product exceeded expectations.",
+    description: "Thanks to Aanandi's work, the client could track their expenses and employees' daily work efficiency. The team delivered a system that could solve and monitor complaints, improving guest satisfaction. They communicated well through in-person meetings. Overall, the product exceeded expectations.",
     name: "Vishal Sharma",
     role: "Partner, Lazystay Hospitality",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/291924"
   },
   {
     quote: "“What stood out about this company was their strong team, modern approach, use of the latest tech, and impressive UI/UX design work.”",
-    description: "Creuto delivered a robust solution with an intuitive UI/UX design and seamless in-app chat functionality. The team delivered on time, communicated well, and promptly addressed needs and concerns. They were dedicated to client satisfaction and the use of modern tools to deliver innovative work.",
+    description: "Aanandi delivered a robust solution with an intuitive UI/UX design and seamless in-app chat functionality. The team delivered on time, communicated well, and promptly addressed needs and concerns. They were dedicated to client satisfaction and the use of modern tools to deliver innovative work.",
     name: "Anonymous Product Head",
     role: "Product Head, QUIV",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/278001"
   },
   {
     quote: "“They prioritized our project as their own and offered only the best choices at each step in the development process.”",
-    description: "Creuto's work led to a 28% increase in customer engagement, a 41% reduction in manual tasks, a 23% faster response time, and a 48% improvement in data accuracy. The team managed the project well and delivered on time. Overall, the team was committed to understanding the client's business needs.",
+    description: "Aanandi's work led to a 28% increase in customer engagement, a 41% reduction in manual tasks, a 23% faster response time, and a 48% improvement in data accuracy. The team managed the project well and delivered on time. Overall, the team was committed to understanding the client's business needs.",
     name: "Daniel Foster",
     role: "CEO, Edverise",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/349787"
   },
   {
-    quote: "“Creuto's team was always open to listening to our requirements and consistently came up with effective solutions.”",
-    description: "Creuto's custom-developed LMS's highly intuitive and user-friendly UI received positive user feedback upon implementation. The team was responsive and committed, ensuring that UX and educational needs were fulfilled, providing modules for assessments and quizzes, and communication and forum tools.",
+    quote: "“Aanandi's team was always open to listening to our requirements and consistently came up with effective solutions.”",
+    description: "Aanandi's custom-developed LMS's highly intuitive and user-friendly UI received positive user feedback upon implementation. The team was responsive and committed, ensuring that UX and educational needs were fulfilled, providing modules for assessments and quizzes, and communication and forum tools.",
     name: "Anonymous CEO",
     role: "CEO, Education Company",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/293451"
   },
   {
-    quote: "“Creuto treated us like friends and operated like internal team members. The process was fully transparent.”",
-    description: "Creuto developed a solid, bug-free mobile app that met the client's expectations. The team delivered items ahead of schedule, demonstrated reliability regarding MVP development, and operated like an in-house team, treating the client as friends and handling a fully transparent process.",
+    quote: "“Aanandi treated us like friends and operated like internal team members. The process was fully transparent.”",
+    description: "Aanandi developed a solid, bug-free mobile app that met the client's expectations. The team delivered items ahead of schedule, demonstrated reliability regarding MVP development, and operated like an in-house team, treating the client as friends and handling a fully transparent process.",
     name: "Anonymous Executive",
     role: "Executive, Software Development Company",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/291658"
   },
   {
     quote: "“Their attention to detail and commitment to creating a user-friendly design were truly impressive.”",
-    description: "Creuto Technologies delivered an intuitive, user-friendly solution that streamlined the client's processes, saving them valuable time and resources. Professional and attentive, they took the time to understand the client's needs and worked collaboratively to tailor a solution that matched.",
+    description: "Aanandi Technologies delivered an intuitive, user-friendly solution that streamlined the client's processes, saving them valuable time and resources. Professional and attentive, they took the time to understand the client's needs and worked collaboratively to tailor a solution that matched.",
     name: "Paramananda Panda",
     role: "Managing Director, Odion Learning Pvt. Ltd",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/193284"
   },
   {
-    quote: "“What impressed us most about Creuto was their deep understanding of both design and product thinking.”",
-    description: "Creuto's app led to increased user engagement and product adherence. Customers interacted with the brand daily, creating stronger and more consistent wellness habits. The team was smooth, structured, and highly responsive. They maintained clear communication and delivered items on time.",
+    quote: "“What impressed us most about Aanandi was their deep understanding of both design and product thinking.”",
+    description: "Aanandi's app led to increased user engagement and product adherence. Customers interacted with the brand daily, creating stronger and more consistent wellness habits. The team was smooth, structured, and highly responsive. They maintained clear communication and delivered items on time.",
     name: "Namrata Reddy",
     role: "CEO, Bloomally",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/384806"
   },
   {
-    quote: "“What stood out the most about Creuto was their exceptional UI/UX expertise.”",
-    description: "Creuto's work led to a significant increase in engagement, user interaction, and time spent on pages for the client. The team's project management, timely delivery, and receptiveness to feedback were commendable. Moreover, Creuto's UI/UX expertise and thoughtful designs stood out.",
+    quote: "“What stood out the most about Aanandi was their exceptional UI/UX expertise.”",
+    description: "Aanandi's work led to a significant increase in engagement, user interaction, and time spent on pages for the client. The team's project management, timely delivery, and receptiveness to feedback were commendable. Moreover, Aanandi's UI/UX expertise and thoughtful designs stood out.",
     name: "Rounak Mehra",
     role: "Co-Founder, Indus AI",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/383518"
   },
   {
-    quote: "“Honestly, we had a smooth experience working with Creuto.”",
-    description: "Creuto's system improved the client's donation management efficiency, reduced manual tracking, provided real-time fundraising insights, and decreased donor drop-offs. The team was supportive, communicative, and easy to work with. The team cared about building something meaningful for the client.",
+    quote: "“Honestly, we had a smooth experience working with Aanandi.”",
+    description: "Aanandi's system improved the client's donation management efficiency, reduced manual tracking, provided real-time fundraising insights, and decreased donor drop-offs. The team was supportive, communicative, and easy to work with. The team cared about building something meaningful for the client.",
     name: "Bidisha Roy",
     role: "Fundraising Manager, NEEDS NGO",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/383041"
   },
   {
     quote: "“Their ability to adapt to our needs while keeping things on track made the experience seamless.”",
-    description: "Creuto delivered a scalable system that improved payroll efficiency and transparency and reduced human errors. The team adhered to timelines, quickly responded to changes, adapted to needs, and managed the project professionally. Their ability to understand the client's requirements was impressive.",
+    description: "Aanandi delivered a scalable system that improved payroll efficiency and transparency and reduced human errors. The team adhered to timelines, quickly responded to changes, adapted to needs, and managed the project professionally. Their ability to understand the client's requirements was impressive.",
     name: "Radhika Mohanty",
     role: "Finance Manager, Crect",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/382633"
   },
   {
     quote: "“Their ability to translate complex operational needs into simple, usable tech was refreshing.”",
-    description: "Creuto's WMS improved inventory accuracy, reduced stock wastage, and expedited order dispatching. The system's traceability made audits less stressful and contributed to smoother warehouse operations. The team was structured, communicative, and responsive. Overall, the collaboration was successful.",
+    description: "Aanandi's WMS improved inventory accuracy, reduced stock wastage, and expedited order dispatching. The system's traceability made audits less stressful and contributed to smoother warehouse operations. The team was structured, communicative, and responsive. Overall, the collaboration was successful.",
     name: "Ananya Gupta",
     role: "Operations Manager, Chromaceutic Pvt Ltd",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/382294"
   },
   {
     quote: "“We always felt supported and in sync with their team.”",
-    description: "Creuto's work streamlined the client's processes, improved batch traceability, and made production planning more efficient, dropping manual paperwork by 80%. Moreover, the team managed the project smoothly, was timely, and communicated clearly. Overall, Creuto's openness was impressive.",
+    description: "Aanandi's work streamlined the client's processes, improved batch traceability, and made production planning more efficient, dropping manual paperwork by 80%. Moreover, the team managed the project smoothly, was timely, and communicated clearly. Overall, Aanandi's openness was impressive.",
     name: "Karan Verma",
     role: "Project Manager, Galgoties",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/380065"
   },
   {
     quote: "“They built a technically robust platform and ensured it was intuitive and accessible for investors of all levels.”",
-    description: "Thanks to Creuto's work, the client saw steady app growth in transactions and SIPs, full regulatory compliance, and positive user feedback. The team had excellent project management, delivered timely milestones, and communicated proactively. Creuto's understanding of the client's industry stood out.",
+    description: "Thanks to Aanandi's work, the client saw steady app growth in transactions and SIPs, full regulatory compliance, and positive user feedback. The team had excellent project management, delivered timely milestones, and communicated proactively. Aanandi's understanding of the client's industry stood out.",
     name: "Colton Wade",
     role: "CEO, Breuto",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/379506"
   },
   {
-    quote: "“What impressed us most about Creuto was their deep understanding of HR processes.”",
-    description: "Creuto's work cut the client's HR processing time by 40%, reduced payroll errors by 60%, and was adopted by 90% of the client's staff within the first month. The team demonstrated professionalism, deep domain knowledge, and a clear understanding of the client's requirements. They met all deadlines.",
+    quote: "“What impressed us most about Aanandi was their deep understanding of HR processes.”",
+    description: "Aanandi's work cut the client's HR processing time by 40%, reduced payroll errors by 60%, and was adopted by 90% of the client's staff within the first month. The team demonstrated professionalism, deep domain knowledge, and a clear understanding of the client's requirements. They met all deadlines.",
     name: "Moumita Kulkarni",
     role: "Growth Manager, AP Associates",
     link: "https://clutch.co/go-to-review/4e36163a-56d5-4ae3-8b30-4c4d31c329d1/379117"

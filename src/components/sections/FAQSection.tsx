@@ -15,13 +15,13 @@ const faqData: FAQItem[] = [
   {
     id: "faq-1",
     num: "01.",
-    question: "What services does CREUTO provide?",
+    question: "What services does AANANDI provide?",
     answer: "We offer end-to-end custom software development, mobile app development, AI feature integration, MVP development, and scalable digital product engineering for startups, SMEs, and enterprises."
   },
   {
     id: "faq-2",
     num: "02.",
-    question: "Can CREUTO integrate AI into my existing product or application?",
+    question: "Can AANANDI integrate AI into my existing product or application?",
     answer: "Yes, we specialize in integrating AI capabilities into existing systems. Whether it's adding chatbots, predictive analytics, or computer vision features, we can enhance your product with the latest AI technologies."
   },
   {
@@ -33,7 +33,7 @@ const faqData: FAQItem[] = [
   {
     id: "faq-4",
     num: "04.",
-    question: "What industries does Creuto work with?",
+    question: "What industries does Aanandi work with?",
     answer: "We work with a diverse range of industries including Healthcare, Fintech, E-commerce, Education, Real Estate, Logistics, and more. Our team adapts to the specific compliance and operational needs of each sector."
   },
   {
@@ -57,7 +57,7 @@ const faqData: FAQItem[] = [
   {
     id: "faq-8",
     num: "08.",
-    question: "Why should we choose Creuto for our software or AI project?",
+    question: "Why should we choose Aanandi for our software or AI project?",
     answer: "We combine technical expertise with business acumen. Our team doesn't just write code; we understand your business goals. We offer transparent communication, agile delivery, and a commitment to building scalable, future-proof solutions."
   }
 ];

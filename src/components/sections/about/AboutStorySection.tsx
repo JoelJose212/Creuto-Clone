@@ -91,7 +91,7 @@ export default function AboutStorySection() {
         <div className="w-full md:w-1/2 flex items-center p-[24px] md:py-[64px] md:pr-[64px] md:pl-[5%]">
           <AnimatedText initialX={-40}>
             <h2 className="font-bricolage text-[32px] md:text-[40px] font-bold text-[#23272e] tracking-[-0.64px] leading-[1.2]">
-              We started CREUTO in <span className="text-[#1746ea]">2023</span> because you don&apos;t need more &apos;order takers.&apos;
+              We started AANANDI in <span className="text-[#1746ea]">2023</span> because you don&apos;t need more &apos;order takers.&apos;
             </h2>
           </AnimatedText>
         </div>
@@ -102,7 +102,7 @@ export default function AboutStorySection() {
         <div className="w-full md:w-1/2 h-[300px] md:h-[500px] relative">
           <Image
             src="/img/about/about-3.webp"
-            alt="About Creuto"
+            alt="About Aanandi"
             fill
             className="object-cover md:rounded-r-[24px] shadow-[var(--shadow-deep-about)]"
           />
@@ -121,7 +121,7 @@ export default function AboutStorySection() {
         <div className="w-full md:w-1/2 h-[300px] md:h-[500px] relative">
           <Image
             src="/img/about/about-4.webp"
-            alt="About Creuto partnership"
+            alt="About Aanandi partnership"
             fill
             className="object-cover md:rounded-l-[24px] shadow-[var(--shadow-deep-about)]"
           />
@@ -167,21 +167,21 @@ export default function AboutStorySection() {
         <div className="max-w-[1280px] w-full mx-auto mt-[80px] rounded-[24px] overflow-hidden shadow-[var(--shadow-deep-about)]">
           <Image
             src="/img/about/Mobile.webp"
-            alt="Creuto Overview Mobile"
+            alt="Aanandi Overview Mobile"
             width={1280}
             height={800}
             className="w-full h-auto block sm:hidden"
           />
           <Image
             src="/img/about/Tab.webp"
-            alt="Creuto Overview Tablet"
+            alt="Aanandi Overview Tablet"
             width={1280}
             height={800}
             className="w-full h-auto hidden sm:block lg:hidden"
           />
           <Image
             src="/img/about/Desktop.png"
-            alt="Creuto Overview Desktop"
+            alt="Aanandi Overview Desktop"
             width={1280}
             height={800}
             className="w-full h-auto hidden lg:block"

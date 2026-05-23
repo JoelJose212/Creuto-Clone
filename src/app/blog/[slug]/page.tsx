@@ -4,24 +4,24 @@ import { blogsComponents } from "./data"
 
 const BLOG_METADATA_MAP: Record<string, { title: string; description: string }> = {
   "how-smes-can-leverage-ai": {
-    title: "How SMEs Can Leverage AI to Scale | Creuto Blog",
+    title: "How SMEs Can Leverage AI to Scale | Aanandi Blog",
     description: "Learn how Small and Medium Enterprises can leverage artificial intelligence to optimize workflows, decrease operational costs, and build smarter capabilities.",
   },
   "your-customers-are-on-mobile": {
-    title: "Your Customers Are On Mobile: Why Mobile First Matters | Creuto Blog",
+    title: "Your Customers Are On Mobile: Why Mobile First Matters | Aanandi Blog",
     description: "Why building a custom, responsive mobile app is critical for customer retention, direct engagement, and scaling your modern business footprint.",
   },
   "why-every-business-owner-should-invest-in-custom-software": {
-    title: "Why Business Owners Should Invest in Custom Software | Creuto Blog",
+    title: "Why Business Owners Should Invest in Custom Software | Aanandi Blog",
     description: "Generic software limits your operational scale. Learn why custom-engineered product solutions provide higher ROI, better efficiency, and a robust competitive advantage.",
   },
-  "how-creuto-help-businesses-scale-smartly": {
-    title: "How Creuto Helps Businesses Scale Smartly | Creuto Blog",
+  "how-aanandi-help-businesses-scale-smartly": {
+    title: "How Aanandi Helps Businesses Scale Smartly | Aanandi Blog",
     description: "Explore our framework for scaling engineering infrastructure, team alignment, and rapid product development tailored for high-growth enterprises.",
   },
   "the-beginning-of-something-real": {
-    title: "The Beginning of Something Real | Creuto Blog",
-    description: "Deep dive into the vision, culture, and core engineering philosophy that inspired the launch of Creuto as an elite AI-first design and software agency.",
+    title: "The Beginning of Something Real | Aanandi Blog",
+    description: "Deep dive into the vision, culture, and core engineering philosophy that inspired the launch of Aanandi as an elite AI-first design and software agency.",
   },
 }
 
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!meta) {
     return {
-      title: "Creuto Blog Post",
+      title: "Aanandi Blog Post",
     }
   }
 
@@ -46,13 +46,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: meta.title,
     description: meta.description,
     alternates: {
-      canonical: `https://creuto.com/blogs/${slug}`,
+      canonical: `https://aananditechnosoft.com/blogs/${slug}`,
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `https://creuto.com/blogs/${slug}`,
-      siteName: "Creuto",
+      url: `https://aananditechnosoft.com/blogs/${slug}`,
+      siteName: "Aanandi",
       type: "article",
     },
   }

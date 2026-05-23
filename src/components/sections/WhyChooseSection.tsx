@@ -10,7 +10,7 @@ export default function WhyChooseSection() {
           <div style={{"opacity":"1","transform":"none scale(0.98)"} as React.CSSProperties}>
             <div>
               <p className="MuiTypography-root MuiTypography-h6 mui-cdl3no">
-In a cluttered market, your product demands certainty. At CREUTO, we bypass theoretical delivery models, opting instead for a strict engineering discipline. We combine advanced AI expertise with a commitment to measurable ROI, ensuring every product we ship is ready for real users, real revenue, and real market traction.
+In a cluttered market, your product demands certainty. At AANANDI, we bypass theoretical delivery models, opting instead for a strict engineering discipline. We combine advanced AI expertise with a commitment to measurable ROI, ensuring every product we ship is ready for real users, real revenue, and real market traction.
               </p>
             </div>
           </div>          <div style={{"opacity":"1","transform":"none scale(0.98)"} as React.CSSProperties}>
@@ -59,7 +59,7 @@ Sales Training App
                   </span>                  <p className="MuiTypography-root MuiTypography-h5 mui-5dspg4">
 AI-Powered Sales Training App for Škoda Auto
                   </p>                  <p className="MuiTypography-root MuiTypography-subtitle1 mui-1a025lw">
-Creuto built an AI-powered training platform for Škoda Auto, centralizing learning across its dealership network. The system delivers personalized content based on each sales rep's role, performance, and behavior — ensuring relevant, timely training for every individual.
+Aanandi built an AI-powered training platform for Škoda Auto, centralizing learning across its dealership network. The system delivers personalized content based on each sales rep's role, performance, and behavior — ensuring relevant, timely training for every individual.
                   </p>
                 </div>
               </div>
@@ -81,7 +81,7 @@ Smart Waste Management
                   </span>                  <p className="MuiTypography-root MuiTypography-h5 mui-5dspg4">
 IoT Smart City Platform for Binimise
                   </p>                  <p className="MuiTypography-root MuiTypography-subtitle1 mui-1a025lw">
-A cloud-native, IoT-powered smart city platform — web command dashboard, citizen mobile app, field staff app, and full IoT integration designed and delivered by Creuto from the ground up.
+A cloud-native, IoT-powered smart city platform — web command dashboard, citizen mobile app, field staff app, and full IoT integration designed and delivered by Aanandi from the ground up.
                   </p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ Custom ERP Solution
                   </span>                  <p className="MuiTypography-root MuiTypography-h5 mui-5dspg4">
 Custom Cloud ERP for Large-Scale Industrial Operations
                   </p>                  <p className="MuiTypography-root MuiTypography-subtitle1 mui-1a025lw">
-A fully custom, browser-based ERP system built to unify every department, eliminate silos, and scale with the business — designed and delivered by Creuto end to end.
+A fully custom, browser-based ERP system built to unify every department, eliminate silos, and scale with the business — designed and delivered by Aanandi end to end.
                   </p>
                 </div>
               </div>
@@ -113,7 +113,7 @@ Payroll Management System
                   </span>                  <p className="MuiTypography-root MuiTypography-h5 mui-5dspg4">
 Enterprise HR & Payroll Platform – Nomina
                   </p>                  <p className="MuiTypography-root MuiTypography-subtitle1 mui-1a025lw">
-A complete, end-to-end HR and payroll platform covering employee onboarding to exit, attendance, leave, payroll processing, compliance, and reporting — built and delivered by Creuto from scratch.
+A complete, end-to-end HR and payroll platform covering employee onboarding to exit, attendance, leave, payroll processing, compliance, and reporting — built and delivered by Aanandi from scratch.
                   </p>
                 </div>
               </div>

@@ -6,44 +6,44 @@ import TOCConnector from "./TOCConnector"
 
 const BLOG_METADATA_MAP: Record<string, { title: string; description: string }> = {
   "how-smes-can-leverage-ai": {
-    "title": "AI Isn&#x27;t Just for Big Companies : Here&#x27;s How SME&#x27;s Can Leverage it Today | Creuto Blog",
+    "title": "AI Isn&#x27;t Just for Big Companies : Here&#x27;s How SME&#x27;s Can Leverage it Today | Aanandi Blog",
     "description": "AI Isn&#x27;t Just for Big Companies : Here&#x27;s How SME&#x27;s Can Leverage it Today"
   },
-  "how-creuto-help-businesses-scale-smartly": {
-    "title": "Behind the Code : How Creuto Helps Businesses Scale Smartly | Creuto Blog",
-    "description": "Behind the Code : How Creuto Helps Businesses Scale Smartly"
+  "how-aanandi-help-businesses-scale-smartly": {
+    "title": "Behind the Code : How Aanandi Helps Businesses Scale Smartly | Aanandi Blog",
+    "description": "Behind the Code : How Aanandi Helps Businesses Scale Smartly"
   },
   "why-every-business-owner-should-invest-in-custom-software": {
-    "title": "Why Every Business Owner Should Invest in Custom Software? | Creuto Blog",
+    "title": "Why Every Business Owner Should Invest in Custom Software? | Aanandi Blog",
     "description": "Why Every Business Owner Should Invest in Custom Software?"
   },
   "the-beginning-of-something-real": {
-    "title": "The Creuto Journey: Built with Belief, Growing with You | Creuto Blog",
-    "description": "The Creuto Journey: Built with Belief, Growing with You"
+    "title": "The Aanandi Journey: Built with Belief, Growing with You | Aanandi Blog",
+    "description": "The Aanandi Journey: Built with Belief, Growing with You"
   },
   "your-customers-are-on-mobile": {
-    "title": "Your Customers Are on Mobile — Why Isn’t Your Business? | Creuto Blog",
+    "title": "Your Customers Are on Mobile — Why Isn’t Your Business? | Aanandi Blog",
     "description": "Your Customers Are on Mobile — Why Isn’t Your Business?"
   },
   "custom-crm": {
-    "title": "Custom CRM vs Ready-Made CRM: What’s Right for Your Business? | Creuto Blog",
+    "title": "Custom CRM vs Ready-Made CRM: What’s Right for Your Business? | Aanandi Blog",
     "description": "Custom CRM vs Ready-Made CRM: What’s Right for Your Business?"
   },
   "software-partner": {
-    "title": "Questions to Ask Before Hiring a Software Development Partner | Creuto Blog",
+    "title": "Questions to Ask Before Hiring a Software Development Partner | Aanandi Blog",
     "description": "Questions to Ask Before Hiring a Software Development Partner"
   },
   "custom-software-development": {
-    "title": "Top 5 Reasons Growing Businesses Are Switching to Custom Software | Creuto Blog",
+    "title": "Top 5 Reasons Growing Businesses Are Switching to Custom Software | Aanandi Blog",
     "description": "Top 5 Reasons Growing Businesses Are Switching to Custom Software"
   },
   "customsoftware-roi": {
-    "title": "Is Custom Software Worth the Investment? Here’s the ROI You Can Expect | Creuto Blog",
+    "title": "Is Custom Software Worth the Investment? Here’s the ROI You Can Expect | Aanandi Blog",
     "description": "Is Custom Software Worth the Investment? Here’s the ROI You Can Expect"
   },
   "startup": {
-    "title": "The Creuto Journey: Built with Belief, Growing with You | Creuto Blog",
-    "description": "The Creuto Journey: Built with Belief, Growing with You"
+    "title": "The Aanandi Journey: Built with Belief, Growing with You | Aanandi Blog",
+    "description": "The Aanandi Journey: Built with Belief, Growing with You"
   }
 };
 
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!meta) {
     return {
-      title: "Creuto Blog Post",
+      title: "Aanandi Blog Post",
     }
   }
 
@@ -68,13 +68,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: meta.title,
     description: meta.description,
     alternates: {
-      canonical: `https://creuto.com/${slug}`,
+      canonical: `https://aananditechnosoft.com/${slug}`,
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `https://creuto.com/${slug}`,
-      siteName: "Creuto",
+      url: `https://aananditechnosoft.com/${slug}`,
+      siteName: "Aanandi",
       type: "article",
     },
   }

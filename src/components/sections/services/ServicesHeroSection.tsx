@@ -106,7 +106,7 @@ export default function ServicesHeroSection({ onExploreClick }: ServicesHeroSect
           >
             <Image 
               src="/img/services/hero.webp" 
-              alt="Creuto Services Hero" 
+              alt="Aanandi Services Hero" 
               fill 
               className="object-cover"
               priority

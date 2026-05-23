@@ -4,23 +4,23 @@ import { Metadata } from "next"
 import "./servicesPageStyles.css"
 
 export const metadata: Metadata = {
-  title: "AI Software & Custom Product Development Services | Creuto",
-  description: "Creuto provides premium product development services — from artificial intelligence and machine learning engineering to custom CRM, mobile, and web applications. Expert engineering tailored for growth.",
-  keywords: ["AI Development Services", "Custom CRM", "Mobile App Development", "Web Engineering", "Creuto Services", "Software Architecture"],
+  title: "AI Software & Custom Product Development Services | Aanandi",
+  description: "Aanandi provides premium product development services — from artificial intelligence and machine learning engineering to custom CRM, mobile, and web applications. Expert engineering tailored for growth.",
+  keywords: ["AI Development Services", "Custom CRM", "Mobile App Development", "Web Engineering", "Aanandi Services", "Software Architecture"],
   alternates: {
-    canonical: "https://creuto.com/services",
+    canonical: "https://aananditechnosoft.com/services",
   },
   openGraph: {
-    title: "AI Software & Custom Product Development Services | Creuto",
-    description: "Creuto provides premium product development services — from artificial intelligence and machine learning engineering to custom CRM, mobile, and web applications. Expert engineering tailored for growth.",
-    url: "https://creuto.com/services",
-    siteName: "Creuto",
+    title: "AI Software & Custom Product Development Services | Aanandi",
+    description: "Aanandi provides premium product development services — from artificial intelligence and machine learning engineering to custom CRM, mobile, and web applications. Expert engineering tailored for growth.",
+    url: "https://aananditechnosoft.com/services",
+    siteName: "Aanandi",
     images: [
       {
         url: "/img/meta/meta-image.png",
         width: 1200,
         height: 630,
-        alt: "Creuto Services Development",
+        alt: "Aanandi Services Development",
       },
     ],
     locale: "en_US",

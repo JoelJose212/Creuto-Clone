@@ -40,26 +40,26 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  title: "Creuto - AI Products, Mobile Apps & Custom Software Development",
-  description: "Creuto is a premium agency specializing in AI products, mobile apps, and custom software development.",
+  title: "Aanandi - AI Products, Mobile Apps & Custom Software Development",
+  description: "Aanandi is a premium agency specializing in AI products, mobile apps, and custom software development.",
   openGraph: {
-    title: "Creuto - AI Products, Mobile Apps & Custom Software Development",
-    description: "Creuto is a premium agency specializing in AI products, mobile apps, and custom software development.",
-    url: "https://creuto.com",
-    siteName: "Creuto",
+    title: "Aanandi - AI Products, Mobile Apps & Custom Software Development",
+    description: "Aanandi is a premium agency specializing in AI products, mobile apps, and custom software development.",
+    url: "https://aananditechnosoft.com",
+    siteName: "Aanandi",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Creuto",
+        alt: "Aanandi",
       },
     ],
     locale: "en_US",
     type: "website",
   },
   alternates: {
-    canonical: "https://creuto.com",
+    canonical: "https://aananditechnosoft.com",
   },
 }
 

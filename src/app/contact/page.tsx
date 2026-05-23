@@ -4,11 +4,11 @@ import { Metadata } from "next"
 import "./contactPageStyles.css"
 
 export const metadata: Metadata = {
-  title: "Contact Creuto - Book a Free Strategy Call",
-  description: "Got an idea for an AI product, mobile app, or custom software? Talk to the Creuto team. Book a free strategy call  no commitment, just a clear roadmap to launch.",
-  keywords: ["Contact Creuto", "Book Call Creuto", "Custom Software Consultation", "AI Development Odisha", "Creuto Offices"],
+  title: "Contact Aanandi - Book a Free Strategy Call",
+  description: "Got an idea for an AI product, mobile app, or custom software? Talk to the Aanandi team. Book a free strategy call  no commitment, just a clear roadmap to launch.",
+  keywords: ["Contact Aanandi", "Book Call Aanandi", "Custom Software Consultation", "AI Development Odisha", "Aanandi Offices"],
   alternates: {
-    canonical: "https://creuto.com/contact",
+    canonical: "https://aananditechnosoft.com/contact",
   },
 }
 

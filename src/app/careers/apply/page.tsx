@@ -49,7 +49,7 @@ const formSchema = z.object({
     .url("Please enter a valid URL (starting with http:// or https://)")
     .or(z.literal(""))
     .optional(),
-  whyCreuto: z.string().min(10, "Please tell us why you want to work at Creuto (at least 10 characters)"),
+  whyAanandi: z.string().min(10, "Please tell us why you want to work at Aanandi (at least 10 characters)"),
 })
 
 type FormValues = z.infer<typeof formSchema>
@@ -97,7 +97,7 @@ function ApplyForm() {
       position: positionParam,
       experience: "",
       linkedinProfile: "",
-      whyCreuto: "",
+      whyAanandi: "",
     }
   })
 
@@ -189,7 +189,7 @@ function ApplyForm() {
       if (data.linkedinProfile) {
         formDataToSend.append("linkedinProfile", data.linkedinProfile)
       }
-      formDataToSend.append("whyCreuto", data.whyCreuto)
+      formDataToSend.append("whyAanandi", data.whyAanandi)
       formDataToSend.append("resume", resumeFile)
       if (coverLetterFile) {
         formDataToSend.append("coverLetter", coverLetterFile)
@@ -305,7 +305,7 @@ function ApplyForm() {
                 <li className="MuiBox-root mui-0">
                   <a style={{"textDecoration":"none","color":"#1E293B","fontWeight":500,"fontSize":"0.95rem"} as any} href="/ai">
                     <span style={{"position":"relative","display":"inline-flex","alignItems":"center"} as any}>
-                      <p className="MuiTypography-root MuiTypography-body1 mui-v6rkzo">Creuto</p>
+                      <p className="MuiTypography-root MuiTypography-body1 mui-v6rkzo">Aanandi</p>
                       <div className="MuiBox-root mui-1itv5e3">
                         <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{"display":"inline-block","verticalAlign":"middle"} as any}>
                           <path d="M1.17211 12C0.843566 12 0.563857 11.8762 0.332986 11.6286C0.110995 11.381 0 11.081 0 10.7286C0 10.3762 0.110995 10.0762 0.332986 9.82857C0.563857 9.58095 0.843566 9.45714 1.17211 9.45714C1.50066 9.45714 1.78037 9.58095 2.01124 9.82857C2.24211 10.0762 2.35754 10.3762 2.35754 10.7286C2.35754 11.081 2.24211 11.381 2.01124 11.6286C1.78037 11.8762 1.50066 12 1.17211 12Z" fill="#1746EA"></path>
@@ -346,7 +346,7 @@ function ApplyForm() {
 
       <div className="w-full pt-[128px] min-h-[calc(100vh-72px)] bg-white text-slate-800 font-bricolage relative overflow-x-hidden flex flex-col md:flex-row antialiased selection:bg-[#1d4ed8]/20 select-none">
         
-        {/* LEFT COLUMN - Creuto Banner / Branding */}
+        {/* LEFT COLUMN - Aanandi Banner / Branding */}
         <div className="w-full md:w-[40%] bg-[#f8fafc] border-b md:border-b-0 md:border-r border-[#e5e7eb] p-8 md:p-12 lg:p-16 flex flex-col justify-between md:sticky md:top-[80px] md:h-[calc(100vh-80px)] overflow-y-auto">
           <div className="flex flex-col gap-8 md:gap-12">
             {/* Logo & Back Button */}
@@ -355,7 +355,7 @@ function ApplyForm() {
                 href="/careers" 
                 className="inline-flex items-center gap-1.5 text-slate-800 hover:text-[#1d4ed8] transition-colors font-jakarta text-[24px] font-[800] tracking-[-0.03em]"
               >
-                <span>Creuto</span>
+                <span>Aanandi</span>
                 <span className="w-1.5 h-1.5 bg-[#1d4ed8] rounded-full mt-2" />
               </Link>
   
@@ -372,7 +372,7 @@ function ApplyForm() {
             <div className="flex flex-col gap-4">
               <span className="text-xs font-bold uppercase tracking-wider text-[#1d4ed8]">JOIN OUR FORCE</span>
               <h1 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-slate-900 tracking-tight leading-[1.1] font-bricolage">
-                Apply for your next role at CREUTO
+                Apply for your next role at AANANDI
               </h1>
               <p className="text-slate-600 text-sm md:text-base font-medium leading-relaxed max-w-md">
                 Join a team that values ownership, clarity, and long-term thinking. We build cutting-edge adaptive AI products and premium custom systems.
@@ -398,7 +398,7 @@ function ApplyForm() {
   
           {/* Dynamic Footer section inside sidebar */}
           <div className="mt-8 md:mt-0 pt-6 border-t border-[#e5e7eb] flex flex-col gap-1.5 text-xs text-slate-500 font-semibold uppercase tracking-wider">
-            <p>© 2026 CREUTO LABS PVT. LTD.</p>
+            <p>© 2026 AANANDI LABS PVT. LTD.</p>
             <p className="text-[#1d4ed8]">SHIP FAST · OWN THE OUTCOME</p>
           </div>
         </div>
@@ -598,21 +598,21 @@ function ApplyForm() {
   
                 </div>
   
-                {/* Row 5: Why Creuto? */}
+                {/* Row 5: Why Aanandi? */}
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="whyCreuto" className="text-xs font-bold uppercase tracking-wider text-slate-700">
-                    Why do you want to work at Creuto? <span className="text-red-500">*</span>
+                  <label htmlFor="whyAanandi" className="text-xs font-bold uppercase tracking-wider text-slate-700">
+                    Why do you want to work at Aanandi? <span className="text-red-500">*</span>
                   </label>
                   <textarea
-                    id="whyCreuto"
+                    id="whyAanandi"
                     rows={4}
-                    placeholder="Share a short summary explaining why you'd be a great addition to the Creuto force..."
-                    {...register("whyCreuto")}
-                    className={`w-full bg-[#f8fafc] border ${errors.whyCreuto ? 'border-red-500 focus:ring-red-100' : 'border-[#e5e7eb] focus:border-[#1d4ed8] focus:ring-blue-100'} rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 outline-none focus:ring-4 transition-all text-sm font-semibold resize-none`}
+                    placeholder="Share a short summary explaining why you'd be a great addition to the Aanandi force..."
+                    {...register("whyAanandi")}
+                    className={`w-full bg-[#f8fafc] border ${errors.whyAanandi ? 'border-red-500 focus:ring-red-100' : 'border-[#e5e7eb] focus:border-[#1d4ed8] focus:ring-blue-100'} rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 outline-none focus:ring-4 transition-all text-sm font-semibold resize-none`}
                   />
-                  {errors.whyCreuto && (
+                  {errors.whyAanandi && (
                     <span className="text-red-500 text-xs font-semibold flex items-center gap-1 mt-0.5">
-                      <AlertCircle size={12} /> {errors.whyCreuto.message}
+                      <AlertCircle size={12} /> {errors.whyAanandi.message}
                     </span>
                   )}
                 </div>

@@ -21,23 +21,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const fallbackTitle = cleanSlug
       .split("-")
       .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-      .join(" ") + " | Creuto Case Study";
+      .join(" ") + " | Aanandi Case Study";
     return {
       title: fallbackTitle,
     }
   }
 
   return {
-    title: `${study.title} | Creuto Case Study`,
+    title: `${study.title} | Aanandi Case Study`,
     description: study.description,
     alternates: {
-      canonical: `https://creuto.com/case-studies/${cleanSlug}`,
+      canonical: `https://aananditechnosoft.com/case-studies/${cleanSlug}`,
     },
     openGraph: {
       title: study.title,
       description: study.description,
-      url: `https://creuto.com/case-studies/${cleanSlug}`,
-      siteName: "Creuto",
+      url: `https://aananditechnosoft.com/case-studies/${cleanSlug}`,
+      siteName: "Aanandi",
       type: "article",
     },
   }

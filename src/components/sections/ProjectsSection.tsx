@@ -291,7 +291,7 @@ export default function ProjectsSection() {
             OUR FRAMEWORK
           </span>
           <h2 className="mt-6 font-display text-[2rem] sm:text-[2.75rem] md:text-[3.5rem] font-bold leading-tight tracking-tight max-w-3xl drop-shadow-sm select-none">
-            C Is for CREUTO. C Is How We Build.
+            C Is for AANANDI. C Is How We Build.
           </h2>
           <p className="mt-4 text-[0.95rem] sm:text-[1.1rem] md:text-[1.25rem] text-white/70 max-w-2xl font-medium tracking-tight select-none">
             We built our engineering culture around the Cs that define world-class software.

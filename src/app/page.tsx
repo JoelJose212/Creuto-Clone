@@ -6,11 +6,11 @@ import FrameworkSection from "@/components/sections/FrameworkSection"
 import FAQSection from "@/components/sections/FAQSection"
 
 export const metadata: Metadata = {
-  title: "AI-First Product Development - Build Intelligent Software | Creuto",
-  description: "Creuto builds high-performance AI-powered software products for startups and enterprises. Custom software development, mobile apps, and AI solutions designed to accelerate business growth.",
-  keywords: ["Custom Software Development", "AI Solutions", "Mobile App Development", "Creuto", "Product Engineering"],
+  title: "AI-First Product Development - Build Intelligent Software | Aanandi",
+  description: "Aanandi builds high-performance AI-powered software products for startups and enterprises. Custom software development, mobile apps, and AI solutions designed to accelerate business growth.",
+  keywords: ["Custom Software Development", "AI Solutions", "Mobile App Development", "Aanandi", "Product Engineering"],
   alternates: {
-    canonical: "https://creuto.com",
+    canonical: "https://aananditechnosoft.com",
   },
 }
 

@@ -264,7 +264,7 @@ export default function FrameworkSection() {
             OUR FRAMEWORK
           </span>
           <h2 className="font-jakarta text-[clamp(28px,4vw,40px)] md:text-[2.75rem] font-[800] tracking-tight leading-[1.2] text-center text-white mt-4 mb-2 md:mb-4">
-            C Is for CREUTO. C Is How We Build.
+            C Is for AANANDI. C Is How We Build.
           </h2>
           <p className="text-center opacity-80 max-w-[50rem] text-white font-[500] text-[1rem] md:text-[1.25rem]">
             We built our engineering culture around the Cs that define world-class software.

@@ -386,7 +386,7 @@ export default function AdminBookings() {
                   {selectedBooking.name}
                 </h2>
                 <p className="text-xs text-amber-400 font-semibold mt-0.5">
-                  Meeting Agenda: <span className="text-white">Creuto Discovery Call</span>
+                  Meeting Agenda: <span className="text-white">Aanandi Discovery Call</span>
                 </p>
               </div>
 

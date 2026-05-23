@@ -10,7 +10,7 @@ import AnnouncementBanner from "./AnnouncementBanner"
 
 
 const NAV_LINKS = [
-  { name: "Creuto.ai", href: "/ai" },
+  { name: "Aanandi.ai", href: "/ai" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services", hasDropdown: true },
   { name: "Case Studies", href: "/case-studies" },
@@ -33,7 +33,7 @@ export default function Navbar() {
 
   const BLOG_SLUGS = [
     "how-smes-can-leverage-ai",
-    "how-creuto-help-businesses-scale-smartly",
+    "how-aanandi-help-businesses-scale-smartly",
     "why-every-business-owner-should-invest-in-custom-software",
     "the-beginning-of-something-real",
     "your-customers-are-on-mobile",

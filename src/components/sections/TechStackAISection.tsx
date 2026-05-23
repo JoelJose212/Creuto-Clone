@@ -643,15 +643,15 @@ Apollo
           <div className="MuiBox-root mui-xducij" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
             <div className="MuiChip-root MuiChip-outlined MuiChip-sizeMedium MuiChip-colorDefault MuiChip-outlinedDefault mui-skowj7" style={{"opacity":"1","transform":"translateY(0.625rem)"} as React.CSSProperties}>
               <span className="MuiChip-label MuiChip-labelMedium mui-1fqh3rg">
-INTRODUCING CREUTO AI
+INTRODUCING AANANDI AI
               </span>
             </div>            <h2 className="MuiTypography-root MuiTypography-h2 mui-1dbc92k" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
 When Tech meets AI
             </h2>            <p className="MuiTypography-root MuiTypography-subtitle1 mui-816a69" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
-Creuto.AI builds custom AI products, automation workflows, and intelligent systems for businesses ready to move beyond manual. From early-stage startups to scaling enterprises we turn AI potential into measurable business results.
+Aanandi.AI builds custom AI products, automation workflows, and intelligent systems for businesses ready to move beyond manual. From early-stage startups to scaling enterprises we turn AI potential into measurable business results.
             </p>            <div className="MuiBox-root mui-0" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
               <a className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary mui-1dkcwf6" tabIndex={0} href="/ai">
-Know more about Creuto AI                <span className="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium mui-14h5678">
+Know more about Aanandi AI                <span className="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium mui-14h5678">
                   <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-1k00d7v" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
                     <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z" />
                   </svg>

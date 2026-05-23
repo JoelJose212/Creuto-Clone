@@ -29,7 +29,7 @@ export default function CTASection() {
           transition={{ delay: 0.1 }}
           className="mb-[32px] font-jakarta text-[clamp(40px,7vw,72px)] font-[800] leading-[1.05] text-white tracking-tight"
         >
-          Connect with Creuto.
+          Connect with Aanandi.
         </motion.h2>
         
         <motion.p 
