@@ -191,7 +191,7 @@ export default function AdminBulletins() {
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
-            className={`fixed top-24 right-8 z-50 flex items-center gap-2.5 rounded-xl border px-4 py-3 shadow-2xl backdrop-blur-md ${
+            className={`fixed top-[144px] right-8 z-50 flex items-center gap-2.5 rounded-xl border px-4 py-3 shadow-2xl backdrop-blur-md ${
               actionMessage.type === "success"
                 ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
                 : "bg-red-500/10 border-red-500/20 text-red-400"
@@ -206,6 +206,7 @@ export default function AdminBulletins() {
           </motion.div>
         )}
       </AnimatePresence>
+
 
       {/* TOP HEADER SECTION */}
       <div className="flex flex-wrap items-center justify-between gap-4">

@@ -46,9 +46,7 @@ export default function Navbar() {
 
   const slug = pathname ? pathname.slice(1) : ""
 
-  if (pathname?.startsWith("/admin") || pathname?.startsWith("/dashboard")) {
-    return null
-  }
+
 
 
   return (

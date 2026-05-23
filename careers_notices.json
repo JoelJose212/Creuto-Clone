@@ -1,5 +1,11 @@
 [
   {
+    "id": "notice-1779511459677",
+    "title": "Good Morning",
+    "content": "How are you guys",
+    "color": "green"
+  },
+  {
     "id": "notice-1",
     "title": "🚀 AI Research Lab Expansion",
     "content": "We're launching a new adaptive AI research lab. We are actively scouting for MLOps and NLP engineers to join the force!",

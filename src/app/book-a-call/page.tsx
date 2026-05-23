@@ -105,38 +105,37 @@ export default function BookACall() {
   }
 
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#070b1e] px-4 py-16 font-jakarta text-white select-none">
+    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#f4f7ff] to-[#eaeefc] px-4 py-16 font-jakarta text-slate-800 select-none">
       {/* Decorative Glow Blobs */}
-      <div className="absolute top-1/4 left-1/4 -z-10 h-80 w-80 rounded-full bg-blue-600/20 opacity-30 blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 -z-10 h-96 w-96 rounded-full bg-indigo-600/20 opacity-25 blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 -z-10 h-80 w-80 rounded-full bg-blue-600/10 opacity-30 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 -z-10 h-96 w-96 rounded-full bg-indigo-600/10 opacity-25 blur-[130px] pointer-events-none" />
 
       {/* Main visual Card Container */}
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="w-full max-w-[700px] rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-10 shadow-2xl backdrop-blur-xl relative overflow-hidden"
+        className="w-full max-w-[700px] rounded-3xl border border-slate-200 bg-white p-6 md:p-10 shadow-2xl shadow-blue-900/10 relative overflow-hidden"
       >
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/10 to-transparent" />
 
         {/* Step Indicator Header (Only on Step 1 & 2) */}
         {step < 3 && (
-          <div className="mb-8 flex items-center justify-between border-b border-white/5 pb-4">
+          <div className="mb-8 flex items-center justify-between border-b border-slate-100 pb-4">
             <div>
-              <span className="rounded-full bg-blue-600/15 px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-blue-400 border border-blue-500/10">
+              <span className="rounded-full bg-blue-600/10 px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-blue-600 border border-blue-500/10">
                 Outreach Engine
               </span>
-              <h1 className="font-bricolage text-2xl font-black text-white md:text-3xl mt-1.5 flex items-center gap-2">
-                <CalendarCheck className="h-7 w-7 text-blue-400" />
+              <h1 className="font-bricolage text-2xl font-black text-slate-900 md:text-3xl mt-1.5 flex items-center gap-2">
+                <CalendarCheck className="h-7 w-7 text-blue-600" />
                 <span>Schedule a Discovery Call</span>
               </h1>
             </div>
-            <div className="text-right font-mono text-xs text-slate-400 font-bold">
-              Step <span className="text-white">{step}</span> of 2
+            <div className="text-right font-mono text-xs text-slate-500 font-bold">
+              Step <span className="text-blue-600">{step}</span> of 2
             </div>
           </div>
         )}
-
         <AnimatePresence mode="wait">
           {/* STEP 1: SELECT DATE & TIME SLOT */}
           {step === 1 && (
@@ -149,8 +148,8 @@ export default function BookACall() {
             >
               {/* Day Selection */}
               <div className="space-y-3 text-left">
-                <label className="text-xs font-black uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                  <CalendarIcon className="h-4 w-4 text-blue-400" />
+                <label className="text-xs font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                  <CalendarIcon className="h-4 w-4 text-blue-600" />
                   <span>Choose an Available Date</span>
                 </label>
                 <div className="grid gap-2 grid-cols-3 sm:grid-cols-4 lg:grid-cols-6">
@@ -166,7 +165,7 @@ export default function BookACall() {
                         className={`flex flex-col items-center justify-center rounded-xl border p-2.5 transition-all active:scale-95 ${
                           isSelected
                             ? "bg-blue-600 border-blue-500 text-white shadow-md shadow-blue-600/15 font-bold scale-[1.03]"
-                            : "border-white/5 bg-white/[0.02] text-slate-300 hover:border-white/20 hover:bg-white/[0.04]"
+                            : "border-slate-200 bg-slate-50 text-slate-600 hover:border-blue-200 hover:bg-blue-50/50"
                         }`}
                       >
                         <span className="text-[10px] font-bold uppercase tracking-wide opacity-60">
@@ -186,8 +185,8 @@ export default function BookACall() {
 
               {/* Time Slots Selection */}
               <div className="space-y-3 text-left">
-                <label className="text-xs font-black uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                  <Clock className="h-4 w-4 text-blue-400" />
+                <label className="text-xs font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                  <Clock className="h-4 w-4 text-blue-600" />
                   <span>Select an Available Time Slot (30m consultation)</span>
                 </label>
                 <div className="grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
@@ -200,7 +199,7 @@ export default function BookACall() {
                         className={`flex items-center justify-center gap-1.5 rounded-xl border py-2.5 transition-all text-xs font-bold active:scale-95 ${
                           isSelected
                             ? "bg-blue-600 border-blue-500 text-white shadow-md shadow-blue-600/15 scale-[1.02]"
-                            : "border-white/5 bg-white/[0.02] text-slate-300 hover:border-white/20 hover:bg-white/[0.04]"
+                            : "border-slate-200 bg-slate-50 text-slate-600 hover:border-blue-200 hover:bg-blue-50/50"
                         }`}
                       >
                         <Clock className="h-3.5 w-3.5 opacity-60" />
@@ -212,7 +211,7 @@ export default function BookACall() {
               </div>
 
               {/* Step Navigation */}
-              <div className="pt-4 border-t border-white/5 flex justify-end">
+              <div className="pt-4 border-t border-slate-100 flex justify-end">
                 <button
                   onClick={() => setStep(2)}
                   disabled={!selectedDate || !selectedTimeSlot}
@@ -245,21 +244,20 @@ export default function BookACall() {
                     <span>{error}</span>
                   </motion.div>
                 )}
-
                 {/* Scheduled summary card */}
-                <div className="rounded-2xl border border-blue-500/20 bg-blue-600/5 p-4 flex flex-col sm:flex-row items-center sm:justify-between gap-3 text-left">
+                <div className="rounded-2xl border border-blue-100 bg-blue-50/40 p-4 flex flex-col sm:flex-row items-center sm:justify-between gap-3 text-left">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600/10 text-blue-400 border border-blue-500/20">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600/10 text-blue-600 border border-blue-500/20">
                       <Clock className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-[10px] uppercase font-black tracking-wider text-blue-400">Scheduled Call Details</p>
-                      <p className="text-sm font-bold text-white mt-0.5">
+                      <p className="text-[10px] uppercase font-black tracking-wider text-blue-600">Scheduled Call Details</p>
+                      <p className="text-sm font-bold text-slate-800 mt-0.5">
                         {new Date(selectedDate).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" })}
                       </p>
                     </div>
                   </div>
-                  <div className="rounded-lg bg-blue-600/20 px-3.5 py-1.5 text-xs font-mono font-bold text-blue-400 border border-blue-500/20">
+                  <div className="rounded-lg bg-blue-600/10 px-3.5 py-1.5 text-xs font-mono font-bold text-blue-600 border border-blue-500/20">
                     {selectedTimeSlot}
                   </div>
                 </div>
@@ -269,7 +267,7 @@ export default function BookACall() {
                   
                   {/* Name Input */}
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Full Name</label>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Full Name</label>
                     <div className="relative">
                       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                         <User className="h-4 w-4" />
@@ -280,14 +278,14 @@ export default function BookACall() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Enter full name"
-                        className="h-11 w-full rounded-xl border border-white/10 bg-white/[0.04] py-2 pl-10 pr-4 text-xs text-white placeholder-slate-500 focus:border-blue-500/40 focus:outline-none"
+                        className="h-11 w-full rounded-xl border border-slate-300 bg-slate-50/50 py-2 pl-10 pr-4 text-xs text-slate-900 placeholder-slate-400 outline-none focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10 transition-all font-jakarta"
                       />
                     </div>
                   </div>
 
                   {/* Email Input */}
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Email Address</label>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Email Address</label>
                     <div className="relative">
                       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                         <Mail className="h-4 w-4" />
@@ -298,14 +296,14 @@ export default function BookACall() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter email address"
-                        className="h-11 w-full rounded-xl border border-white/10 bg-white/[0.04] py-2 pl-10 pr-4 text-xs text-white placeholder-slate-500 focus:border-blue-500/40 focus:outline-none"
+                        className="h-11 w-full rounded-xl border border-slate-300 bg-slate-50/50 py-2 pl-10 pr-4 text-xs text-slate-900 placeholder-slate-400 outline-none focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10 transition-all font-jakarta"
                       />
                     </div>
                   </div>
 
                   {/* Mobile Input */}
                   <div className="space-y-1.5 sm:col-span-2">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Mobile Contact (Optional)</label>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Mobile Contact (Optional)</label>
                     <div className="relative">
                       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                         <Phone className="h-4 w-4" />
@@ -315,14 +313,14 @@ export default function BookACall() {
                         value={mobile}
                         onChange={(e) => setMobile(e.target.value)}
                         placeholder="+1 (555) 000-0000"
-                        className="h-11 w-full rounded-xl border border-white/10 bg-white/[0.04] py-2 pl-10 pr-4 text-xs text-white placeholder-slate-500 focus:border-blue-500/40 focus:outline-none"
+                        className="h-11 w-full rounded-xl border border-slate-300 bg-slate-50/50 py-2 pl-10 pr-4 text-xs text-slate-900 placeholder-slate-400 outline-none focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10 transition-all font-jakarta"
                       />
                     </div>
                   </div>
 
                   {/* Project Details */}
                   <div className="space-y-1.5 sm:col-span-2">
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Project scope or consult guidelines</label>
+                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Project scope or consult guidelines</label>
                     <div className="relative">
                       <div className="pointer-events-none absolute top-3 left-3 text-slate-400">
                         <FileText className="h-4 w-4" />
@@ -332,7 +330,7 @@ export default function BookACall() {
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         placeholder="Describe your project, custom requirements, or call targets..."
-                        className="w-full rounded-xl border border-white/10 bg-white/[0.04] py-2.5 pl-10 pr-4 text-xs text-white placeholder-slate-500 focus:border-blue-500/40 focus:outline-none resize-none"
+                        className="w-full rounded-xl border border-slate-300 bg-slate-50/50 py-2.5 pl-10 pr-4 text-xs text-slate-900 placeholder-slate-400 outline-none focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10 transition-all resize-none font-jakarta"
                       />
                     </div>
                   </div>
@@ -340,13 +338,12 @@ export default function BookACall() {
                 </div>
 
                 {/* Form Nav Buttons */}
-                <div className="pt-4 border-t border-white/5 flex justify-between gap-4">
+                <div className="pt-4 border-t border-slate-100 flex justify-between gap-4">
                   <button
                     type="button"
                     onClick={() => setStep(1)}
-                    className="flex h-11 items-center justify-center gap-1.5 rounded-xl border border-white/10 bg-transparent px-5 text-xs font-bold text-slate-400 hover:text-white"
+                    className="flex h-11 items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 px-5 text-xs font-bold text-slate-600 hover:bg-slate-100 hover:text-slate-800"
                   >
-                    <ArrowLeft className="h-4 w-4" />
                     <span>Change Date</span>
                   </button>
 
@@ -385,38 +382,38 @@ export default function BookACall() {
                 <motion.div
                   initial={{ scale: 0.6 }}
                   animate={{ scale: 1 }}
-                  className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+                  className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-600 border border-emerald-500/20"
                 >
                   <CheckCircle className="h-8 w-8" />
                 </motion.div>
               </div>
 
               <div className="space-y-2">
-                <h2 className="font-bricolage text-2xl font-black text-white">Discovery Call Scheduled!</h2>
-                <p className="text-sm text-slate-300 max-w-[450px] mx-auto leading-relaxed">
+                <h2 className="font-bricolage text-2xl font-black text-slate-900">Discovery Call Scheduled!</h2>
+                <p className="text-sm text-slate-600 max-w-[450px] mx-auto leading-relaxed">
                   {successMessage || "Your calendar appointment has been logged successfully. Sanjana or one of our leads will follow up."}
                 </p>
               </div>
 
               {/* Visual Ticket Receipt */}
-              <div className="max-w-[380px] mx-auto rounded-2xl border border-white/5 bg-white/[0.01] p-4 text-left space-y-2.5 relative">
+              <div className="max-w-[380px] mx-auto rounded-2xl border border-slate-200 bg-slate-50/50 p-4 text-left space-y-2.5 relative">
                 <div className="absolute top-0 right-0 h-16 w-16 rounded-full bg-emerald-500/5 blur-[20px]" />
                 
                 <div className="flex justify-between items-center text-xs">
-                  <span className="font-semibold text-slate-400">Appointment Host</span>
-                  <span className="font-bold text-white">Creuto Leadership Team</span>
+                  <span className="font-semibold text-slate-500">Appointment Host</span>
+                  <span className="font-bold text-slate-800">Creuto Leadership Team</span>
                 </div>
                 <div className="flex justify-between items-center text-xs">
-                  <span className="font-semibold text-slate-400">Consultant Client</span>
-                  <span className="font-bold text-white truncate max-w-[150px]">{name}</span>
+                  <span className="font-semibold text-slate-500">Consultant Client</span>
+                  <span className="font-bold text-slate-800 truncate max-w-[150px]">{name}</span>
                 </div>
-                <div className="flex justify-between items-center text-xs border-t border-white/5 pt-2 mt-2">
-                  <span className="font-semibold text-slate-400">Scheduled Time</span>
-                  <span className="font-bold text-emerald-400 text-right">
+                <div className="flex justify-between items-center text-xs border-t border-slate-200/60 pt-2 mt-2">
+                  <span className="font-semibold text-slate-500">Scheduled Time</span>
+                  <span className="font-bold text-emerald-600 text-right">
                     {selectedTimeSlot}
                   </span>
                 </div>
-                <div className="text-right text-[10px] text-slate-500 font-mono">
+                <div className="text-right text-[10px] text-slate-400 font-mono">
                   {new Date(selectedDate).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" })}
                 </div>
               </div>
@@ -424,7 +421,7 @@ export default function BookACall() {
               <div className="pt-4 flex justify-center gap-4">
                 <Link
                   href="/"
-                  className="rounded-xl border border-white/10 px-6 py-2.5 text-xs font-bold text-slate-400 hover:text-white transition-colors"
+                  className="rounded-xl border border-slate-200 bg-slate-50 px-6 py-2.5 text-xs font-bold text-slate-600 hover:bg-slate-100 hover:text-slate-800 transition-colors"
                 >
                   Return to Home
                 </Link>
@@ -432,7 +429,6 @@ export default function BookACall() {
             </motion.div>
           )}
         </AnimatePresence>
-
       </motion.div>
     </div>
   )

@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion"
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
 
+  const isAdmin = pathname?.startsWith("/admin") || pathname?.startsWith("/dashboard")
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -14,7 +16,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="min-h-screen pt-[72px]"
+        className={`min-h-screen ${isAdmin ? "" : "pt-[72px]"}`}
       >
         {children}
       </motion.div>
