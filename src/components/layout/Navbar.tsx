@@ -58,7 +58,7 @@ export default function Navbar() {
           backgroundColor: scrolled ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0)",
           borderBottomColor: scrolled ? "rgba(229,231,235,1)" : "rgba(229,231,235,0)",
           backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
-          top: scrolled ? "0px" : "48px", // Shift down when banner is visible
+          top: "48px", // Keep fixed at 48px below the fixed top announcement banner
         }}
         transition={{ duration: 0.2, ease: "easeOut" }}
         className="fixed left-0 right-0 z-50 flex h-[80px] items-center border-b border-transparent"
