@@ -10,18 +10,5 @@
       "AI/ML"
     ],
     "createdAt": "2026-05-17T21:39:31.621Z"
-  },
-  {
-    "id": "8x5t454",
-    "name": "Joel Miller",
-    "email": "joel.miller@gmail.com",
-    "mobile": "1234567890",
-    "company": "Miller AI Inc",
-    "message": "We want to build a custom enterprise CRM with AI-powered forecasting models. Let us set up a discovery call.",
-    "services": [
-      "Mobile App",
-      "DevOps & Cloud"
-    ],
-    "createdAt": "2026-05-17T21:39:31.629Z"
   }
 ]

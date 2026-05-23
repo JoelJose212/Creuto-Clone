@@ -66,9 +66,8 @@ export default function Navbar() {
         <div className="container mx-auto flex w-full items-center justify-between px-4 md:px-8">
           {/* Logo */}
           <motion.div layout>
-            <Link href="/" className="font-jakarta text-[26px] font-[800] tracking-[-0.03em] text-heading flex items-center">
-              <span>Creuto</span>
-              <span className="w-1.5 h-1.5 bg-blue rounded-full ml-0.5 mt-2" />
+            <Link href="/" className="flex items-center">
+              <img src="/img/aanandi_logo.png" alt="Aanandi TechnoSoft Logo" className="h-[36px] w-auto object-contain" />
             </Link>
           </motion.div>
 
@@ -132,9 +131,8 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] overflow-hidden bg-[#ffffff]"
           >
             <div className="flex h-[72px] items-center justify-between px-4">
-              <Link href="/" className="font-display text-[22px] font-[800] tracking-[-0.5px]">
-                <span className="text-heading">Creu</span>
-                <span className="text-blue">to</span>
+              <Link href="/" className="flex items-center">
+                <img src="/img/aanandi_logo.png" alt="Aanandi TechnoSoft Logo" className="h-[30px] w-auto object-contain" />
               </Link>
               <button
                 className="flex items-center justify-center p-2 text-heading"
