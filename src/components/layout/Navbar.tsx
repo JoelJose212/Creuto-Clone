@@ -1,13 +1,13 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react"
 import AnnouncementBanner from "./AnnouncementBanner"
-
-
+import ServicesMegaMenu from "./ServicesMegaMenu"
+import { SERVICES_MENU_DATA } from "@/constants/servicesMenuData"
 
 const NAV_LINKS = [
   { name: "Aanandi.ai", href: "/ai" },
@@ -22,6 +22,22 @@ export default function Navbar() {
   const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [mobileActiveCategoryId, setMobileActiveCategoryId] = useState<string | null>(null)
+
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    setDesktopDropdownOpen(true)
+  }
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setDesktopDropdownOpen(false)
+    }, 150)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,15 +89,43 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden items-center gap-8 lg:flex">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="font-jakarta text-[14.5px] font-[600] text-[#4B5563] transition-colors duration-200 hover:text-blue"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              if (link.hasDropdown) {
+                return (
+                  <div
+                    key={link.name}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    className="flex h-[80px] items-center cursor-pointer"
+                  >
+                    <Link
+                      href={link.href}
+                      className={`flex items-center gap-1 font-jakarta text-[14.5px] font-[600] transition-colors duration-200 hover:text-blue ${
+                        desktopDropdownOpen ? "text-blue" : "text-[#4B5563]"
+                      }`}
+                    >
+                      <span>{link.name}</span>
+                      <ChevronDown
+                        size={15}
+                        className={`transition-transform duration-200 ${
+                          desktopDropdownOpen ? "rotate-180 text-blue" : "text-[#4B5563]"
+                        }`}
+                      />
+                    </Link>
+                  </div>
+                )
+              }
+
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="font-jakarta text-[14.5px] font-[600] text-[#4B5563] transition-colors duration-200 hover:text-blue"
+                >
+                  {link.name}
+                </Link>
+              )
+            })}
           </div>
 
           {/* Desktop CTA */}
@@ -120,6 +164,19 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
+      {/* Desktop Services Mega Menu (fixed-positioned, rendered outside nav) */}
+      <AnimatePresence>
+        {desktopDropdownOpen && (
+          <div
+            className="hidden lg:block"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <ServicesMegaMenu />
+          </div>
+        )}
+      </AnimatePresence>
+
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
@@ -128,9 +185,9 @@ export default function Navbar() {
             animate={{ height: "100vh", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 z-[60] overflow-hidden bg-[#ffffff]"
+            className="fixed inset-0 z-[60] overflow-y-auto pb-12 bg-[#ffffff]"
           >
-            <div className="flex h-[72px] items-center justify-between px-4">
+            <div className="flex h-[72px] items-center justify-between px-4 sticky top-0 bg-white z-[70] border-b border-slate-100">
               <Link href="/" className="flex items-center">
                 <img src="/img/aanandi_logo.png" alt="Aanandi TechnoSoft Logo" className="h-[30px] w-auto object-contain" />
               </Link>
@@ -142,29 +199,110 @@ export default function Navbar() {
               </button>
             </div>
             
-            <div className="flex flex-col items-center justify-center gap-[24px] pt-12">
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="font-sans text-[18px] font-medium text-heading"
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <div className="mt-8 flex flex-col items-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-[24px] pt-8 px-6 w-full max-w-md mx-auto">
+              {NAV_LINKS.map((link) => {
+                if (link.hasDropdown) {
+                  return (
+                    <div key={link.name} className="w-full flex flex-col items-center">
+                      <button
+                        onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                        className="flex items-center gap-2 font-sans text-[18px] font-medium text-heading focus:outline-none"
+                      >
+                        <span>{link.name}</span>
+                        <ChevronDown
+                          size={18}
+                          className={`transition-transform duration-200 ${
+                            mobileServicesOpen ? "rotate-180 text-blue" : "text-heading"
+                          }`}
+                        />
+                      </button>
+
+                      <AnimatePresence>
+                        {mobileServicesOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.25 }}
+                            className="w-full flex flex-col gap-2 mt-3 border-l-2 border-slate-100 pl-4 text-left align-start"
+                          >
+                            {SERVICES_MENU_DATA.map((category) => {
+                              const isCatActive = mobileActiveCategoryId === category.id
+                              return (
+                                <div key={category.id} className="w-full flex flex-col">
+                                  <button
+                                    onClick={() => setMobileActiveCategoryId(isCatActive ? null : category.id)}
+                                    className={`w-full text-left font-sans text-[15px] font-[600] py-1.5 flex justify-between items-center ${
+                                      isCatActive ? "text-blue" : "text-[#4B5563]"
+                                    }`}
+                                  >
+                                    <span>{category.name}</span>
+                                    <ChevronDown
+                                      size={14}
+                                      className={`transition-transform duration-200 shrink-0 ${
+                                        isCatActive ? "rotate-180" : ""
+                                      }`}
+                                    />
+                                  </button>
+
+                                  <AnimatePresence>
+                                    {isCatActive && (
+                                      <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: "auto" }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        className="flex flex-col gap-2 pl-3 py-1"
+                                      >
+                                        {category.subServices.map((sub, idx) => (
+                                          <Link
+                                            key={`${sub.slug}-${idx}`}
+                                            href={`/services/${sub.slug}`}
+                                            onClick={() => {
+                                              setMobileMenuOpen(false)
+                                              setMobileServicesOpen(false)
+                                              setMobileActiveCategoryId(null)
+                                            }}
+                                            className="font-sans text-[13.5px] font-medium text-[#6B7280] py-1 hover:text-blue block text-left"
+                                          >
+                                            → {sub.name}
+                                          </Link>
+                                        ))}
+                                      </motion.div>
+                                    )}
+                                  </AnimatePresence>
+                                </div>
+                              )
+                            })}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  )
+                }
+
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="font-sans text-[18px] font-medium text-heading"
+                  >
+                    {link.name}
+                  </Link>
+                )
+              })}
+              <div className="mt-6 flex flex-col items-center gap-4 w-full">
                 <Link
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-lg border border-border bg-transparent px-[24px] py-[12px] font-sans text-[16px] font-medium text-heading transition-colors hover:border-blue"
+                  className="w-full text-center rounded-full border border-border bg-transparent py-3 font-sans text-[16px] font-medium text-heading transition-colors hover:border-blue"
                 >
                   Contact Us
                 </Link>
                 <Link
                   href="/book-a-call"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-lg bg-blue px-[24px] py-[12px] font-sans text-[16px] font-medium text-[#ffffff] transition-all hover:bg-blue-hover"
+                  className="w-full text-center rounded-full bg-blue py-3 font-sans text-[16px] font-medium text-[#ffffff] transition-all hover:bg-blue-hover"
                 >
                   Book A Call
                 </Link>
