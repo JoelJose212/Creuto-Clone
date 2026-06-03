@@ -4,12 +4,14 @@ import Link from "next/link"
 import { ArrowLeft, Calendar, ArrowUpRight } from "lucide-react"
 import Footer from "@/components/layout/Footer"
 import { SERVICES_MENU_DATA } from "@/constants/servicesMenuData"
+import { SERVICES_PAGE_DATA } from "@/constants/servicesPageData"
+import ServicePageClient from "./ServicePageClient"
 
 interface RouteParams {
   params: Promise<{ slug: string }>;
 }
 
-// Find a sub-service dynamically across all categories
+// Find a sub-service dynamically across all categories (for fallback metadata/names)
 function findSubService(slug: string) {
   for (const category of SERVICES_MENU_DATA) {
     const sub = category.subServices.find((s) => s.slug === slug)
@@ -25,21 +27,45 @@ function findSubService(slug: string) {
 
 export async function generateStaticParams() {
   const slugs: { slug: string }[] = []
+  
+  // 1. Gather slugs from main categories
   SERVICES_MENU_DATA.forEach((category) => {
     category.subServices.forEach((sub) => {
-      // Avoid duplicates just in case (e.g. Legacy Application Modernization appears in both)
       if (!slugs.some((s) => s.slug === sub.slug)) {
         slugs.push({ slug: sub.slug })
       }
     })
   })
+
+  // 2. Add any additional dynamic page data keys just in case
+  Object.keys(SERVICES_PAGE_DATA).forEach((slug) => {
+    if (!slugs.some((s) => s.slug === slug)) {
+      slugs.push({ slug })
+    }
+  })
+
   return slugs
 }
 
 export async function generateMetadata({ params }: RouteParams): Promise<Metadata> {
   const resolvedParams = await params;
-  const match = findSubService(resolvedParams.slug)
+  const slug = resolvedParams.slug;
 
+  // Check if we have specific page metadata
+  const dynamicContent = SERVICES_PAGE_DATA[slug];
+  if (dynamicContent) {
+    return {
+      title: dynamicContent.metaTitle,
+      description: dynamicContent.metaDescription,
+      keywords: dynamicContent.keywords,
+      alternates: {
+        canonical: dynamicContent.canonical,
+      },
+    }
+  }
+
+  // Fallback to menu categories metadata
+  const match = findSubService(slug)
   if (!match) {
     return {
       title: "Service Not Found | Aanandi",
@@ -57,8 +83,16 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
 
 export default async function ServiceSubPage({ params }: RouteParams) {
   const resolvedParams = await params;
-  const match = findSubService(resolvedParams.slug)
+  const slug = resolvedParams.slug;
 
+  // 1. If we have dynamic page content, render the premium duplicated Custom ERP layout
+  const dynamicContent = SERVICES_PAGE_DATA[slug];
+  if (dynamicContent) {
+    return <ServicePageClient pageData={dynamicContent} slug={slug} />;
+  }
+
+  // 2. Otherwise, fall back to the generic "Under Construction" template
+  const match = findSubService(slug)
   if (!match) {
     notFound()
   }
