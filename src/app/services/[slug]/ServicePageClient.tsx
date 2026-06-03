@@ -69,36 +69,69 @@ export default function ServicePageClient({ pageData, slug }: ServicePageClientP
 
       <div id={pageId} className="min-h-screen bg-white">
         {/* 1. Hero Section */}
-        <section className="MuiBox-root mui-1k4npe9">
-          <div className="MuiContainer-root MuiContainer-maxWidthLg mui-16lg97m">
-            <div style={{"opacity":1,"transform":"translateY(0)"} as any}>
-              <div className="MuiStack-root mui-d7x68j">
-                <h1 className="MuiTypography-root MuiTypography-h1 mui-1m58sbh">
-                  {pageData.hero.title}
-                </h1>
-                <h5 className="MuiTypography-root MuiTypography-h5 mui-oj2gkm">
-                  {pageData.hero.subtitle}
-                </h5>
-                <h6 className="MuiTypography-root MuiTypography-subtitle1 mui-1a81sah">
-                  {pageData.hero.description}
-                </h6>
-              </div>
-            </div>
-            <div className="MuiBox-root mui-xwunxj">
-              <div style={{"width":"100%","display":"flex","justifyContent":"center","opacity":1,"transform":"scale(1)"} as any}>
-                <div className="MuiBox-root mui-1n8npjz">
-                  <img 
-                    className="MuiBox-root mui-3o9s0b" 
-                    src={pageData.hero.imageSrc} 
-                    alt={pageData.hero.imageAlt}
-                  />
+        {pageData.heroLayout === 'side-by-side' ? (
+          <section className="MuiBox-root mui-vivk30">
+            <div className="MuiContainer-root MuiContainer-maxWidthXl mui-1fgd3v5">
+              <div className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-6 MuiGrid-spacing-md-10 mui-zvqozp">
+                <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-5 mui-19ynww8">
+                  <div style={{"opacity":1,"transform":"translateY(0)"} as any}>
+                    <h1 className="MuiTypography-root MuiTypography-h1 mui-17r5nx7">
+                      {pageData.hero.title}
+                    </h1>
+                    <h5 className="MuiTypography-root MuiTypography-h5 mui-16f9sm9">
+                      {pageData.hero.subtitle}
+                    </h5>
+                    <h6 className="MuiTypography-root MuiTypography-h6 mui-18vxaj1">
+                      {pageData.hero.description}
+                    </h6>
+                  </div>
+                </div>
+                <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-7 mui-1tn0d4a">
+                  <div style={{"opacity":1,"transform":"translateX(40px) scale(0.92)"} as any}>
+                    <div className="MuiBox-root mui-n4qwwa">
+                      <img 
+                        className="MuiBox-root mui-nh34ao" 
+                        src={pageData.hero.imageSrc} 
+                        alt={pageData.hero.imageAlt}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="MuiBox-root mui-1lt9stp"></div>
-          <div className="MuiBox-root mui-1tidmfz"></div>
-        </section>
+          </section>
+        ) : (
+          <section className="MuiBox-root mui-1k4npe9">
+            <div className="MuiContainer-root MuiContainer-maxWidthLg mui-16lg97m">
+              <div style={{"opacity":1,"transform":"translateY(0)"} as any}>
+                <div className="MuiStack-root mui-d7x68j">
+                  <h1 className="MuiTypography-root MuiTypography-h1 mui-1m58sbh">
+                    {pageData.hero.title}
+                  </h1>
+                  <h5 className="MuiTypography-root MuiTypography-h5 mui-oj2gkm">
+                    {pageData.hero.subtitle}
+                  </h5>
+                  <h6 className="MuiTypography-root MuiTypography-subtitle1 mui-1a81sah">
+                    {pageData.hero.description}
+                  </h6>
+                </div>
+              </div>
+              <div className="MuiBox-root mui-xwunxj">
+                <div style={{"width":"100%","display":"flex","justifyContent":"center","opacity":1,"transform":"scale(1)"} as any}>
+                  <div className="MuiBox-root mui-1n8npjz">
+                    <img 
+                      className="MuiBox-root mui-3o9s0b" 
+                      src={pageData.hero.imageSrc} 
+                      alt={pageData.hero.imageAlt}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="MuiBox-root mui-1lt9stp"></div>
+            <div className="MuiBox-root mui-1tidmfz"></div>
+          </section>
+        )}
 
         {/* 2. Intro / About Section */}
         <section className="MuiBox-root mui-13g25so">
@@ -117,14 +150,16 @@ export default function ServicePageClient({ pageData, slug }: ServicePageClientP
                   );
                 })}
               </div>
-              <div className="MuiBox-root mui-1i9uuzs">
-                <h6 className="MuiTypography-root MuiTypography-subtitle1 mui-qj888w">
-                  {pageData.intro.goalTitle}
-                </h6>
-                <p className="MuiTypography-root MuiTypography-body1 mui-bojpyb">
-                  {pageData.intro.goalDescription}
-                </p>
-              </div>
+              {pageData.intro.goalTitle && pageData.intro.goalDescription && (
+                <div className="MuiBox-root mui-1i9uuzs">
+                  <h6 className="MuiTypography-root MuiTypography-subtitle1 mui-qj888w">
+                    {pageData.intro.goalTitle}
+                  </h6>
+                  <p className="MuiTypography-root MuiTypography-body1 mui-bojpyb">
+                    {pageData.intro.goalDescription}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </section>

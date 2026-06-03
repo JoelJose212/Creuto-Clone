@@ -11,6 +11,7 @@ export interface ServicePageContent {
     imageSrc: string;
     imageAlt: string;
   };
+  heroLayout?: 'centered' | 'side-by-side';
   intro: {
     paragraphs: string[];
     goalTitle: string;
@@ -2053,6 +2054,1206 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       {
         question: "How do you handle SDK target updates required by App Store/Google Play?",
         answer: "We update outdated packages, replace deprecated APIs, and upgrade build profiles (Gradle/Cocoapods) to comply with new target SDK rules."
+      }
+    ]
+  },
+  "aws-gcp-azure-consulting": {
+    metaTitle: "AWS / GCP / Azure Cloud Consulting | Aanandi",
+    metaDescription: "Aanandi TechnoSoft provides expert AWS, GCP, and Azure cloud consulting, architecture planning, elastic migration strategy, and serverless DevOps solutions optimized for business scaling.",
+    keywords: ["Cloud Consulting", "AWS Consulting", "GCP Consulting", "Azure DevOps", "Cloud Migration", "Kubernetes Implementation", "Serverless Architecture"],
+    canonical: "https://aananditechnosoft.com/services/aws-gcp-azure-consulting",
+    heroLayout: "side-by-side",
+    hero: {
+      category: "DevOps & Cloud Engineering",
+      title: "AWS / GCP / Azure Consulting",
+      subtitle: "The Right Cloud Platform. The Right Architecture. Built to Scale Securely.",
+      description: "We provide expert cloud consulting across AWS, Google Cloud, and Microsoft Azure helping businesses select the right platform, design scalable infrastructure, reduce cost, and operate cloud environments that are secure, reliable, and aligned with their business goals.",
+      imageSrc: "/img/services/dev-ops-new.webp",
+      imageAlt: "AWS / GCP / Azure Consulting"
+    },
+    intro: {
+      paragraphs: [
+        "Many businesses end up with cloud environments that are overprovisioned, poorly secured, or architected around short-term convenience instead of long-term operational goals.",
+        "We approach cloud consulting from a business-first perspective understanding workloads, compliance requirements, team capabilities, operational dependencies, and growth plans before recommending architecture or platforms.",
+        "Our consulting services span cloud strategy, platform selection, infrastructure design, migration planning, DevOps automation, security configuration, compliance alignment, and cost optimisation.",
+        "We work across AWS, Google Cloud Platform, and Microsoft Azure selecting the platform that best fits your specific operational and technical requirements.",
+        "From startups provisioning their first cloud environment to enterprises modernising complex infrastructure, we deliver cloud consulting grounded in scalability, security, reliability, and operational clarity."
+      ],
+      goalTitle: "",
+      goalDescription: ""
+    },
+    capabilities: {
+      title: "Our AWS / GCP / Azure Consulting Services",
+      subtitle: "We help businesses select, design, migrate, optimise, and secure cloud infrastructure across AWS, GCP, and Azure.",
+      items: [
+        {
+          title: "Cloud Strategy & Platform Selection",
+          description: "Structured cloud strategy and platform evaluation that matches the right cloud to your workloads and business goals.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Cloud Strategy & Platform Selection"
+        },
+        {
+          title: "AWS Consulting Services",
+          description: "AWS architecture design, configuration, and optimisation across the full service ecosystem.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "AWS Consulting Services"
+        },
+        {
+          title: "Google Cloud Platform (GCP) Consulting",
+          description: "GCP infrastructure and data platform consulting for businesses building on Google Cloud's core strengths.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Google Cloud Platform (GCP) Consulting"
+        },
+        {
+          title: "Microsoft Azure Consulting",
+          description: "Azure infrastructure and enterprise integration consulting for organisations building on the Microsoft ecosystem.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Microsoft Azure Consulting"
+        },
+        {
+          title: "Cloud Migration Services",
+          description: "End-to-end cloud migration planning and execution that moves workloads safely and minimises disruption.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Cloud Migration Services"
+        },
+        {
+          title: "Cloud Cost Optimisation",
+          description: "Cloud cost audit and ongoing optimisation that eliminates waste and aligns infrastructure spend with actual usage.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Cloud Cost Optimisation"
+        },
+        {
+          title: "DevOps & Cloud Automation",
+          description: "Cloud automation and CI/CD pipeline design that makes infrastructure reliable, repeatable, and auditable.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "DevOps & Cloud Automation"
+        },
+        {
+          title: "Cloud Security & Compliance",
+          description: "Comprehensive cloud security review and remediation aligned with modern standards and compliance requirements.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Cloud Security & Compliance"
+        }
+      ]
+    },
+    process: {
+      title: "Our Process",
+      steps: [
+        {
+          stepNumber: "STEP 1",
+          title: "Infrastructure Assessment & Discovery",
+          description: "Assessing workloads, architecture, security posture, operational workflows, and infrastructure cost structure."
+        },
+        {
+          stepNumber: "STEP 2",
+          title: "Cloud Strategy & Platform Selection",
+          description: "Evaluating AWS, GCP, and Azure options against business goals, workloads, and operational requirements."
+        },
+        {
+          stepNumber: "STEP 3",
+          title: "Architecture & Migration Planning",
+          description: "Designing scalable cloud architecture and defining structured migration strategies for each workload."
+        },
+        {
+          stepNumber: "STEP 4",
+          title: "Cloud Configuration & Deployment",
+          description: "Deploying infrastructure using infrastructure-as-code practices with version-controlled, reproducible environments."
+        },
+        {
+          stepNumber: "STEP 5",
+          title: "Security, Optimisation & Testing",
+          description: "Configuring security controls, validating scalability, optimising infrastructure cost, and testing production readiness."
+        },
+        {
+          stepNumber: "STEP 6",
+          title: "Monitoring & Continuous Support",
+          description: "Providing observability, incident response, optimisation guidance, and ongoing infrastructure support after deployment."
+        }
+      ]
+    },
+    stats: {
+      title: "Quick Stats",
+      subtitle: "Delivering scalable, secure, and cost-efficient cloud infrastructure across AWS, Google Cloud, and Azure.",
+      items: [
+        {
+          number: "100+",
+          label: "Cloud Infrastructure Assessments & Migrations Delivered"
+        },
+        {
+          number: "3+",
+          label: "Major Cloud Platforms Supported"
+        },
+        {
+          number: "50+",
+          label: "Infrastructure-as-Code Deployments Implemented"
+        },
+        {
+          number: "200+",
+          label: "Cloud Workloads Optimised for Scale & Cost Efficiency"
+        }
+      ]
+    },
+    whyChoose: {
+      title: "Why Choose Creuto for AWS / GCP / Azure Consulting?",
+      items: [
+        {
+          title: "Platform-Agnostic, Business-Driven Advice",
+          description: "We recommend the cloud platform and architecture that best fit your workloads, constraints, and business goals.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Platform Agnostic"
+        },
+        {
+          title: "Depth Across AWS, GCP & Azure",
+          description: "Hands-on production expertise across all three major cloud ecosystems and their operational strengths.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Cloud Expertise"
+        },
+        {
+          title: "Security Built Into Every Engagement",
+          description: "Security, access control, compliance alignment, and monitoring are integrated into every cloud project.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Security"
+        },
+        {
+          title: "Cost Optimisation as Standard Practice",
+          description: "Infrastructure designed and reviewed continuously to eliminate waste and maintain cost efficiency.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Cost"
+        },
+        {
+          title: "Infrastructure-as-Code by Default",
+          description: "Every environment is reproducible, auditable, version-controlled, and safe to evolve over time.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "IaC"
+        },
+        {
+          title: "Long-Term Cloud Partnership",
+          description: "We continue supporting, optimising, and evolving your cloud environment as the business grows.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Partnership"
+        }
+      ]
+    },
+    faqs: [
+      {
+        question: "Which cloud platform AWS, GCP, or Azure is right for my business?",
+        answer: "It depends on your workloads, operational requirements, compliance needs, and team capabilities. We assess your specific context before making recommendations."
+      },
+      {
+        question: "Can you help migrate our existing infrastructure to the cloud?",
+        answer: "Yes. We manage the full migration lifecycle including workload assessment, migration strategy, execution, testing, and post-migration optimisation."
+      },
+      {
+        question: "How do you approach cloud cost optimisation?",
+        answer: "We audit spending, eliminate overprovisioning, optimise resource allocation, implement governance controls, and continuously review usage patterns."
+      },
+      {
+        question: "Can you design multi-cloud architectures?",
+        answer: "Yes. We design multi-cloud environments when the use case genuinely requires redundancy, workload-specific optimisation, or vendor risk reduction."
+      },
+      {
+        question: "Do you provide ongoing cloud monitoring and support?",
+        answer: "Absolutely. We provide monitoring, incident response, infrastructure optimisation, security updates, and ongoing advisory support."
+      }
+    ]
+  },
+  "ci-cd-implementation": {
+    metaTitle: "CI/CD Implementation Services | Aanandi",
+    metaDescription: "We design and build robust, automated Continuous Integration and Continuous Deployment (CI/CD) pipelines to accelerate release cycles, reduce manual errors, and guarantee secure cloud delivery.",
+    keywords: ["CI/CD Implementation", "Continuous Integration", "Continuous Deployment", "DevOps Pipeline", "Jenkins Setup", "GitHub Actions", "GitLab CI"],
+    canonical: "https://aananditechnosoft.com/services/ci-cd-implementation",
+    heroLayout: "side-by-side",
+    hero: {
+      category: "DevOps & Cloud Engineering",
+      title: "CI/CD Implementation",
+      subtitle: "Automate Deployments. Eliminate Manual Errors. Ship Code with Confidence.",
+      description: "We design and build robust Continuous Integration and Continuous Deployment (CI/CD) pipelines that automate testing, security scanning, and containerized deployments so your team can release software faster and more reliably.",
+      imageSrc: "/img/services/dev-ops-new.webp",
+      imageAlt: "CI/CD Implementation"
+    },
+    intro: {
+      paragraphs: [
+        "Manual deployments are slow, error-prone, and create operational bottlenecks that delay new features and compromise system uptime.",
+        "We build custom CI/CD pipelines that automate your build, test, and release cycles, transforming code changes into live, tested production deployments without manual intervention.",
+        "Our pipelines integrate automated linting, unit testing, integration testing, and container vulnerability scanning directly into your git workflow.",
+        "Whether you are deploying microservices to Kubernetes, serverless functions, or multi-tier legacy applications, we establish reliable pathways that rollback automatically on failure.",
+        "We help you achieve true continuous delivery, reducing release cycles from weeks to minutes while ensuring absolute quality and security control."
+      ],
+      goalTitle: "",
+      goalDescription: ""
+    },
+    capabilities: {
+      title: "Our CI/CD capabilities",
+      subtitle: "Automate builds, vulnerability scans, integration tests, and multi-environment cloud deployments.",
+      items: [
+        {
+          title: "Automated Build & Test Pipelines",
+          description: "Compile code, resolve dependencies, and execute automated test suites on every git push.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Automated Build & Test Pipelines"
+        },
+        {
+          title: "Pipeline-as-Code Setup",
+          description: "Define version-controlled CI/CD workflows using YAML configs (GitHub Actions, GitLab CI, Jenkins, Bitbucket).",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Pipeline-as-Code Setup"
+        },
+        {
+          title: "Security & Compliance Audits",
+          description: "Integrate Static Application Security Testing (SAST) and dependency scans directly into the pipeline.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Security & Compliance Audits"
+        },
+        {
+          title: "Containerized Deployments",
+          description: "Automate Docker image building, tagging, and secure publishing to private image registries.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Containerized Deployments"
+        },
+        {
+          title: "Multi-Environment Promotion",
+          description: "Deploy code safely across development, staging, UAT, and production environments with approval gates.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Multi-Environment Promotion"
+        },
+        {
+          title: "Blue-Green & Canary Releases",
+          description: "Implement zero-downtime deployment patterns to route traffic gradually and protect production uptime.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Blue-Green & Canary Releases"
+        },
+        {
+          title: "Automated Rollbacks",
+          description: "Configure automatic rollbacks triggered by real-time health check failures or error spikes post-deployment.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Automated Rollbacks"
+        },
+        {
+          title: "Secrets Management Integration",
+          description: "Securely inject database credentials, API keys, and certificates using HashiCorp Vault, AWS Secrets Manager, or GCP Secret Manager.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Secrets Management Integration"
+        }
+      ]
+    },
+    process: {
+      title: "Our Process",
+      steps: [
+        {
+          stepNumber: "STEP 1",
+          title: "Discovery & Git Workflow Audit",
+          description: "We analyze your branching model, build setups, testing suites, and target environments."
+        },
+        {
+          stepNumber: "STEP 2",
+          title: "Pipeline Design & Architecture",
+          description: "We design a pipeline blueprint outlining stages, caching strategies, and environment paths."
+        },
+        {
+          stepNumber: "STEP 3",
+          title: "Automation Scripting & Setup",
+          description: "We build and configure the pipeline using version-controlled configuration files."
+        },
+        {
+          stepNumber: "STEP 4",
+          title: "Testing & Security Integration",
+          description: "We integrate unit, integration, and security scanning tools to run on every commit."
+        },
+        {
+          stepNumber: "STEP 5",
+          title: "Deployment Strategy Implementation",
+          description: "We set up target cloud integrations (Kubernetes, Serverless, VMs) and configure promotion gates."
+        },
+        {
+          stepNumber: "STEP 6",
+          title: "Handover, Training & Monitoring",
+          description: "We train your development team, document the pipelines, and set up slack/email notifications."
+        }
+      ]
+    },
+    stats: {
+      title: "Quick Stats",
+      subtitle: "Accelerating software delivery pipeline speed, reliability, and security compliance.",
+      items: [
+        {
+          number: "90%",
+          label: "Reduction in Average Deployment Cycle Times"
+        },
+        {
+          number: "0",
+          label: "Manual Steps Required to Ship Code from Git to Production"
+        },
+        {
+          number: "99.9%",
+          label: "Deployment Success Rate with Automated Gates"
+        },
+        {
+          number: "100%",
+          label: "Auditable and Version-Controlled Deployments"
+        }
+      ]
+    },
+    whyChoose: {
+      title: "Why Choose Creuto for CI/CD Implementation?",
+      items: [
+        {
+          title: "Custom Tailored Workflows",
+          description: "We design pipelines that align with your specific branching models, frameworks, and team preferences.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Custom Tailored Workflows"
+        },
+        {
+          title: "Security-First Mentality",
+          description: "Vulnerability, dependency, and secrets scanning are baked directly into the build process.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Security-First Mentality"
+        },
+        {
+          title: "Zero-Downtime Releases",
+          description: "We implement canary, blue-green, and rolling updates to keep services responsive during deployments.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Zero-Downtime Releases"
+        },
+        {
+          title: "Platform Agnostic Solutions",
+          description: "Expertise across GitHub Actions, GitLab CI, Jenkins, CircleCI, Bitbucket Pipelines, and cloud-native tools.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Platform Agnostic Solutions"
+        },
+        {
+          title: "Infrastructure-as-Code Alignment",
+          description: "Pipelines align perfectly with Terraform, Helm, and GitOps workflows.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Infrastructure-as-Code Alignment"
+        },
+        {
+          title: "Ongoing Support & Optimization",
+          description: "We optimize caching, parallel build execution, and runner configurations to keep pipelines fast.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Ongoing Support & Optimization"
+        }
+      ]
+    },
+    faqs: [
+      {
+        question: "Which CI/CD tools do you support?",
+        answer: "We support all major CI/CD engines including GitHub Actions, GitLab CI, Jenkins, Bitbucket Pipelines, CircleCI, and AWS CodePipeline."
+      },
+      {
+        question: "Can you integrate security scanning into the pipeline?",
+        answer: "Yes. We integrate SAST, DAST, dependency scanners (like Snyk, Dependabot, Trivy), and credential leak detection as mandatory build stages."
+      },
+      {
+        question: "How do you handle secrets like API keys in pipelines?",
+        answer: "We never hardcode secrets. We integrate with secure vault systems (like AWS Secrets Manager, GCP Secret Manager, or GitHub Secrets) to inject them dynamically at runtime."
+      },
+      {
+        question: "Will my team need training to maintain the pipelines?",
+        answer: "We deliver fully documented pipeline-as-code configurations and conduct hands-on handovers so your team can easily modify them."
+      },
+      {
+        question: "How do you prevent broken builds from reaching production?",
+        answer: "We implement strict pull request gates, mandatory unit/integration test passes, approval workflows, and automated rollback triggers."
+      }
+    ]
+  },
+  "kubernetes-implementation": {
+    metaTitle: "Kubernetes Implementation Services | Aanandi",
+    metaDescription: "We design, deploy, and manage production-ready Kubernetes (EKS, GKE, AKS) clusters. Scale microservices securely, configure autoscaling, and secure network traffic.",
+    keywords: ["Kubernetes Implementation", "Container Orchestration", "EKS Consulting", "GKE Setup", "AKS Deployment", "Helm Charts", "ArgoCD", "GitOps"],
+    canonical: "https://aananditechnosoft.com/services/kubernetes-implementation",
+    heroLayout: "side-by-side",
+    hero: {
+      category: "DevOps & Cloud Engineering",
+      title: "Kubernetes Implementation",
+      subtitle: "Container Orchestration. Auto-Scaling. High Availability Built for Scale.",
+      description: "We design, deploy, and manage production-grade Kubernetes (EKS, GKE, AKS) clusters. We help you containerize workloads, manage microservices, configure auto-scaling, and secure network traffic for absolute uptime.",
+      imageSrc: "/img/services/dev-ops-new.webp",
+      imageAlt: "Kubernetes Implementation"
+    },
+    intro: {
+      paragraphs: [
+        "Managing containerized applications across multiple servers without proper orchestration leads to configuration drift, manual scaling headaches, and high resource costs.",
+        "Kubernetes is the industry standard for container orchestration, but designing a secure, production-grade cluster requires deep specialized expertise.",
+        "We build, configure, and maintain Kubernetes environments tailored for high-availability workloads on AWS (EKS), GCP (GKE), and Microsoft Azure (AKS).",
+        "We focus on setting up robust network policies, resource limit configurations, auto-scaling thresholds, ingress controllers, and centralized log collections.",
+        "Whether you are migrating from traditional VMs or scaling an existing container ecosystem, we implement Kubernetes with performance, security, and developer speed in mind."
+      ],
+      goalTitle: "",
+      goalDescription: ""
+    },
+    capabilities: {
+      title: "Our Kubernetes capabilities",
+      subtitle: "Production-grade cluster orchestration, auto-scaling, storage management, and service mesh.",
+      items: [
+        {
+          title: "Managed Cluster Setup",
+          description: "Production-ready cluster deployments using AWS EKS, GCP GKE, Azure AKS, or bare-metal Kubernetes.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Managed Cluster Setup"
+        },
+        {
+          title: "Infrastructure-as-Code Provisioning",
+          description: "Provision cluster resources, node groups, and IAM roles declaratively using Terraform.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Infrastructure-as-Code Provisioning"
+        },
+        {
+          title: "Auto-Scaling & Load Balancing",
+          description: "Configure Horizontal Pod Autoscaler (HPA), Cluster Autoscaler, and external load balancer routing.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Auto-Scaling & Load Balancing"
+        },
+        {
+          title: "Ingress & Network Policies",
+          description: "Set up NGINX or Traefik Ingress controllers and secure pod-to-pod communications with NetworkPolicies.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Ingress & Network Policies"
+        },
+        {
+          title: "Secrets & Config Management",
+          description: "Manage application configurations and passwords securely using Kubernetes Secrets and ConfigMaps.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Secrets & Config Management"
+        },
+        {
+          title: "GitOps-Based Deployments",
+          description: "Enable continuous sync and declarative state management using ArgoCD or FluxCD.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "GitOps-Based Deployments"
+        },
+        {
+          title: "Storage & Persistence Volume",
+          description: "Configure dynamic storage provisioning (EBS, EFS, PersistentVolumes) for stateful applications.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Storage & Persistence Volume"
+        },
+        {
+          title: "Service Mesh Integration",
+          description: "Implement Istio or Linkerd for advanced traffic routing, mutual TLS (mTLS), and telemetry.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Service Mesh Integration"
+        }
+      ]
+    },
+    process: {
+      title: "Our Process",
+      steps: [
+        {
+          stepNumber: "STEP 1",
+          title: "Workload & Microservices Audit",
+          description: "We analyze your applications, dependencies, resource needs, and performance goals."
+        },
+        {
+          stepNumber: "STEP 2",
+          title: "Architecture & Network Design",
+          description: "We design the VPC, subnets, cluster configurations, IAM permissions, and network boundary rules."
+        },
+        {
+          stepNumber: "STEP 3",
+          title: "Terraform Cluster Deployment",
+          description: "We spin up the cluster, node groups, and system namespaces using Terraform IaC scripts."
+        },
+        {
+          stepNumber: "STEP 4",
+          title: "Ingress, Certs & Core Services Setup",
+          description: "We configure DNS routing, ingress controllers, SSL certificates (Let's Encrypt), and monitoring dashboards."
+        },
+        {
+          stepNumber: "STEP 5",
+          title: "Application Migration & Testing",
+          description: "We write clean Helm charts, deploy your workloads, and test horizontal scaling and failover."
+        },
+        {
+          stepNumber: "STEP 6",
+          title: "GitOps Integration & Handoff",
+          description: "We connect your code repositories to ArgoCD/Flux and hand over operational documentation to your team."
+        }
+      ]
+    },
+    stats: {
+      title: "Quick Stats",
+      subtitle: "Enhancing scaling speed, resource utilization, and application reliability.",
+      items: [
+        {
+          number: "50%",
+          label: "Increase in Server Resource Utilization Efficiency"
+        },
+        {
+          number: "Seconds",
+          label: "Average Time to Auto-Scale Application Pods"
+        },
+        {
+          number: "99.99%",
+          label: "Target Cluster Control Plane High-Availability Uptime"
+        },
+        {
+          number: "100%",
+          label: "Infrastructure-as-Code Cluster Provisioning"
+        }
+      ]
+    },
+    whyChoose: {
+      title: "Why Choose Creuto for Kubernetes?",
+      items: [
+        {
+          title: "Infrastructure-as-Code First",
+          description: "We build and modify clusters exclusively using Terraform and Helm so environments are always reproducible.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Infrastructure-as-Code First"
+        },
+        {
+          title: "Deep Cloud Ecosystem Expertise",
+          description: "Certified engineers with extensive experience operating EKS, GKE, and AKS production environments.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Deep Cloud Ecosystem Expertise"
+        },
+        {
+          title: "GitOps-Based Delivery",
+          description: "We set up automated workflows where cluster updates are triggered directly by git commits.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "GitOps-Based Delivery"
+        },
+        {
+          title: "High-Security Configuration",
+          description: "We lock down clusters using RBAC, NetworkPolicies, and automated image vulnerability scanning.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "High-Security Configuration"
+        },
+        {
+          title: "Cost Optimization Focus",
+          description: "We use spot instances, node-selector rules, and Karpenter autoscaling to minimize cloud compute cost.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Cost Optimization Focus"
+        },
+        {
+          title: "Complete Observability Setup",
+          description: "Clusters come pre-configured with Prometheus, Grafana, and ELK/Loki log aggregations.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Complete Observability Setup"
+        }
+      ]
+    },
+    faqs: [
+      {
+        question: "What is the difference between EKS, GKE, and AKS?",
+        answer: "They are managed Kubernetes services by AWS, Google, and Azure. While they share core APIs, they differ in IAM integrations, networking models, and console features. We select the best one for your cloud vendor."
+      },
+      {
+        question: "How do you keep Kubernetes compute cost under control?",
+        answer: "We implement node scaling policies, configure appropriate resource requests/limits for pods, and leverage spot/preemptible instances for non-critical workloads."
+      },
+      {
+        question: "Can you migrate stateful databases to Kubernetes?",
+        answer: "Yes. We configure stateful sets, persistence volume claims (PVCs), and backup operators, though we often recommend managed database services for core production data."
+      },
+      {
+        question: "What is GitOps and do we need it?",
+        answer: "GitOps uses git repositories as the single source of truth for cluster state. ArgoCD or Flux automatically syncs your git manifests to the cluster, which eliminates manual CLI deployment mistakes."
+      },
+      {
+        question: "Do you configure monitoring and alerting for clusters?",
+        answer: "Yes. We install Prometheus and Grafana dashboards, and configure Slack/email alerts for high memory/CPU usage, crash looping pods, and node failures."
+      }
+    ]
+  },
+  "serverless-architecture": {
+    metaTitle: "Serverless Architecture Services | Aanandi",
+    metaDescription: "Build elastic cloud backends with zero server maintenance. Expert AWS Lambda, Google Cloud Functions, and API Gateway development optimized for performance and cost.",
+    keywords: ["Serverless Architecture", "AWS Lambda", "Cloud Functions", "Azure Functions", "API Gateway", "DynamoDB", "Event-Driven", "SST Framework"],
+    canonical: "https://aananditechnosoft.com/services/serverless-architecture",
+    heroLayout: "side-by-side",
+    hero: {
+      category: "DevOps & Cloud Engineering",
+      title: "Serverless Architecture",
+      subtitle: "Zero Server Management. Elastic Scaling. Pay-Per-Request Efficiency.",
+      description: "We design and build serverless applications using AWS Lambda, Google Cloud Functions, Azure Functions, and API Gateway. We eliminate server maintenance, scale compute resources automatically, and drastically reduce cloud bills.",
+      imageSrc: "/img/services/dev-ops-new.webp",
+      imageAlt: "Serverless Architecture"
+    },
+    intro: {
+      paragraphs: [
+        "Paying for idle virtual servers that run 24/7 even during low-traffic periods is a major waste of engineering budget and operational overhead.",
+        "Serverless architecture shifts the focus from managing servers to writing code. Compute resources spin up instantly in response to requests and shut down immediately when done.",
+        "We design highly efficient, event-driven serverless backends that scale from zero to thousands of concurrent requests seamlessly without server maintenance.",
+        "We leverage serverless functions, event routers, managed databases, and cloud storage to construct secure, modular, and cheap application layers.",
+        "From building REST APIs and webhook listeners to processing background queues and data streams, we create architectures optimized for performance and cost."
+      ],
+      goalTitle: "",
+      goalDescription: ""
+    },
+    capabilities: {
+      title: "Our Serverless capabilities",
+      subtitle: "Event-driven application design, serverless microservices, managed APIs, and stream processing.",
+      items: [
+        {
+          title: "Serverless API Development",
+          description: "Build ultra-fast serverless backends using AWS Lambda, Google Cloud Functions, and API Gateway.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Serverless API Development"
+        },
+        {
+          title: "Event-Driven Workflows",
+          description: "Design decoupled application flows triggered by S3 uploads, DynamoDB streams, or Pub/Sub messages.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Event-Driven Workflows"
+        },
+        {
+          title: "Database Integration",
+          description: "Integrate serverless functions with cloud databases like DynamoDB, Firestore, or Aurora Serverless.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Database Integration"
+        },
+        {
+          title: "Serverless Frameworks",
+          description: "Define and package serverless stacks declaratively using Serverless Framework, AWS SAM, or SST.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Serverless Frameworks"
+        },
+        {
+          title: "Edge Computing Setup",
+          description: "Deploy global, low-latency microservices at the network edge using Cloudflare Workers or Lambda@Edge.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Edge Computing Setup"
+        },
+        {
+          title: "Background Queue Processing",
+          description: "Build background worker tasks that consume queues (SQS, SNS) and process jobs asynchronously.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Background Queue Processing"
+        },
+        {
+          title: "Cold Start Optimization",
+          description: "Implement code bundling, memory tuning, and provisioned concurrency to minimize function cold starts.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Cold Start Optimization"
+        },
+        {
+          title: "Distributed Tracing & Logging",
+          description: "Configure end-to-end telemetry and monitoring using AWS X-Ray, Datadog, or Honeycomb.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Distributed Tracing & Logging"
+        }
+      ]
+    },
+    process: {
+      title: "Our Process",
+      steps: [
+        {
+          stepNumber: "STEP 1",
+          title: "Workload & Flow Feasibility Study",
+          description: "We analyze your application requirements to see if they fit serverless limits (execution time, cold starts)."
+        },
+        {
+          stepNumber: "STEP 2",
+          title: "Architecture Blueprinting",
+          description: "We map out event triggers, function boundaries, IAM roles, API gateways, and data stores."
+        },
+        {
+          stepNumber: "STEP 3",
+          title: "IaC Serverless Scripting",
+          description: "We write the stack configurations using Serverless Framework or AWS SAM to version control the infrastructure."
+        },
+        {
+          stepNumber: "STEP 4",
+          title: "Function Coding & Integrations",
+          description: "We write clean, lightweight function code, optimize dependencies, and connect to managed databases."
+        },
+        {
+          stepNumber: "STEP 5",
+          title: "Performance & Load Testing",
+          description: "We simulate concurrent load to test scaling thresholds, verify cold starts, and optimize memory allocations."
+        },
+        {
+          stepNumber: "STEP 6",
+          title: "Deployment & Telemetry Configuration",
+          description: "We deploy to the cloud, configure API routing, domain mappings, and setup alerting metrics."
+        }
+      ]
+    },
+    stats: {
+      title: "Quick Stats",
+      subtitle: "Maximizing application efficiency, scaling responsiveness, and cost savings.",
+      items: [
+        {
+          number: "80%",
+          label: "Average Compute Cost Reduction Compared to VMs"
+        },
+        {
+          number: "Zero",
+          label: "Virtual Servers to Maintain, Patch, or Upgrade"
+        },
+        {
+          number: "ms",
+          label: "Average Compute Scale-Up Time to Handle Sudden Spikes"
+        },
+        {
+          number: "100%",
+          label: "Pay-Per-Use billing model (Zero Cost for Idle Time)"
+        }
+      ]
+    },
+    whyChoose: {
+      title: "Why Choose Creuto for Serverless?",
+      items: [
+        {
+          title: "Deep Serverless Design Patterns",
+          description: "We avoid anti-patterns by designing properly decoupled, event-driven architectures.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Deep Serverless Design Patterns"
+        },
+        {
+          title: "Cost-Optimized Engineering",
+          description: "We tune memory size, execution timeouts, and database connections to minimize execution costs.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Cost-Optimized Engineering"
+        },
+        {
+          title: "Cold Start Mitigation Specialists",
+          description: "We keep function packages tiny, write clean code, and use edge deployment platforms to keep APIs fast.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Cold Start Mitigation Specialists"
+        },
+        {
+          title: "Strict IAM Least Privilege",
+          description: "Every individual serverless function is configured with its own micro-IAM role for maximum security.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Strict IAM Least Privilege"
+        },
+        {
+          title: "Multi-Cloud Adaptability",
+          description: "Expertise across AWS Lambda, GCP Cloud Run/Functions, and Cloudflare Workers.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Multi-Cloud Adaptability"
+        },
+        {
+          title: "Complete Stack Automation",
+          description: "We configure automated CI/CD pipelines that test and deploy functions with zero manual steps.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Complete Stack Automation"
+        }
+      ]
+    },
+    faqs: [
+      {
+        question: "What are the limitations of serverless functions?",
+        answer: "Serverless functions typically have a maximum execution time limit (e.g., 15 minutes on AWS Lambda) and can experience brief latency delays on first request (cold starts)."
+      },
+      {
+        question: "How do you handle cold starts?",
+        answer: "We optimize cold starts by keeping function bundles small, choosing fast-starting runtimes (like Node.js or Go), using warm-up patterns, or configuring provisioned concurrency."
+      },
+      {
+        question: "Can serverless connect to traditional relational databases?",
+        answer: "Yes, but it requires careful connection pooling. We use RDS Proxy or connection-pooling layers to prevent serverless scaling from overwhelming the database."
+      },
+      {
+        question: "Are serverless applications lock-in prone?",
+        answer: "We build using cloud-agnostic frameworks (like Serverless Framework) and write decoupled code to make it easy to port functions if you switch cloud providers."
+      },
+      {
+        question: "Is serverless secure?",
+        answer: "Yes. Because functions are stateless and spin down instantly, the attack surface is tiny. We configure precise IAM permissions to ensure functions only access what they need."
+      }
+    ]
+  },
+  "cloud-consulting-cost-optimisation": {
+    metaTitle: "Cloud Consulting & Cost Optimisation Services | Aanandi",
+    metaDescription: "We audit AWS, GCP, and Azure cloud spend to eliminate compute waste, resize instances, and setup automated budgets. Reduce cloud bills by 30% or more.",
+    keywords: ["Cloud Cost Optimisation", "AWS Cost Audit", "Cloud Cost Management", "Billing Analysis", "Reserved Instances", "Compute Savings Plans", "FinOps"],
+    canonical: "https://aananditechnosoft.com/services/cloud-consulting-cost-optimisation",
+    heroLayout: "side-by-side",
+    hero: {
+      category: "DevOps & Cloud Engineering",
+      title: "Cloud Consulting & Cost Optimisation",
+      subtitle: "Audit Infrastructure. Eliminate Waste. Maximize Cloud ROI.",
+      description: "We audit your AWS, GCP, or Azure environments to identify resource waste, overprovisioning, and storage inefficiencies, helping you reduce cloud bills by 30% or more while maintaining absolute performance.",
+      imageSrc: "/img/services/dev-ops-new.webp",
+      imageAlt: "Cloud Cost Optimisation"
+    },
+    intro: {
+      paragraphs: [
+        "As companies scale, their cloud bills often grow exponentially, driven by unattached storage volumes, oversized instances, and idle database servers.",
+        "Without continuous governance and monitoring, cloud environments quickly accumulate operational waste that eats into business profit margins.",
+        "We conduct comprehensive cloud cost audits, mapping every dollar spent to actual application workloads and identifying immediately actionable savings.",
+        "We implement modern cost-efficiency strategies like auto-scheduling, instance rightsizing, spot-pricing models, and storage lifecycle policies.",
+        "We don't just cut costs; we ensure your infrastructure is architected for maximum ROI, keeping systems highly available and secure while eliminating waste."
+      ],
+      goalTitle: "",
+      goalDescription: ""
+    },
+    capabilities: {
+      title: "Our Cost Optimisation capabilities",
+      subtitle: "Cloud spend audits, instance rightsizing, storage lifecycle policies, and budget governance.",
+      items: [
+        {
+          title: "Comprehensive Spend Auditing",
+          description: "Analyze monthly bills and tag resource usage to pinpoint cost drivers and billing anomalies.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Comprehensive Spend Auditing"
+        },
+        {
+          title: "Resource Rightsizing",
+          description: "Analyze CPU, memory, and disk IO patterns to downsize overprovisioned VMs and database clusters.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Resource Rightsizing"
+        },
+        {
+          title: "Spot & Preemptible Strategy",
+          description: "Configure stateless workloads and background queues to run on cheap Spot compute instances.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Spot & Preemptible Strategy"
+        },
+        {
+          title: "Storage Lifecycle Policies",
+          description: "Set up automated rules to move old database backups and log files to archival storage (S3 Glacier).",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Storage Lifecycle Policies"
+        },
+        {
+          title: "Auto-Shutdown Scheduling",
+          description: "Configure development and staging environments to shut down automatically during non-business hours.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Auto-Shutdown Scheduling"
+        },
+        {
+          title: "Reserved Instance Planning",
+          description: "Structure compute commitments (Reserved Instances, Savings Plans) to lock in deep cloud vendor discounts.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Reserved Instance Planning"
+        },
+        {
+          title: "Data Transfer Optimization",
+          description: "Reduce network transfer bills by optimizing CDN caching, VPC endpoints, and cross-AZ traffic routing.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Data Transfer Optimization"
+        },
+        {
+          title: "Cost Governance Setup",
+          description: "Install real-time budget tracking, anomaly alerts, and automated tagging rules to prevent cost creep.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Cost Governance Setup"
+        }
+      ]
+    },
+    process: {
+      title: "Our Process",
+      steps: [
+        {
+          stepNumber: "STEP 1",
+          title: "Access & Billing Analytics Audit",
+          description: "We secure read-only access to your cloud accounts and analyze billing logs and cost explorer metrics."
+        },
+        {
+          stepNumber: "STEP 2",
+          title: "Resource Utilization Analysis",
+          description: "We monitor instance CPU, memory, network, and storage usage patterns over a multi-day cycle."
+        },
+        {
+          stepNumber: "STEP 3",
+          title: "Savings Recommendations Report",
+          description: "We deliver a detailed report categorizing savings into quick-wins (immediate) and architectural changes."
+        },
+        {
+          stepNumber: "STEP 4",
+          title: "Implementation of Cost Controls",
+          description: "We rightsize instances, schedule non-prod shutdowns, delete orphan disks, and apply tiering policies."
+        },
+        {
+          stepNumber: "STEP 5",
+          title: "Savings Plans & Reservation Structuring",
+          description: "We guide your team in purchasing appropriate Reserved Instances and Savings Plans for steady workloads."
+        },
+        {
+          stepNumber: "STEP 6",
+          title: "Governance & Automated Guardrails",
+          description: "We set up cost allocation tags, real-time Slack billing alerts, and budget limits to keep costs low."
+        }
+      ]
+    },
+    stats: {
+      title: "Quick Stats",
+      subtitle: "Maximizing infrastructure efficiency, eliminating waste, and cloud bill reduction.",
+      items: [
+        {
+          number: "30%+",
+          label: "Average Cloud Billing Savings Delivered for Clients"
+        },
+        {
+          number: "Days",
+          label: "To Deliver a Complete Cloud Cost Audit Report"
+        },
+        {
+          number: "100%",
+          label: "Performance and Security Retention Post-Audit"
+        },
+        {
+          number: "Immediate",
+          label: "ROI (Audit costs are covered by first-month savings)"
+        }
+      ]
+    },
+    whyChoose: {
+      title: "Why Choose Creuto for Cost Optimisation?",
+      items: [
+        {
+          title: "Performance-Preserving Adjustments",
+          description: "We never sacrifice application speed, user experience, or system availability to save money.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Performance-Preserving Adjustments"
+        },
+        {
+          title: "Practical, Hand-On Execution",
+          description: "We don't just hand you a report of tools; we write the IaC scripts and configure the policies for you.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Practical, Hand-On Execution"
+        },
+        {
+          title: "Platform Agnostic Optimization",
+          description: "Deep expertise auditing complex billing and architectures across AWS, GCP, and Azure.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Platform Agnostic Optimization"
+        },
+        {
+          title: "Long-Term Cost Guardrails",
+          description: "We install automated anomaly detection so a runaway script doesn't spike your bill next month.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Long-Term Cost Guardrails"
+        },
+        {
+          title: "No Downtime Changes",
+          description: "Rightsizing and database modifications are executed during maintenance windows with zero business impact.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "No Downtime Changes"
+        },
+        {
+          title: "Transparent Savings Reporting",
+          description: "Clear, detailed breakdown showing exactly where and how savings are achieved.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Transparent Savings Reporting"
+        }
+      ]
+    },
+    faqs: [
+      {
+        question: "Will cost optimisation degrade our application's performance?",
+        answer: "No. We analyze historical load metrics to ensure resources are scaled to handle peak traffic safely, retaining adequate performance buffers."
+      },
+      {
+        question: "What are 'quick wins' in cloud cost reduction?",
+        answer: "These are actions that reduce your bill immediately with zero risk, such as deleting unattached storage volumes, terminating idle VMs, and sizing down unused databases."
+      },
+      {
+        question: "How do Reserved Instances and Savings Plans work?",
+        answer: "They allow you to commit to a specific amount of compute usage for 1 or 3 years in exchange for discounts of up to 72% compared to standard on-demand pricing."
+      },
+      {
+        question: "How do we prevent cost creep after the audit?",
+        answer: "We implement automated cost allocation tags, budget alerts, and resource creation restrictions to keep team deployments visible and auditable."
+      },
+      {
+        question: "What cloud platforms can you optimize?",
+        answer: "We optimize infrastructure on Amazon Web Services (AWS), Google Cloud Platform (GCP), and Microsoft Azure."
+      }
+    ]
+  },
+  "infrastructure-management-and-monitoring": {
+    metaTitle: "Infrastructure Management & Monitoring | Aanandi",
+    metaDescription: "Establish robust, proactive cloud observability. Set up Grafana dashboards, centralized Loki/ELK logs, and Prometheus monitoring with Slack alert routing.",
+    keywords: ["Infrastructure Monitoring", "Log Aggregation", "Prometheus Setup", "Grafana Dashboard", "ELK Stack", "Loki Logging", "APM Tracing", "Observability"],
+    canonical: "https://aananditechnosoft.com/services/infrastructure-management-and-monitoring",
+    heroLayout: "side-by-side",
+    hero: {
+      category: "DevOps & Cloud Engineering",
+      title: "Infrastructure Management & Monitoring",
+      subtitle: "Proactive Observability. Centralized Logging. 24/7 Peace of Mind.",
+      description: "We design and implement comprehensive infrastructure monitoring and log aggregation systems (Prometheus, Grafana, Datadog, ELK). We ensure you have real-time visibility and instant alerts for issues before they affect users.",
+      imageSrc: "/img/services/dev-ops-new.webp",
+      imageAlt: "Infrastructure Management & Monitoring"
+    },
+    intro: {
+      paragraphs: [
+        "Flying blind without real-time infrastructure metrics means you only discover server crashes or database bottlenecks when angry users report them.",
+        "Modern systems need proactive monitoring, tracing, and logging to help engineering teams debug issues and maintain system availability.",
+        "We configure end-to-end observability across your cloud applications, virtual servers, database clusters, and container environments.",
+        "We build custom Grafana dashboards, aggregate application logs, and configure alerting policies that message your team on Slack or PagerDuty.",
+        "From early detection of disk exhaustion to root-cause tracing of database slow queries, we deliver complete operational peace of mind."
+      ],
+      goalTitle: "",
+      goalDescription: ""
+    },
+    capabilities: {
+      title: "Our Monitoring & Observability capabilities",
+      subtitle: "Infrastructure metric collection, log aggregation, application performance monitoring (APM), and alerting.",
+      items: [
+        {
+          title: "Centralized Log Collection",
+          description: "Aggregate system and application logs in one searchable place using ELK stack, Loki, or Datadog.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Centralized Log Collection"
+        },
+        {
+          title: "Custom Grafana Dashboards",
+          description: "Build unified, real-time telemetry dashboards tracking CPU, memory, disk, network, and request rates.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Custom Grafana Dashboards"
+        },
+        {
+          title: "Application Performance Monitoring",
+          description: "Track API transaction latency, database query times, and trace microservice calls using APM tools.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Application Performance Monitoring"
+        },
+        {
+          title: "Proactive Smart Alerting",
+          description: "Configure anomaly and threshold alerts routed directly to Slack, email, or paging services (PagerDuty).",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Proactive Smart Alerting"
+        },
+        {
+          title: "Synthetic Monitoring Setup",
+          description: "Set up external uptime pings and simulated user flows to verify API and web page availability globally.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Synthetic Monitoring Setup"
+        },
+        {
+          title: "Database Performance Tracking",
+          description: "Monitor database connection counts, read/write IOPS, replication lag, and slow query executions.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Database Performance Tracking"
+        },
+        {
+          title: "Container & Kubernetes Telemetry",
+          description: "Collect cluster metrics, pod statuses, and node resources using Prometheus and Kube-State-Metrics.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Container & Kubernetes Telemetry"
+        },
+        {
+          title: "Infrastructure-as-Code Monitoring",
+          description: "Provision dashboards and alert rules declaratively using Terraform to avoid manual config drift.",
+          imageSrc: "/img/newService/mobile-app/3.png",
+          imageAlt: "Infrastructure-as-Code Monitoring"
+        }
+      ]
+    },
+    process: {
+      title: "Our Process",
+      steps: [
+        {
+          stepNumber: "STEP 1",
+          title: "Observability & Alerting Review",
+          description: "We audit your current logging setup, identify visibility gaps, and list key system metrics to track."
+        },
+        {
+          stepNumber: "STEP 2",
+          title: "Telemetry Stack Selection",
+          description: "We choose the monitoring tools (Open-source Prometheus/Grafana or SaaS like Datadog/New Relic) that fit your budget."
+        },
+        {
+          stepNumber: "STEP 3",
+          title: "Agent Deployment & IaC Setup",
+          description: "We write Terraform scripts to provision the logging infrastructure and deploy collection agents to servers/containers."
+        },
+        {
+          stepNumber: "STEP 4",
+          title: "Dashboard Design & Customization",
+          description: "We create clear, structured dashboard screens tailored for both developers and business leaders."
+        },
+        {
+          stepNumber: "STEP 5",
+          title: "Alert Threshold Calibration",
+          description: "We write intelligent alert rules to prevent alert fatigue, separating critical pages from non-urgent notices."
+        },
+        {
+          stepNumber: "STEP 6",
+          title: "Drill Testing & Team Training",
+          description: "We simulate a system failure to verify alerts fire correctly and train your team on root-cause analysis."
+        }
+      ]
+    },
+    stats: {
+      title: "Quick Stats",
+      subtitle: "Reducing MTTR (Mean Time to Resolution) and achieving complete system observability.",
+      items: [
+        {
+          number: "85%",
+          label: "Average Reduction in Incident Resolution Times (MTTR)"
+        },
+        {
+          number: "Seconds",
+          label: "To Detect Server Outages or Application Exceptions"
+        },
+        {
+          number: "100%",
+          label: "Metric Coverage Across API, Compute, and Databases"
+        },
+        {
+          number: "24/7/365",
+          label: "Automated System Monitoring and Alert Readiness"
+        }
+      ]
+    },
+    whyChoose: {
+      title: "Why Choose Creuto for Infrastructure Monitoring?",
+      items: [
+        {
+          title: "Alert Fatigue Elimination",
+          description: "We calibrate thresholds and group alerts intelligently so your team is only woken up for genuine incidents.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Alert Fatigue Elimination"
+        },
+        {
+          title: "Declarative Monitoring (GitOps)",
+          description: "We write monitoring rules as code (Terraform/Helm), keeping configurations version-controlled.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Declarative Monitoring"
+        },
+        {
+          title: "Unified Dashboard Views",
+          description: "We bring metrics, logs, and APM traces into a single pane of glass for rapid debugging.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Unified Dashboard Views"
+        },
+        {
+          title: "Deep Database Observability",
+          description: "Expertise tracing locks, slow transactions, and resource contention inside Postgres, MySQL, and DynamoDB.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Deep Database Observability"
+        },
+        {
+          title: "Open-Source & SaaS Experience",
+          description: "Fluent in open-source stacks (Prometheus, Grafana, ELK) as well as premium platforms (Datadog, Dynatrace).",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Open-Source & SaaS Experience"
+        },
+        {
+          title: "Actionable Alert Payloads",
+          description: "Alerts include links to relevant dashboards and runbooks so engineers can act immediately.",
+          imageSrc: "/img/newService/mobile-app/mobile-app-choose-1.png",
+          imageAlt: "Actionable Alert Payloads"
+        }
+      ]
+    },
+    faqs: [
+      {
+        question: "What is the difference between metrics, logs, and traces?",
+        answer: "Metrics tell you IF something is wrong (CPU is 99%), logs tell you WHAT went wrong (stack trace showing out-of-memory), and traces tell you WHERE the latency is in microservices."
+      },
+      {
+        question: "Should we use open-source Prometheus/Grafana or a SaaS tool like Datadog?",
+        answer: "Open-source stacks have zero license fees but require hosting and maintenance. SaaS platforms are plug-and-play but can become expensive as you scale. We help you choose the best fit for your budget."
+      },
+      {
+        question: "How do you prevent 'alert fatigue'?",
+        answer: "We classify alerts by severity (Warning vs. Critical), use anomaly detection instead of simple thresholds, and route non-urgent alerts to quiet Slack channels instead of waking developers."
+      },
+      {
+        question: "Can you monitor legacy applications hosted on VMs?",
+        answer: "Yes. We install lightweight metric collection agents (like Prometheus Node Exporter or Datadog Agent) directly on the VMs to track system stats."
+      },
+      {
+        question: "Will installing monitoring agents slow down our application?",
+        answer: "No. Modern collection agents are designed to run asynchronously with minimal CPU and memory footprints (typically less than 1% resource overhead)."
       }
     ]
   }
