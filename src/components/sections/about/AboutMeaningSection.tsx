@@ -38,7 +38,7 @@ export default function AboutMeaningSection() {
       </div>
       
       <h2 className="font-bricolage text-[32px] md:text-[44px] font-bold text-[#23272e] tracking-[-0.88px] text-center mb-[64px]">
-        What AANANDI Means
+        What MOOLSAP Means
       </h2>
 
       <motion.div 
@@ -96,19 +96,19 @@ export default function AboutMeaningSection() {
           =
         </motion.div>
 
-        {/* AANANDI Card */}
+        {/* MOOLSAP Card */}
         <motion.div 
           className="rounded-[24px] bg-[rgba(23,70,234,0.04)] border-[1.5px] border-[rgba(23,70,234,0.3)] p-[40px_32px] text-center flex-shrink-0 w-full sm:w-[280px] shadow-[var(--shadow-deep-about)] flex flex-col items-center"
           variants={cardVariants}
         >
           <div className="w-[80px] h-[80px] relative mb-[20px]">
-            <Image src="/icons/Aanandi_Single_Logo.svg" alt="Aanandi Logo" fill className="object-contain" />
+            <Image src="/icons/MoolSap_Single_Logo.svg" alt="MoolSap Logo" fill className="object-contain" />
           </div>
           <div className="font-bricolage text-[24px] font-bold text-[#1746ea] tracking-[0.05em] mb-[8px]">
-            AANANDI
+            MOOLSAP
           </div>
           <div className="text-[14.4px] font-medium text-[#23272e] leading-[1.65]">
-            AANANDI Means Building Beyond The Obvious. Looking Further Into A Product&apos;s Future Than Most Are Willing To See.
+            MOOLSAP Means Building Beyond The Obvious. Looking Further Into A Product&apos;s Future Than Most Are Willing To See.
           </div>
         </motion.div>
       </motion.div>
@@ -120,8 +120,8 @@ export default function AboutMeaningSection() {
         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
       >
         <Image 
-          src="/icons/What_Aanandi_Means_Vector.svg" 
-          alt="What Aanandi Means Vector" 
+          src="/icons/What_MoolSap_Means_Vector.svg" 
+          alt="What MoolSap Means Vector" 
           width={900} 
           height={300} 
           className="w-full h-auto"

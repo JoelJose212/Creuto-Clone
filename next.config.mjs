@@ -10,8 +10,6 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion", "@tanstack/react-query"],
-    // Enable turbo for faster dev builds
-    turbo: {},
   },
   // Reduce the number of compilations
   onDemandEntries: {

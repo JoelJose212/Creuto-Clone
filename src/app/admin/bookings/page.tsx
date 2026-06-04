@@ -139,7 +139,7 @@ export default function AdminBookings() {
     const url = URL.createObjectURL(blob)
     const link = document.createElement("a")
     link.setAttribute("href", url)
-    link.setAttribute("download", `creuto_call_bookings_${new Date().toISOString().slice(0, 10)}.csv`)
+    link.setAttribute("download", `moolsap_call_bookings_${new Date().toISOString().slice(0, 10)}.csv`)
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -386,7 +386,7 @@ export default function AdminBookings() {
                   {selectedBooking.name}
                 </h2>
                 <p className="text-xs text-amber-400 font-semibold mt-0.5">
-                  Meeting Agenda: <span className="text-white">Aanandi Discovery Call</span>
+                  Meeting Agenda: <span className="text-white">MoolSap Discovery Call</span>
                 </p>
               </div>
 

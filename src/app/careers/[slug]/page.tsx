@@ -45,10 +45,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const roleTitle = formatSlugToTitle(slug)
 
   return {
-    title: `${roleTitle} Jobs at Aanandi - Join Our Product Team`,
-    description: `Apply for the ${roleTitle} position at Aanandi. Join our high-performance engineering, product, and design team. Review candidate requirements and submit your application online today.`,
+    title: `${roleTitle} Jobs at MoolSap - Join Our Product Team`,
+    description: `Apply for the ${roleTitle} position at MoolSap. Join our high-performance engineering, product, and design team. Review candidate requirements and submit your application online today.`,
     alternates: {
-      canonical: `https://aananditechnosoft.com/careers/${slug}`,
+      canonical: `https://moolsap.com/careers/${slug}`,
     },
   }
 }
@@ -75,26 +75,26 @@ export default async function JobDetailPage({ params }: Props) {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        #aanandi-job-detail-page,
-        #aanandi-job-detail-page h1,
-        #aanandi-job-detail-page h2,
-        #aanandi-job-detail-page h3,
-        #aanandi-job-detail-page h4,
-        #aanandi-job-detail-page h5,
-        #aanandi-job-detail-page h6,
-        #aanandi-job-detail-page p,
-        #aanandi-job-detail-page span,
-        #aanandi-job-detail-page li,
-        #aanandi-job-detail-page a,
-        #aanandi-job-detail-page button,
-        #aanandi-job-detail-page label,
-        #aanandi-job-detail-page div,
-        #aanandi-job-detail-page .MuiTypography-root {
+        #moolsap-job-detail-page,
+        #moolsap-job-detail-page h1,
+        #moolsap-job-detail-page h2,
+        #moolsap-job-detail-page h3,
+        #moolsap-job-detail-page h4,
+        #moolsap-job-detail-page h5,
+        #moolsap-job-detail-page h6,
+        #moolsap-job-detail-page p,
+        #moolsap-job-detail-page span,
+        #moolsap-job-detail-page li,
+        #moolsap-job-detail-page a,
+        #moolsap-job-detail-page button,
+        #moolsap-job-detail-page label,
+        #moolsap-job-detail-page div,
+        #moolsap-job-detail-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />
 
-      <div id="creuto-job-detail-page">
+      <div id="moolsap-job-detail-page">
         <CareersDetailHydration roleTitle={roleTitle}>
           <Component />
         </CareersDetailHydration>

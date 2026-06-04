@@ -144,19 +144,19 @@ export default function Footer() {
   if (pathname?.startsWith("/dashboard")) return null
 
   return (
-    <footer className="border-t border-[#1a1e3a] bg-[#0a0c1a] px-[5%] pb-[32px] pt-[64px]">
+    <footer className="border-t border-[rgba(255,255,255,0.1)] bg-[#1C1E35] px-[5%] pb-[32px] pt-[64px]">
       <div className="mx-auto max-w-7xl">
         {/* Top Grid */}
-        <div className="grid grid-cols-1 gap-[48px] border-b border-[#1a1e3a] pb-[48px] md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr]">
+        <div className="grid grid-cols-1 gap-[48px] border-b border-[rgba(255,255,255,0.1)] pb-[48px] md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr]">
           
           {/* Column 1: Brand & Newsletter */}
           <div className="flex flex-col">
             <Link href="/" className="mb-[20px] font-display text-[24px] font-[800] tracking-[-0.5px]">
               <span className="text-[#ffffff]">Creu</span>
-              <span className="text-blue">to</span>
+              <span className="text-[#FFB700]">to</span>
             </Link>
-            <p className="mb-[32px] max-w-[280px] font-sans text-[14px] font-[300] leading-[1.75] text-[#7b80a8]">
-              We don&apos;t just aim to fit in — we strive to stand out. Experience the perfect blend of innovation, excellence, and trust that makes us truly unforgettable. Discover the difference with Aanandi.
+            <p className="mb-[32px] max-w-[280px] font-sans text-[14px] font-[300] leading-[1.75] text-[#E8F4F0]">
+              We don&apos;t just aim to fit in — we strive to stand out. Experience the perfect blend of innovation, excellence, and trust that makes us truly unforgettable. Discover the difference with MoolSap.
             </p>
             
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
@@ -164,12 +164,12 @@ export default function Footer() {
                 <input
                   {...register("email")}
                   placeholder="Enter your email"
-                  className="w-full flex-1 rounded-[8px] border border-[#1a1e3a] bg-[#0b0d1e] px-[16px] py-[10px] font-sans text-[13px] text-[#ffffff] outline-none transition-colors focus:border-blue"
+                  className="w-full flex-1 rounded-[8px] border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.05)] px-[16px] py-[10px] font-sans text-[13px] text-[#ffffff] outline-none transition-colors focus:border-[#FFB700]"
                 />
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex items-center justify-center rounded-[8px] bg-[#1531FF] px-[18px] py-[10px] font-sans text-[13px] font-[600] text-[#ffffff] transition-colors hover:bg-[#3d57ff] disabled:opacity-70"
+                  className="flex items-center justify-center rounded-[8px] bg-[#FFB700] px-[18px] py-[10px] font-sans text-[13px] font-[600] text-[#1C1E35] transition-colors hover:bg-[#FFFFFF] hover:text-[#303358] disabled:opacity-70"
                 >
                   {isSubmitting ? <Loader2 size={16} className="animate-spin" /> : "Subscribe"}
                 </button>
@@ -196,7 +196,7 @@ export default function Footer() {
                 <Link
                   key={link}
                   href="#"
-                  className="font-sans text-[13px] font-[300] text-[#7b80a8] transition-colors duration-200 hover:text-[#ffffff]"
+                  className="font-sans text-[13px] font-[300] text-[#E8F4F0] transition-colors duration-200 hover:text-[#FFB700]"
                 >
                   {link}
                 </Link>
@@ -214,7 +214,7 @@ export default function Footer() {
                 <Link
                   key={link}
                   href="#"
-                  className="font-sans text-[13px] font-[300] text-[#7b80a8] transition-colors duration-200 hover:text-[#ffffff]"
+                  className="font-sans text-[13px] font-[300] text-[#E8F4F0] transition-colors duration-200 hover:text-[#FFB700]"
                 >
                   {link}
                 </Link>
@@ -233,7 +233,7 @@ export default function Footer() {
                   <div className="mb-[4px] font-sans text-[14px] font-[500] text-[#ffffff]">
                     {loc.country}
                   </div>
-                  <div className="font-sans text-[12px] font-[300] leading-[1.6] text-[#7b80a8]">
+                  <div className="font-sans text-[12px] font-[300] leading-[1.6] text-[#E8F4F0]">
                     {loc.address}
                   </div>
                 </div>
@@ -244,14 +244,14 @@ export default function Footer() {
 
         {/* Bottom Row */}
         <div className="flex flex-col items-start gap-[16px] pt-[28px] md:flex-row md:items-center md:justify-between">
-          <div className="font-sans text-[13px] font-[300] text-[#7b80a8]">
-            © 2026 Aanandi All Rights Reserved
+          <div className="font-sans text-[13px] font-[300] text-[#E8F4F0]">
+            © 2026 MoolSap All Rights Reserved
           </div>
           <div className="flex gap-[24px]">
-            <Link href="#" className="font-sans text-[12px] text-[#7b80a8] transition-colors hover:text-[#ffffff]">
+            <Link href="#" className="font-sans text-[12px] text-[#E8F4F0] transition-colors hover:text-[#FFB700]">
               Terms & Conditions
             </Link>
-            <Link href="#" className="font-sans text-[12px] text-[#7b80a8] transition-colors hover:text-[#ffffff]">
+            <Link href="#" className="font-sans text-[12px] text-[#E8F4F0] transition-colors hover:text-[#FFB700]">
               Privacy Policy
             </Link>
           </div>
@@ -266,7 +266,7 @@ export default function Footer() {
                 >
                   <Link
                     href={social.href}
-                    className="flex h-[36px] w-[36px] items-center justify-center rounded-[8px] border border-[#1a1e3a] bg-transparent text-[#7b80a8] transition-colors duration-200 hover:border-blue hover:text-blue"
+                    className="flex h-[36px] w-[36px] items-center justify-center rounded-[8px] border border-[rgba(255,255,255,0.1)] bg-transparent text-[#E8F4F0] transition-colors duration-200 hover:border-[#FFB700] hover:text-[#FFB700]"
                   >
                     <Icon width={16} height={16} />
                   </Link>

@@ -40,7 +40,7 @@ export default function AboutRightPartnerSection() {
           </div>
           
           <h2 className="font-bricolage text-[32px] md:text-[44px] font-bold text-[#ffffff] tracking-[-0.88px] leading-[1.1] mb-[16px]">
-            Is AANANDI the Right Partner for You?
+            Is MOOLSAP the Right Partner for You?
           </h2>
           
           <p className="font-bricolage text-[18px] md:text-[20px] font-normal text-[rgba(255,255,255,0.75)] mb-[40px]">

@@ -21,7 +21,7 @@ function generateApplicantHtml({
   position,
   experience,
   linkedinProfile,
-  whyAanandi,
+  whyMoolSap,
   resumeUrl,
   coverLetterUrl,
 }: {
@@ -31,7 +31,7 @@ function generateApplicantHtml({
   position: string
   experience: string
   linkedinProfile: string | null
-  whyAanandi: string
+  whyMoolSap: string
   resumeUrl: string
   coverLetterUrl: string | null
 }) {
@@ -183,7 +183,7 @@ function generateApplicantHtml({
       <div class="container">
         <div class="header">
           <h1>New Applicant Alert</h1>
-          <p>Aanandi Recruitment Engine</p>
+          <p>MoolSap Recruitment Engine</p>
         </div>
         
         <div class="content">
@@ -218,9 +218,9 @@ function generateApplicantHtml({
             </div>
           </div>
           
-          <div class="section-title">Candidate Pitch ("Why Aanandi?")</div>
+          <div class="section-title">Candidate Pitch ("Why MoolSap?")</div>
           <div class="pitch">
-            "${whyAanandi.replace(/\n/g, "<br>")}"
+            "${whyMoolSap.replace(/\n/g, "<br>")}"
           </div>
           
           <div class="actions">
@@ -230,7 +230,7 @@ function generateApplicantHtml({
         </div>
         
         <div class="footer">
-          This is an automated recruitment system alert. Manage all active candidates at <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin/careers" style="color: #2563eb; text-decoration: none; font-weight: 600;">Aanandi Control Deck</a>.
+          This is an automated recruitment system alert. Manage all active candidates at <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/admin/careers" style="color: #2563eb; text-decoration: none; font-weight: 600;">MoolSap Control Deck</a>.
         </div>
       </div>
     </body>
@@ -248,13 +248,13 @@ export async function POST(request: Request) {
     const position = formData.get("position") as string
     const experience = formData.get("experience") as string
     const linkedinProfile = formData.get("linkedinProfile") as string
-    const whyAanandi = formData.get("whyAanandi") as string
+    const whyMoolSap = formData.get("whyMoolSap") as string
 
     const resumeFile = formData.get("resume") as File | null
     const coverLetterFile = formData.get("coverLetter") as File | null
 
     // 1. Basic Field Validations
-    if (!fullName || !email || !mobile || !position || !experience || !whyAanandi || !resumeFile) {
+    if (!fullName || !email || !mobile || !position || !experience || !whyMoolSap || !resumeFile) {
       return NextResponse.json(
         { success: false, error: "Please fill in all required fields." },
         { status: 400 }
@@ -338,7 +338,7 @@ export async function POST(request: Request) {
           mobile,
           experience,
           linkedinProfile: linkedinProfile || null,
-          whyCreuto: whyAanandi,
+          whyMoolSap: whyMoolSap,
           resumePath,
           coverLetterPath,
         },
@@ -373,7 +373,7 @@ export async function POST(request: Request) {
         mobile,
         experience,
         linkedinProfile: linkedinProfile || null,
-        whyAanandi,
+        whyMoolSap,
         resumePath,
         coverLetterPath,
         savedToDb: isSavedToDb,
@@ -388,7 +388,7 @@ export async function POST(request: Request) {
     }
 
     // 8. Send notification email to admin asynchronously (non-blocking)
-    const adminEmail = process.env.ADMIN_NOTIFICATION_EMAIL || "joel@aananditechnosoft.com"
+    const adminEmail = process.env.ADMIN_NOTIFICATION_EMAIL || "joel@moolsap.com"
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
 
     if (adminEmail) {
@@ -402,7 +402,7 @@ export async function POST(request: Request) {
           position,
           experience,
           linkedinProfile: linkedinProfile || null,
-          whyAanandi,
+          whyMoolSap,
           resumeUrl: `${siteUrl}${resumePath}`,
           coverLetterUrl: coverLetterPath ? `${siteUrl}${coverLetterPath}` : null,
         }),

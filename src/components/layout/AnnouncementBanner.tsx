@@ -18,11 +18,11 @@ export default function AnnouncementBanner() {
           to { transform: translateX(calc(-100% - 32px)); }
         }
         .mui-1h4dmgi {
-          background: url('/img/top-banner.webp') !important;
+          background: #303358 !important;
           background-size: cover !important;
           background-position: center !important;
           background-repeat: no-repeat !important;
-          color: white !important;
+          color: #FFB700 !important;
           position: fixed !important;
           height: 3rem !important;
           top: 0 !important;
@@ -68,7 +68,7 @@ export default function AnnouncementBanner() {
           line-weight: 1.43 !important;
           font-weight: 500 !important;
           line-height: 1.4 !important;
-          color: white !important;
+          color: #FFB700 !important;
         }
         @media (max-width:899.95px){.mui-1lbq0s0{font-size:0.875rem !important;}}
         @media (max-width:599.95px){.mui-1lbq0s0{font-size:0.75rem !important;}}

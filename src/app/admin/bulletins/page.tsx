@@ -410,7 +410,7 @@ export default function AdminBulletins() {
                 {/* Footer details */}
                 <div className="mt-4 flex items-center justify-between text-[7px] font-bold text-slate-500 uppercase tracking-widest select-none border-t border-slate-900/5 pt-1.5">
                   <span>📌 Dynamic Pin</span>
-                  <span>Aanandi Hub</span>
+                  <span>MoolSap Hub</span>
                 </div>
               </motion.div>
 

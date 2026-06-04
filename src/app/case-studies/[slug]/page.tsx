@@ -21,23 +21,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const fallbackTitle = cleanSlug
       .split("-")
       .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-      .join(" ") + " | Aanandi Case Study";
+      .join(" ") + " | MoolSap Case Study";
     return {
       title: fallbackTitle,
     }
   }
 
   return {
-    title: `${study.title} | Aanandi Case Study`,
+    title: `${study.title} | MoolSap Case Study`,
     description: study.description,
     alternates: {
-      canonical: `https://aananditechnosoft.com/case-studies/${cleanSlug}`,
+      canonical: `https://moolsap.com/case-studies/${cleanSlug}`,
     },
     openGraph: {
       title: study.title,
       description: study.description,
-      url: `https://aananditechnosoft.com/case-studies/${cleanSlug}`,
-      siteName: "Aanandi",
+      url: `https://moolsap.com/case-studies/${cleanSlug}`,
+      siteName: "MoolSap",
       type: "article",
     },
   }
@@ -60,26 +60,26 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-casestudy-cloned-page,
-        #creuto-casestudy-cloned-page h1,
-        #creuto-casestudy-cloned-page h2,
-        #creuto-casestudy-cloned-page h3,
-        #creuto-casestudy-cloned-page h4,
-        #creuto-casestudy-cloned-page h5,
-        #creuto-casestudy-cloned-page h6,
-        #creuto-casestudy-cloned-page p,
-        #creuto-casestudy-cloned-page span,
-        #creuto-casestudy-cloned-page li,
-        #creuto-casestudy-cloned-page a,
-        #creuto-casestudy-cloned-page button,
-        #creuto-casestudy-cloned-page label,
-        #creuto-casestudy-cloned-page div,
-        #creuto-casestudy-cloned-page .MuiTypography-root {
+        #moolsap-casestudy-cloned-page,
+        #moolsap-casestudy-cloned-page h1,
+        #moolsap-casestudy-cloned-page h2,
+        #moolsap-casestudy-cloned-page h3,
+        #moolsap-casestudy-cloned-page h4,
+        #moolsap-casestudy-cloned-page h5,
+        #moolsap-casestudy-cloned-page h6,
+        #moolsap-casestudy-cloned-page p,
+        #moolsap-casestudy-cloned-page span,
+        #moolsap-casestudy-cloned-page li,
+        #moolsap-casestudy-cloned-page a,
+        #moolsap-casestudy-cloned-page button,
+        #moolsap-casestudy-cloned-page label,
+        #moolsap-casestudy-cloned-page div,
+        #moolsap-casestudy-cloned-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       `}} />
 
-      <div id="creuto-casestudy-cloned-page">
+      <div id="moolsap-casestudy-cloned-page">
         <Component />
       </div>
     </>

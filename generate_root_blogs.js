@@ -3,13 +3,13 @@ const path = require('path');
 const { htmlToJsx, unlayerCSS } = require('./convert_page');
 const { JSDOM } = require('jsdom');
 
-const cloneDir = path.join('D:', 'clone', 'Clone', 'creuto.com');
+const cloneDir = path.join('D:', 'clone', 'Clone', 'moolsap.com');
 const targetDir = path.join('src', 'app', '[slug]', 'data');
 const pageFilePath = path.join('src', 'app', '[slug]', 'page.tsx');
 
 const allBlogs = [
   'how-smes-can-leverage-ai.html',
-  'how-creuto-help-businesses-scale-smartly.html',
+  'how-moolsap-help-businesses-scale-smartly.html',
   'why-every-business-owner-should-invest-in-custom-software.html',
   'the-beginning-of-something-real.html',
   'your-customers-are-on-mobile.html',
@@ -74,7 +74,7 @@ function preprocess(html) {
   res = res.replace(/href="index\.html"/g, 'href="/"');
   
   // Replace blog post links to go to root directly
-  res = res.replace(/href="(how-smes-can-leverage-ai|your-customers-are-on-mobile|why-every-business-owner-should-invest-in-custom-software|how-creuto-help-businesses-scale-smartly|the-beginning-of-something-real|custom-crm|software-partner|custom-software-development|customsoftware-roi|startup)\.html"/g, 'href="/$1"');
+  res = res.replace(/href="(how-smes-can-leverage-ai|your-customers-are-on-mobile|why-every-business-owner-should-invest-in-custom-software|how-moolsap-help-businesses-scale-smartly|the-beginning-of-something-real|custom-crm|software-partner|custom-software-development|customsoftware-roi|startup)\.html"/g, 'href="/$1"');
 
   // Correct image CDN paths (e.g. absolute online or local assets)
   // Correcting any "/https://" prefix to "https://"
@@ -83,12 +83,12 @@ function preprocess(html) {
   res = res.replace(/src="\/_next\/static\/chunks\/images\/([^"]+)"/g, 'src="https://creutocdn.s3.ap-south-1.amazonaws.com/$1"');
   
   // If we downloaded/copied images locally, they are in /image/ folder:
-  // e.g. partner (1).png, the creuto story.png, etc.
+  // e.g. partner (1).png, the moolsap story.png, etc.
   res = res.replace(/src="https:\/\/creutocdn\.s3\.ap-south-1\.amazonaws\.com\/image\/1760342828095-partner%20\(1\)\.png"/g, 'src="/image/1760342828095-partner (1).png"');
   res = res.replace(/src="https:\/\/creutocdn\.s3\.ap-south-1\.amazonaws\.com\/image\/1760337632265-partner%20\(1\)\.png"/g, 'src="/image/1760337632265-partner (1).png"');
   res = res.replace(/src="https:\/\/creutocdn\.s3\.ap-south-1\.amazonaws\.com\/image\/1756718808568-partner%20\(1\)\.png"/g, 'src="/image/1756718808568-partner (1).png"');
   res = res.replace(/src="https:\/\/creutocdn\.s3\.ap-south-1\.amazonaws\.com\/image\/1756715048910-partner\.png"/g, 'src="/image/1756715048910-partner.png"');
-  res = res.replace(/src="https:\/\/creutocdn\.s3\.ap-south-1\.amazonaws\.com\/image\/1756713571459-the%20creuto%20story\.png"/g, 'src="/image/1756713571459-the creuto story.png"');
+  res = res.replace(/src="https:\/\/creutocdn\.s3\.ap-south-1\.amazonaws\.com\/image\/1756713571459-the%20moolsap%20story\.png"/g, 'src="/image/1756713571459-the moolsap story.png"');
 
   return res;
 }
@@ -118,10 +118,10 @@ function generateAll() {
 
     // 1. Extract Title
     const titleMatch = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(htmlContent);
-    const title = titleMatch ? titleMatch[1].trim() : `${slug.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')} | Creuto Blog`;
+    const title = titleMatch ? titleMatch[1].trim() : `${slug.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')} | MoolSap Blog`;
 
     // 2. Extract Description
-    let description = "Read the latest engineering articles, product strategy guides, and development insights from Creuto.";
+    let description = "Read the latest engineering articles, product strategy guides, and development insights from MoolSap.";
     const descMatch = /<meta[^>]*?name="description"[^>]*?content="([^"]*)"/i.exec(htmlContent) || 
                       /<meta[^>]*?content="([^"]*)"[^>]*?name="description"/i.exec(htmlContent);
     if (descMatch) {
@@ -220,7 +220,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!meta) {
     return {
-      title: "Creuto Blog Post",
+      title: "MoolSap Blog Post",
     }
   }
 
@@ -228,13 +228,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: meta.title,
     description: meta.description,
     alternates: {
-      canonical: \`https://creuto.com/\${slug}\`,
+      canonical: \`https://moolsap.com/\${slug}\`,
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: \`https://creuto.com/\${slug}\`,
-      siteName: "Creuto",
+      url: \`https://moolsap.com/\${slug}\`,
+      siteName: "MoolSap",
       type: "article",
     },
   }
@@ -259,29 +259,29 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: \`
-        #creuto-blogpost-cloned-page {
+        #moolsap-blogpost-cloned-page {
           background-color: #ffffff;
         }
-        #creuto-blogpost-cloned-page,
-        #creuto-blogpost-cloned-page h1,
-        #creuto-blogpost-cloned-page h2,
-        #creuto-blogpost-cloned-page h3,
-        #creuto-blogpost-cloned-page h4,
-        #creuto-blogpost-cloned-page h5,
-        #creuto-blogpost-cloned-page h6,
-        #creuto-blogpost-cloned-page p,
-        #creuto-blogpost-cloned-page span,
-        #creuto-blogpost-cloned-page li,
-        #creuto-blogpost-cloned-page a,
-        #creuto-blogpost-cloned-page button,
-        #creuto-blogpost-cloned-page label,
-        #creuto-blogpost-cloned-page div,
-        #creuto-blogpost-cloned-page .MuiTypography-root {
+        #moolsap-blogpost-cloned-page,
+        #moolsap-blogpost-cloned-page h1,
+        #moolsap-blogpost-cloned-page h2,
+        #moolsap-blogpost-cloned-page h3,
+        #moolsap-blogpost-cloned-page h4,
+        #moolsap-blogpost-cloned-page h5,
+        #moolsap-blogpost-cloned-page h6,
+        #moolsap-blogpost-cloned-page p,
+        #moolsap-blogpost-cloned-page span,
+        #moolsap-blogpost-cloned-page li,
+        #moolsap-blogpost-cloned-page a,
+        #moolsap-blogpost-cloned-page button,
+        #moolsap-blogpost-cloned-page label,
+        #moolsap-blogpost-cloned-page div,
+        #moolsap-blogpost-cloned-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
       \`}} />
 
-      <div id="creuto-blogpost-cloned-page">
+      <div id="moolsap-blogpost-cloned-page">
         <Component />
       </div>
       <Footer />

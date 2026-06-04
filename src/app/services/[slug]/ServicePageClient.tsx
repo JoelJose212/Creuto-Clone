@@ -425,7 +425,7 @@ export default function ServicePageClient({ pageData, slug }: ServicePageClientP
               </span>
             </div>
             <h2 className="MuiTypography-root MuiTypography-h2 mui-2oqkbb">
-              Connect with Creuto!
+              Connect with MoolSap!
             </h2>
             <p className="MuiTypography-root MuiTypography-subtitle2 mui-zxeike">
               Ready to take the first step towards unlocking opportunities, realizing goals, and embracing innovation? We're here and eager to connect.

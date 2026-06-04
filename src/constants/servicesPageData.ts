@@ -60,10 +60,10 @@ export interface ServicePageContent {
 
 export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
   "crm-development": {
-    metaTitle: "Custom CRM Development Services | Aanandi",
-    metaDescription: "Aanandi TechnoSoft designs and develops high-adoption custom CRM software to automate sales pipelines, centralize customer data, and drive revenue growth.",
+    metaTitle: "Custom CRM Development Services | MoolSap",
+    metaDescription: "MoolSap designs and develops high-adoption custom CRM software to automate sales pipelines, centralize customer data, and drive revenue growth.",
     keywords: ["Custom CRM Development", "Customer Relationship Management", "Sales Pipeline Automation", "CRM Software Bhubaneswar", "Custom Sales Tool"],
-    canonical: "https://aananditechnosoft.com/services/crm-development",
+    canonical: "https://moolsap.com/services/crm-development",
     hero: {
       category: "Custom Software Development",
       title: "CRM Development Services",
@@ -75,7 +75,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     intro: {
       paragraphs: [
         "A standard off-the-shelf CRM often forces your sales and customer support teams to adapt to rigid structures and pay high monthly seat fees for unused features.",
-        "At Aanandi TechnoSoft, we build custom CRMs designed specifically around your customer lifecycle and sales workflows. This increases sales team adoption and eliminates manual administration.",
+        "At MoolSap, we build custom CRMs designed specifically around your customer lifecycle and sales workflows. This increases sales team adoption and eliminates manual administration.",
         "We focus on deep integrations—syncing your CRM directly with email servers, telephony services, billing software, and custom communication channels to ensure data is always updated.",
         "Whether you need to streamline multi-channel lead intake, automate follow-up schedules, or equip executives with real-time pipeline analytics, we build a tool tailored for your success."
       ],
@@ -170,7 +170,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Aanandi for CRM Development?",
+      title: "Why Choose MoolSap for CRM Development?",
       items: [
         {
           title: "Strategic Product Thinking",
@@ -218,10 +218,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "legacy-application-modernization": {
-    metaTitle: "Legacy Application Modernization Services | Aanandi",
-    metaDescription: "Aanandi TechnoSoft modernizes outdated software systems, migrating legacy applications to scalable Next.js and cloud environments safely.",
+    metaTitle: "Legacy Application Modernization Services | MoolSap",
+    metaDescription: "MoolSap modernizes outdated software systems, migrating legacy applications to scalable Next.js and cloud environments safely.",
     keywords: ["Legacy Software Modernization", "System Migration", "Cloud Migration", "Software Re-platforming", "App Migration Services"],
-    canonical: "https://aananditechnosoft.com/services/legacy-application-modernization",
+    canonical: "https://moolsap.com/services/legacy-application-modernization",
     hero: {
       category: "Custom Software Development",
       title: "Legacy Application Modernization",
@@ -328,7 +328,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Trust Aanandi with Your Modernization?",
+      title: "Why Trust MoolSap with Your Modernization?",
       items: [
         {
           title: "Risk-First Engineering",
@@ -376,10 +376,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "mvp-development": {
-    metaTitle: "MVP Development Services for Startups | Aanandi",
-    metaDescription: "Aanandi TechnoSoft designs and develops high-performance Minimum Viable Products (MVPs) in 6-8 weeks to help startups validate ideas.",
+    metaTitle: "MVP Development Services for Startups | MoolSap",
+    metaDescription: "MoolSap designs and develops high-performance Minimum Viable Products (MVPs) in 6-8 weeks to help startups validate ideas.",
     keywords: ["MVP Development", "Minimum Viable Product", "Startup Engineering", "Prototype Development", "Rapid Prototyping"],
-    canonical: "https://aananditechnosoft.com/services/mvp-development",
+    canonical: "https://moolsap.com/services/mvp-development",
     hero: {
       category: "Custom Software Development",
       title: "MVP Development Services",
@@ -486,7 +486,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Startups Partner with Aanandi?",
+      title: "Why Startups Partner with MoolSap?",
       items: [
         {
           title: "Startup Speed & Focus",
@@ -534,10 +534,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "e-commerce-solutions": {
-    metaTitle: "Custom E-commerce Software Development | Aanandi",
-    metaDescription: "Aanandi TechnoSoft develops custom E-commerce web applications, headless commerce systems, subscription portals, and API integrations.",
+    metaTitle: "Custom E-commerce Software Development | MoolSap",
+    metaDescription: "MoolSap develops custom E-commerce web applications, headless commerce systems, subscription portals, and API integrations.",
     keywords: ["Custom E-commerce", "Headless Commerce", "E-commerce Development Bhubaneswar", "Subscription Portals", "E-commerce Software"],
-    canonical: "https://aananditechnosoft.com/services/e-commerce-solutions",
+    canonical: "https://moolsap.com/services/e-commerce-solutions",
     hero: {
       category: "Custom Software Development",
       title: "E-commerce Solutions",
@@ -644,7 +644,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Aanandi for E-commerce?",
+      title: "Why Choose MoolSap for E-commerce?",
       items: [
         {
           title: "Speed for Conversions",
@@ -692,10 +692,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "software-consulting-services": {
-    metaTitle: "Custom Software Consulting & Advisory | Aanandi",
-    metaDescription: "Aanandi TechnoSoft provides expert software consulting, technical architecture design, stack auditing, and product planning services.",
+    metaTitle: "Custom Software Consulting & Advisory | MoolSap",
+    metaDescription: "MoolSap provides expert software consulting, technical architecture design, stack auditing, and product planning services.",
     keywords: ["Software Consulting", "Tech Stack Audit", "Technical Architecture", "IT Advisory Services", "Product Roadmapping"],
-    canonical: "https://aananditechnosoft.com/services/software-consulting-services",
+    canonical: "https://moolsap.com/services/software-consulting-services",
     hero: {
       category: "Custom Software Development",
       title: "Software Consulting Services",
@@ -802,7 +802,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Partner with Aanandi for Tech Advisory?",
+      title: "Why Partner with MoolSap for Tech Advisory?",
       items: [
         {
           title: "Senior Developers Only",
@@ -850,10 +850,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "enterprise-application-development": {
-    metaTitle: "Enterprise Application Development Services | Aanandi",
-    metaDescription: "Aanandi TechnoSoft develops scalable, secure, and robust custom enterprise applications, integrating business systems, legacy data, and APIs.",
+    metaTitle: "Enterprise Application Development Services | MoolSap",
+    metaDescription: "MoolSap develops scalable, secure, and robust custom enterprise applications, integrating business systems, legacy data, and APIs.",
     keywords: ["Enterprise Software Development", "Enterprise Applications", "Software Engineering Bhubaneswar", "Bespoke Enterprise Apps", "System Integration"],
-    canonical: "https://aananditechnosoft.com/services/enterprise-application-development",
+    canonical: "https://moolsap.com/services/enterprise-application-development",
     hero: {
       category: "Custom Software Development",
       title: "Enterprise Application Development",
@@ -960,7 +960,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Aanandi for Enterprise Software?",
+      title: "Why Choose MoolSap for Enterprise Software?",
       items: [
         {
           title: "Engineered for Scale",
@@ -1008,10 +1008,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "ios-app-development": {
-    metaTitle: "iOS App Development Services | Aanandi",
-    metaDescription: "Aanandi TechnoSoft builds high-performance, secure, and beautiful native iOS applications using Swift and React Native tailored for your enterprise workflows.",
+    metaTitle: "iOS App Development Services | MoolSap",
+    metaDescription: "MoolSap builds high-performance, secure, and beautiful native iOS applications using Swift and React Native tailored for your enterprise workflows.",
     keywords: ["iOS App Development", "iPhone App Development", "Swift Development", "React Native iOS", "Apple App Development", "Mobile App Development Bhubaneswar"],
-    canonical: "https://aananditechnosoft.com/services/ios-app-development",
+    canonical: "https://moolsap.com/services/ios-app-development",
     hero: {
       category: "Mobile App Development",
       title: "iOS App Development",
@@ -1119,7 +1119,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Creuto for iOS App Development?",
+      title: "Why Choose MoolSap for iOS App Development?",
       items: [
         {
           title: "Product-First iOS Development",
@@ -1183,10 +1183,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "android-app-development": {
-    metaTitle: "Android App Development Services | Aanandi",
-    metaDescription: "Aanandi TechnoSoft develops secure, robust, and scalable native Android applications using Kotlin and Java for smartphones, tablets, and Android TV.",
+    metaTitle: "Android App Development Services | MoolSap",
+    metaDescription: "MoolSap develops secure, robust, and scalable native Android applications using Kotlin and Java for smartphones, tablets, and Android TV.",
     keywords: ["Android App Development", "Kotlin App Development", "Java Android", "Android Tablet App", "Android TV App", "Mobile App Development Bhubaneswar"],
-    canonical: "https://aananditechnosoft.com/services/android-app-development",
+    canonical: "https://moolsap.com/services/android-app-development",
     hero: {
       category: "Mobile App Development",
       title: "Android App Development",
@@ -1294,7 +1294,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Creuto for Android App Development?",
+      title: "Why Choose MoolSap for Android App Development?",
       items: [
         {
           title: "Targeted Android Expertise",
@@ -1358,10 +1358,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "react-native-app-development": {
-    metaTitle: "React Native App Development Services | Aanandi",
-    metaDescription: "Aanandi TechnoSoft develops cross-platform mobile apps using React Native. Get native performance on iOS and Android with a single shared codebase.",
+    metaTitle: "React Native App Development Services | MoolSap",
+    metaDescription: "MoolSap develops cross-platform mobile apps using React Native. Get native performance on iOS and Android with a single shared codebase.",
     keywords: ["React Native Development", "Cross-Platform Mobile App", "React Native Developer", "Hybrid App Development", "Mobile App Development Bhubaneswar"],
-    canonical: "https://aananditechnosoft.com/services/react-native-app-development",
+    canonical: "https://moolsap.com/services/react-native-app-development",
     hero: {
       category: "Mobile App Development",
       title: "React Native App Development",
@@ -1469,7 +1469,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Creuto for React Native Apps?",
+      title: "Why Choose MoolSap for React Native Apps?",
       items: [
         {
           title: "Unified Team & Code",
@@ -1533,10 +1533,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "flutter-app-development": {
-    metaTitle: "Flutter App Development Services | Aanandi",
-    metaDescription: "Aanandi TechnoSoft develops cross-platform mobile apps using Flutter. Get gorgeous designs and native-speed execution on iOS, Android, and web from a single codebase.",
+    metaTitle: "Flutter App Development Services | MoolSap",
+    metaDescription: "MoolSap develops cross-platform mobile apps using Flutter. Get gorgeous designs and native-speed execution on iOS, Android, and web from a single codebase.",
     keywords: ["Flutter App Development", "Flutter Developer", "Google Flutter", "Cross-Platform Mobile App", "Dart Development Bhubaneswar"],
-    canonical: "https://aananditechnosoft.com/services/flutter-app-development",
+    canonical: "https://moolsap.com/services/flutter-app-development",
     hero: {
       category: "Mobile App Development",
       title: "Flutter App Development",
@@ -1644,7 +1644,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Creuto for Flutter Development?",
+      title: "Why Choose MoolSap for Flutter Development?",
       items: [
         {
           title: "Expert Dart Developers",
@@ -1708,10 +1708,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "mobile-app-qa-and-testing": {
-    metaTitle: "Mobile App QA & Quality Assurance Services | Aanandi",
-    metaDescription: "Aanandi TechnoSoft provides mobile app testing services. Ensure your iOS and Android apps are bug-free, secure, and run smoothly across devices.",
+    metaTitle: "Mobile App QA & Quality Assurance Services | MoolSap",
+    metaDescription: "MoolSap provides mobile app testing services. Ensure your iOS and Android apps are bug-free, secure, and run smoothly across devices.",
     keywords: ["Mobile App QA", "Mobile App Testing", "iOS Testing", "Android Testing Services", "Automated Mobile Testing", "Quality Assurance Bhubaneswar"],
-    canonical: "https://aananditechnosoft.com/services/mobile-app-qa-and-testing",
+    canonical: "https://moolsap.com/services/mobile-app-qa-and-testing",
     hero: {
       category: "Mobile App Development",
       title: "Mobile App QA & Testing",
@@ -1819,7 +1819,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Partner with Creuto for Mobile QA?",
+      title: "Why Partner with MoolSap for Mobile QA?",
       items: [
         {
           title: "Real Device Grids",
@@ -1883,10 +1883,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "mobile-app-modernization": {
-    metaTitle: "Mobile App Modernization Services | Aanandi",
-    metaDescription: "Aanandi TechnoSoft modernizes outdated mobile apps, refactoring codebase infrastructure, updating UI/UX, and migrating to modern hybrid frameworks safely.",
+    metaTitle: "Mobile App Modernization Services | MoolSap",
+    metaDescription: "MoolSap modernizes outdated mobile apps, refactoring codebase infrastructure, updating UI/UX, and migrating to modern hybrid frameworks safely.",
     keywords: ["Mobile App Modernization", "App Legacy Refactoring", "UI UX Revamp", "App Migration Services", "Mobile App Development Bhubaneswar"],
-    canonical: "https://aananditechnosoft.com/services/mobile-app-modernization",
+    canonical: "https://moolsap.com/services/mobile-app-modernization",
     hero: {
       category: "Mobile App Development",
       title: "Mobile App Modernization",
@@ -1994,7 +1994,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Trust Creuto with Your App Modernization?",
+      title: "Why Trust MoolSap with Your App Modernization?",
       items: [
         {
           title: "Risk-Controlled Refactoring",
@@ -2058,10 +2058,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "aws-gcp-azure-consulting": {
-    metaTitle: "AWS / GCP / Azure Cloud Consulting | Aanandi",
-    metaDescription: "Aanandi TechnoSoft provides expert AWS, GCP, and Azure cloud consulting, architecture planning, elastic migration strategy, and serverless DevOps solutions optimized for business scaling.",
+    metaTitle: "AWS / GCP / Azure Cloud Consulting | MoolSap",
+    metaDescription: "MoolSap provides expert AWS, GCP, and Azure cloud consulting, architecture planning, elastic migration strategy, and serverless DevOps solutions optimized for business scaling.",
     keywords: ["Cloud Consulting", "AWS Consulting", "GCP Consulting", "Azure DevOps", "Cloud Migration", "Kubernetes Implementation", "Serverless Architecture"],
-    canonical: "https://aananditechnosoft.com/services/aws-gcp-azure-consulting",
+    canonical: "https://moolsap.com/services/aws-gcp-azure-consulting",
     heroLayout: "side-by-side",
     hero: {
       category: "DevOps & Cloud Engineering",
@@ -2194,7 +2194,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Creuto for AWS / GCP / Azure Consulting?",
+      title: "Why Choose MoolSap for AWS / GCP / Azure Consulting?",
       items: [
         {
           title: "Platform-Agnostic, Business-Driven Advice",
@@ -2258,10 +2258,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "ci-cd-implementation": {
-    metaTitle: "CI/CD Implementation Services | Aanandi",
+    metaTitle: "CI/CD Implementation Services | MoolSap",
     metaDescription: "We design and build robust, automated Continuous Integration and Continuous Deployment (CI/CD) pipelines to accelerate release cycles, reduce manual errors, and guarantee secure cloud delivery.",
     keywords: ["CI/CD Implementation", "Continuous Integration", "Continuous Deployment", "DevOps Pipeline", "Jenkins Setup", "GitHub Actions", "GitLab CI"],
-    canonical: "https://aananditechnosoft.com/services/ci-cd-implementation",
+    canonical: "https://moolsap.com/services/ci-cd-implementation",
     heroLayout: "side-by-side",
     hero: {
       category: "DevOps & Cloud Engineering",
@@ -2394,7 +2394,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Creuto for CI/CD Implementation?",
+      title: "Why Choose MoolSap for CI/CD Implementation?",
       items: [
         {
           title: "Custom Tailored Workflows",
@@ -2458,10 +2458,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "kubernetes-implementation": {
-    metaTitle: "Kubernetes Implementation Services | Aanandi",
+    metaTitle: "Kubernetes Implementation Services | MoolSap",
     metaDescription: "We design, deploy, and manage production-ready Kubernetes (EKS, GKE, AKS) clusters. Scale microservices securely, configure autoscaling, and secure network traffic.",
     keywords: ["Kubernetes Implementation", "Container Orchestration", "EKS Consulting", "GKE Setup", "AKS Deployment", "Helm Charts", "ArgoCD", "GitOps"],
-    canonical: "https://aananditechnosoft.com/services/kubernetes-implementation",
+    canonical: "https://moolsap.com/services/kubernetes-implementation",
     heroLayout: "side-by-side",
     hero: {
       category: "DevOps & Cloud Engineering",
@@ -2594,7 +2594,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Creuto for Kubernetes?",
+      title: "Why Choose MoolSap for Kubernetes?",
       items: [
         {
           title: "Infrastructure-as-Code First",
@@ -2658,10 +2658,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "serverless-architecture": {
-    metaTitle: "Serverless Architecture Services | Aanandi",
+    metaTitle: "Serverless Architecture Services | MoolSap",
     metaDescription: "Build elastic cloud backends with zero server maintenance. Expert AWS Lambda, Google Cloud Functions, and API Gateway development optimized for performance and cost.",
     keywords: ["Serverless Architecture", "AWS Lambda", "Cloud Functions", "Azure Functions", "API Gateway", "DynamoDB", "Event-Driven", "SST Framework"],
-    canonical: "https://aananditechnosoft.com/services/serverless-architecture",
+    canonical: "https://moolsap.com/services/serverless-architecture",
     heroLayout: "side-by-side",
     hero: {
       category: "DevOps & Cloud Engineering",
@@ -2794,7 +2794,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Creuto for Serverless?",
+      title: "Why Choose MoolSap for Serverless?",
       items: [
         {
           title: "Deep Serverless Design Patterns",
@@ -2858,10 +2858,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "cloud-consulting-cost-optimisation": {
-    metaTitle: "Cloud Consulting & Cost Optimisation Services | Aanandi",
+    metaTitle: "Cloud Consulting & Cost Optimisation Services | MoolSap",
     metaDescription: "We audit AWS, GCP, and Azure cloud spend to eliminate compute waste, resize instances, and setup automated budgets. Reduce cloud bills by 30% or more.",
     keywords: ["Cloud Cost Optimisation", "AWS Cost Audit", "Cloud Cost Management", "Billing Analysis", "Reserved Instances", "Compute Savings Plans", "FinOps"],
-    canonical: "https://aananditechnosoft.com/services/cloud-consulting-cost-optimisation",
+    canonical: "https://moolsap.com/services/cloud-consulting-cost-optimisation",
     heroLayout: "side-by-side",
     hero: {
       category: "DevOps & Cloud Engineering",
@@ -2994,7 +2994,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Creuto for Cost Optimisation?",
+      title: "Why Choose MoolSap for Cost Optimisation?",
       items: [
         {
           title: "Performance-Preserving Adjustments",
@@ -3058,10 +3058,10 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
     ]
   },
   "infrastructure-management-and-monitoring": {
-    metaTitle: "Infrastructure Management & Monitoring | Aanandi",
+    metaTitle: "Infrastructure Management & Monitoring | MoolSap",
     metaDescription: "Establish robust, proactive cloud observability. Set up Grafana dashboards, centralized Loki/ELK logs, and Prometheus monitoring with Slack alert routing.",
     keywords: ["Infrastructure Monitoring", "Log Aggregation", "Prometheus Setup", "Grafana Dashboard", "ELK Stack", "Loki Logging", "APM Tracing", "Observability"],
-    canonical: "https://aananditechnosoft.com/services/infrastructure-management-and-monitoring",
+    canonical: "https://moolsap.com/services/infrastructure-management-and-monitoring",
     heroLayout: "side-by-side",
     hero: {
       category: "DevOps & Cloud Engineering",
@@ -3194,7 +3194,7 @@ export const SERVICES_PAGE_DATA: Record<string, ServicePageContent> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Creuto for Infrastructure Monitoring?",
+      title: "Why Choose MoolSap for Infrastructure Monitoring?",
       items: [
         {
           title: "Alert Fatigue Elimination",

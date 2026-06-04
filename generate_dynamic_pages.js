@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { htmlToJsx, unlayerCSS } = require('./convert_page');
 
-const cloneDir = path.join('D:', 'clone', 'Clone', 'creuto.com');
+const cloneDir = path.join('D:', 'clone', 'Clone', 'moolsap.com');
 
 const configs = [
   {
@@ -53,7 +53,7 @@ const configs = [
       res = res.replace(/href="portfolio\.html"/g, 'href="/portfolio"');
       res = res.replace(/href="blog\.html"/g, 'href="/blogs"');
       res = res.replace(/href="index\.html"/g, 'href="/"');
-      res = res.replace(/href="(how-smes-can-leverage-ai|your-customers-are-on-mobile|why-every-business-owner-should-invest-in-custom-software|how-creuto-help-businesses-scale-smartly|the-beginning-of-something-real)\.html"/g, 'href="/blogs/$1"');
+      res = res.replace(/href="(how-smes-can-leverage-ai|your-customers-are-on-mobile|why-every-business-owner-should-invest-in-custom-software|how-moolsap-help-businesses-scale-smartly|the-beginning-of-something-real)\.html"/g, 'href="/blogs/$1"');
       return res;
     },
     // filter to only blog files
@@ -61,7 +61,7 @@ const configs = [
       'how-smes-can-leverage-ai.html',
       'your-customers-are-on-mobile.html',
       'why-every-business-owner-should-invest-in-custom-software.html',
-      'how-creuto-help-businesses-scale-smartly.html',
+      'how-moolsap-help-businesses-scale-smartly.html',
       'the-beginning-of-something-real.html'
     ].includes(file)
   },

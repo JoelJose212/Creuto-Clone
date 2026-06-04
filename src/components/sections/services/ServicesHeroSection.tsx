@@ -106,7 +106,7 @@ export default function ServicesHeroSection({ onExploreClick }: ServicesHeroSect
           >
             <Image 
               src="/img/services/hero.webp" 
-              alt="Aanandi Services Hero" 
+              alt="MoolSap Services Hero" 
               fill 
               className="object-cover"
               priority

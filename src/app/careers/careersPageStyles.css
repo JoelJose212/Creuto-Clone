@@ -6419,7 +6419,7 @@ body::backdrop {
 }
 
 /* Disable unwanted global hover motion for non-clickable cards on careers page */
-#creuto-careers-cloned-page .MuiCard-root.reveal-card.active:not(a .MuiCard-root):hover {
+#moolsap-careers-cloned-page .MuiCard-root.reveal-card.active:not(a .MuiCard-root):hover {
   transform: none !important;
   box-shadow: var(--PaperShadow, none) !important;
   border-color: #e6eaf2 !important;

@@ -1,6 +1,6 @@
-# 🚀 Creuto Clone — Full-Stack Next.js Platform
+# 🚀 MoolSap Clone — Full-Stack Next.js Platform
 
-A **pixel-perfect**, high-fidelity replication of the [Creuto](https://creuto.com/) AI-first product engineering website — fully migrated to **native Next.js 14, React 18, and TypeScript** with server-side rendering, static site generation, dynamic data-driven service pages, and interactive client hydration.
+A **pixel-perfect**, high-fidelity replication of the [MoolSap](https://moolsap.com/) AI-first product engineering website — fully migrated to **native Next.js 14, React 18, and TypeScript** with server-side rendering, static site generation, dynamic data-driven service pages, and interactive client hydration.
 
 > **90+ statically pre-rendered pages** • **18 dynamic service detail pages** • **6 service categories with 40 sub-services** • **100% native JSX/TSX**
 
@@ -25,7 +25,7 @@ A **pixel-perfect**, high-fidelity replication of the [Creuto](https://creuto.co
 
 ## 🌐 Overview
 
-This project started as a static HTML crawl of [creuto.com](https://creuto.com/) and was systematically migrated through **multiple engineering phases** into a fully native, type-safe, and production-ready Next.js application with a scalable **data-driven architecture** for service detail pages.
+This project started as a static HTML crawl of [moolsap.com](https://moolsap.com/) and was systematically migrated through **multiple engineering phases** into a fully native, type-safe, and production-ready Next.js application with a scalable **data-driven architecture** for service detail pages.
 
 ### Key Achievements
 
@@ -191,10 +191,10 @@ To add a new service page, simply add an entry to `servicesPageData.ts`:
 ```typescript
 // src/constants/servicesPageData.ts
 "your-new-service-slug": {
-  metaTitle: "Your New Service | Aanandi",
+  metaTitle: "Your New Service | MoolSap",
   metaDescription: "...",
   keywords: ["..."],
-  canonical: "https://aananditechnosoft.com/services/your-new-service-slug",
+  canonical: "https://moolsap.com/services/your-new-service-slug",
   heroLayout: "centered", // or "side-by-side"
   hero: { ... },
   intro: { ... },
@@ -243,7 +243,7 @@ The dynamic route handler at `services/[slug]/page.tsx` automatically:
 |:---|:---|:---|
 | `/` | Home | 14-section interactive homepage with services carousel, testimonials slider, FAQ accordion |
 | `/about` | About Us | Company story, team, vision, and mission |
-| `/ai` | Creuto AI | AI capabilities showcase with interactive WebGL globe |
+| `/ai` | MoolSap AI | AI capabilities showcase with interactive WebGL globe |
 | `/services` | Services | 6 service categories with 40 sub-service cards and mega menu |
 | `/case-studies` | Case Studies | Portfolio listing of 11 completed projects |
 | `/blogs` | Blogs | Blog listing with published articles |
@@ -488,8 +488,8 @@ erDiagram
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/JoelJose212/Creuto-Clone.git
-cd Creuto-Clone
+git clone https://github.com/JoelJose212/MoolSap-Clone.git
+cd MoolSap-Clone
 ```
 
 ### 2. Install Dependencies
@@ -504,14 +504,14 @@ Create a `.env.local` file in the project root:
 
 ```env
 # Database
-DATABASE_URL="postgresql://username:password@localhost:5432/creuto_db?schema=public"
+DATABASE_URL="postgresql://username:password@localhost:5432/moolsap_db?schema=public"
 
 # Email (Nodemailer SMTP)
 SMTP_HOST="smtp.example.com"
 SMTP_PORT=587
 SMTP_USER="your-email@example.com"
 SMTP_PASS="your-email-password"
-CONTACT_RECEIVER="info@creuto.com"
+CONTACT_RECEIVER="info@moolsap.com"
 ```
 
 ### 4. Initialize Database
@@ -573,7 +573,7 @@ Route (app)                              Size      First Load JS
 
 ## 📄 License
 
-This project is a clone/replication built for **educational and portfolio purposes only**. All original brand assets, content, and design belong to [Creuto](https://creuto.com/).
+This project is a clone/replication built for **educational and portfolio purposes only**. All original brand assets, content, and design belong to [MoolSap](https://moolsap.com/).
 
 ---
 

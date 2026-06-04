@@ -123,7 +123,7 @@ export default function AdminDashboard() {
             Control Room Dashboard
           </h1>
           <p className="mt-1.5 text-sm text-slate-400">
-            Real-time analytics and dynamic administrative controls for Aanandi.
+            Real-time analytics and dynamic administrative controls for MoolSap.
           </p>
         </div>
         

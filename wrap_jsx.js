@@ -4,7 +4,7 @@ const inJsx = process.argv[2];
 const inOriginalPage = process.argv[3];
 const outPage = process.argv[4];
 const cssName = process.argv[5]; // e.g. servicesPageStyles.css
-const containerId = process.argv[6]; // e.g. creuto-services-cloned-page
+const containerId = process.argv[6]; // e.g. moolsap-services-cloned-page
 
 let original = fs.readFileSync(inOriginalPage, 'utf8');
 let jsx = fs.readFileSync(inJsx, 'utf8');

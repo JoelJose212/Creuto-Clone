@@ -37,6 +37,10 @@ const config = {
         muted: "var(--color-muted)",
         white: "var(--color-white)",
         heading: "var(--color-heading)",
+        "brand-navy": "var(--color-brand-navy)",
+        "brand-gold": "var(--color-brand-gold)",
+        "brand-gold-dark": "var(--color-brand-gold-dark)",
+        "brand-gold-tint": "var(--color-brand-gold-tint)",
         dashboard: {
           bg: "var(--color-bg)",
           surface: "var(--color-surface)",

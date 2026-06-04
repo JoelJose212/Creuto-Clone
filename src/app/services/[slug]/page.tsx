@@ -68,15 +68,15 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
   const match = findSubService(slug)
   if (!match) {
     return {
-      title: "Service Not Found | Aanandi",
+      title: "Service Not Found | MoolSap",
     }
   }
 
   return {
-    title: `${match.sub.name} - ${match.category.name} | Aanandi`,
-    description: `Premium ${match.sub.name} services tailored for high growth. Expert engineering by Aanandi TechnoSoft.`,
+    title: `${match.sub.name} - ${match.category.name} | MoolSap`,
+    description: `Premium ${match.sub.name} services tailored for high growth. Expert engineering by MoolSap.`,
     alternates: {
-      canonical: `https://aananditechnosoft.com/services/${match.sub.slug}`,
+      canonical: `https://moolsap.com/services/${match.sub.slug}`,
     },
   }
 }
@@ -137,7 +137,7 @@ export default async function ServiceSubPage({ params }: RouteParams) {
           </h2>
           <p className="font-jakarta text-[15px] md:text-[16px] text-slate-600 leading-relaxed mb-6">
             We are currently crafting a fully bespoke, immersive detail page to showcase our comprehensive capabilities in <span className="font-[600] text-heading">{sub.name}</span>. 
-            Aanandi's team of elite engineers and product leaders is dedicated to delivering state-of-the-art results for this specialization.
+            MoolSap's team of elite engineers and product leaders is dedicated to delivering state-of-the-art results for this specialization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link

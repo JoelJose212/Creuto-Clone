@@ -44,7 +44,7 @@ HONORED FOR CONTRIBUTION TO TECHNOLOGY AND INNOVATION.
         <div className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters mui-646rm1">
           <div className="MuiBox-root mui-0">
             <h2 className="MuiTypography-root MuiTypography-h1 mui-9xkzhl">
-At AANANDI, there is no "maybe."              <br className="MuiBox-root mui-13tqxrv" /> Either we build it—and it's exceptional.              <br className="MuiBox-root mui-13tqxrv" /> Or we don't.
+At MOOLSAP, there is no "maybe."              <br className="MuiBox-root mui-13tqxrv" /> Either we build it—and it's exceptional.              <br className="MuiBox-root mui-13tqxrv" /> Or we don't.
             </h2>            <p className="MuiTypography-root MuiTypography-subtitle1 mui-1a0y9mv">
 Ready to take the first step towards unlocking opportunities, realizing goals, and embracing innovation? We're here and eager to connect.
             </p>

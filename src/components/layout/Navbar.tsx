@@ -10,7 +10,7 @@ import ServicesMegaMenu from "./ServicesMegaMenu"
 import { SERVICES_MENU_DATA } from "@/constants/servicesMenuData"
 
 const NAV_LINKS = [
-  { name: "Aanandi.ai", href: "/ai" },
+  { name: "MoolSap.ai", href: "/ai" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services", hasDropdown: true },
   { name: "Case Studies", href: "/case-studies" },
@@ -49,7 +49,7 @@ export default function Navbar() {
 
   const BLOG_SLUGS = [
     "how-smes-can-leverage-ai",
-    "how-aanandi-help-businesses-scale-smartly",
+    "how-moolsap-help-businesses-scale-smartly",
     "why-every-business-owner-should-invest-in-custom-software",
     "the-beginning-of-something-real",
     "your-customers-are-on-mobile",
@@ -69,7 +69,7 @@ export default function Navbar() {
     <>
       <AnnouncementBanner />
       <motion.nav
-        initial={{ backgroundColor: "rgba(255,255,255,0)", borderBottomColor: "rgba(229,231,235,0)", backdropFilter: "blur(0px)" }}
+        initial={{ backgroundColor: "rgba(255,255,255,0)", borderBottomColor: "rgba(229,231,235,0)", backdropFilter: "blur(0px)", top: "48px" }}
         animate={{
           backgroundColor: scrolled ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0)",
           borderBottomColor: scrolled ? "rgba(229,231,235,1)" : "rgba(229,231,235,0)",
@@ -77,13 +77,14 @@ export default function Navbar() {
           top: "48px", // Keep fixed at 48px below the fixed top announcement banner
         }}
         transition={{ duration: 0.2, ease: "easeOut" }}
+        style={{ top: "48px" }}
         className="fixed left-0 right-0 z-50 flex h-[80px] items-center border-b border-transparent"
       >
         <div className="container mx-auto flex w-full items-center justify-between px-4 md:px-8">
           {/* Logo */}
           <motion.div layout>
             <Link href="/" className="flex items-center">
-              <img src="/img/aanandi_logo.png" alt="Aanandi TechnoSoft Logo" className="h-[36px] w-auto object-contain" />
+              <img src="/img/moolsap_logo.png" alt="MoolSap Logo" className="h-[36px] w-auto object-contain" />
             </Link>
           </motion.div>
 
@@ -101,14 +102,14 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       className={`flex items-center gap-1 font-jakarta text-[14.5px] font-[600] transition-colors duration-200 hover:text-blue ${
-                        desktopDropdownOpen ? "text-blue" : "text-[#4B5563]"
+                        desktopDropdownOpen ? "text-blue" : "text-[#4A4D75]"
                       }`}
                     >
                       <span>{link.name}</span>
                       <ChevronDown
                         size={15}
                         className={`transition-transform duration-200 ${
-                          desktopDropdownOpen ? "rotate-180 text-blue" : "text-[#4B5563]"
+                          desktopDropdownOpen ? "rotate-180 text-blue" : "text-[#4A4D75]"
                         }`}
                       />
                     </Link>
@@ -120,7 +121,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="font-jakarta text-[14.5px] font-[600] text-[#4B5563] transition-colors duration-200 hover:text-blue"
+                  className="font-jakarta text-[14.5px] font-[600] text-[#4A4D75] transition-colors duration-200 hover:text-blue"
                 >
                   {link.name}
                 </Link>
@@ -189,7 +190,7 @@ export default function Navbar() {
           >
             <div className="flex h-[72px] items-center justify-between px-4 sticky top-0 bg-white z-[70] border-b border-slate-100">
               <Link href="/" className="flex items-center">
-                <img src="/img/aanandi_logo.png" alt="Aanandi TechnoSoft Logo" className="h-[30px] w-auto object-contain" />
+                <img src="/img/moolsap_logo.png" alt="MoolSap Logo" className="h-[30px] w-auto object-contain" />
               </Link>
               <button
                 className="flex items-center justify-center p-2 text-heading"
@@ -233,7 +234,7 @@ export default function Navbar() {
                                   <button
                                     onClick={() => setMobileActiveCategoryId(isCatActive ? null : category.id)}
                                     className={`w-full text-left font-sans text-[15px] font-[600] py-1.5 flex justify-between items-center ${
-                                      isCatActive ? "text-blue" : "text-[#4B5563]"
+                                      isCatActive ? "text-blue" : "text-[#4A4D75]"
                                     }`}
                                   >
                                     <span>{category.name}</span>
@@ -262,7 +263,7 @@ export default function Navbar() {
                                               setMobileServicesOpen(false)
                                               setMobileActiveCategoryId(null)
                                             }}
-                                            className="font-sans text-[13.5px] font-medium text-[#6B7280] py-1 hover:text-blue block text-left"
+                                            className="font-sans text-[13.5px] font-medium text-[#6B7080] py-1 hover:text-blue block text-left"
                                           >
                                             → {sub.name}
                                           </Link>

@@ -6,44 +6,44 @@ import TOCConnector from "./TOCConnector"
 
 const BLOG_METADATA_MAP: Record<string, { title: string; description: string }> = {
   "how-smes-can-leverage-ai": {
-    "title": "AI Isn&#x27;t Just for Big Companies : Here&#x27;s How SME&#x27;s Can Leverage it Today | Aanandi Blog",
+    "title": "AI Isn&#x27;t Just for Big Companies : Here&#x27;s How SME&#x27;s Can Leverage it Today | MoolSap Blog",
     "description": "AI Isn&#x27;t Just for Big Companies : Here&#x27;s How SME&#x27;s Can Leverage it Today"
   },
-  "how-aanandi-help-businesses-scale-smartly": {
-    "title": "Behind the Code : How Aanandi Helps Businesses Scale Smartly | Aanandi Blog",
-    "description": "Behind the Code : How Aanandi Helps Businesses Scale Smartly"
+  "how-moolsap-help-businesses-scale-smartly": {
+    "title": "Behind the Code : How MoolSap Helps Businesses Scale Smartly | MoolSap Blog",
+    "description": "Behind the Code : How MoolSap Helps Businesses Scale Smartly"
   },
   "why-every-business-owner-should-invest-in-custom-software": {
-    "title": "Why Every Business Owner Should Invest in Custom Software? | Aanandi Blog",
+    "title": "Why Every Business Owner Should Invest in Custom Software? | MoolSap Blog",
     "description": "Why Every Business Owner Should Invest in Custom Software?"
   },
   "the-beginning-of-something-real": {
-    "title": "The Aanandi Journey: Built with Belief, Growing with You | Aanandi Blog",
-    "description": "The Aanandi Journey: Built with Belief, Growing with You"
+    "title": "The MoolSap Journey: Built with Belief, Growing with You | MoolSap Blog",
+    "description": "The MoolSap Journey: Built with Belief, Growing with You"
   },
   "your-customers-are-on-mobile": {
-    "title": "Your Customers Are on Mobile — Why Isn’t Your Business? | Aanandi Blog",
+    "title": "Your Customers Are on Mobile — Why Isn’t Your Business? | MoolSap Blog",
     "description": "Your Customers Are on Mobile — Why Isn’t Your Business?"
   },
   "custom-crm": {
-    "title": "Custom CRM vs Ready-Made CRM: What’s Right for Your Business? | Aanandi Blog",
+    "title": "Custom CRM vs Ready-Made CRM: What’s Right for Your Business? | MoolSap Blog",
     "description": "Custom CRM vs Ready-Made CRM: What’s Right for Your Business?"
   },
   "software-partner": {
-    "title": "Questions to Ask Before Hiring a Software Development Partner | Aanandi Blog",
+    "title": "Questions to Ask Before Hiring a Software Development Partner | MoolSap Blog",
     "description": "Questions to Ask Before Hiring a Software Development Partner"
   },
   "custom-software-development": {
-    "title": "Top 5 Reasons Growing Businesses Are Switching to Custom Software | Aanandi Blog",
+    "title": "Top 5 Reasons Growing Businesses Are Switching to Custom Software | MoolSap Blog",
     "description": "Top 5 Reasons Growing Businesses Are Switching to Custom Software"
   },
   "customsoftware-roi": {
-    "title": "Is Custom Software Worth the Investment? Here’s the ROI You Can Expect | Aanandi Blog",
+    "title": "Is Custom Software Worth the Investment? Here’s the ROI You Can Expect | MoolSap Blog",
     "description": "Is Custom Software Worth the Investment? Here’s the ROI You Can Expect"
   },
   "startup": {
-    "title": "The Aanandi Journey: Built with Belief, Growing with You | Aanandi Blog",
-    "description": "The Aanandi Journey: Built with Belief, Growing with You"
+    "title": "The MoolSap Journey: Built with Belief, Growing with You | MoolSap Blog",
+    "description": "The MoolSap Journey: Built with Belief, Growing with You"
   }
 };
 
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!meta) {
     return {
-      title: "Aanandi Blog Post",
+      title: "MoolSap Blog Post",
     }
   }
 
@@ -68,13 +68,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: meta.title,
     description: meta.description,
     alternates: {
-      canonical: `https://aananditechnosoft.com/${slug}`,
+      canonical: `https://moolsap.com/${slug}`,
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `https://aananditechnosoft.com/${slug}`,
-      siteName: "Aanandi",
+      url: `https://moolsap.com/${slug}`,
+      siteName: "MoolSap",
       type: "article",
     },
   }
@@ -99,24 +99,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        #creuto-blogpost-cloned-page {
+        #moolsap-blogpost-cloned-page {
           background-color: #ffffff;
         }
-        #creuto-blogpost-cloned-page,
-        #creuto-blogpost-cloned-page h1,
-        #creuto-blogpost-cloned-page h2,
-        #creuto-blogpost-cloned-page h3,
-        #creuto-blogpost-cloned-page h4,
-        #creuto-blogpost-cloned-page h5,
-        #creuto-blogpost-cloned-page h6,
-        #creuto-blogpost-cloned-page p,
-        #creuto-blogpost-cloned-page span,
-        #creuto-blogpost-cloned-page li,
-        #creuto-blogpost-cloned-page a,
-        #creuto-blogpost-cloned-page button,
-        #creuto-blogpost-cloned-page label,
-        #creuto-blogpost-cloned-page div,
-        #creuto-blogpost-cloned-page .MuiTypography-root {
+        #moolsap-blogpost-cloned-page,
+        #moolsap-blogpost-cloned-page h1,
+        #moolsap-blogpost-cloned-page h2,
+        #moolsap-blogpost-cloned-page h3,
+        #moolsap-blogpost-cloned-page h4,
+        #moolsap-blogpost-cloned-page h5,
+        #moolsap-blogpost-cloned-page h6,
+        #moolsap-blogpost-cloned-page p,
+        #moolsap-blogpost-cloned-page span,
+        #moolsap-blogpost-cloned-page li,
+        #moolsap-blogpost-cloned-page a,
+        #moolsap-blogpost-cloned-page button,
+        #moolsap-blogpost-cloned-page label,
+        #moolsap-blogpost-cloned-page div,
+        #moolsap-blogpost-cloned-page .MuiTypography-root {
           font-family: var(--font-bricolage), 'Bricolage Grotesque', sans-serif !important;
         }
 
@@ -198,7 +198,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <TOCConnector slug={slug} />
 
-      <div id="creuto-blogpost-cloned-page">
+      <div id="moolsap-blogpost-cloned-page">
         <Component />
       </div>
       <Footer />

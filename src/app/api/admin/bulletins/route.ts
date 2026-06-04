@@ -11,7 +11,7 @@ const getFilePath = () => path.join(process.cwd(), "careers_notices.json")
 const checkAuth = (request: Request) => {
   const cookieHeader = request.headers.get("cookie") || ""
   const cookies = cookieHeader.split(";").map(c => c.trim())
-  const sessionCookie = cookies.find(c => c.startsWith("creuto_admin_session="))
+  const sessionCookie = cookies.find(c => c.startsWith("moolsap_admin_session="))
   return sessionCookie && sessionCookie.split("=")[1] === "authorized"
 }
 

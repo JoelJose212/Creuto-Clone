@@ -10,7 +10,7 @@ export default function ConnectSection() {
 LET'S CONNECT
             </span>
           </div>          <h2 className="MuiTypography-root MuiTypography-h2 mui-2oqkbb">
-Connect with Aanandi!
+Connect with MoolSap!
           </h2>          <p className="MuiTypography-root MuiTypography-subtitle2 mui-zxeike">
 Ready to take the first step towards unlocking opportunities, realizing goals, and embracing innovation? We're here and eager to connect.
           </p>          <div className="MuiBox-root mui-7v4qig">

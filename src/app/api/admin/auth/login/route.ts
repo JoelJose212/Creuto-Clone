@@ -10,7 +10,7 @@ export async function POST(request: Request) {
       const response = NextResponse.json({ success: true, message: "Authentication successful!" })
       
       // Set the session cookie. Accessible by client checks but scoped to path
-      response.cookies.set("creuto_admin_session", "authorized", {
+      response.cookies.set("moolsap_admin_session", "authorized", {
         path: "/",
         sameSite: "lax",
         maxAge: 60 * 60 * 24, // 24 hours

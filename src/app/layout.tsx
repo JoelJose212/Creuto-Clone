@@ -35,31 +35,31 @@ const jakarta = Plus_Jakarta_Sans({
 
 
 export const viewport = {
-  themeColor: "#1531FF",
+  themeColor: "#303358",
 }
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  title: "Aanandi - AI Products, Mobile Apps & Custom Software Development",
-  description: "Aanandi is a premium agency specializing in AI products, mobile apps, and custom software development.",
+  title: "MoolSap - AI Products, Mobile Apps & Custom Software Development",
+  description: "MoolSap is a premium agency specializing in AI products, mobile apps, and custom software development.",
   openGraph: {
-    title: "Aanandi - AI Products, Mobile Apps & Custom Software Development",
-    description: "Aanandi is a premium agency specializing in AI products, mobile apps, and custom software development.",
-    url: "https://aananditechnosoft.com",
-    siteName: "Aanandi",
+    title: "MoolSap - AI Products, Mobile Apps & Custom Software Development",
+    description: "MoolSap is a premium agency specializing in AI products, mobile apps, and custom software development.",
+    url: "https://moolsap.com",
+    siteName: "MoolSap",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Aanandi",
+        alt: "MoolSap",
       },
     ],
     locale: "en_US",
     type: "website",
   },
   alternates: {
-    canonical: "https://aananditechnosoft.com",
+    canonical: "https://moolsap.com",
   },
 }
 
@@ -70,7 +70,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable} ${bricolage.variable} ${jakarta.variable} dark`}>
-      <body className="bg-bg text-text antialiased selection:bg-blue/30">
+      <body className="bg-bg text-text antialiased selection:bg-[#303358]/20">
         <Providers>
           <CustomCursor />
           <ScrollAnimate />

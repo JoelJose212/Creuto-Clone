@@ -55,7 +55,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
     const checkAuth = () => {
       const cookies = document.cookie.split("; ")
-      const sessionCookie = cookies.find(row => row.startsWith("creuto_admin_session="))
+      const sessionCookie = cookies.find(row => row.startsWith("moolsap_admin_session="))
       
       if (sessionCookie && sessionCookie.split("=")[1] === "authorized") {
         setIsAuthorized(true)
@@ -122,7 +122,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   }, [pathname])
 
   const handleLogout = () => {
-    document.cookie = "creuto_admin_session=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;"
+    document.cookie = "moolsap_admin_session=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;"
     router.push("/admin/login")
   }
 
@@ -139,7 +139,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <Loader2 className="h-7 w-7 animate-spin text-blue-600" />
           </div>
           <div className="space-y-1">
-            <p className="font-bricolage text-lg font-extrabold text-slate-900">Aanandi Control Deck</p>
+            <p className="font-bricolage text-lg font-extrabold text-slate-900">MoolSap Control Deck</p>
             <p className="text-xs text-slate-500 font-semibold tracking-wide">Verifying secure administrative session...</p>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 font-extrabold text-white shadow-md shadow-blue-600/20">
               C
             </span>
-            <span>Aanandi Admin</span>
+            <span>MoolSap Admin</span>
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse mt-0.5" />
           </Link>
           <button

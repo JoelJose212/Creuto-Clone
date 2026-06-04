@@ -3,7 +3,7 @@
 import { motion, Variants } from "framer-motion";
 
 export default function AboutHeroSection() {
-  const h1Text = "Why AANANDI Was Started";
+  const h1Text = "Why MOOLSAP Was Started";
   const words = h1Text.split(" ");
 
   const container: Variants = {

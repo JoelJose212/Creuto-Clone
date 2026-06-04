@@ -50,7 +50,7 @@ export default function PinBoard() {
     }
 
     // Fallback loading mechanism
-    const saved = localStorage.getItem("creuto_notices")
+    const saved = localStorage.getItem("moolsap_notices")
     if (saved) {
       try {
         setNotices(JSON.parse(saved))
@@ -68,7 +68,7 @@ export default function PinBoard() {
 
     // Read cookie list
     const cookies = typeof document !== "undefined" ? document.cookie.split("; ") : []
-    const sessionCookie = cookies.find(row => row.startsWith("creuto_admin_session="))
+    const sessionCookie = cookies.find(row => row.startsWith("moolsap_admin_session="))
     if (sessionCookie && sessionCookie.split("=")[1] === "authorized") {
       setIsAdminMode(true)
     }
@@ -131,7 +131,7 @@ export default function PinBoard() {
       }
       const updated = [notice, ...notices]
       setNotices(updated)
-      localStorage.setItem("creuto_notices", JSON.stringify(updated))
+      localStorage.setItem("moolsap_notices", JSON.stringify(updated))
       
       // Reset Form
       setNewTitle("")
@@ -165,7 +165,7 @@ export default function PinBoard() {
     // Local fallback deletion
     const updated = notices.filter(n => n.id !== id)
     setNotices(updated)
-    localStorage.setItem("creuto_notices", JSON.stringify(updated))
+    localStorage.setItem("moolsap_notices", JSON.stringify(updated))
   }
 
   // Sticky color classes
@@ -300,7 +300,7 @@ export default function PinBoard() {
                 {/* Center Heading & Pencil Icon */}
                 <div className="flex items-center gap-3">
                   <h3 className="font-bricolage text-sm sm:text-base font-extrabold uppercase tracking-widest text-slate-900">
-                    {isAdminMode ? "💡 Bulletin Admin Panel" : "📌 Aanandi Pin Board"}
+                    {isAdminMode ? "💡 Bulletin Admin Panel" : "📌 MoolSap Pin Board"}
                   </h3>
                   
                   {/* Pencil Icon circular button inside circle (from Image 1 center button) */}
@@ -468,7 +468,7 @@ export default function PinBoard() {
                           {/* Pinned time reference */}
                           <div className="mt-4 flex items-center justify-between text-[8px] font-bold text-slate-500 uppercase tracking-widest select-none">
                             <span>📌 Pinned Bulletin</span>
-                            <span>Aanandi Hub</span>
+                            <span>MoolSap Hub</span>
                           </div>
                         </motion.div>
                       )
@@ -539,7 +539,7 @@ export default function PinBoard() {
 
               {/* MODAL FOOTER */}
               <div className="px-8 py-4 border-t-4 border-slate-900 bg-white flex items-center justify-between text-[10px] font-extrabold text-slate-500 uppercase tracking-widest">
-                <span>© Aanandi Labs Bulletins</span>
+                <span>© MoolSap Labs Bulletins</span>
                 <span className="text-[#1d4ed8]">✨ Pinned With Care</span>
               </div>
             </motion.div>

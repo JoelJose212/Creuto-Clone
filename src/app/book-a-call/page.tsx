@@ -401,7 +401,7 @@ export default function BookACall() {
                 
                 <div className="flex justify-between items-center text-xs">
                   <span className="font-semibold text-slate-500">Appointment Host</span>
-                  <span className="font-bold text-slate-800">Aanandi Leadership Team</span>
+                  <span className="font-bold text-slate-800">MoolSap Leadership Team</span>
                 </div>
                 <div className="flex justify-between items-center text-xs">
                   <span className="font-semibold text-slate-500">Consultant Client</span>

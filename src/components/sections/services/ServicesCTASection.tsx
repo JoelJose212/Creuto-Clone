@@ -46,7 +46,7 @@ export default function ServicesCTASection() {
           className="font-bricolage text-[36px] md:text-[44px] font-bold text-white tracking-[-0.88px] leading-[1.2] text-center max-w-[560px] mb-[16px]"
           variants={itemVariants}
         >
-          Connect with Aanandi!
+          Connect with MoolSap!
         </motion.h2>
         
         <motion.p 

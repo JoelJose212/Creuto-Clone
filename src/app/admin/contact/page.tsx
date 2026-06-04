@@ -136,7 +136,7 @@ export default function AdminContact() {
     const url = URL.createObjectURL(blob)
     const link = document.createElement("a")
     link.setAttribute("href", url)
-    link.setAttribute("download", `creuto_contact_leads_${new Date().toISOString().slice(0, 10)}.csv`)
+    link.setAttribute("download", `moolsap_contact_leads_${new Date().toISOString().slice(0, 10)}.csv`)
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)

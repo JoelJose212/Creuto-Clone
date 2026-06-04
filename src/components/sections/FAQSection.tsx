@@ -15,13 +15,13 @@ const faqData: FAQItem[] = [
   {
     id: "faq-1",
     num: "01.",
-    question: "What services does AANANDI provide?",
+    question: "What services does MOOLSAP provide?",
     answer: "We offer end-to-end custom software development, mobile app development, AI feature integration, MVP development, and scalable digital product engineering for startups, SMEs, and enterprises."
   },
   {
     id: "faq-2",
     num: "02.",
-    question: "Can AANANDI integrate AI into my existing product or application?",
+    question: "Can MOOLSAP integrate AI into my existing product or application?",
     answer: "Yes, we specialize in integrating AI capabilities into existing systems. Whether it's adding chatbots, predictive analytics, or computer vision features, we can enhance your product with the latest AI technologies."
   },
   {
@@ -33,7 +33,7 @@ const faqData: FAQItem[] = [
   {
     id: "faq-4",
     num: "04.",
-    question: "What industries does Aanandi work with?",
+    question: "What industries does MoolSap work with?",
     answer: "We work with a diverse range of industries including Healthcare, Fintech, E-commerce, Education, Real Estate, Logistics, and more. Our team adapts to the specific compliance and operational needs of each sector."
   },
   {
@@ -57,7 +57,7 @@ const faqData: FAQItem[] = [
   {
     id: "faq-8",
     num: "08.",
-    question: "Why should we choose Aanandi for our software or AI project?",
+    question: "Why should we choose MoolSap for our software or AI project?",
     answer: "We combine technical expertise with business acumen. Our team doesn't just write code; we understand your business goals. We offer transparent communication, agile delivery, and a commitment to building scalable, future-proof solutions."
   }
 ];
@@ -196,7 +196,7 @@ export default function FAQSection() {
           font-size: 0.75rem;
           font-weight: 700;
           letter-spacing: 0.1em;
-          color: #0f172a;
+          color: #1C1E35;
           background: rgba(0, 0, 0, 0.03);
           margin-bottom: 20px;
           text-transform: uppercase;
@@ -207,7 +207,7 @@ export default function FAQSection() {
           font-size: 2.75rem;
           font-weight: 800;
           line-height: 1.2;
-          color: #0f172a;
+          color: #1C1E35;
           margin: 0 0 16px 0;
           letter-spacing: -0.02em;
         }
@@ -215,7 +215,7 @@ export default function FAQSection() {
         .faq-subtitle {
           font-size: 1.1rem;
           line-height: 1.6;
-          color: #64748b;
+          color: #6B7080;
           margin: 0;
           font-weight: 400;
           max-width: 600px;
@@ -241,7 +241,7 @@ export default function FAQSection() {
 
         .faq-card {
           background: #ffffff;
-          border: 1px solid #eeeeee;
+          border: 1px solid #E8E9F2;
           border-radius: 12px;
           padding: 24px;
           cursor: pointer;
@@ -259,7 +259,7 @@ export default function FAQSection() {
 
         .faq-card.active {
           background: #ffffff;
-          border-color: #eeeeee;
+          border-color: #E8E9F2;
           box-shadow: none;
         }
 
@@ -275,7 +275,7 @@ export default function FAQSection() {
           font-size: 1.05rem;
           font-weight: 700;
           line-height: 1.5;
-          color: #0f172a;
+          color: #1C1E35;
           margin: 0;
           display: flex;
           align-items: flex-start;
@@ -283,7 +283,7 @@ export default function FAQSection() {
         }
 
         .faq-card-num {
-          color: #0f172a;
+          color: #1C1E35;
           font-weight: 800;
           opacity: 0.9;
         }
@@ -297,7 +297,7 @@ export default function FAQSection() {
           justify-content: center;
           border-radius: 50%;
           background: rgba(0, 0, 0, 0.03);
-          color: #0f172a;
+          color: #1C1E35;
           transition: background 300ms ease;
         }
 
@@ -313,7 +313,7 @@ export default function FAQSection() {
           padding-top: 16px;
           font-size: 0.92rem;
           line-height: 1.6;
-          color: #475569;
+          color: #4A4E6B;
           font-weight: 400;
           border-top: 1px solid rgba(0, 0, 0, 0.05);
           margin-top: 16px;

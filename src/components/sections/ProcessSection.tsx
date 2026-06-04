@@ -18,7 +18,7 @@ Our Product Development Process
               </div>
             </div>            <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 mui-tnatjl">
               <p className="MuiTypography-root MuiTypography-subtitle1 mui-f5usl4" style={{"opacity":"1","transform":"translateX(1.875rem)"} as React.CSSProperties}>
-At Aanandi, we believe that a structured and effective development process is crucial to delivering successful products for our clients. Our approach is characterized by flexibility and responsiveness, ensuring that we deliver maximum value at every stage, and turn your vision into a reality.
+At MoolSap, we believe that a structured and effective development process is crucial to delivering successful products for our clients. Our approach is characterized by flexibility and responsiveness, ensuring that we deliver maximum value at every stage, and turn your vision into a reality.
               </p>
             </div>
           </div>          <div className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-md-6 mui-1qsd2mk">

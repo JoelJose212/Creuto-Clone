@@ -49,7 +49,7 @@ const formSchema = z.object({
     .url("Please enter a valid URL (starting with http:// or https://)")
     .or(z.literal(""))
     .optional(),
-  whyAanandi: z.string().min(10, "Please tell us why you want to work at Aanandi (at least 10 characters)"),
+  whyMoolSap: z.string().min(10, "Please tell us why you want to work at MoolSap (at least 10 characters)"),
 })
 
 type FormValues = z.infer<typeof formSchema>
@@ -97,7 +97,7 @@ function ApplyForm() {
       position: positionParam,
       experience: "",
       linkedinProfile: "",
-      whyAanandi: "",
+      whyMoolSap: "",
     }
   })
 
@@ -189,7 +189,7 @@ function ApplyForm() {
       if (data.linkedinProfile) {
         formDataToSend.append("linkedinProfile", data.linkedinProfile)
       }
-      formDataToSend.append("whyAanandi", data.whyAanandi)
+      formDataToSend.append("whyMoolSap", data.whyMoolSap)
       formDataToSend.append("resume", resumeFile)
       if (coverLetterFile) {
         formDataToSend.append("coverLetter", coverLetterFile)
@@ -280,21 +280,13 @@ function ApplyForm() {
 
   return (
     <>
-      <div id="creuto-careers-cloned-page">
+      <div id="moolsap-careers-cloned-page">
         <AnnouncementBanner />
         <div className="MuiBox-root mui-143ljvh">
           <div className="MuiContainer-root MuiContainer-maxWidthXl mui-1fgd3v5">
             <div className="MuiBox-root mui-1lekzkb">
               <a aria-label="Go to homepage" style={{"position":"relative","display":"flex","alignItems":"center"} as any} href="/index">
-                <svg width="109" height="30" viewBox="0 0 109 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.3578 29.9979C9.06659 29.9979 7.06739 29.5255 5.36239 28.5829C3.65739 27.6381 2.33797 26.3011 1.40189 24.5697C0.46581 22.8382 0 20.8082 0 18.4796C0 16.151 0.468039 14.0988 1.40189 12.3763C2.33574 10.6538 3.65739 9.31899 5.36239 8.37641C7.06739 7.4316 9.06436 6.96143 11.3578 6.96143C13.2277 6.96143 14.8859 7.28676 16.3346 7.93743C17.7833 8.5881 18.9645 9.51732 19.8828 10.7273C20.7988 11.9373 21.376 13.3857 21.6145 15.0725H16.2254C16.0426 13.9539 15.5144 13.0849 14.6452 12.4609C13.7737 11.837 12.6794 11.525 11.36 11.525C9.45216 11.525 7.94552 12.1401 6.8356 13.3679C5.72568 14.5957 5.17295 16.3003 5.17295 18.4819C5.17295 20.6634 5.72791 22.3681 6.8356 23.5959C7.94552 24.8237 9.45216 25.4387 11.36 25.4387C12.6794 25.4387 13.776 25.1267 14.6452 24.5028C15.5166 23.8811 16.0426 23.0098 16.2254 21.8912H21.6145C21.376 23.5602 20.7988 25.0019 19.8828 26.2208C18.9667 27.4397 17.7833 28.3756 16.3346 29.0241C14.8859 29.6747 13.2277 30.0001 11.3578 30.0001V29.9979Z" fill="#1E293B"></path>
-                  <path d="M26.0232 29.5589V18.0118H23.5493V13.0626H28.6086V16.3628H29.7631C30.1843 15.1706 30.873 14.286 31.8247 13.7089C32.7786 13.1317 33.8417 12.842 35.014 12.842H36.4159V17.2408H34.7934C33.4361 17.2408 32.4599 17.6173 31.8648 18.3683C31.2697 19.1192 30.9711 20.0997 30.9711 21.3097V29.5589H26.021H26.0232Z" fill="#1E293B"></path>
-                  <path d="M45.9325 29.8883C44.1183 29.8883 42.5403 29.5362 41.2031 28.8298C39.8636 28.1235 38.8339 27.1252 38.1096 25.8328C37.3852 24.5403 37.0242 23.0139 37.0242 21.2558C37.0242 19.4976 37.3763 17.9801 38.0828 16.7055C38.7893 15.4309 39.7967 14.4505 41.1073 13.7641C42.4178 13.0778 43.9623 12.7324 45.7408 12.7324C47.5194 12.7324 49.0127 13.0667 50.2786 13.7352C51.5445 14.4037 52.5096 15.3618 53.1804 16.6075C53.8491 17.8531 54.1834 19.3483 54.1834 21.0886V22.7109H41.8918C42.0924 23.7738 42.5337 24.576 43.2112 25.1175C43.8887 25.6589 44.7869 25.9286 45.9058 25.9286C46.804 25.9286 47.506 25.786 48.0097 25.503C48.5134 25.22 48.8767 24.7654 49.0951 24.1414H54.1544C53.8067 25.9375 52.9085 27.3458 51.4598 28.3619C50.0111 29.378 48.168 29.8883 45.9325 29.8883ZM41.972 19.4129H49.3425C49.1776 18.4971 48.7965 17.813 48.2014 17.3651C47.6063 16.9172 46.795 16.6922 45.7676 16.6922C44.7401 16.6922 43.9333 16.9217 43.2937 17.3785C42.6518 17.8375 42.2127 18.5149 41.9742 19.4129H41.972Z" fill="#1E293B"></path>
-                  <path d="M63.7248 29.8619C61.36 29.8619 59.5637 29.2535 58.3356 28.0324C57.1076 26.8135 56.4924 25.1512 56.4924 23.0432V13.0625H61.5517V22.0538C61.5517 23.1724 61.8303 24.0014 62.3897 24.5428C62.9491 25.0843 63.7961 25.3539 64.9327 25.3539C66.0694 25.3539 67.0322 25.0554 67.654 24.4604C68.2759 23.8654 68.5901 23.0075 68.5901 21.8889V13.0625H73.6494V24.6097H76.1256V29.5588H71.0663V26.809H69.9118C69.2342 27.7984 68.4274 28.5538 67.4914 29.0775C66.5553 29.5989 65.3005 29.8619 63.7248 29.8619Z" fill="#1E293B"></path>
-                  <path d="M83.9639 29.5587C82.6801 29.5587 81.6861 29.2334 80.9796 28.5827C80.2731 27.932 79.9209 26.9382 79.9209 25.599V17.0199H77.1707V13.0602H79.9767V8.11108H84.9267V13.0602H88.5574V17.0199H84.9824V25.599H88.943V29.5587H83.9661H83.9639Z" fill="#1E293B"></path>
-                  <path d="M99.3912 29.8881C97.5769 29.8881 95.9901 29.536 94.6328 28.8296C93.2754 28.1233 92.2257 27.125 91.4835 25.8325C90.7413 24.5401 90.3691 23.0248 90.3691 21.2823C90.3691 19.5397 90.7413 18.0289 91.4835 16.7454C92.2257 15.4619 93.2754 14.4725 94.6328 13.7751C95.9901 13.0798 97.5836 12.73 99.4179 12.73C101.252 12.73 102.832 13.0776 104.161 13.7751C105.489 14.4725 106.521 15.4619 107.254 16.7454C107.987 18.0289 108.355 19.5509 108.355 21.309C108.355 23.0672 107.987 24.5668 107.254 25.8593C106.521 27.1517 105.485 28.1455 104.147 28.843C102.81 29.5405 101.223 29.8881 99.3889 29.8881H99.3912ZM99.3912 25.4894C100.657 25.4894 101.622 25.1083 102.293 24.3485C102.962 23.5886 103.296 22.5658 103.296 21.2823C103.296 19.9988 102.962 18.9871 102.293 18.2451C101.624 17.5031 100.657 17.1309 99.3912 17.1309C98.1252 17.1309 97.1267 17.5031 96.4492 18.2451C95.7717 18.9871 95.4306 20.001 95.4306 21.2823C95.4306 22.5636 95.7694 23.5886 96.4492 24.3485C97.1267 25.1083 98.1074 25.4894 99.3912 25.4894Z" fill="#1E293B"></path>
-                  <path d="M22.4841 8.39396C20.6187 6.2815 18.225 4.637 15.5037 3.67214C14.7281 3.39582 14.7503 2.29503 15.5393 2.05883L22.3549 0.0355093C22.8742 -0.118245 23.4024 0.244972 23.4425 0.784227L23.9685 7.77225C24.0287 8.58559 23.0257 9.00452 22.4864 8.39396H22.4841Z" fill="#1D4ED8"></path>
-                </svg>
+                <img src="/img/moolsap_logo.png" alt="MoolSap Logo" style={{ height: "30px", width: "auto", objectFit: "contain" }} />
               </a>
               <button className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium mui-4q58yh" tabIndex={0} type="button" aria-label="open close menu">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50">
@@ -305,7 +297,7 @@ function ApplyForm() {
                 <li className="MuiBox-root mui-0">
                   <a style={{"textDecoration":"none","color":"#1E293B","fontWeight":500,"fontSize":"0.95rem"} as any} href="/ai">
                     <span style={{"position":"relative","display":"inline-flex","alignItems":"center"} as any}>
-                      <p className="MuiTypography-root MuiTypography-body1 mui-v6rkzo">Aanandi</p>
+                      <p className="MuiTypography-root MuiTypography-body1 mui-v6rkzo">MoolSap</p>
                       <div className="MuiBox-root mui-1itv5e3">
                         <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{"display":"inline-block","verticalAlign":"middle"} as any}>
                           <path d="M1.17211 12C0.843566 12 0.563857 11.8762 0.332986 11.6286C0.110995 11.381 0 11.081 0 10.7286C0 10.3762 0.110995 10.0762 0.332986 9.82857C0.563857 9.58095 0.843566 9.45714 1.17211 9.45714C1.50066 9.45714 1.78037 9.58095 2.01124 9.82857C2.24211 10.0762 2.35754 10.3762 2.35754 10.7286C2.35754 11.081 2.24211 11.381 2.01124 11.6286C1.78037 11.8762 1.50066 12 1.17211 12Z" fill="#1746EA"></path>
@@ -337,7 +329,7 @@ function ApplyForm() {
               </ul>
               <div className="MuiBox-root mui-1e9i2bb">
                 <button className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary mui-12qv835" tabIndex={0} type="button">Contact Us</button>
-                <a className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary mui-knz3q9" tabIndex={0} href="https://calendly.com/creuto/meet" target="_blank" rel="noopener noreferrer">Book A Call</a>
+                <a className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary mui-knz3q9" tabIndex={0} href="https://calendly.com/moolsap/meet" target="_blank" rel="noopener noreferrer">Book A Call</a>
               </div>
             </div>
           </div>
@@ -346,7 +338,7 @@ function ApplyForm() {
 
       <div className="w-full pt-[128px] min-h-[calc(100vh-72px)] bg-white text-slate-800 font-bricolage relative overflow-x-hidden flex flex-col md:flex-row antialiased selection:bg-[#1d4ed8]/20 select-none">
         
-        {/* LEFT COLUMN - Aanandi Banner / Branding */}
+        {/* LEFT COLUMN - MoolSap Banner / Branding */}
         <div className="w-full md:w-[40%] bg-[#f8fafc] border-b md:border-b-0 md:border-r border-[#e5e7eb] p-8 md:p-12 lg:p-16 flex flex-col justify-between md:sticky md:top-[80px] md:h-[calc(100vh-80px)] overflow-y-auto">
           <div className="flex flex-col gap-8 md:gap-12">
             {/* Logo & Back Button */}
@@ -355,7 +347,7 @@ function ApplyForm() {
                 href="/careers" 
                 className="inline-flex items-center gap-1.5 text-slate-800 hover:text-[#1d4ed8] transition-colors font-jakarta text-[24px] font-[800] tracking-[-0.03em]"
               >
-                <span>Aanandi</span>
+                <span>MoolSap</span>
                 <span className="w-1.5 h-1.5 bg-[#1d4ed8] rounded-full mt-2" />
               </Link>
   
@@ -372,7 +364,7 @@ function ApplyForm() {
             <div className="flex flex-col gap-4">
               <span className="text-xs font-bold uppercase tracking-wider text-[#1d4ed8]">JOIN OUR FORCE</span>
               <h1 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-slate-900 tracking-tight leading-[1.1] font-bricolage">
-                Apply for your next role at AANANDI
+                Apply for your next role at MOOLSAP
               </h1>
               <p className="text-slate-600 text-sm md:text-base font-medium leading-relaxed max-w-md">
                 Join a team that values ownership, clarity, and long-term thinking. We build cutting-edge adaptive AI products and premium custom systems.
@@ -398,7 +390,7 @@ function ApplyForm() {
   
           {/* Dynamic Footer section inside sidebar */}
           <div className="mt-8 md:mt-0 pt-6 border-t border-[#e5e7eb] flex flex-col gap-1.5 text-xs text-slate-500 font-semibold uppercase tracking-wider">
-            <p>© 2026 AANANDI LABS PVT. LTD.</p>
+            <p>© 2026 MOOLSAP LABS PVT. LTD.</p>
             <p className="text-[#1d4ed8]">SHIP FAST · OWN THE OUTCOME</p>
           </div>
         </div>
@@ -598,21 +590,21 @@ function ApplyForm() {
   
                 </div>
   
-                {/* Row 5: Why Aanandi? */}
+                {/* Row 5: Why MoolSap? */}
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="whyAanandi" className="text-xs font-bold uppercase tracking-wider text-slate-700">
-                    Why do you want to work at Aanandi? <span className="text-red-500">*</span>
+                  <label htmlFor="whyMoolSap" className="text-xs font-bold uppercase tracking-wider text-slate-700">
+                    Why do you want to work at MoolSap? <span className="text-red-500">*</span>
                   </label>
                   <textarea
-                    id="whyAanandi"
+                    id="whyMoolSap"
                     rows={4}
-                    placeholder="Share a short summary explaining why you'd be a great addition to the Aanandi force..."
-                    {...register("whyAanandi")}
-                    className={`w-full bg-[#f8fafc] border ${errors.whyAanandi ? 'border-red-500 focus:ring-red-100' : 'border-[#e5e7eb] focus:border-[#1d4ed8] focus:ring-blue-100'} rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 outline-none focus:ring-4 transition-all text-sm font-semibold resize-none`}
+                    placeholder="Share a short summary explaining why you'd be a great addition to the MoolSap force..."
+                    {...register("whyMoolSap")}
+                    className={`w-full bg-[#f8fafc] border ${errors.whyMoolSap ? 'border-red-500 focus:ring-red-100' : 'border-[#e5e7eb] focus:border-[#1d4ed8] focus:ring-blue-100'} rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 outline-none focus:ring-4 transition-all text-sm font-semibold resize-none`}
                   />
-                  {errors.whyAanandi && (
+                  {errors.whyMoolSap && (
                     <span className="text-red-500 text-xs font-semibold flex items-center gap-1 mt-0.5">
-                      <AlertCircle size={12} /> {errors.whyAanandi.message}
+                      <AlertCircle size={12} /> {errors.whyMoolSap.message}
                     </span>
                   )}
                 </div>

@@ -4,7 +4,7 @@ import { cn } from "@/lib/cn"
 import { MoreHorizontal, ExternalLink, Server } from "lucide-react"
 
 const DATA = [
-  { id: "PRJ-001", name: "Aanandi-AI-Core", type: "Production", status: "Active", latency: "24ms", health: "100%" },
+  { id: "PRJ-001", name: "MoolSap-AI-Core", type: "Production", status: "Active", latency: "24ms", health: "100%" },
   { id: "PRJ-002", name: "Mobile-API-v2", type: "Staging", status: "Active", latency: "18ms", health: "100%" },
   { id: "PRJ-003", name: "Web-Frontend-Main", type: "Production", status: "Deploying", latency: "N/A", health: "98%" },
   { id: "PRJ-004", name: "Internal-Tool-v1", type: "Development", status: "Paused", latency: "N/A", health: "N/A" },

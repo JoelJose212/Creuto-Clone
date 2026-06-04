@@ -4,27 +4,37 @@
 
 @layer base {
   :root {
-    --color-bg: #ffffff;
-    --color-surface: #ffffff;
-    --color-surface-2: #f3f4f6;
-    --color-border: #e5e7eb;
-    --color-blue: #2563eb;
-    --color-blue-hover: #1d4ed8;
-    --color-text: #374151;
-    --color-text-secondary: #4b5563;
+    --color-bg: #E8F4F0;
+    --color-surface: #FFFFFF;
+    --color-surface-2: #ECEEF6;
+    --color-border: #E8E9F2;
+    --color-blue: #303358;
+    --color-blue-hover: #1C1E35;
+    --color-text: #4A4E6B;
+    --color-text-secondary: #6B7080;
     --color-text-inverse: #ffffff;
-    --color-muted: #6b7280;
+    --color-muted: #6B7080;
     --color-white: #ffffff;
-    --color-heading: #111827;
+    --color-heading: #1C1E35;
     
     /* About Page Specific Tokens */
     --color-bg-secondary-about: #f8f8f8;
     --color-text-secondary-about: #666666;
     --color-block: #e5e7eb;
     --color-button-light: #e8edff;
-    --color-navy: #01083d;
+    --color-navy: #1C1E35;
     --shadow-deep-about: rgba(0,0,0,0.08) 0px 20px 50px 0px;
     --shadow-mid-about: rgba(0,0,0,0.1) 0px 4px 12px 0px;
+
+    --color-brand-navy: #303358;
+    --color-brand-navy-deep: #1C1E35;
+    --color-brand-navy-soft: #4A4D75;
+    --color-brand-navy-tint: #E8E9F2;
+    --color-brand-gold: #FFB700;
+    --color-brand-gold-dark: #E07B00;
+    --color-brand-gold-tint: #FFF4CC;
+    --color-success: #2A8C6E;
+    --color-success-surface: #E8F4F0;
     
     /* Shadcn defaults mapped to our custom variables */
     --background: var(--color-bg);
@@ -50,7 +60,7 @@
   }
 
   body {
-    @apply bg-[var(--color-bg)] text-[var(--color-text)] antialiased selection:bg-blue-500/30;
+    @apply bg-[var(--color-bg)] text-[var(--color-text)] antialiased selection:bg-[#303358]/20;
   }
 
   /* Typography */
@@ -96,7 +106,7 @@
 /* Float & Glow on Hover for General Grid Cards */
 .reveal-card.active:hover {
   transform: translateY(-8px) scale(1.02) !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 32px rgba(23, 70, 234, 0.2) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 32px rgba(48, 51, 88, 0.2) !important;
   border-color: rgba(255, 255, 255, 0.25) !important;
 }
 
@@ -341,13 +351,13 @@
 }
 
 /* 2. Hide local page-level duplicate banners while preserving the root global banner */
-div[id*="creuto-"] .mui-1h4dmgi,
+div[id*="moolsap-"] .mui-1h4dmgi,
 div[id*="-page"] .mui-1h4dmgi {
   display: none !important;
 }
 
 /* 3. Apply standard top spacing to public pages to accommodate the fixed premium header */
-div[id*="aanandi-"]:not(.admin-exclude-navbar),
+div[id*="moolsap-"]:not(.admin-exclude-navbar),
 div[id*="-page"]:not(.admin-exclude-navbar) {
   padding-top: 128px !important; /* 48px Announcement Ribbon + 80px Navbar */
 }
