@@ -102,7 +102,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       className={`flex items-center gap-1 font-jakarta text-[14.5px] font-[600] transition-colors duration-200 hover:text-blue ${
-                        desktopDropdownOpen ? "text-blue" : "text-[#4A4D75]"
+                        desktopDropdownOpen ? "text-blue" : "text-[#4B5563]"
                       }`}
                     >
                       <span>{link.name}</span>
@@ -121,7 +121,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="font-jakarta text-[14.5px] font-[600] text-[#4A4D75] transition-colors duration-200 hover:text-blue"
+                  className="font-jakarta text-[14.5px] font-[600] text-[#4B5563] transition-colors duration-200 hover:text-blue"
                 >
                   {link.name}
                 </Link>
@@ -234,7 +234,7 @@ export default function Navbar() {
                                   <button
                                     onClick={() => setMobileActiveCategoryId(isCatActive ? null : category.id)}
                                     className={`w-full text-left font-sans text-[15px] font-[600] py-1.5 flex justify-between items-center ${
-                                      isCatActive ? "text-blue" : "text-[#4A4D75]"
+                                      isCatActive ? "text-blue" : "text-[#4B5563]"
                                     }`}
                                   >
                                     <span>{category.name}</span>
@@ -263,7 +263,7 @@ export default function Navbar() {
                                               setMobileServicesOpen(false)
                                               setMobileActiveCategoryId(null)
                                             }}
-                                            className="font-sans text-[13.5px] font-medium text-[#6B7080] py-1 hover:text-blue block text-left"
+                                            className="font-sans text-[13.5px] font-medium text-[#6B7280] py-1 hover:text-blue block text-left"
                                           >
                                             → {sub.name}
                                           </Link>

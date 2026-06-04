@@ -196,7 +196,7 @@ export default function FAQSection() {
           font-size: 0.75rem;
           font-weight: 700;
           letter-spacing: 0.1em;
-          color: #1C1E35;
+          color: #0f172a;
           background: rgba(0, 0, 0, 0.03);
           margin-bottom: 20px;
           text-transform: uppercase;
@@ -207,7 +207,7 @@ export default function FAQSection() {
           font-size: 2.75rem;
           font-weight: 800;
           line-height: 1.2;
-          color: #1C1E35;
+          color: #0f172a;
           margin: 0 0 16px 0;
           letter-spacing: -0.02em;
         }
@@ -215,7 +215,7 @@ export default function FAQSection() {
         .faq-subtitle {
           font-size: 1.1rem;
           line-height: 1.6;
-          color: #6B7080;
+          color: #64748b;
           margin: 0;
           font-weight: 400;
           max-width: 600px;
@@ -241,7 +241,7 @@ export default function FAQSection() {
 
         .faq-card {
           background: #ffffff;
-          border: 1px solid #E8E9F2;
+          border: 1px solid #eeeeee;
           border-radius: 12px;
           padding: 24px;
           cursor: pointer;
@@ -259,7 +259,7 @@ export default function FAQSection() {
 
         .faq-card.active {
           background: #ffffff;
-          border-color: #E8E9F2;
+          border-color: #eeeeee;
           box-shadow: none;
         }
 
@@ -275,7 +275,7 @@ export default function FAQSection() {
           font-size: 1.05rem;
           font-weight: 700;
           line-height: 1.5;
-          color: #1C1E35;
+          color: #0f172a;
           margin: 0;
           display: flex;
           align-items: flex-start;
@@ -283,7 +283,7 @@ export default function FAQSection() {
         }
 
         .faq-card-num {
-          color: #1C1E35;
+          color: #0f172a;
           font-weight: 800;
           opacity: 0.9;
         }
@@ -297,7 +297,7 @@ export default function FAQSection() {
           justify-content: center;
           border-radius: 50%;
           background: rgba(0, 0, 0, 0.03);
-          color: #1C1E35;
+          color: #0f172a;
           transition: background 300ms ease;
         }
 
@@ -313,7 +313,7 @@ export default function FAQSection() {
           padding-top: 16px;
           font-size: 0.92rem;
           line-height: 1.6;
-          color: #4A4E6B;
+          color: #475569;
           font-weight: 400;
           border-top: 1px solid rgba(0, 0, 0, 0.05);
           margin-top: 16px;

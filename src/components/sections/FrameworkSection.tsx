@@ -253,14 +253,14 @@ export default function FrameworkSection() {
   }
 
   return (
-    <section className="min-h-[36rem] md:min-h-[50.375rem] bg-[#303358] text-white py-12 sm:py-16 md:py-20 flex flex-col items-center relative overflow-hidden w-full">
+    <section className="min-h-[36rem] md:min-h-[50.375rem] bg-[#1746EA] text-white py-12 sm:py-16 md:py-20 flex flex-col items-center relative overflow-hidden w-full">
       {/* Decorative Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#303358]/30 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-blue-600/20 blur-[120px] pointer-events-none" />
 
       <div className="w-full mx-auto relative z-10">
         {/* Header Block */}
         <div className="text-center mb-8 md:mb-16 flex flex-col items-center gap-2 px-4 sm:px-8 md:px-20 max-w-[75rem] mx-auto select-none">
-          <span className="px-4 py-1.5 rounded-full border border-white/20 font-bold text-xs tracking-[0.2em] text-[#303358] bg-white uppercase">
+          <span className="px-4 py-1.5 rounded-full border border-white/20 font-bold text-xs tracking-[0.2em] text-[#1746EA] bg-white uppercase">
             OUR FRAMEWORK
           </span>
           <h2 className="font-jakarta text-[clamp(28px,4vw,40px)] md:text-[2.75rem] font-[800] tracking-tight leading-[1.2] text-center text-white mt-4 mb-2 md:mb-4">
@@ -281,8 +281,8 @@ export default function FrameworkSection() {
           style={{ cursor: isDragging ? "grabbing" : "grab" }}
         >
           {/* Side blur gradients */}
-          <div className="absolute top-0 left-0 w-[4rem] md:w-[15.625rem] h-full z-10 pointer-events-none bg-gradient-to-r from-[#303358] to-transparent" />
-          <div className="absolute top-0 right-0 w-[4rem] md:w-[15.625rem] h-full z-10 pointer-events-none bg-gradient-to-l from-[#303358] to-transparent" />
+          <div className="absolute top-0 left-0 w-[4rem] md:w-[15.625rem] h-full z-10 pointer-events-none bg-gradient-to-r from-[#1746EA] to-transparent" />
+          <div className="absolute top-0 right-0 w-[4rem] md:w-[15.625rem] h-full z-10 pointer-events-none bg-gradient-to-l from-[#1746EA] to-transparent" />
 
           {/* Sliding Track container */}
           <div

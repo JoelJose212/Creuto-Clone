@@ -35,7 +35,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 
 export const viewport = {
-  themeColor: "#303358",
+  themeColor: "#1531FF",
 }
 
 export const metadata: Metadata = {
@@ -70,7 +70,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable} ${bricolage.variable} ${jakarta.variable} dark`}>
-      <body className="bg-bg text-text antialiased selection:bg-[#303358]/20">
+      <body className="bg-bg text-text antialiased selection:bg-blue/30">
         <Providers>
           <CustomCursor />
           <ScrollAnimate />
