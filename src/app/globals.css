@@ -223,10 +223,10 @@
   .bg-white\/\[0\.05\],
   .bg-white\/10,
   .bg-white\/5,
-  .bg-[#ffffff]\/\[0\.02\],
-  .bg-[#ffffff]\/\[0\.03\],
-  .bg-[#ffffff]\/\[0\.05\],
-  .bg-[#ffffff]\/\[0\.08\],
+  .bg-\[\#ffffff\]\/\[0\.02\],
+  .bg-\[\#ffffff\]\/\[0\.03\],
+  .bg-\[\#ffffff\]\/\[0\.05\],
+  .bg-\[\#ffffff\]\/\[0\.08\],
   .bg-\[\#0c122c\]\/60,
   .bg-\[\#0c122c\]\/40 {
     background-color: #ffffff !important;
@@ -335,8 +335,17 @@
 
 /* 1. Hide the broken, static cloned legacy navbars globally on all public pages */
 .mui-143ljvh,
+.mui-zxq01x,
+.mui-1fgd3v5,
+.mui-1lekzkb,
 [id*="cloned-page"] .mui-143ljvh,
-[id$="-page"] .mui-143ljvh {
+[id*="cloned-page"] .mui-zxq01x,
+[id*="cloned-page"] .mui-1fgd3v5,
+[id*="cloned-page"] .mui-1lekzkb,
+[id$="-page"] .mui-143ljvh,
+[id$="-page"] .mui-zxq01x,
+[id$="-page"] .mui-1fgd3v5,
+[id$="-page"] .mui-1lekzkb {
   display: none !important;
 }
 
@@ -349,6 +358,23 @@ div[id*="-page"] .mui-1h4dmgi {
 /* 3. Apply standard top spacing to public pages to accommodate the fixed premium header */
 div[id*="moolsap-"]:not(.admin-exclude-navbar),
 div[id*="-page"]:not(.admin-exclude-navbar) {
-  padding-top: 128px !important; /* 48px Announcement Ribbon + 80px Navbar */
+  padding-top: 0px !important; /* Reverted to 0px so backgrounds flow behind the fixed header */
 }
 
+/* Homepage Hero padding adjustments to clear the fixed header when wrapper padding is 0 */
+@media (max-width: 1199.95px) {
+  .mui-1i90w2y {
+    padding-top: 144px !important; /* Force to 144px on all smaller screens to prevent header overlap */
+  }
+}
+
+/* Tablet padding overrides for pages that collapse their top padding to 4rem */
+@media (min-width: 600px) and (max-width: 899.95px) {
+  .mui-i2zzig,  /* About page first section */
+  .mui-1kbflsk, /* Case studies page first section */
+  .mui-57vqux,  /* Contact page first section */
+  .mui-3qe8o5   /* Blog post detail page first section */
+  {
+    padding-top: 10rem !important; /* Maintain mobile padding-top of 160px to clear the 128px navbar */
+  }
+}

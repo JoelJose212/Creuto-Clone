@@ -7,29 +7,29 @@ const G = "cubic-bezier(0.22, 1, 0.36, 1)"
 
 const CS = [
   {
-    label: "Creativity",
-    description: "Innovation that drives unique and engaging experiences.",
-    src: "/img/home/1.webp"
+    label: "Motivation",
+    description: "Passion-driven action that fuels innovation, growth, and excellence.",
+    src: "/img/home/motivation.png"
   },
   {
-    label: "Clarity",
-    description: "Clear communication and transparent processes.",
-    src: "/img/home/2.webp"
+    label: "Mastery",
+    description: "Deep expertise and continuous improvement in every solution we deliver.",
+    src: "/img/home/mastery.png"
   },
   {
-    label: "Craftsmanship",
-    description: "Code engineered for performance and longevity.",
-    src: "/img/home/Craftmanship.webp"
+    label: "Merit",
+    description: "Success earned through integrity, performance, and measurable results.",
+    src: "/img/home/merit.png"
   },
   {
-    label: "Consistency",
-    description: "Reliable results and uniform quality standards.",
-    src: "/img/home/3.webp"
+    label: "Magnanimity",
+    description: "Leading with generosity, respect, and a commitment to empowering others.",
+    src: "/img/home/magnanimity.png"
   },
   {
-    label: "Confidence",
-    description: "Secure, scalable, and robust software solutions.",
-    src: "/img/home/4.webp"
+    label: "Mission",
+    description: "A clear purpose guiding every decision, action, and outcome.",
+    src: "/img/home/mission.png"
   }
 ]
 
@@ -182,7 +182,7 @@ export default function FrameworkSection() {
                 a
                   ? "w-[2rem] sm:w-[2.5rem] md:w-[3rem] h-[2rem] sm:h-[2.5rem] md:h-[3rem]"
                   : "w-[1.5rem] sm:w-[2rem] md:w-[2.5rem] h-[1.5rem] sm:h-[2rem] md:h-[2.5rem]"
-              }`}
+              } scale-[1.6]`}
             >
               <Image
                 src={oSlide.src}
@@ -196,10 +196,10 @@ export default function FrameworkSection() {
 
           {/* Title Label */}
           <h3
-            className={`font-jakarta font-[600] text-center transition-all duration-700 ease-out-quart ${
+            className={`font-jakarta font-[600] text-center text-white transition-all duration-700 ease-out-quart ${
               a
-                ? "text-[1.25rem] md:text-[1.75rem] opacity-100"
-                : "text-[1rem] md:text-[1.25rem] opacity-70"
+                ? "text-[1.45rem] md:text-[2rem] opacity-100"
+                : "text-[1.15rem] md:text-[1.5rem] opacity-80"
             }`}
           >
             {oSlide.label}
@@ -264,10 +264,10 @@ export default function FrameworkSection() {
             OUR FRAMEWORK
           </span>
           <h2 className="font-jakarta text-[clamp(28px,4vw,40px)] md:text-[2.75rem] font-[800] tracking-tight leading-[1.2] text-center text-white mt-4 mb-2 md:mb-4">
-            C Is for MOOLSAP. C Is How We Build.
+            M Is for MOOLSAP. M Is How We Build.
           </h2>
           <p className="text-center opacity-80 max-w-[50rem] text-white font-[500] text-[1rem] md:text-[1.25rem]">
-            We built our engineering culture around the Cs that define world-class software.
+            We built our engineering culture around the Ms that define world-class software.
           </p>
         </div>
 

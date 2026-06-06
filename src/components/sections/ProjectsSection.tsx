@@ -4,29 +4,29 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const ITEMS = [
   {
-    label: "Creativity",
-    description: "Innovation that drives unique and engaging experiences.",
-    image: "/cloned_next/1e28c.jpeg"
+    label: "Motivation",
+    description: "Passion-driven action that fuels innovation, growth, and excellence.",
+    image: "/img/home/motivation.png"
   },
   {
-    label: "Clarity",
-    description: "Clear communication and transparent processes.",
-    image: "/cloned_next/2a45c.jpeg"
+    label: "Mastery",
+    description: "Deep expertise and continuous improvement in every solution we deliver.",
+    image: "/img/home/mastery.png"
   },
   {
-    label: "Craftsmanship",
-    description: "Code engineered for performance and longevity.",
-    image: "/cloned_next/Craftmanshipf9e1.jpeg"
+    label: "Merit",
+    description: "Success earned through integrity, performance, and measurable results.",
+    image: "/img/home/merit.png"
   },
   {
-    label: "Consistency",
-    description: "Reliable results and uniform quality standards.",
-    image: "/cloned_next/3a35b.jpeg"
+    label: "Magnanimity",
+    description: "Leading with generosity, respect, and a commitment to empowering others.",
+    image: "/img/home/magnanimity.png"
   },
   {
-    label: "Confidence",
-    description: "Secure, scalable, and robust software solutions.",
-    image: "/cloned_next/40bb1.jpeg"
+    label: "Mission",
+    description: "A clear purpose guiding every decision, action, and outcome.",
+    image: "/img/home/mission.png"
   }
 ];
 
@@ -190,7 +190,7 @@ export default function ProjectsSection() {
                 : "bg-white/10 opacity-60 hover:opacity-90 hover:bg-white/15"
             }`}
           >
-            <div className="relative w-10 h-10 md:w-14 md:h-14 flex items-center justify-center">
+            <div className="relative w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all scale-[1.6]">
               <img
                 src={item.image}
                 alt={item.label}
@@ -203,8 +203,8 @@ export default function ProjectsSection() {
           <h3
             className={`mt-4 md:mt-5 text-center font-display font-semibold transition-all duration-700 ease-out-quart select-none tracking-tight ${
               isActive
-                ? "text-[1.25rem] md:text-[1.6rem] text-white opacity-100 scale-105"
-                : "text-[1rem] md:text-[1.2rem] text-white/60 opacity-60"
+                ? "text-[1.45rem] md:text-[1.85rem] text-white opacity-100 scale-105"
+                : "text-[1.15rem] md:text-[1.4rem] text-white opacity-80"
             }`}
           >
             {item.label}
@@ -291,10 +291,10 @@ export default function ProjectsSection() {
             OUR FRAMEWORK
           </span>
           <h2 className="mt-6 font-display text-[2rem] sm:text-[2.75rem] md:text-[3.5rem] font-bold leading-tight tracking-tight max-w-3xl drop-shadow-sm select-none">
-            C Is for MOOLSAP. C Is How We Build.
+            M Is for MOOLSAP. M Is How We Build.
           </h2>
           <p className="mt-4 text-[0.95rem] sm:text-[1.1rem] md:text-[1.25rem] text-white/70 max-w-2xl font-medium tracking-tight select-none">
-            We built our engineering culture around the Cs that define world-class software.
+            We built our engineering culture around the Ms that define world-class software.
           </p>
         </div>
 

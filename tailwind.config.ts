@@ -125,6 +125,14 @@ const config = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "gradient-shift": {
+          "0%, 100%": { "background-position": "0% 50%" },
+          "50%": { "background-position": "100% 50%" },
+        },
+        "soft-pulse": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.05)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -133,6 +141,8 @@ const config = {
         marqueeLeftFast: "marqueeLeftFast 20s linear infinite",
         "pulse-dot": "pulseDot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         float: "float 6s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 4s ease infinite",
+        "soft-pulse": "soft-pulse 3s ease-in-out infinite",
       },
     },
   },

@@ -645,7 +645,7 @@ Apollo
               <span className="MuiChip-label MuiChip-labelMedium mui-1fqh3rg">
 INTRODUCING MOOLSAP AI
               </span>
-            </div>            <h2 className="MuiTypography-root MuiTypography-h2 mui-1dbc92k" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
+            </div>            <h2 className="MuiTypography-root MuiTypography-h2 mui-1dbc92k text-white" style={{"opacity":"1","transform":"translateY(1.25rem)","color":"#ffffff"} as React.CSSProperties}>
 When Tech meets AI
             </h2>            <p className="MuiTypography-root MuiTypography-subtitle1 mui-816a69" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
 MoolSap.AI builds custom AI products, automation workflows, and intelligent systems for businesses ready to move beyond manual. From early-stage startups to scaling enterprises we turn AI potential into measurable business results.

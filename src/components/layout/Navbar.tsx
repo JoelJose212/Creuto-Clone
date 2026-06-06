@@ -69,16 +69,16 @@ export default function Navbar() {
     <>
       <AnnouncementBanner />
       <motion.nav
-        initial={{ backgroundColor: "rgba(255,255,255,0)", borderBottomColor: "rgba(229,231,235,0)", backdropFilter: "blur(0px)", top: "48px" }}
+        initial={{ backgroundColor: "rgba(255,255,255,1)", borderBottomColor: "rgba(229,231,235,1)", backdropFilter: "blur(0px)", top: "48px" }}
         animate={{
-          backgroundColor: scrolled ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0)",
-          borderBottomColor: scrolled ? "rgba(229,231,235,1)" : "rgba(229,231,235,0)",
-          backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
+          backgroundColor: "rgba(255,255,255,1)",
+          borderBottomColor: "rgba(229,231,235,1)",
+          backdropFilter: "blur(0px)",
           top: "48px", // Keep fixed at 48px below the fixed top announcement banner
         }}
         transition={{ duration: 0.2, ease: "easeOut" }}
         style={{ top: "48px" }}
-        className="fixed left-0 right-0 z-50 flex h-[80px] items-center border-b border-transparent"
+        className="fixed left-0 right-0 z-50 flex h-[80px] items-center border-b border-[#E5E7EB] bg-white"
       >
         <div className="container mx-auto flex w-full items-center justify-between px-4 md:px-8">
           {/* Logo */}
@@ -114,6 +114,31 @@ export default function Navbar() {
                       />
                     </Link>
                   </div>
+                )
+              }
+
+              if (link.name === "MoolSap.ai") {
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-white text-[#4B5563] hover:bg-slate-50/50 transition-all hover:scale-102"
+                  >
+                    <span className="font-jakarta text-[14px] font-[700] text-[#4B5563] tracking-tight">MoolSap</span>
+                    <span className="inline-flex items-center gap-1 bg-gradient-to-r from-[#38bdf8] via-[#ec4899] to-[#a855f7] bg-[length:200%_auto] animate-gradient-shift bg-clip-text text-transparent animate-soft-pulse origin-center font-jakarta text-[14px] font-[800]">
+                      .ai
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline-block select-none animate-soft-pulse origin-center">
+                        <defs>
+                          <linearGradient id="sparkle-gradient-nav-desktop" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#38bdf8" />
+                            <stop offset="50%" stopColor="#ec4899" />
+                            <stop offset="100%" stopColor="#a855f7" />
+                          </linearGradient>
+                        </defs>
+                        <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="url(#sparkle-gradient-nav-desktop)" />
+                      </svg>
+                    </span>
+                  </Link>
                 )
               }
 
@@ -278,6 +303,32 @@ export default function Navbar() {
                         )}
                       </AnimatePresence>
                     </div>
+                  )
+                }
+
+                if (link.name === "MoolSap.ai") {
+                  return (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center gap-1 px-4 py-2 rounded-full bg-white text-heading hover:bg-slate-50 transition-all w-fit justify-center hover:scale-102"
+                    >
+                      <span className="font-sans text-[16px] font-bold text-heading tracking-tight">MoolSap</span>
+                      <span className="inline-flex items-center gap-1 bg-gradient-to-r from-[#38bdf8] via-[#ec4899] to-[#a855f7] bg-[length:200%_auto] animate-gradient-shift bg-clip-text text-transparent animate-soft-pulse origin-center font-sans text-[16px] font-extrabold">
+                        .ai
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline-block select-none animate-soft-pulse origin-center">
+                          <defs>
+                            <linearGradient id="sparkle-gradient-nav-mobile" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stopColor="#38bdf8" />
+                              <stop offset="50%" stopColor="#ec4899" />
+                              <stop offset="100%" stopColor="#a855f7" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="url(#sparkle-gradient-nav-mobile)" />
+                        </svg>
+                      </span>
+                    </Link>
                   )
                 }
 

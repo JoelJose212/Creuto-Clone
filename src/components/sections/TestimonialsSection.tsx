@@ -268,58 +268,6 @@ export default function TestimonialsSection() {
             <p className="MuiTypography-root MuiTypography-subtitle2 mui-1aqn3xk" style={{"opacity":"1","transform":"translateY(1.25rem)"} as React.CSSProperties}>
               A leading product engineering company, creating adaptive software solutions to improve operations.
             </p>
-            <div className="MuiContainer-root MuiContainer-maxWidthLg mui-7umt5i">
-              <div className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 MuiGrid-spacing-md-6 mui-1q7l1ox">
-                <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 mui-olk9wb">
-                  <a className="MuiBox-root mui-bujaci" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/shorts/I9a9s8jQB1M">
-                    <img alt="Client Success Story 1" loading="lazy" decoding="async" data-nimg="fill" className="thumbnail-img" style={{"position":"absolute","height":"100%","width":"100%","left":"0","top":"0","right":"0","bottom":"0","objectFit":"cover","color":"transparent","transition":"transform 0.5s ease"} as React.CSSProperties} sizes="100vw" srcSet="/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FI9a9s8jQB1M%2Fmaxresdefault.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FI9a9s8jQB1M%2Fmaxresdefault.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FI9a9s8jQB1M%2Fmaxresdefault.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FI9a9s8jQB1M%2Fmaxresdefault.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FI9a9s8jQB1M%2Fmaxresdefault.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FI9a9s8jQB1M%2Fmaxresdefault.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FI9a9s8jQB1M%2Fmaxresdefault.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FI9a9s8jQB1M%2Fmaxresdefault.jpg&w=3840&q=75 3840w" src="/cloned_next/maxresdefault8c4e.jpeg?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FI9a9s8jQB1M%2Fmaxresdefault.jpg&w=3840&q=75" />
-                    <div className="info-overlay MuiBox-root mui-svj9vm">
-                      <div className="MuiBox-root mui-0">
-                        <p className="MuiTypography-root MuiTypography-body1 mui-qthyam">
-                          Sonali Mohnani
-                        </p>
-                        <p className="MuiTypography-root MuiTypography-body1 mui-n6cn9j">
-                          CEO, Lensdocket
-                        </p>
-                      </div>
-                      <div className="MuiBox-root mui-goktz">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M7 17l10-10M7 7h10v10" />
-                        </svg>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div className="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 mui-olk9wb">
-                  <a className="MuiBox-root mui-bujaci" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/shorts/yZWJAHOeIrg">
-                    <img alt="Client Success Story 2" loading="lazy" decoding="async" data-nimg="fill" className="thumbnail-img" style={{"position":"absolute","height":"100%","width":"100%","left":"0","top":"0","right":"0","bottom":"0","objectFit":"cover","color":"transparent","transition":"transform 0.5s ease"} as React.CSSProperties} sizes="100vw" srcSet="/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FyZWJAHOeIrg%2Fmaxresdefault.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FyZWJAHOeIrg%2Fmaxresdefault.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FyZWJAHOeIrg%2Fmaxresdefault.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FyZWJAHOeIrg%2Fmaxresdefault.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FyZWJAHOeIrg%2Fmaxresdefault.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FyZWJAHOeIrg%2Fmaxresdefault.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FyZWJAHOeIrg%2Fmaxresdefault.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FyZWJAHOeIrg%2Fmaxresdefault.jpg&w=3840&q=75 3840w" src="/cloned_next/maxresdefault8963.jpeg?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FyZWJAHOeIrg%2Fmaxresdefault.jpg&w=3840&q=75" />
-                    <div className="info-overlay MuiBox-root mui-svj9vm">
-                      <div className="MuiBox-root mui-0">
-                        <p className="MuiTypography-root MuiTypography-body1 mui-qthyam">
-                          Ruksar Khan
-                        </p>
-                        <p className="MuiTypography-root MuiTypography-body1 mui-n6cn9j">
-                          CEO, Brand Sutra
-                        </p>
-                      </div>
-                      <div className="MuiBox-root mui-goktz">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M7 17l10-10M7 7h10v10" />
-                        </svg>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <a target="_blank" rel="noopener noreferrer" style={{"textDecoration":"none"} as React.CSSProperties} href="https://www.youtube.com/@moolsaphq">
-                <div className="MuiBox-root mui-zb939p">
-                  View More Stories
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M7 17l10-10M7 7h10v10" />
-                  </svg>
-                </div>
-              </a>
-            </div>
           </div>
           
           <div className="MuiBox-root mui-1tbulv1" style={{ overflow: 'hidden', position: 'relative', width: '100%' }}>
@@ -328,13 +276,15 @@ export default function TestimonialsSection() {
                 className="slick-list" 
                 ref={containerRef}
                 style={{ 
-                  padding: '0px 0rem', 
+                  padding: '30px 0px', 
                   overflow: 'hidden', 
                   position: 'relative', 
                   width: '100%', 
                   cursor: isDragging ? 'grabbing' : 'grab',
                   userSelect: 'none',
-                  touchAction: 'pan-y'
+                  touchAction: 'pan-y',
+                  perspective: '1200px',
+                  perspectiveOrigin: '50% 50%'
                 }}
                 onPointerDown={handlePointerDown}
                 onPointerMove={handlePointerMove}
@@ -350,10 +300,54 @@ export default function TestimonialsSection() {
                     width: `${extendedTestimonials.length * (100 / visibleSlides)}%`,
                     transform: `translateX(calc(-${(currentIndex) * (100 / extendedTestimonials.length)}% + ${dragOffset}px))`,
                     transition: transitionEnabled ? (isDragging ? 'none' : 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)') : 'none',
+                    transformStyle: 'preserve-3d'
                   }}
                 >
                   {extendedTestimonials.map((testimonial, idx) => {
                     const isCenter = idx === centerIndex;
+                    const diff = idx - centerIndex;
+                    
+                    let cardTransform = "scale(1) rotateY(0deg)";
+                    let cardOpacity = 1;
+                    let cardZIndex = 1;
+
+                    if (visibleSlides === 3) {
+                      if (diff === 0) {
+                        cardTransform = "scale(1.05) translateZ(40px) rotateY(0deg)";
+                        cardOpacity = 1;
+                        cardZIndex = 10;
+                      } else if (diff === -1) {
+                        cardTransform = "scale(0.93) rotateY(15deg) translateZ(-40px) rotate(-1.5deg)";
+                        cardOpacity = 0.65;
+                        cardZIndex = 5;
+                      } else if (diff === 1) {
+                        cardTransform = "scale(0.93) rotateY(-15deg) translateZ(-40px) rotate(1.5deg)";
+                        cardOpacity = 0.65;
+                        cardZIndex = 5;
+                      } else {
+                        // Far left or far right slides
+                        cardTransform = `scale(0.85) rotateY(${diff < 0 ? 20 : -20}deg) translateZ(-80px)`;
+                        cardOpacity = 0.25;
+                        cardZIndex = 1;
+                      }
+                    } else if (visibleSlides === 2) {
+                      const isLeft = idx === currentIndex;
+                      if (isLeft) {
+                        cardTransform = "scale(1.02) rotateY(8deg)";
+                        cardOpacity = 1;
+                        cardZIndex = 10;
+                      } else {
+                        cardTransform = "scale(0.95) rotateY(-8deg)";
+                        cardOpacity = 0.8;
+                        cardZIndex = 5;
+                      }
+                    } else {
+                      const isCurrent = idx === currentIndex;
+                      cardTransform = isCurrent ? "scale(1) rotateY(0deg)" : "scale(0.92) rotateY(12deg)";
+                      cardOpacity = isCurrent ? 1 : 0.4;
+                      cardZIndex = isCurrent ? 10 : 5;
+                    }
+
                     return (
                       <div 
                         key={idx}
@@ -362,7 +356,8 @@ export default function TestimonialsSection() {
                           width: `${100 / extendedTestimonials.length}%`, 
                           flexShrink: 0,
                           padding: '0 12px',
-                          boxSizing: 'border-box'
+                          boxSizing: 'border-box',
+                          transformStyle: 'preserve-3d'
                         }}
                       >
                         <div>
@@ -378,6 +373,15 @@ export default function TestimonialsSection() {
                                   e.preventDefault();
                                 }
                               }}
+                              style={{
+                                display: 'block',
+                                transition: 'all 0.6s cubic-bezier(0.25, 1, 0.5, 1)',
+                                transform: cardTransform,
+                                opacity: cardOpacity,
+                                zIndex: cardZIndex,
+                                transformStyle: 'preserve-3d',
+                                backfaceVisibility: 'hidden'
+                              } as React.CSSProperties}
                             >
                               <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root mui-1mavqfs" style={{"--Paper-shadow":"none"} as React.CSSProperties}>
                                 <div className="MuiBox-root mui-0">
