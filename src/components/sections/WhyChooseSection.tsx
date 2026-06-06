@@ -19,7 +19,7 @@ In a cluttered market, your product demands certainty. At MOOLSAP, we bypass the
 ~
               </span>              <div style={{"display":"inline-flex","borderRadius":"50%"} as React.CSSProperties}>
                 <div className="MuiAvatar-root MuiAvatar-circular mui-njktzk">
-                  <img alt="Amit Kumar Tamrakar" src="/img/newHome/avatars/nihar_avatar.webp" className="MuiAvatar-img mui-45do71" />
+                  <img alt="Amit Kumar Tamrakar" src="/img/newHome/avatars/amit_avatar.webp" className="MuiAvatar-img mui-45do71" />
                 </div>
               </div>              <div className="MuiBox-root mui-axw7ok">
                 <p className="MuiTypography-root MuiTypography-subtitle1 mui-1jypjz9">
