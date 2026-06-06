@@ -2,10 +2,10 @@ import { LeadershipMember } from "@/types/about";
 
 export const team: LeadershipMember[] = [
   {
-    name: "Nihar Ranjan",
+    name: "Amit Kumar Tamrakar",
     role: "Co Founder & CEO",
-    linkedin: "https://www.linkedin.com/in/niharrout/",
-    initials: "NR",
+    linkedin: "https://www.linkedin.com/in/amitkummartamrakar/",
+    initials: "AT",
   },
   {
     name: "Santanu Sahoo",

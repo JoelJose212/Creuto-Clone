@@ -120,11 +120,11 @@ export default function WhyMoolSapSection() {
           </div>
           <div className="flex items-center gap-[20px]">
             <div className="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-full bg-[#2563eb]/10 border-2 border-[#2563eb]/20">
-              <span className="font-jakarta text-[16px] font-[800] text-[#2563eb]">NR</span>
+              <span className="font-jakarta text-[16px] font-[800] text-[#2563eb]">AT</span>
             </div>
             <div>
               <div className="font-jakarta text-[18px] font-[700] text-[#111827]">
-                Nihar Ranjan Rout
+                Amit Kumar Tamrakar
               </div>
               <div className="font-jakarta text-[14px] font-[600] uppercase tracking-wider text-[#6B7280]">
                 CEO & CO-FOUNDER, MoolSap

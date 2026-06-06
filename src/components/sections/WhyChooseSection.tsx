@@ -14,16 +14,16 @@ In a cluttered market, your product demands certainty. At MOOLSAP, we bypass the
               </p>
             </div>
           </div>          <div style={{"opacity":"1","transform":"none scale(0.98)"} as React.CSSProperties}>
-            <a className="MuiBox-root mui-1sddtmt" href="https://www.linkedin.com/in/niharrout/" target="_blank" rel="noopener noreferrer">
+            <a className="MuiBox-root mui-1sddtmt" href="https://www.linkedin.com/in/amitkummartamrakar/" target="_blank" rel="noopener noreferrer">
               <span className="MuiTypography-root MuiTypography-body1 mui-1mkpl5a">
 ~
               </span>              <div style={{"display":"inline-flex","borderRadius":"50%"} as React.CSSProperties}>
                 <div className="MuiAvatar-root MuiAvatar-circular mui-njktzk">
-                  <img alt="Nihar Ranjan Rout" src="/img/newHome/avatars/nihar_avatar.webp" className="MuiAvatar-img mui-45do71" />
+                  <img alt="Amit Kumar Tamrakar" src="/img/newHome/avatars/nihar_avatar.webp" className="MuiAvatar-img mui-45do71" />
                 </div>
               </div>              <div className="MuiBox-root mui-axw7ok">
                 <p className="MuiTypography-root MuiTypography-subtitle1 mui-1jypjz9">
-Nihar Ranjan Rout
+Amit Kumar Tamrakar
                 </p>                <div style={{"borderRadius":"6.25rem"} as React.CSSProperties}>
                   <div className="MuiBox-root mui-h2ejcn">
                     <span className="MuiTypography-root MuiTypography-caption mui-150cd7b">

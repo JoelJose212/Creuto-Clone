@@ -338,7 +338,7 @@ export async function POST(request: Request) {
           mobile,
           experience,
           linkedinProfile: linkedinProfile || null,
-          whyMoolSap: whyMoolSap,
+          whyCreuto: whyMoolSap,
           resumePath,
           coverLetterPath,
         },

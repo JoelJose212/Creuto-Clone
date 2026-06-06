@@ -57,10 +57,10 @@ export default function AboutMeaningSection() {
             <Image src="/icons/Create.svg" alt="Create" fill className="object-contain" />
           </div>
           <div className="font-bricolage text-[24px] font-bold text-[#1746ea] tracking-[0.05em] mb-[8px]">
-            CREATE
+            MOOL
           </div>
           <div className="text-[14.4px] font-medium text-[#666666] leading-[1.6]">
-            Intentional, Disciplined Craftsmanship
+            The Core Essence; The Fundamental Truth Behind Every Great Idea.
           </div>
         </motion.div>
 
@@ -81,10 +81,10 @@ export default function AboutMeaningSection() {
             <Image src="/icons/Pluto.svg" alt="Pluto" fill className="object-contain" />
           </div>
           <div className="font-bricolage text-[24px] font-bold text-[#1746ea] tracking-[0.05em] mb-[8px]">
-            PLUTO
+            SAP
           </div>
           <div className="text-[14.4px] font-medium text-[#666666] leading-[1.6]">
-            The Edge Of The Known; The Misunderstood And Unexplored.
+            The Vital Energy That Fuels Growth, Adaptation, and Evolution.
           </div>
         </motion.div>
 
@@ -102,13 +102,13 @@ export default function AboutMeaningSection() {
           variants={cardVariants}
         >
           <div className="w-[80px] h-[80px] relative mb-[20px]">
-            <Image src="/icons/MoolSap_Single_Logo.svg" alt="MoolSap Logo" fill className="object-contain" />
+            <Image src="/img/moolsap_symbol.png" alt="MoolSap Logo" fill className="object-contain" />
           </div>
           <div className="font-bricolage text-[24px] font-bold text-[#1746ea] tracking-[0.05em] mb-[8px]">
             MOOLSAP
           </div>
           <div className="text-[14.4px] font-medium text-[#23272e] leading-[1.65]">
-            MOOLSAP Means Building Beyond The Obvious. Looking Further Into A Product&apos;s Future Than Most Are Willing To See.
+            MOOLSAP Means Creating Products Rooted in Purpose and Driven by the Energy to Grow Beyond Expectations.
           </div>
         </motion.div>
       </motion.div>
