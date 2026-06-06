@@ -8,10 +8,10 @@ export const team: LeadershipMember[] = [
     initials: "AT",
   },
   {
-    name: "Santanu Sahoo",
+    name: "Yuvraj Tamrakar",
     role: "Co Founder & Director",
-    linkedin: "https://www.linkedin.com/in/santanu-prasad-sahoo/",
-    initials: "SS",
+    linkedin: "https://www.linkedin.com/in/yuvraj-tamrakar/",
+    initials: "YT",
   },
   {
     name: "Akash Mohapatra",
